@@ -12,114 +12,8 @@ CREATE TABLE GuildConfigurable
     guildLanguage VARCHAR(10) DEFAULT 'es',
     cmdPrefix VARCHAR(10) DEFAULT 's!'
 );
-
-CREATE TABLE "vehicles" (
-	"id"	INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	"owner"	TEXT NOT NULL,
-	"engine"	INTEGER NOT NULL,
-	"model"	INTEGER NOT NULL,
-	"name"	TEXT NOT NULL,
-	"health"	INTEGER NOT NULL,
-	"x"	REAL NOT NULL,
-	"y"	REAL NOT NULL,
-	"z"	REAL NOT NULL,
-	"r"	INTEGER NOT NULL,
-	"g"	INTEGER NOT NULL,
-	"b"	INTEGER NOT NULL,
-	"rx"	INTEGER NOT NULL,
-	"ry"	REAL NOT NULL,
-	"rz"	REAL NOT NULL,
-	"hood"	INTEGER NOT NULL,
-	"trunk"	INTEGER NOT NULL,
-	"frontL"	INTEGER NOT NULL,
-	"frontR"	INTEGER NOT NULL,
-	"rearL"	INTEGER NOT NULL,
-	"rearR"	INTEGER NOT NULL,
-	"lightFL"	INTEGER NOT NULL,
-	"lightFR"	INTEGER NOT NULL,
-	"lightRL"	INTEGER NOT NULL,
-	"lightRR"	INTEGER NOT NULL,
-	"frontLP"	INTEGER NOT NULL,
-	"frontRP"	INTEGER NOT NULL,
-	"rearLP"	INTEGER NOT NULL,
-	"rearRP"	INTEGER NOT NULL,
-	"windScrean"	INTEGER NOT NULL,
-	"frontB"	INTEGER NOT NULL,
-	"rearB"	INTEGER NOT NULL
-);
-
-
-CREATE TABLE Vehicles(
-    id INT NOT NULL AUTO_INCREMENT,
-    owner VARCHAR(100) NOT NULL,
-    serialKey VARCHAR(100),
-    engine INT NOT NULL,
-    model INT NOT NULL,
-    name VARCHAR(100) NOT NULL,    
-    health INT NOT NULL,
-    x DOUBLE NOT NULL,
-    y DOUBLE NOT NULL,
-    z DOUBLE NOT NULL,
-    r INT NOT NULL,
-    g INT NOT NULL,
-    b INT NOT NULL,
-    rx DOUBLE NOT NULL,
-    ry DOUBLE NOT NULL,
-    rz DOUBLE NOT NULL,
-    hood INT NOT NULL,
-    trunk INT NOT NULL,
-    frontL INT NOT NULL,
-    frontR INT NOT NULL,
-    rearL INT NOT NULL,
-    rearR INT NOT NULL,
-    lightFL INT NOT NULL,
-    lightFR INT NOT NULL,
-    lightRL INT NOT NULL,
-    lightRR INT NOT NULL,
-    frontLP INT NOT NULL,
-    frontRP INT NOT NULL,
-    rearLP INT NOT NULL,
-    rearRP INT NOT NULL,
-    windScrean INT NOT NULL,
-    frontB INT NOT NULL,
-    rearB INT NOT NULL,
-    wheelFL INT NOT NULL,
-    wheelRL INT NOT NULL,
-    wheelFR INT NOT NULL,
-    wheelRR INT NOT NULL,
-    PRIMARY KEY(id)
-);
-
-CREATE TABLE Players(
-    account VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,    
-    discordID VARCHAR(100) NOT NULL,
-    adminMember BOOLEAN NOT NULL DEFAULT false,
-    inmortalMember BOOLEAN NOT NULL DEFAULT false,
-    moderatorMember BOOLEAN NOT NULL DEFAULT false,
-    vipMember BOOLEAN NOT NULL DEFAULT false,
-    subMember BOOLEAN NOT NULL DEFAULT false,
-    characters INT NOT NULL DEFAULT 0,
-    PRIMARY KEY(account,discordID)
-);
-
-CREATE TABLE TownVehicles(
-    owner VARCHAR(100) NOT NULL,    
-    PRIMARY KEY(owner)
-);
-
-CREATE TABLE Objects(
-    id INT NOT NULL AUTO_INCREMENT,
-    owner VARCHAR(100) NOT NULL,
-    model INT NOT NULL,
-    x DOUBLE NOT NULL,
-    y DOUBLE NOT NULL,
-    z DOUBLE NOT NULL,
-    rx DOUBLE NOT NULL,
-    ry DOUBLE NOT NULL,
-    rz DOUBLE NOT NULL,
-    PRIMARY KEY(id)
-);
+INSERT INTO GuildConfigurable
+VALUES('623715606184722442','es','sR!');
 
 CREATE TABLE GuildMembers
 (
@@ -139,7 +33,7 @@ CREATE TABLE GuildMembers
 );
 
 INSERT INTO GuildMembers
-VALUES('623715606184722442', '248204538941538308', 'es', true, true, true, 1, 2894022, 46, 100, 7909, 0);
+VALUES('894634118267146272', '777657705083043860', 'en', false, false, false, 0, 0, 0, 0, 0, 0);
 INSERT INTO GuildMembers
 VALUES('623715606184722442', '250353644820627456', 'es', true, true, true, 5, 407149, 31, 100, 772, 0);
 INSERT INTO GuildMembers
@@ -174,7 +68,7 @@ CREATE TABLE GuildBank
 );
 
 INSERT INTO GuildBank
-VALUES('623715606184722442', '248204538941538308', 1021008);
+VALUES('894634118267146272', '777657705083043860', 1021008);
 INSERT INTO GuildBank
 VALUES('623715606184722442', '250353644820627456', 135828);
 INSERT INTO GuildBank

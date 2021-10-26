@@ -61,23 +61,9 @@ module.exports = class NewsCommand extends BaseCommand {
       .setColor(noneColor)
       .setDescription(description)
       .attachFiles([
-        "database/multimedia/images/demo/server/Discord_Verify_Banner.png",
+        "database/multimedia/images/demo/server/BarPost_Discord.gif",
       ])
-      .setImage("attachment://Discord_Verify_Banner.png");
-    try {
-      let members_array = message.guild.members.cache;
-      members_array.forEach((member) => {
-        member
-          .send(description)
-          .catch(() => message.reply("Can't send DM to your user!"));
-        message.channel.send(
-          "Envio correctamente - anuncio a <@" + member + ">"
-        );
-      });
-    } catch (e) {
-      /* handle error */
-      console.log("No se pudo");
-    }
-    //message.channel.send(description);
+      .setImage("attachment://BarPost_Discord.gif");
+     message.channel.send(embed);
   }
 };
