@@ -96,7 +96,7 @@ module.exports.twitter = async (bot) => {
       boogle,
       dizan,
     ];
-    accountTwitter.forEach(function (account) {
+    accountTwitter.forEach((account) => {
       if (tweet.user.id == account) {
         var url_kyo_tweet =
           "https://twitter.com/" +
@@ -122,6 +122,7 @@ module.exports.twitter = async (bot) => {
         }
       }
     });
+
     if (tweet.user.id == process.env.TWITTER_ROTTEN) {
       var url_kyo_tweet =
         "https://twitter.com/" +
