@@ -16,16 +16,112 @@ var T = new Twit({
 });
 //Forex Twitter
 var rotten_ville_twitter = process.env.TWITTER_ROTTEN;
+var solana_sensei = process.env.TWITTER_SOLANASENSEI;
+var big_brain = process.env.TWITTER_BIGBRAIN;
+var sol_buckets = process.env.TWITTER_SOLBUCKETS;
+var sol_legend = process.env.TWITTER_SOLLEGEND;
+var monkey_bussines = process.env.TWITTER_SOLMB;
+var sol_dbc = process.env.TWITTER_SOLBDC;
+var doc_hollywood = process.env.TWITTER_DOCHOLLYWOOD;
+var solanart = process.env.TWITTER_SOLANART;
+var phantom = process.env.TWITTER_PHANTOM;
+var solana = process.env.TWITTER_SOLANA;
+var rick_bakas = process.env.TWITTER_RICKBAKAS;
+var digital_eyes = process.env.TWITTER_DIGITALEYES;
+var plug = process.env.TWITTER_PLUG;
+var sol_nfts = process.env.TWITTER_SOLNTFs;
+var crypto_gorilla = process.env.TWITTER_CRYPTOGORILLA;
+var nft_verse = process.env.TWITTER_NFTVERSE;
+var ravers = process.env.TWIITER_RAVERS;
+var nft = process.env.TWITTER_NFT;
+var sol_reaper = process.env.TWITTER_SOLREAPER;
+var lilmayo = process.env.TWITTER_LILMAYO;
+var boogle = process.env.TWITTER_BOOGLE;
+var dizan = process.env.TWITTER_DIZAN;
 //Crypto Twitter
 module.exports.twitter = async (bot) => {
   const emoji_afirmado = synchronous.emojiID[0].afirmado;
   //Twitter API
   var stream_twitter_forex = T.stream("statuses/filter", {
-    follow: [rotten_ville_twitter],
+    follow: [
+      rotten_ville_twitter,
+      solana_sensei,
+      big_brain,
+      sol_buckets,
+      sol_legend,
+      monkey_bussines,
+      sol_dbc,
+      doc_hollywood,
+      solanart,
+      phantom,
+      solana,
+      rick_bakas,
+      digital_eyes,
+      plug,
+      sol_nfts,
+      crypto_gorilla,
+      nft_verse,
+      ravers,
+      nft,
+      sol_reaper,
+      lilmayo,
+      boogle,
+      dizan,
+    ],
   });
 
   stream_twitter_forex.on("tweet", function (tweet) {
-    console.log("all looks fine");
+    let accountTwitter = [
+      rotten_ville_twitter,
+      solana_sensei,
+      big_brain,
+      sol_buckets,
+      sol_legend,
+      monkey_bussines,
+      sol_dbc,
+      doc_hollywood,
+      solanart,
+      phantom,
+      solana,
+      rick_bakas,
+      digital_eyes,
+      plug,
+      sol_nfts,
+      crypto_gorilla,
+      nft_verse,
+      ravers,
+      nft,
+      sol_reaper,
+      lilmayo,
+      boogle,
+      dizan,
+    ];
+    accountTwitter.forEach(function (account) {
+      if (tweet.user.id == account) {
+        var url_kyo_tweet =
+          "https://twitter.com/" +
+          tweet.user.screen_name +
+          "/status/" +
+          tweet.id_str;
+        try {
+          let channel_t = bot.channels
+            .fetch(process.env.DISCORD_CHANNEL_ADM_ID)
+            .then((channel) => {
+              channel.send(
+                `${putEmoji(
+                  bot,
+                  emoji_afirmado
+                )} ADM Tweet to Watch <@248204538941538308>\n${url_kyo_tweet}`
+              );
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
     if (tweet.user.id == process.env.TWITTER_ROTTEN) {
       var url_kyo_tweet =
         "https://twitter.com/" +
