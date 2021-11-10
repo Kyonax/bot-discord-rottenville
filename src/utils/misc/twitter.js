@@ -97,6 +97,7 @@ module.exports.twitter = async (bot) => {
       dizan,
     ];
     accountTwitter.forEach((account) => {
+      console.log("Test");
       if (tweet.user.id == account) {
         var url_kyo_tweet =
           "https://twitter.com/" +
