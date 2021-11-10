@@ -14,8 +14,13 @@ module.exports.welcomeMessage = async (member, bot) => {
   const _GUILD_ID = member.guild.id;
   const _MEMBER_ID = member.user.id;
   const _MEMBER = member;
+  const _SALUTE = [`**New Member to the GANG** Welcome Welcome!!!`];
+  const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
   const _SERVER_CHANNEL = member.guild.channels.cache.find((ch) =>
     ch.name.includes("🍕・welcome")
+  );
+  const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
+    ch.name.includes("💬・general-chat")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
     ch.name.includes("🍵・welcome-survivor")
@@ -54,6 +59,10 @@ module.exports.welcomeMessage = async (member, bot) => {
     _SERVER_CHANNEL_.send(
       `**Hey ${_MEMBER} check this out before Verify.**`,
       _embed
+    );
+
+    _HELLO_CHANNEL.send(
+      `${putEmoji(bot, "905441646613762048")} ${_RANDOM_SALUTE}`
     );
   } catch (error) {
     console.log("No se pudo enviar el welcome. " + error);
