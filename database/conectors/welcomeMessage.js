@@ -14,7 +14,14 @@ module.exports.welcomeMessage = async (member, bot) => {
   const _GUILD_ID = member.guild.id;
   const _MEMBER_ID = member.user.id;
   const _MEMBER = member;
-  const _SALUTE = [`**New Member to the GANG** Welcome Welcome!!!`];
+  const _SALUTE = [
+    `**Hey!! ${_MEMBER} welcome to RottenVille Gang**, make sure to read all the Server Rules <#898963212433764373>, and start to get **Alpha Radiation ${putEmoji(
+      bot,
+      "901151325117636618"
+    )}**`,
+    `What? A new Survivor? **Welcome ${_MEMBER} to the RottenVille Gang, enjoy your stay!!!**`,
+    `**Gang gang, We have a new member in our Gang, congrats ${_MEMBER}** and Welcome to RottenVille!`,
+  ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
   const _SERVER_CHANNEL = member.guild.channels.cache.find((ch) =>
     ch.name.includes("🍕・welcome")
