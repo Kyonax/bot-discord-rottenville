@@ -111,7 +111,7 @@ module.exports.twitter = async (bot) => {
                 `${putEmoji(
                   bot,
                   emoji_afirmado
-                )} ADM Tweet to Watch <@248204538941538308>\n${url_kyo_tweet}`
+                )} **ADM Tweet to Watch <@248204538941538308>**\n${url_kyo_tweet}`
               );
             })
             .catch((err) => {

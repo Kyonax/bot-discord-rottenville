@@ -13,9 +13,9 @@ module.exports = class WhoisCommand extends BaseCommand {
     super(
       "suggestion",
       ["sug", "sugges", "idea", "ideas"],
-      "Comando para **Sugerir _actualizaciones, cambios y contenido multimedia_** .",
-      "suggestion <type> <text>`.\n**Tipo:** `<mta>`, `<server>`",
-      "_***Todos***_",
+      "Suggestion command, **Suggest your thoughts**.",
+      "suggestion <text>`.",
+      "_***Everyone***_",
       "guild"
     );
   }
@@ -33,24 +33,24 @@ module.exports = class WhoisCommand extends BaseCommand {
     //Creación EMBED
     //Creación del Mensaje Embed del Comando
     let embed = new MessageEmbed()
-      .setTitle(`**${autor.displayName}'s Sugerencia 🧠**`)
+      .setTitle(`**${autor.displayName}'s Suggestion 🧠**`)
       .setThumbnail(message.guild.iconURL())
       .setDescription(`${text}`)
       .setColor(kyoColor)
-      .addField("**Usuario**", `${autor}`, true)
+      .addField("**User**", `${autor}`, true)
       .addField(
-        `**Sugerencia - [${SERVER}]**`,
-        `**Enviado desde ${message.channel}**`,
+        `**Suggestion - [${SERVER}]**`,
+        `**Send it from ${message.channel}**`,
         true
       )
-      .setFooter("Sugerencias de miembros del Servidor")
+      .setFooter("Server RottenVille Suggestions")
       .setTimestamp();
     const serverChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "📯・sugerencias"
+      (ch) => ch.name === "👹・community-ideas"
     );
     if (!serverChannel) {
       return message.guild.channels
-        .create("📯・sugerencias", {
+        .create("👹・community-ideas", {
           type: "text",
           permissionOverwrites: [
             {
