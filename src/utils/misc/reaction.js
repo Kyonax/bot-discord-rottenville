@@ -1,9 +1,9 @@
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 module.exports = {
-  reactionEmbeds: async function (bot, message) {     
+  reactionEmbeds: async function (bot, message) {
     //Reacción a Mensajes Embed
-    if (message.author.bot) {      
-      if (message.embeds) {        
+    if (message.author.bot) {
+      if (message.embeds) {
         //Inicialización de Emojis y su Uso respectivo
         let clever = synchronous.emojiID[0].clever;
         let kyonax = synchronous.emojiID[0].kyonax;
@@ -36,17 +36,17 @@ module.exports = {
         const gamesRoleEmbed = message.embeds.find(
           (msg) => msg.title === "**🎮 Roles de Juegos 🎮**"
         );
-        //Suggestions        
-        const suggestionEmbed = message.embeds.find((msg) =>          
-          msg.title.includes("Sugerencia")          
-        );        
+        //Suggestions
+        const suggestionEmbed = message.embeds.find((msg) =>
+          msg.title.includes("Suggestion")
+        );
         //Polls
         const pollEmbed = message.embeds.find((msg) =>
           msg.title.includes("Encuesta")
         );
         //Embed Suggestion
         if (suggestionEmbed) {
-          try {            
+          try {
             await message.react(afirmado);
             await message.react(cancelado);
           } catch (err) {
