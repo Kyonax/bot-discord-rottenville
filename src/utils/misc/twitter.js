@@ -97,7 +97,6 @@ module.exports.twitter = async (bot) => {
       dizan,
     ];
     accountTwitter.forEach((account) => {
-      console.log("Test");
       if (tweet.user.id == account) {
         var url_kyo_tweet =
           "https://twitter.com/" +
@@ -105,7 +104,7 @@ module.exports.twitter = async (bot) => {
           "/status/" +
           tweet.id_str;
         try {
-          let channel_t = bot.channels
+          let channel = bot.channels
             .fetch(process.env.DISCORD_CHANNEL_ADM_ID)
             .then((channel) => {
               channel.send(
