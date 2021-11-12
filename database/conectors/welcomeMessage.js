@@ -67,10 +67,6 @@ module.exports.welcomeMessage = async (member, bot) => {
       `**Hey ${_MEMBER} check this out before Verify.**`,
       _embed
     );
-
-    _HELLO_CHANNEL.send(
-      `${putEmoji(bot, "905441646613762048")} ${_RANDOM_SALUTE}`
-    );
   } catch (error) {
     console.log("No se pudo enviar el welcome. " + error);
   }
