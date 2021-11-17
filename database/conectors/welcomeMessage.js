@@ -34,7 +34,7 @@ module.exports.welcomeMessage = async (member, bot) => {
   );
 
   let _embed = new MessageEmbed()
-    .setColor("#b4e634")
+    .setColor("#13ea83")
     .setThumbnail(member.user.displayAvatarURL())
     .setFooter(
       "📣 Collection comming soon・check out our twitter.com/rotten_ville"
