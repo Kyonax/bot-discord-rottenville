@@ -275,7 +275,7 @@ module.exports = class MessageEvent extends BaseEvent {
           roleRewards(message, bot, newLevel);
           const levelUpEmbed = new MessageEmbed()
             .setAuthor(message.author.username, bot.user.displayAvatarURL())
-            .setColor("#b4e634")
+            .setColor("#13ea83")
             .setThumbnail(message.author.displayAvatarURL())
             .addField(
               "**Survivor RottenVille**",
