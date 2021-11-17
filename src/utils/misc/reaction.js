@@ -42,7 +42,7 @@ module.exports = {
         );
         //Polls
         const pollEmbed = message.embeds.find((msg) =>
-          msg.title.includes("Encuesta")
+          msg.title.includes("Poll")
         );
         //Embed Suggestion
         if (suggestionEmbed) {
