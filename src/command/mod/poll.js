@@ -2,7 +2,8 @@
 const { MessageEmbed } = require("discord.js");
 const {
   initObjectMember,
-  getMember,putEmoji,
+  getMember,
+  putEmoji,
   replaceRoleItems,
 } = require("../../utils/misc/functions.js");
 const { goldColor } = require("../../../database/utils/color/color.json");
@@ -60,21 +61,21 @@ module.exports = class PollCommand extends BaseCommand {
     let gRole = message.guild.roles.cache.find((rol) => rol.id == role);
     //Creación del Mensaje Embed
     let embed = new MessageEmbed()
-      .setTitle(`Encuesta de **${autor.displayName} 📜**`)
+      .setTitle(`**${autor.displayName}'s Poll**`)
       .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(poll)
       .setColor(goldColor)
-      .addField("**Usuario**", `${autor}`, true)
+      .addField("**User**", `${autor}`, true)
       .addField(
-        `**Encuesta para - [${gRole.name}]**`,
-        `**Enviado desde ${message.channel}**`,
+        `**Poll for - [${gRole.name}]**`,
+        `**Send it from ${message.channel}**`,
         true
       )
-      .setFooter("Encuestas y Sorteos Synchronous")
+      .setFooter("RottenVille Poll & Giveaways")
       .setTimestamp();
 
     const encChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "encuestas"
+      (ch) => ch.name === "📣・rottenvile-poll"
     );
     if (!encChannel) {
       return message.guild.channels
@@ -91,7 +92,9 @@ module.exports = class PollCommand extends BaseCommand {
         .catch((err) => console.log(err));
     }
 
-    encChannel.send(`Nueva encuesta para ${gRole}!! ${putEmoji(bot,"780487068526313502")}`);
+    encChannel.send(
+      `New Poll ${gRole}!! ${putEmoji(bot, "910558105031544842")}`
+    );
     encChannel.send(embed);
   }
 };
