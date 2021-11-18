@@ -130,6 +130,7 @@ module.exports.twitter = async (bot) => {
         "/status/" +
         tweet.id_str;
       try {
+        console.log(tweet);
         let channel = bot.channels
           .fetch(process.env.DISCORD_CHANNEL_FOREX_ID)
           .then((channel) => {
