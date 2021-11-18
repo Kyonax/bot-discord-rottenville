@@ -130,20 +130,35 @@ module.exports.twitter = async (bot) => {
         "/status/" +
         tweet.id_str;
       try {
-        console.log(tweet);
-        let channel = bot.channels
-          .fetch(process.env.DISCORD_CHANNEL_FOREX_ID)
-          .then((channel) => {
-            channel.send(
-              `${putEmoji(
-                bot,
-                emoji_afirmado
-              )} New Tweet! What do you think <@&900354883708936202>?\n${url_kyo_tweet}`
-            );
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        if (tweet.text.includes("RottenVille-Battles")) {
+          let channel = bot.channels
+            .fetch(process.env.DISCORD_CHANNEL_BATTLES)
+            .then((channel) => {
+              channel.send(
+                `${putEmoji(
+                  bot,
+                  emoji_afirmado
+                )} RottenVille-Battles, Choose your Rotten! <@&900354883708936202>?\n${url_kyo_tweet}`
+              );
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        } else {
+          let channel = bot.channels
+            .fetch(process.env.DISCORD_CHANNEL_FOREX_ID)
+            .then((channel) => {
+              channel.send(
+                `${putEmoji(
+                  bot,
+                  emoji_afirmado
+                )} New Tweet! What do you think <@&900354883708936202>?\n${url_kyo_tweet}`
+              );
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+        }
       } catch (error) {
         console.log(error);
       }
