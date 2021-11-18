@@ -138,7 +138,7 @@ module.exports.twitter = async (bot) => {
                 `${putEmoji(
                   bot,
                   emoji_afirmado
-                )} RottenVille-Battles, Choose your Rotten! <@&900354883708936202>?\n${url_kyo_tweet}`
+                )} RottenVille-Battles, Choose your Rotten! <@&895850023311540225>?\n${url_kyo_tweet}`
               );
             })
             .catch((err) => {
