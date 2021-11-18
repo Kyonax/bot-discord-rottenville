@@ -23,14 +23,11 @@ module.exports.welcomeMessage = async (member, bot) => {
     `**Gang gang, We have a new member in our Gang, congrats ${_MEMBER}** and Welcome to RottenVille!`,
   ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
-  const _SERVER_CHANNEL = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("🍕・welcome")
-  );
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
     ch.name.includes("💬・general-chat")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("🍵・welcome-survivor")
+    ch.name.includes("📗・welcome-survivor")
   );
 
   let _embed = new MessageEmbed()
