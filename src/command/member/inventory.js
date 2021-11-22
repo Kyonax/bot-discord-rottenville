@@ -364,11 +364,9 @@ module.exports = class InventaryCommand extends BaseCommand {
         ).then(() => {
           delay(3000).then(async function () {
             message.channel.send(
-              `**<@${
-                member.id
-              }> ahora puedes ver tu Inventario del servidor!! **${putEmoji(
+              `**<@${member.id}> Look your Inventory!! **${putEmoji(
                 bot,
-                "899041375687950336"
+                "910545619238678538"
               )}`,
               embed
             );
