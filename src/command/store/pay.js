@@ -381,7 +381,7 @@ module.exports = class PayCommand extends BaseCommand {
       );
       //Emojis
       const levelChannel = message.guild.channels.cache.find(
-        (ch) => ch.name === "📯・level-up"
+        (ch) => ch.name === "👹・level-up"
       );
       //Inicialización de Emojis y su Uso respectivo
       const emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
@@ -389,16 +389,18 @@ module.exports = class PayCommand extends BaseCommand {
       const emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
       //Mensaje Embed Level
       const levelUpEmbed = new MessageEmbed()
-        .setTitle(`**Nivel Alcanzado** ${emojiLevelUp}`)
+        .setTitle(`**Level Reached** ${emojiLevelUp}`)
         .setAuthor(message.author.username, bot.user.displayAvatarURL())
         .setColor(cleverColor)
         .setThumbnail(message.author.displayAvatarURL())
         .addField(
-          "**Usuario Iluminado**",
-          `<@${message.author.id}> alcanzó un nuevo **Nivel**.`
+          "**Survivor RottenVille**",
+          `<@${message.author.id}> reached a new **Level**.`
         )
-        .addField("**Nivel Alcanzado**", `Nuevo nivel **${actualAuthorLevel}**`)
-        .setFooter("Estadísticas de niveles Internacional Mundo Kyonax !")
+        .addField("**Level Reached**", `New Level **${actualAuthorLevel}**`)
+        .setFooter(
+          "RottenVille population stats - XP & Level ・Interact to gain more XP"
+        )
         .setTimestamp();
       //Mensaje Embed
       embed.addField(
