@@ -11,7 +11,7 @@ module.exports = class InfoCommand extends BaseCommand {
     super(
       "info",
       ["inf", "i", "information"],
-      "**Command to get importan Information,** about RottenVille.",
+      "**Command to get important Information,** about RottenVille.",
       "say <text>`",
       "***Everyone***",
       "everyone"
