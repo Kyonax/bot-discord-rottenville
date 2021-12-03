@@ -13,7 +13,7 @@ module.exports = class WhoisCommand extends BaseCommand {
   constructor() {
     super(
       "whois",
-      ["w", "info", "is"],
+      ["w", "is"],
       "Comando para **obtener** datos importantes de un **miembro**.",
       "whois`.\n**Opciones:** `<user>`",
       "_***Todos***_",
@@ -75,11 +75,11 @@ module.exports = class WhoisCommand extends BaseCommand {
       )
       .setTimestamp();
     const statatus = member.user.presence.activities;
-    let gameStatus = []        
+    let gameStatus = [];
     if (statatus.length > 0) {
       statatus.forEach((sts) => {
-        gameStatus.push(sts.name)
-        console.log(gameStatus)
+        gameStatus.push(sts.name);
+        console.log(gameStatus);
       });
       embed.addField("Jugando", `**> Juego:** ${gameStatus.join(" , ")}`);
     }
