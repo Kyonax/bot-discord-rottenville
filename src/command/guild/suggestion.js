@@ -46,7 +46,7 @@ module.exports = class WhoisCommand extends BaseCommand {
       .setFooter("Server RottenVille Suggestions")
       .setTimestamp();
     const serverChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "👹・community-ideas"
+      (ch) => ch.name === "🎄・community-ideas"
     );
     if (!serverChannel) {
       return message.guild.channels
