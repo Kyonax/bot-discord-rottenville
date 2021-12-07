@@ -34,10 +34,10 @@ module.exports = class PayCommand extends BaseCommand {
   constructor() {
     super(
       "pay",
-      ["sendCoins", "pagar", "psynkoins"],
-      "Comando **transferir** dinero o **comprar** cosas de la Tienda.",
-      "pay <type>`\n**Tipo:** `user`, `level`, `boost`\n**User:** `<user>` `<amount>`\n**Boost:** `<boost>`",
-      "_***Todos***_",
+      ["sendAR", "payAR", "transfer"],
+      "**Pay Levels, Boost, Merch, and trade with members** (Some of this are only avaible with RP).",
+      "pay <type>`\n**Type:** `user`, `level`, `boost`\n**User:** `<user>` `<amount>`\n**Boost:** `<boost>`",
+      "_***Everyone***_",
       "store"
     );
   }
@@ -209,19 +209,19 @@ module.exports = class PayCommand extends BaseCommand {
         const emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
         //Mensaje Embed
         embed.addField(
-          "**Boost Canjeado**",
-          `<@${autor.id}> ha canjeado el **Boost Base** ${emojiBoostB} de experiencia`
+          "**Exchanged Boost**",
+          `<@${autor.id}> has redeemed the **Experience Base** boost ${emojiBoostB}`
         );
         embed.addField(
-          "**Dinero Canjeado**",
-          `**${numberWithCommas(boostB)}** ${emojiSynkoins} **Kyo Shinys.**`
+          "**Amount of Alpha Radiation**",
+          `**${numberWithCommas(boostB)}** ${emoji} **Alpha Radiation.**`
         );
         embed.addField(
-          `**Fondos Restantes de ${autor.displayName}**`,
-          `**${numberWithCommas(updateACoins)} ${emojiSynkoins} Kyo Shinys.**`,
+          `**Alpha Radiation remaining from ${autor.displayName}**`,
+          `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
           true
         );
-      } else if (args[1] === "avanzado") {
+      } else if (args[1] === "advanced") {
         let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
         //Validación de Variables - No suficientes Monedas
         if (actualAuthorCoins < boostA)
@@ -264,16 +264,16 @@ module.exports = class PayCommand extends BaseCommand {
         const emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
         //Mensaje Embed
         embed.addField(
-          "**Boost Canjeado**",
-          `<@${autor.id}> ha canjeado el **Boost Avanzado** ${emojiBoostA} de experiencia`
+          "**Exchanged Boost**",
+          `<@${autor.id}> has redeemed the **Experience Advanced** boost ${emojiBoostA}`
         );
         embed.addField(
-          "**Dinero Canjeado**",
-          `**${numberWithCommas(boostA)}** ${emojiSynkoins} **Kyo Shinys**`
+          "**Amount of Alpha Radiation**",
+          `**${numberWithCommas(boostA)}** ${emoji} **Alpha Radiation**`
         );
         embed.addField(
-          `**Fondos Restantes de ${autor.displayName}**`,
-          `**${numberWithCommas(updateACoins)} ${emojiSynkoins} Kyo Shinys.**`,
+          `**Alpha Radiation remaining from ${autor.displayName}**`,
+          `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
           true
         );
       } else if (args[1] === "premium") {
@@ -319,19 +319,17 @@ module.exports = class PayCommand extends BaseCommand {
         const emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
         //Mensaje Embed
         embed.addField(
-          "**Boost Canjeado**",
-          `<@${autor.id}> ha canjeado el **Boost Premium** ${emojiBoostPremium} de experiencia`
+          "**Exchanged Boost**",
+          `<@${autor.id}> has redeemed the **Experience Premium** boost ${emojiBoostPremium}`
         );
         embed.addField(
-          "**Dinero Canjeado**",
-          `**${numberWithCommas(
-            boostPremium
-          )}** ${emojiSynkoins} **Kyo Shinys.**`,
+          "**Amount of Alpha Radiation**",
+          `**${numberWithCommas(boostPremium)}** ${emoji} **Alpha Radiation.**`,
           true
         );
         embed.addField(
-          `**Fondos Restantes de ${autor.displayName}**`,
-          `**${numberWithCommas(updateACoins)} ${emojiSynkoins} Kyo Shinys.**`,
+          `**Alpha Radiation remaining from ${autor.displayName}**`,
+          `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
           true
         );
       }
@@ -381,7 +379,7 @@ module.exports = class PayCommand extends BaseCommand {
       );
       //Emojis
       const levelChannel = message.guild.channels.cache.find(
-        (ch) => ch.name === "👹・level-up"
+        (ch) => ch.name === "🎄・level-up"
       );
       //Inicialización de Emojis y su Uso respectivo
       const emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
@@ -404,17 +402,17 @@ module.exports = class PayCommand extends BaseCommand {
         .setTimestamp();
       //Mensaje Embed
       embed.addField(
-        "**Nivel Canjeado**",
-        `<@${autor.id}> ha canjeado un **Nuevo Nivel** ${emojiLevelUp}.`
+        "**Exchanged Level**",
+        `<@${autor.id}> has redeemed a **NEW Level** ${emojiLevelUp}.`
       );
       embed.addField(
-        "**Dinero Canjeado**",
-        `**${numberWithCommas(basePrice)}** ${emojiSynkoins} **Kyo Shinys.**`,
+        "**Amount of Alpha Radiation**",
+        `**${numberWithCommas(basePrice)}** ${emoji} **Alpha Radition.**`,
         true
       );
       embed.addField(
-        `**Fondos Restantes de ${autor.displayName}**`,
-        `**${numberWithCommas(updateACoins)} ${emojiSynkoins} Kyo Shinys.**`,
+        `**Alpha Radiation remaining from ${autor.displayName}**`,
+        `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
         true
       );
       roleRewards(message, bot, actualAuthorLevel);

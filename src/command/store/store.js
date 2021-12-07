@@ -5,7 +5,10 @@ const {
   initObjectMember,
   numberWithCommas,
 } = require("../../utils/misc/functions");
-const { kyoColor,noneColor } = require("../../../database/utils/color/color.json");
+const {
+  kyoColor,
+  noneColor,
+} = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { stripIndents } = require("common-tags");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
@@ -19,10 +22,10 @@ module.exports = class StoreCommand extends BaseCommand {
   constructor() {
     super(
       "store",
-      ["tienda"],
-      "Comando para **abrir** la tienda del Servidor.",
+      ["str", "merch", "car"],
+      "**Show the RottenVille Store** (Only RP are allowed).",
       "store`",
-      "***Todos***",
+      "***Everyone***",
       "store"
     );
   }
@@ -38,17 +41,20 @@ module.exports = class StoreCommand extends BaseCommand {
       message.guild.id,
       message.author.id
     );
+    let _emoteCancel = synchronous.emojiID[0].cancelado;
     let actualAuthorLevel = parseInt(ObjectMember.memberLevel);
     let actualAuthorXP = parseInt(ObjectMember.memberXP);
-    let levelPrice = Math.floor(
-      actualAuthorLevel * 9000 + actualAuthorXP / 9
-    );
+    let levelPrice = Math.floor(actualAuthorLevel * 9000 + actualAuthorXP / 9);
     //Inicialización de Emojis y su Uso respectivo
     //Inicialización de Emojis y su Uso respectivo
     let emojiSynkoins = putEmoji(bot, synchronous.emojiID[0].synkoin);
-    let boostb = putEmoji(bot, synchronous.emojiID[0].boostb);    
-    let boosta = putEmoji(bot, synchronous.emojiID[0].boosta);    
-    let boostp = putEmoji(bot, synchronous.emojiID[0].boostp);    
+    let boostb = putEmoji(bot, synchronous.emojiID[0].boostb);
+    let boosta = putEmoji(bot, synchronous.emojiID[0].boosta);
+    let boostp = putEmoji(bot, synchronous.emojiID[0].boostp);
+    message.channel.send(
+      `${putEmoji(bot, cancelado)} **We are working on this Command**`
+    );
+    return;
     //Embed General que especifica la función de la Tienda
     let storeEmbed = new MessageEmbed()
       .setTitle("Tienda Mundo Kyonax !")
