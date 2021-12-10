@@ -27,6 +27,9 @@ module.exports = {
 
         let title = message.embeds.find((msg) => msg.title);
         let footer = message.embeds.find((msg) => msg.footer);
+
+        let player1 = "918868797367148604";
+        let player2 = "918869733783269436";
         if (!title) return;
         //Welcome Embed
         const roleSynksEmbed = message.embeds.find(
@@ -44,6 +47,10 @@ module.exports = {
         const pollEmbed = message.embeds.find((msg) =>
           msg.title.includes("Poll")
         );
+        //Battles
+        const battlesEmbed = message.embeds.find((msg) =>
+          msg.title.includes("RottenVille-Battles")
+        );
         //Embed Suggestion
         if (suggestionEmbed) {
           try {
@@ -60,6 +67,16 @@ module.exports = {
             await message.react(cancelado);
           } catch (err) {
             console.log(err);
+          }
+        }
+        //Battles
+        if (battlesEmbed) {
+          try {
+            await message.react(player1);
+            await message.react(player2);
+          } catch (err) {
+            console.log(err);
+            /* handle error */
           }
         }
         //Embeds Welcome

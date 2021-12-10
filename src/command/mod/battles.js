@@ -20,13 +20,13 @@ const StateManager = require("../../utils/database/StateManager");
 const guildMembers = new Map();
 const guilds = new Map();
 //Exportación de Comando Poll
-module.exports = class PollCommand extends BaseCommand {
+module.exports = class BattlesCommand extends BaseCommand {
   constructor() {
     super(
-      "poll",
-      ["encuesta", "enc"],
-      "Comando para **realizar una encuesta** en el Servidor.",
-      "poll`\n**Opciones:** `<rol>`",
+      "battle",
+      ["batalla", "btl"],
+      "Command to create **RottenVille-Battles**.",
+      "battle`\n**Rol Announcement:** `<rol>`\n**Members:** `@competitor_1` `@competitor_2`",
       "_***Pilares - Inmortales - Moderadores***_",
       "mod"
     );
@@ -40,7 +40,8 @@ module.exports = class PollCommand extends BaseCommand {
     const perm = new Perms();
     const autor = getMember(message, message.author.id);
     let [cmd, role] = message.content.split(" ");
-    let poll = args.slice(1).join(" ");
+    let _competitor_1 = args[1];
+    let _competitor_2 = args[2];
     let ObjectAuthor = null;
     ObjectAuthor = initObjectMember(
       guilds,
@@ -54,27 +55,46 @@ module.exports = class PollCommand extends BaseCommand {
     if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
     if (!role.includes("@")) {
       role = "@everyone";
-      poll = args.slice(0).join(" ");
     }
     role = replaceRoleItems(role);
     let gRole = message.guild.roles.cache.find((rol) => rol.id == role);
     //Creación del Mensaje Embed
     let embed = new MessageEmbed()
-      .setTitle(`**${autor.displayName}'s Poll**`)
+      .setTitle(`**Solana RottenVille-Battles | Tournament 🏁**`)
       .setThumbnail(bot.user.displayAvatarURL())
-      .setDescription(poll)
-      .setColor(goldColor)
+      .setDescription(
+        `**🥊 The competitor with more reactions wins!! (Every Reaction cost 100 AR ${putEmoji(
+          bot,
+          "905441646362120232"
+        )})**
+
+**<@&918875434639323136> #47 VS <@&918875434639323136> #214 - Match #1**
+
+**You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
+          bot,
+          "905441646362120232"
+        )}, **all the radiation voted for the Winner Rotten goes directly to their exposure.**
+
+${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
+
+`
+      )
+      .setColor("#8942C0")
       .addField("**User**", `${autor}`, true)
       .addField(
-        `**Poll for - [${gRole.name}]**`,
+        `**Vote for your favorite - [${gRole.name}]**`,
         `**Send it from ${message.channel}**`,
         true
       )
-      .setFooter("RottenVille Poll & Giveaways")
+      .attachFiles([
+        "database/multimedia/images/demo/server/RTSolBattlesTournament1.png",
+      ])
+      .setImage("attachment://RTSolBattlesTournament1.png")
+      .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
 
     const encChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "📣・rottenvile-poll"
+      (ch) => ch.name === "🎁・rottenville-battles"
     );
     if (!encChannel) {
       return message.guild.channels
@@ -91,10 +111,13 @@ module.exports = class PollCommand extends BaseCommand {
         .catch((err) => console.log(err));
     }
 
-    encChannel.send(
-      `New Poll ${gRole}!! ${putEmoji(bot, "910558105031544842")}`
+    message.channel.send(
+      `**RTSolBattles Tournament ${gRole}!! | ${_competitor_1} VS ${_competitor_2}** ${putEmoji(
+        bot,
+        "910558105031544842"
+      )}`
     );
-    encChannel.send(embed);
+    message.channel.send(embed);
   }
 };
 
