@@ -35,12 +35,15 @@ module.exports = class MessageReactionAdd extends BaseEvent {
     super("messageReactionAdd");
   }
   async run(bot, reaction, user) {
+    console.log("INICIO REACCIón")
     let eventChannel = reaction.message.guild.channels.cache.find(
       (ch) => ch.name === "🎁・events-participate"
     );
 
     if (user.bot) return;
+
     let applyRole = async () => {
+      console.log("INICIO METODO")
       let emojiName = reaction.emoji.name;
       let member = reaction.message.guild.members.cache.find(
         (member) => member.id === user.id
@@ -68,12 +71,13 @@ module.exports = class MessageReactionAdd extends BaseEvent {
 
                 eventChannel.send(
                   putEmoji(bot, "910558104838615090") +
-                    "**<@" +
-                    member +
-                    "> If you are a <@&918907618330808381> you can't vote, tell your friends and wait for the best** **| Si eres un <@&918907618330808381> no puedes votar, dile a tus amigos y espera lo mejor** "
+                  "**<@" +
+                  member +
+                  "> If you are a <@&918907618330808381> you can't vote, tell your friends and wait for the best** **| Si eres un <@&918907618330808381> no puedes votar, dile a tus amigos y espera lo mejor** "
                 );
                 return;
               }
+              console.log("ANTES DESICION")
               if (
                 member.roles.cache.some(
                   (role) => role.id === "918907276981583932"
@@ -85,9 +89,9 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 }
                 eventChannel.send(`<@${member.id}>
 ${putEmoji(
-  bot,
-  "910558104838615090"
-)} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the AR ${putEmoji(
+                  bot,
+                  "910558104838615090"
+                )} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the AR ${putEmoji(
                   bot,
                   "905441646362120232"
                 )}, if you want to vote you have to do it again.**
@@ -95,10 +99,13 @@ ${putEmoji(
                   bot,
                   "905441646362120232"
                 )}, si deseas votar tienes que hacerlo nuevamente.**`);
+
               } else {
+                console.log("ENTRO DESICION NO VOTO")
                 member.roles
                   .add("918907276981583932")
                   .catch((err) => console.error);
+
                 const ammountPay = 100;
                 //Creación de Mensajes Embed para el Comando
                 let embed = new MessageEmbed()
@@ -110,31 +117,29 @@ ${putEmoji(
                 //Creación de Objeto Bank Member
                 let ObjectBankMember = null;
                 let ObjectBankAuthor = null;
-                let ObjectAuthor = null;
-                ObjectAuthor = initObjectMember(
-                  guilds,
-                  ObjectAuthor,
-                  reaction.message.guild.id,
-                  member.id
-                );
-                ObjectBankAuthor = initObjectMember(
-                  bankGuilds,
-                  ObjectBankAuthor,
-                  reaction.message.guild.id,
-                  member.id
-                );
+
                 ObjectBankMember = initObjectMember(
                   bankGuilds,
                   ObjectBankMember,
                   reaction.message.guild.id,
                   "894243194051629156"
                 );
+
+                ObjectBankAuthor = initObjectMember(
+                  bankGuilds,
+                  ObjectBankAuthor,
+                  reaction.message.guild.id,
+                  member.id
+                );
+
                 if (!ObjectBankMember.memberCoins)
                   return err.noFindMemberBank(bot, reaction.message);
 
-                //Validación de variables - Monedas - Usuario
+                //Validación de variables - Monedas - Usuario                
                 let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
                 let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
+                console.log("AUTHOR: " + actualAuthorCoins)
+                console.log("MEMBER: " + actualMemberCoins)
                 const updateMCoins = actualMemberCoins + parseInt(ammountPay);
                 const updateACoins = actualAuthorCoins - parseInt(ammountPay);
                 //Validación de Variables - No suficientes Monedas
@@ -196,8 +201,8 @@ ${putEmoji(
 
                 eventChannel.send(
                   "**Congrats <@" +
-                    member +
-                    "> you are now a Cool <@&918907276981583932>**",
+                  member +
+                  "> you are now a Cool <@&918907276981583932>**",
                   embed
                 );
               }
@@ -210,21 +215,18 @@ ${putEmoji(
         console.log(err);
       }
     };
-    if (reaction.message.partial) {
-      try {
-        let msg = await reaction.message.fetch();
-        if (msg.id === "918945639709147137") {
-          applyRole();
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    } else {
+
+
+    try {
       let msg = await reaction.message.fetch();
-      if (msg.id === "918934055150571532") {
+      if (msg.id === "918963050965520385") {
         applyRole();
       }
+    } catch (err) {
+      console.log(err);
     }
+
+
   }
 };
 
@@ -340,9 +342,3 @@ StateManager.on(
     });
   }
 );
-
-StateManager.on("updateAdminMember", (guildID, memberID, adminMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.adminMember = adminMember;
-});
