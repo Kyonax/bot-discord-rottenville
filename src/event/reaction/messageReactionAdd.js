@@ -236,7 +236,7 @@ ${putEmoji(
                 reaction.message.channel
                   .send(
                     putEmoji(bot, "910545619238678538") +
-                      " **Check on #🎁・events-participate the transaction accomplished - thank you for vote.**"
+                      " **Check on <#898996309334310913> the transaction accomplished - thank you for vote.**"
                   )
                   .then((msg) => {
                     msg.delete({
