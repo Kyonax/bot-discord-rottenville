@@ -60,6 +60,14 @@ module.exports = class MessageReactionAdd extends BaseEvent {
             //Creación de Objeto Bank Member
             let ObjectBankMember = null;
             let ObjectBankAuthor = null;
+            let ObjectMember = null;
+
+            ObjectMember = initObjectMember(
+              guilds,
+              ObjectMember,
+              reaction.message.guild.id,
+              member.id
+            );
 
             ObjectBankMember = initObjectMember(
               bankGuilds,
