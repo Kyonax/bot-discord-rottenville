@@ -37,13 +37,12 @@ module.exports = class MessageReactionAdd extends BaseEvent {
   async run(bot, reaction, user) {
     const err = new Error();
     let eventChannel = reaction.message.guild.channels.cache.find(
-      (ch) => ch.name === "💬・testing-team"
+      (ch) => ch.name === "🎁・events-participate"
     );
 
     if (user.bot) return;
 
     let applyRole = async () => {
-      console.log("INICIO METODO");
       let emojiName = reaction.emoji.name;
       let member = reaction.message.guild.members.cache.find(
         (member) => member.id === user.id
@@ -58,7 +57,6 @@ module.exports = class MessageReactionAdd extends BaseEvent {
             emojiName.toLowerCase() == "p1" ||
             emojiName.toLowerCase() == "p2"
           ) {
-
             //Creación de Objeto Bank Member
             let ObjectBankMember = null;
             let ObjectBankAuthor = null;
@@ -91,7 +89,6 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 member.displayName
               );
 
-
             try {
               if (
                 member.roles.cache.some(
@@ -105,13 +102,12 @@ module.exports = class MessageReactionAdd extends BaseEvent {
 
                 eventChannel.send(
                   putEmoji(bot, "910558104838615090") +
-                  "**<@" +
-                  member +
-                  "> If you are a <@&918907618330808381> you can't vote, tell your friends and wait for the best** **| Si eres un <@&918907618330808381> no puedes votar, dile a tus amigos y espera lo mejor** "
+                    "**<@" +
+                    member +
+                    "> If you are a <@&918907618330808381> you can't vote, tell your friends and wait for the best** **| Si eres un <@&918907618330808381> no puedes votar, dile a tus amigos y espera lo mejor** "
                 );
                 return;
               }
-              console.log("ANTES DESICION");
               if (
                 member.roles.cache.some(
                   (role) => role.id === "918907276981583932"
@@ -123,9 +119,9 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 }
                 eventChannel.send(`<@${member.id}>
 ${putEmoji(
-                  bot,
-                  "910558104838615090"
-                )} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the AR ${putEmoji(
+  bot,
+  "910558104838615090"
+)} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the AR ${putEmoji(
                   bot,
                   "905441646362120232"
                 )}, if you want to vote you have to do it again.**
@@ -134,11 +130,9 @@ ${putEmoji(
                   "905441646362120232"
                 )}, si deseas votar tienes que hacerlo nuevamente.**`);
               } else {
-                console.log("ENTRO DESICION NO VOTO");
                 member.roles
                   .add("918907276981583932")
                   .catch((err) => console.error);
-
 
                 //Creación de Mensajes Embed para el Comando
                 let embed = new MessageEmbed()
@@ -148,14 +142,11 @@ ${putEmoji(
                   .setFooter("RottenBot radiation scanner")
                   .setTimestamp();
 
-
                 //Validación de variables - Monedas - Usuario
-
 
                 const updateMCoins = actualMemberCoins + parseInt(ammountPay);
                 const updateACoins = actualAuthorCoins - parseInt(ammountPay);
                 //Validación de Variables - No suficientes Monedas
-                console.log("Monedas persona: " + actualAuthorCoins)
 
                 //Transferencia de Monedas - Autor - Usuario
                 const updateMemberCoins = await updateGuildBankCoins(
@@ -209,8 +200,8 @@ ${putEmoji(
 
                 eventChannel.send(
                   "**Congrats <@" +
-                  member +
-                  "> you are now a Cool <@&918907276981583932>**",
+                    member +
+                    "> you are now a Cool <@&918907276981583932>**",
                   embed
                 );
               }
@@ -226,7 +217,7 @@ ${putEmoji(
 
     try {
       let msg = await reaction.message.fetch();
-      if (msg.id === "918880957245845505") {
+      if (msg.embeds[0].title.includes("Solana RottenVille-Battles")) {
         applyRole();
       }
     } catch (err) {
