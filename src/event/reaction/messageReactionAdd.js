@@ -225,6 +225,17 @@ ${putEmoji(
                     "> you are now a Cool <@&918907276981583932>**",
                   embed
                 );
+                reaction.message.channel
+                  .send(
+                    putEmoji(bot, "910545619238678538") +
+                      " **Check on #🎁・events-participate the transaction accomplished - thank you for vote.**"
+                  )
+                  .then((msg) => {
+                    msg.delete({
+                      timeout: 20000,
+                      reason: "It had to be done.",
+                    });
+                  });
               }
             } catch (error) {
               console.error(error);
