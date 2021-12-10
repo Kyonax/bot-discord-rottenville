@@ -226,7 +226,7 @@ ${putEmoji(
 
     try {
       let msg = await reaction.message.fetch();
-      if (msg.id === "918881324473938002") {
+      if (msg.id === "918880957245845505") {
         applyRole();
       }
     } catch (err) {
