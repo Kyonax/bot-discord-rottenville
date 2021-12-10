@@ -61,7 +61,7 @@ module.exports = class ErrorConector extends BaseConector {
       msg.delete({ timeout: 20000, reason: "It had to be done." });
     });
   }
-  async noCorrectChannel(bot, message,channel) {
+  async noCorrectChannel(bot, message, channel) {
     //Eliminación del Mensaje Enviado
     message.delete().catch((O_o) => {});
     //Inicialización de Variables prefix - emojiObject Map - Embed
@@ -470,25 +470,15 @@ module.exports = class ErrorConector extends BaseConector {
   }
   //Error dontHaveSynkoins
   async dontHaveSynkoins(bot, message, username) {
-    //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
     //Validación Emojis de Guild
-    if (message.guild.id === synchronous.guildID) {
-      embed.addField(
-        `**Error de Base de Datos** ${putEmoji(bot, emoji)} `,
-        `El usuario **${username}** no tiene suficientes **Synkoins en la Base de Datos**.`,
-        false
-      );
-    } else {
-      embed.addField(
-        `**Error de Base de Datos** ❌`,
-        `El usuario **${username}** no tiene suficientes **Synkoins en la Base de Datos**.`,
-        false
-      );
-    }
+    embed.addField(
+      `**DB Error, don't have enough AR** ${putEmoji(bot, emoji)} `,
+      `The user **${username}** doesn't have enough AR to use.`,
+      false
+    );
     //Agregación de Tipo de Conector y Nombre de Error
     embed.addFields(
       {
@@ -497,7 +487,7 @@ module.exports = class ErrorConector extends BaseConector {
         inline: true,
       },
       {
-        name: "NOMBRE DE ERROR",
+        name: "NAME ERROR",
         value: "`dontHaveSynkoins(bot,message,username)`",
         inline: true,
       }
