@@ -89,7 +89,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 await reaction.users.remove(user.id);
               }
 
-              return err.noFindMemberBank(bot, reaction.message);
+              return err.noFindMember(bot, reaction.message);
             }
 
             if (!ObjectBankMember.memberCoins) {
@@ -98,7 +98,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 await reaction.users.remove(user.id);
               }
 
-              return err.noFindMemberBank(bot, reaction.message);
+              return err.noFindMember(bot, reaction.message);
             }
 
             let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
