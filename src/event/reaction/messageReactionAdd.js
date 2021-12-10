@@ -75,19 +75,40 @@ module.exports = class MessageReactionAdd extends BaseEvent {
               member.id
             );
 
-            if (!ObjectBankMember.memberCoins)
+            if (!ObjectMember) {
+              for (const reaction of userReactions.values()) {
+                member.roles.remove("918907276981583932");
+                await reaction.users.remove(user.id);
+              }
+
               return err.noFindMemberBank(bot, reaction.message);
+            }
+
+            if (!ObjectBankMember.memberCoins) {
+              for (const reaction of userReactions.values()) {
+                member.roles.remove("918907276981583932");
+                await reaction.users.remove(user.id);
+              }
+
+              return err.noFindMemberBank(bot, reaction.message);
+            }
 
             let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
             let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
 
             const ammountPay = 100;
-            if (actualAuthorCoins < ammountPay)
+            if (actualAuthorCoins < ammountPay) {
+              for (const reaction of userReactions.values()) {
+                member.roles.remove("918907276981583932");
+                await reaction.users.remove(user.id);
+              }
+
               return err.dontHaveSynkoins(
                 bot,
                 reaction.message,
                 member.displayName
               );
+            }
 
             try {
               if (

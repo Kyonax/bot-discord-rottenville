@@ -506,19 +506,14 @@ module.exports = class ErrorConector extends BaseConector {
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
     //Validación Emojis de Guild
-    if (message.guild.id === synchronous.guildID) {
-      embed.addField(
-        `**Error de Base de Datos** ${putEmoji(bot, emoji)} `,
-        `El usuario **${username}** no está registrado en **la Base de Datos**.`,
-        false
-      );
-    } else {
-      embed.addField(
-        `**Error de Base de Datos** ❌`,
-        `El usuario **${username}** no está registrado en **la Base de Datos**.`,
-        false
-      );
-    }
+    embed.addField(
+      `**DB Error, the user has never written to this server** ${putEmoji(
+        bot,
+        emoji
+      )} `,
+      `The user **${username}** is not register in **the Data Base**, please write and win AR to trade, and play.`,
+      false
+    );
     //Agregación de Tipo de Conector y Nombre de Error
     embed.addFields(
       {
@@ -527,7 +522,7 @@ module.exports = class ErrorConector extends BaseConector {
         inline: true,
       },
       {
-        name: "NOMBRE DE ERROR",
+        name: "NAME ERROR",
         value: "`noFindMember(bot,message,username)`",
         inline: true,
       }
