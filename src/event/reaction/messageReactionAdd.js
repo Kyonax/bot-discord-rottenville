@@ -213,7 +213,7 @@ ${putEmoji(
     if (reaction.message.partial) {
       try {
         let msg = await reaction.message.fetch();
-        if (msg.id === "918881738292363275") {
+        if (msg.id === "918934055150571532") {
           applyRole();
         }
       } catch (err) {
@@ -221,7 +221,7 @@ ${putEmoji(
       }
     } else {
       let msg = await reaction.message.fetch();
-      if (msg.id === "918881738292363275") {
+      if (msg.id === "918934055150571532") {
         applyRole();
       }
     }
