@@ -35,15 +35,15 @@ module.exports = class MessageReactionAdd extends BaseEvent {
     super("messageReactionAdd");
   }
   async run(bot, reaction, user) {
-    console.log("INICIO REACCIón")
+    const err = new Error();
     let eventChannel = reaction.message.guild.channels.cache.find(
-      (ch) => ch.name === "🎁・events-participate"
+      (ch) => ch.name === "💬・testing-team"
     );
 
     if (user.bot) return;
 
     let applyRole = async () => {
-      console.log("INICIO METODO")
+      console.log("INICIO METODO");
       let emojiName = reaction.emoji.name;
       let member = reaction.message.guild.members.cache.find(
         (member) => member.id === user.id
@@ -58,6 +58,40 @@ module.exports = class MessageReactionAdd extends BaseEvent {
             emojiName.toLowerCase() == "p1" ||
             emojiName.toLowerCase() == "p2"
           ) {
+
+            //Creación de Objeto Bank Member
+            let ObjectBankMember = null;
+            let ObjectBankAuthor = null;
+
+            ObjectBankMember = initObjectMember(
+              bankGuilds,
+              ObjectBankMember,
+              reaction.message.guild.id,
+              "894243194051629156"
+            );
+
+            ObjectBankAuthor = initObjectMember(
+              bankGuilds,
+              ObjectBankAuthor,
+              reaction.message.guild.id,
+              member.id
+            );
+
+            if (!ObjectBankMember.memberCoins)
+              return err.noFindMemberBank(bot, reaction.message);
+
+            let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
+            let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
+
+            const ammountPay = 100;
+            if (actualAuthorCoins < ammountPay)
+              return err.dontHaveSynkoins(
+                bot,
+                reaction.message,
+                member.displayName
+              );
+
+
             try {
               if (
                 member.roles.cache.some(
@@ -77,7 +111,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
                 );
                 return;
               }
-              console.log("ANTES DESICION")
+              console.log("ANTES DESICION");
               if (
                 member.roles.cache.some(
                   (role) => role.id === "918907276981583932"
@@ -99,14 +133,13 @@ ${putEmoji(
                   bot,
                   "905441646362120232"
                 )}, si deseas votar tienes que hacerlo nuevamente.**`);
-
               } else {
-                console.log("ENTRO DESICION NO VOTO")
+                console.log("ENTRO DESICION NO VOTO");
                 member.roles
                   .add("918907276981583932")
                   .catch((err) => console.error);
 
-                const ammountPay = 100;
+
                 //Creación de Mensajes Embed para el Comando
                 let embed = new MessageEmbed()
                   .setTitle(`**${member.displayName}'s Level Radiation**`)
@@ -114,41 +147,16 @@ ${putEmoji(
                   .setThumbnail(bot.user.displayAvatarURL())
                   .setFooter("RottenBot radiation scanner")
                   .setTimestamp();
-                //Creación de Objeto Bank Member
-                let ObjectBankMember = null;
-                let ObjectBankAuthor = null;
 
-                ObjectBankMember = initObjectMember(
-                  bankGuilds,
-                  ObjectBankMember,
-                  reaction.message.guild.id,
-                  "894243194051629156"
-                );
 
-                ObjectBankAuthor = initObjectMember(
-                  bankGuilds,
-                  ObjectBankAuthor,
-                  reaction.message.guild.id,
-                  member.id
-                );
+                //Validación de variables - Monedas - Usuario
 
-                if (!ObjectBankMember.memberCoins)
-                  return err.noFindMemberBank(bot, reaction.message);
 
-                //Validación de variables - Monedas - Usuario                
-                let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
-                let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
-                console.log("AUTHOR: " + actualAuthorCoins)
-                console.log("MEMBER: " + actualMemberCoins)
                 const updateMCoins = actualMemberCoins + parseInt(ammountPay);
                 const updateACoins = actualAuthorCoins - parseInt(ammountPay);
                 //Validación de Variables - No suficientes Monedas
-                if (actualAuthorCoins < ammountPay)
-                  return err.dontHaveSynkoins(
-                    bot,
-                    reaction.message,
-                    member.displayName
-                  );
+                console.log("Monedas persona: " + actualAuthorCoins)
+
                 //Transferencia de Monedas - Autor - Usuario
                 const updateMemberCoins = await updateGuildBankCoins(
                   reaction.message.guild.id,
@@ -216,17 +224,14 @@ ${putEmoji(
       }
     };
 
-
     try {
       let msg = await reaction.message.fetch();
-      if (msg.id === "918963050965520385") {
+      if (msg.id === "918881324473938002") {
         applyRole();
       }
     } catch (err) {
       console.log(err);
     }
-
-
   }
 };
 
