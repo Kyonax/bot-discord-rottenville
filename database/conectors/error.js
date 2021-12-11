@@ -500,8 +500,6 @@ module.exports = class ErrorConector extends BaseConector {
 
   //Error noFindMember
   async noFindMember(bot, message, username) {
-    //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
