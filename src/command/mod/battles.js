@@ -23,8 +23,8 @@ const guilds = new Map();
 module.exports = class BattlesCommand extends BaseCommand {
   constructor() {
     super(
-      "battle",
-      ["batalla", "btl"],
+      "battles",
+      ["batalla", "btl", "battle"],
       "Command to create **RottenVille-Battles**.",
       "battle`\n**Rol Announcement:** `<rol>`\n**Members:** `@competitor_1` `@competitor_2`",
       "_***Pilares - Inmortales - Moderadores***_",
@@ -68,7 +68,13 @@ module.exports = class BattlesCommand extends BaseCommand {
           "905441646362120232"
         )})**
 
-**<@&918875434639323136> #47 VS <@&918875434639323136> #214 - Match #1**
+${putEmoji(
+  bot,
+  "918868797367148604"
+)} **<@&918875434639323136> #48 VS ${putEmoji(
+          bot,
+          "918869733783269436"
+        )} <@&918875434639323136> #215**
 
 **You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
           bot,
@@ -87,9 +93,9 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
         true
       )
       .attachFiles([
-        "database/multimedia/images/demo/server/RTSolBattlesTournament1.png",
+        "database/multimedia/images/demo/server/RTSolBattlesTournament2.png",
       ])
-      .setImage("attachment://RTSolBattlesTournament1.png")
+      .setImage("attachment://RTSolBattlesTournament2.png")
       .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
 
