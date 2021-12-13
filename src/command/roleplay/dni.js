@@ -31,10 +31,10 @@ module.exports = class DniCommands extends BaseCommand {
     super(
       "dni",
       ["ti", "cc"],
-      "Comando para **Mostrar** la DNI del Servidor.",
-      "dni`\n**Opciones** `<user>`",
+      "Command to show the **DNI on the Server**.",
+      "dni`\n**Options** `<user>`",
       "Todos",
-      "roleplay"
+      "Citizen"
     );
   }
   async run(bot, message, args) {
@@ -43,6 +43,7 @@ module.exports = class DniCommands extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
+    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
     //Inicialización de Variables Autor - Usuario - Ingreso al Servidor - Role - Length Array - Id de Usuario
     let autor = message.author;
     const member = getMember(message, args.join(" "));
@@ -86,29 +87,33 @@ module.exports = class DniCommands extends BaseCommand {
     const actionLevel =
       "🟦".repeat(nextLevelIndex * 2) + "⬜".repeat((10 - nextLevelIndex) * 2);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].levelup);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].levelup);
     //Embed
     let embed = new MessageEmbed()
       .setAuthor(`${member.displayName}'s DNI`, member.user.displayAvatarURL())
       .setDescription(
-        `${memberBiography}.\n\nLlegando a **${message.guild.name}** el día ${joined}`
+        `${memberBiography}.\n\nComing to RottenVille **${message.guild.name}** on ${joined}`
       )
       .setThumbnail(member.user.displayAvatarURL())
-      .addField(`${emoji} Nivel de Rol`, `${memberLevel}`, true)
-      .addField(``+putEmoji(bot, "780487068237037568")+` Rank`, `#${rolePlayRank}`, true)
-      .addField(`⌛ Edad`, `${memberAge} años.`, true)
-      .addField(`☄ Renombre`, `${memberRespect}`, true)
-      .addField(`💼 Trabajo`, `${memberWork}.`, true)
-      .addField(`💍 Casada/o con`, `${memberRelation}.`, true)
+      .addField(`${emoji} Citizen Level`, `${memberLevel}`, true)
+      .addField(
+        `` + putEmoji(bot, "899084173455814676") + ` Rank`,
+        `#${rolePlayRank}`,
+        true
+      )
+      .addField(`⌛ Age`, `${memberAge} years old.`, true)
+      .addField(`☄ Respect`, `${memberRespect}`, true)
+      .addField(`💼 Citizen Position`, `${memberWork}.`, true)
+      .addField(`🚀 Rotten Number`, `${memberRelation}.`, true)
       .setColor(noneColor);
     if (ObjectMember.gameRolePlay) {
       embed.addField(
-        "**Miembro Roleplay en**",
-        `**> Juegos:**` + "\n`" + ObjectMember.gameRolePlay + "`"
+        "**Citizen on**",
+        `**> Games:**` + "\n`" + ObjectMember.gameRolePlay + "`"
       );
     }
     embed.addField(
-      `Experiencia de Rol ${numberWithCommas(memberXP)} / ${numberWithCommas(
+      `Citizen XP ${numberWithCommas(memberXP)} / ${numberWithCommas(
         nxtLevel
       )}`,
       `${actionLevel}`
@@ -233,6 +238,17 @@ StateManager.on("updateMemberAge", (guildID, memberID, memberAge) => {
     memberID
   );
   ObjectMember.memberAge = memberAge;
+});
+
+StateManager.on("updateGuildRotten", (guildID, memberID, rottenNumber) => {
+  let ObjectMember = null;
+  ObjectMember = initObjectMember(
+    guildsRoleplay,
+    ObjectMember,
+    guildID,
+    memberID
+  );
+  ObjectMember.memberRelation = rottenNumber;
 });
 
 StateManager.on("updateMemberBio", (guildID, memberID, memberBiography) => {

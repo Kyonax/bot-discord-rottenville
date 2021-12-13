@@ -95,13 +95,13 @@ module.exports.levelRoleRewards = async (message, bot) => {
     let addBoost = "";
     //Canal de Niveles
     const levelChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "📯・level-up"
+      (ch) => ch.name === "🎄・level-up"
     );
     //Emoji según la Guild
-    let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);    
-    let emojiRewardBag = putEmoji(bot, synchronous.emojiID[0].rewardbag);    
-    let emojiSynkoin = putEmoji(bot, synchronous.emojiID[0].synkoin);    
-    let emojiBoostB = putEmoji(bot, synchronous.emojiID[0].boostb);    
+    let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
+    let emojiRewardBag = putEmoji(bot, synchronous.emojiID[0].rewardbag);
+    let emojiSynkoin = putEmoji(bot, synchronous.emojiID[0].synkoin);
+    let emojiBoostB = putEmoji(bot, synchronous.emojiID[0].boostb);
     //Nuevo Nivel
     if (newLevel > memberLevel) {
       //Actualización Base de Datos Roleplay XP - Rank
@@ -141,13 +141,15 @@ module.exports.levelRoleRewards = async (message, bot) => {
         memberLevel !== 3 ||
         memberLevel !== 6 ||
         memberLevel !== 9 ||
-        memberLevel !== 12 
+        memberLevel !== 12
       ) {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          `${putEmoji(bot,"780487068526313502")} **XP** de Servidor + ` +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.`
+          `${putEmoji(bot, "780487068526313502")} **XP** de Servidor + ` +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.`
         );
         //Comprobación nuevo Nivel Usuario
         let memberXPUpdate = parseInt(ObjectMember.memberXP) + xpReward;
@@ -171,7 +173,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);
@@ -230,8 +234,12 @@ module.exports.levelRoleRewards = async (message, bot) => {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          "📜 **Nuevo** comando desbloqueado: `try or try <user>`.\n"+putEmoji(bot,"780487068526313502")+" **XP** de Servidor + " +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
+          "📜 **Nuevo** comando desbloqueado: `try or try <user>`.\n" +
+            putEmoji(bot, "780487068526313502") +
+            " **XP** de Servidor + " +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
             addBoost
         );
         //Comprobación nuevo Nivel Usuario
@@ -256,7 +264,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);
@@ -314,8 +324,12 @@ module.exports.levelRoleRewards = async (message, bot) => {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          "📜 **Nuevo** comando desbloqueado: `hug <user>`.\n"+putEmoji(bot,"780487068526313502")+" **XP** de Servidor + " +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
+          "📜 **Nuevo** comando desbloqueado: `hug <user>`.\n" +
+            putEmoji(bot, "780487068526313502") +
+            " **XP** de Servidor + " +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
             addBoost
         );
         //Comprobación nuevo Nivel Usuario
@@ -340,7 +354,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);
@@ -398,8 +414,12 @@ module.exports.levelRoleRewards = async (message, bot) => {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          "📜 **Nuevo** comando desbloqueado: `kiss <user>`.\n"+putEmoji(bot,"780487068526313502")+" **XP** de Servidor + " +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganadas: ${coinsReward}ks.` +
+          "📜 **Nuevo** comando desbloqueado: `kiss <user>`.\n" +
+            putEmoji(bot, "780487068526313502") +
+            " **XP** de Servidor + " +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganadas: ${coinsReward}ks.` +
             addBoost
         );
         //Comprobación nuevo Nivel Usuario
@@ -424,7 +444,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);
@@ -482,8 +504,12 @@ module.exports.levelRoleRewards = async (message, bot) => {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          "📜 **Nuevo** comando desbloqueado: `pat <user>`.\n"+putEmoji(bot,"780487068526313502")+" **XP** de Servidor + " +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
+          "📜 **Nuevo** comando desbloqueado: `pat <user>`.\n" +
+            putEmoji(bot, "780487068526313502") +
+            " **XP** de Servidor + " +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
             addBoost
         );
         //Comprobación nuevo Nivel Usuario
@@ -508,7 +534,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);
@@ -566,8 +594,12 @@ module.exports.levelRoleRewards = async (message, bot) => {
         //Agregación al Mensaje Embed
         levelupEmbed.addField(
           `Recompensa de Nivel ${emojiRewardBag}`,
-          "📜 **Nuevo** comando desbloqueado: `fuck <user>`.\n"+putEmoji(bot,"780487068526313502")+" **XP** de Servidor + " +
-            `${xpReward+putEmoji(bot,"851538050252931132")}\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
+          "📜 **Nuevo** comando desbloqueado: `fuck <user>`.\n" +
+            putEmoji(bot, "780487068526313502") +
+            " **XP** de Servidor + " +
+            `${
+              xpReward + putEmoji(bot, "851538050252931132")
+            }\n${emojiSynkoin} **Kyo Shinys** ganados: ${coinsReward}ks.` +
             addBoost
         );
         //Comprobación nuevo Nivel Usuario
@@ -592,7 +624,9 @@ module.exports.levelRoleRewards = async (message, bot) => {
               "**Nivel Alcanzado**",
               `Nuevo nivel **${ObjectMember.memberLevel}**`
             )
-            .setFooter("Estadísticas de niveles Internacional de Mundo Kyonax !")
+            .setFooter(
+              "Estadísticas de niveles Internacional de Mundo Kyonax !"
+            )
             .setTimestamp();
           memberLevelUpdate = newMemberLevel;
           levelChannel.send(levelUpMemberEmbed);

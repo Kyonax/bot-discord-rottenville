@@ -208,8 +208,8 @@ module.exports = {
           memberLevel: 1,
           memberAge: 18,
           memberRespect: 0,
-          memberWork: "**Vago**",
-          memberRelation: "Soltero/a",
+          memberWork: "**<@&920025805055197224>**",
+          memberRelation: "**<@&918875434639323136>** #",
           memberBiography: "None Biography Information",
         });
         if (rolePlayMembers.get(memberID).guildID === guildID) {
@@ -229,8 +229,8 @@ module.exports = {
           1,
           18,
           0,
-          "**Vago**",
-          "Soltero/a",
+          "**<@&920025805055197224>**",
+          "**<@&918875434639323136>** #",
           "None Biography Information"
         );
       });
@@ -299,6 +299,11 @@ module.exports = {
   updateGuildRolePlayRank: function (guildID, memberID, rolePlayRank) {
     return StateManager.connection.query(
       `UPDATE RolePlayMembers SET rolePlayRank='${rolePlayRank}' WHERE guildID='${guildID}' AND memberID='${memberID}'`
+    );
+  },
+  updateGuildRotten: function (guildID, memberID, rottenNumber) {
+    return StateManager.connection.query(
+      `UPDATE RolePlayMembers SET memberRelation='${rottenNumber}' WHERE guildID='${guildID}' AND memberID='${memberID}'`
     );
   },
   updateGuildRolePlayAge: function (guildID, memberID, memberAge) {

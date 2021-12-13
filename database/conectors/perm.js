@@ -48,6 +48,39 @@ module.exports = class ErrorConector extends BaseConector {
       msg.delete({ timeout: 20000, reason: "It had to be done." });
     });
   }
+
+  //Falta de Permisos Synks
+  async citizenPerms(bot, message) {
+    //Eliminación del Mensaje Enviado
+    message.delete().catch((O_o) => {});
+    //Inicialización de Variables Emoji - MessageEmbed
+    const emoji = synchronous.emojiID[0].cancelado;
+    let embed = new MessageEmbed().setColor(kyoColor);    
+      embed.addField(
+        `**You are NOT a Citizen** ${putEmoji(bot, emoji)}`,
+        `Claim your **DNI to use this command**.`,
+        false
+      );
+    
+    //Agregación de Tipo de Conector y Nombre de Error
+    embed.addFields(
+      {
+        name: "CONECTOR",
+        value: `[${this.name.toUpperCase()}]`,
+        inline: true,
+      },
+      {
+        name: "TIPO DE PERMISO",
+        value: "`citizenPerms(bot,message)`",
+        inline: true,
+      }
+    );
+    //Envío del Mensaje Embed y su autoeliminación en 20seg
+    message.channel.send(embed).then((msg) => {
+      msg.delete({ timeout: 20000, reason: "It had to be done." });
+    });
+  }
+
   //Falta de Permisos Synks
   async synksPerms(bot, message) {
     //Eliminación del Mensaje Enviado

@@ -2247,6 +2247,44 @@ module.exports = class ErrorConector extends BaseConector {
       msg.delete({ timeout: 20000, reason: "It had to be done." });
     });
   }
+
+  //Error noRottenDigit
+  async noRottenDigit(bot, message) {
+    //Eliminación del Mensaje Enviado
+    message.delete().catch((O_o) => {});
+    //Inicialización de Variables prefix - emojiObject Map - Embed
+    const prefix = guildCommandPrefix.get(message.guild.id);
+    const emoji = synchronous.emojiID[0].cancelado;
+    let embed = new MessageEmbed().setColor(kyoColor);
+    //Validación Emojis de Guild    
+      embed.addField(
+        `**Error** ${putEmoji(bot, emoji)} `,
+        `You must enter an **Age** to be able to make the change in the Database.\n` +
+          "Use **the command again**: `" +
+          prefix +
+          "rotten <number>`",
+        false
+      );
+    
+    //Agregación de Tipo de Conector y Nombre de Error
+    embed.addFields(
+      {
+        name: "CONECTOR",
+        value: `[${this.name.toUpperCase()}]`,
+        inline: true,
+      },
+      {
+        name: "NOMBRE DE ERROR",
+        value: "`noRottenDigit(bot,message)`",
+        inline: true,
+      }
+    );
+    //Envío del Mensaje Embed y su autoeliminación en 20seg
+    message.channel.send(embed).then((msg) => {
+      msg.delete({ timeout: 20000, reason: "It had to be done." });
+    });
+  }
+
   //Error noAgeDigit
   async noAgeDigit(bot, message) {
     //Eliminación del Mensaje Enviado

@@ -1,6 +1,6 @@
 //Importacion de node.js events (EventEmitter)
 const { EventEmitter } = require("events");
-EventEmitter.defaultMaxListeners = 20;
+EventEmitter.defaultMaxListeners = 50;
 //Importando archivo Conexión con la Base de Datos
 const connection = require("../../../database/mysql/db");
 //Creando Clase StateManager - padre(EventEmitter)

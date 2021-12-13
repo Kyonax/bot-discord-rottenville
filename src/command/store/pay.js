@@ -20,6 +20,7 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { limit } = require("../../utils/logic/logicMember");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
+const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 const StateManager = require("../../utils/database/StateManager");
@@ -44,8 +45,9 @@ module.exports = class PayCommand extends BaseCommand {
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
-    //Creación de Objetos
-    const err = new Error();
+    //Creación de Objetos    
+    const err = new Error();    
+    const perm = new Perms();
     //Inicialización de Variable Usuario
     let autor = getMember(message, message.author.id);
     let member = getMember(message, args[1]);
@@ -142,6 +144,7 @@ module.exports = class PayCommand extends BaseCommand {
         true
       );
     } else if (type.toLowerCase() === "boost") {
+      if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
       let boostB = 1800;
       let boostA = 3200;
       let boostPremium = 6000;
@@ -334,6 +337,7 @@ module.exports = class PayCommand extends BaseCommand {
         );
       }
     } else if (args[0] === "level") {
+      if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
       let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
       let actualAuthorLevel = parseInt(ObjectAuthor.memberLevel);
       let actualAuthorXP = parseInt(ObjectAuthor.memberXP);

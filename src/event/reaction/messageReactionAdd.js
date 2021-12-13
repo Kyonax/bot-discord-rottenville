@@ -257,11 +257,12 @@ ${putEmoji(
 
     try {
       let msg = await reaction.message.fetch();
+      if(!msg.embeds) return;            
       if (msg.embeds[0].title.includes("Solana RottenVille-Battles")) {
         applyRole();
       }
     } catch (err) {
-      console.log(err);
+      
     }
   }
 };
