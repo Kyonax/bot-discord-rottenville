@@ -1,6 +1,10 @@
 //Importación especifica de Metodos - RichEmbed - putEmoji - Errors - nonecolor Color - afirmado Emoji
 const { MessageEmbed } = require("discord.js");
-const { putEmoji,getMember, initObjectMember } = require("../../utils/misc/functions");
+const {
+  putEmoji,
+  getMember,
+  initObjectMember,
+} = require("../../utils/misc/functions");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { updateGuildRotten } = require("../../utils/database/functions");
@@ -30,9 +34,14 @@ module.exports = class AgeCommand extends BaseCommand {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    const err = new Error();    
+    const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables Autor - Usuario - Ingreso al Servidor - Role - Length Array - Id de Usuario
     let autor = message.author;
     const member = getMember(message, args.join(" "));
@@ -49,23 +58,23 @@ module.exports = class AgeCommand extends BaseCommand {
     const { moderatorMember } = ObjectAutor;
     //Validación es un Número o no
     if (message.author.id != member.id) {
-        if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
-      }
+      if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
+    }
     //Inicialización de variable Edad
-    const rotten = args[0];
+    const rotten = args.slice(1).join(" ");
     const updateMemberAge = await updateGuildRotten(
       message.guild.id,
       member.id,
-      "**<@&918875434639323136> #** "+rotten
+      "**<@&918875434639323136> #** " + rotten
     );
     StateManager.emit(
       "updateGuildRotten",
       message.guild.id,
       member.id,
-      "**<@&918875434639323136> #** "+rotten
+      "**<@&918875434639323136> #** " + rotten
     );
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     //Embed de confirmación
     let embed = new MessageEmbed()
       .setAuthor(
@@ -81,77 +90,77 @@ module.exports = class AgeCommand extends BaseCommand {
   }
 };
 
+StateManager.on(
+  "membersFetched",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    memberLanguage,
+    adminMember,
+    inmortalMember,
+    moderatorMember,
+    serverRank,
+    memberXP,
+    memberLevel,
+    memberBoost,
+    boostMemberTime,
+    warnings
+  ) => {
+    guildMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      memberLanguage: memberLanguage,
+      adminMember: adminMember,
+      inmortalMember: inmortalMember,
+      moderatorMember: moderatorMember,
+      serverRank: serverRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberBoost: memberBoost,
+      boostMemberTime: boostMemberTime,
+      warnings: warnings,
+    });
+    guilds.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
 
 StateManager.on(
-    "membersFetched",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      memberLanguage,
-      adminMember,
-      inmortalMember,
-      moderatorMember,
-      serverRank,
-      memberXP,
-      memberLevel,
-      memberBoost,
-      boostMemberTime,
-      warnings
-    ) => {
-      guildMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        memberLanguage: memberLanguage,
-        adminMember: adminMember,
-        inmortalMember: inmortalMember,
-        moderatorMember: moderatorMember,
-        serverRank: serverRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberBoost: memberBoost,
-        boostMemberTime: boostMemberTime,
-        warnings: warnings,
-      });
-      guilds.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
-  
-  StateManager.on(
-    "membersUpdate",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      memberLanguage,
-      adminMember,
-      inmortalMember,
-      moderatorMember,
-      serverRank,
-      memberXP,
-      memberLevel,
-      memberBoost,
-      boostMemberTime,
-      warnings
-    ) => {
-      guildMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        memberLanguage: memberLanguage,
-        adminMember: adminMember,
-        inmortalMember: inmortalMember,
-        moderatorMember: moderatorMember,
-        serverRank: serverRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberBoost: memberBoost,
-        boostMemberTime: boostMemberTime,
-        warnings: warnings,
-      });
-      guilds.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
+  "membersUpdate",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    memberLanguage,
+    adminMember,
+    inmortalMember,
+    moderatorMember,
+    serverRank,
+    memberXP,
+    memberLevel,
+    memberBoost,
+    boostMemberTime,
+    warnings
+  ) => {
+    guildMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      memberLanguage: memberLanguage,
+      adminMember: adminMember,
+      inmortalMember: inmortalMember,
+      moderatorMember: moderatorMember,
+      serverRank: serverRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberBoost: memberBoost,
+      boostMemberTime: boostMemberTime,
+      warnings: warnings,
+    });
+    guilds.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
+
