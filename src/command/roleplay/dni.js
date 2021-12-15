@@ -105,7 +105,9 @@ module.exports = class DniCommands extends BaseCommand {
       .addField(`☄ Respect`, `${memberRespect}`, true)
       .addField(`💼 Citizen Position`, `${memberWork}.`, true)
       .addField(`🚀 Rotten Number`, `${memberRelation}.`, true)
+      
       .setColor(noneColor);
+
     if (ObjectMember.gameRolePlay) {
       embed.addField(
         "**Citizen on**",
@@ -121,11 +123,11 @@ module.exports = class DniCommands extends BaseCommand {
     //Validación de Variables - Permisos de Comandos - Falta de Usuario - Falta de Razón - Auto Baneo
     // - Usuarios Restringidos - Canal Existente
     if (moderatorMember === 0) {
-      if (member.id !== autor.id) return perm.moderatorPerms(bot, message);
+      if (member.id !== autor.id) return perm.moderatorPerms(bot, message);          
       return message.channel.send(embed).then((msg) => {
         msg.delete({ timeout: 60000, reason: "It had to be done." });
       });
-    } else {
+    } else {      
       message.channel.send(embed).then((msg) => {
         msg.delete({ timeout: 60000, reason: "It had to be done." });
       });

@@ -164,3 +164,11 @@ StateManager.on(
   }
 );
 
+StateManager.on(
+  "updateModeratorMember",
+  (guildID, memberID, moderatorMember) => {
+    let ObjectMember = null;
+    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
+    ObjectMember.moderatorMember = moderatorMember;
+  }
+);
