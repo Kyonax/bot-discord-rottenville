@@ -39,7 +39,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
   async run(bot, reaction, user) {
     const err = new Error();
     let eventChannel = reaction.message.guild.channels.cache.find(
-      (ch) => ch.name === "💬・testing-team"
+      (ch) => ch.name === "🎁・rottenville-battles"
     );
 
     if (user.bot) return;
