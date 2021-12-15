@@ -68,7 +68,7 @@ module.exports = class DniCommands extends BaseCommand {
     
     let embedCard = new MessageEmbed()
     .setTitle(`${putEmoji(bot,"910558106008817764")} RT◎ VIP PASS CARD - ${member.displayName}`)
-    .setColor(noneColor)
+    .setColor("#41F389")
     .attachFiles([
       `./database/multimedia/images/demo/server/${member.id}-min.png`,
     ])
