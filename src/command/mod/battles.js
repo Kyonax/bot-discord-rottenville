@@ -39,6 +39,8 @@ module.exports = class BattlesCommand extends BaseCommand {
     const err = new Error();
     const perm = new Perms();
     const autor = getMember(message, message.author.id);
+    const number = args[3]
+    if (!number) number = 1;
     let [cmd, role] = message.content.split(" ");
     let _competitor_1 = args[1];
     let _competitor_2 = args[2];
@@ -71,10 +73,10 @@ module.exports = class BattlesCommand extends BaseCommand {
 ${putEmoji(
   bot,
   "918868797367148604"
-)} **<@&918875434639323136> #48 VS ${putEmoji(
+)} **<@&918875434639323136> #51 VS ${putEmoji(
           bot,
           "918869733783269436"
-        )} <@&918875434639323136> #215**
+        )} <@&918875434639323136> #216**
 
 **You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
           bot,
@@ -93,9 +95,9 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
         true
       )
       .attachFiles([
-        "database/multimedia/images/demo/server/RTSolBattlesTournament2.png",
+        `database/multimedia/images/demo/server/RTSolBattlesTournament${number}.png`,
       ])
-      .setImage("attachment://RTSolBattlesTournament2.png")
+      .setImage(`attachment://RTSolBattlesTournament${number}.png`)
       .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
 

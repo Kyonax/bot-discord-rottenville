@@ -15,6 +15,7 @@ const {
   updateGuildLevel,
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
+const  RTSolBattles  = require("../../../database/utils/adds/votes.json");
 const { limit } = require("../../utils/logic/logicMember");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
@@ -27,7 +28,8 @@ const bankGuilds = new Map();
 const guildMembers = new Map();
 const guilds = new Map();
 //Exportación de Comando Pay
-
+//Importación de paquetes JS de Node.js
+const fs = require("fs");
 //Importación de la Clase Padre
 const BaseEvent = require("../../utils/structure/BaseEvent");
 module.exports = class MessageReactionAdd extends BaseEvent {
@@ -37,7 +39,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
   async run(bot, reaction, user) {
     const err = new Error();
     let eventChannel = reaction.message.guild.channels.cache.find(
-      (ch) => ch.name === "🎁・events-participate"
+      (ch) => ch.name === "💬・testing-team"
     );
 
     if (user.bot) return;
@@ -159,6 +161,31 @@ ${putEmoji(
                   "905441646362120232"
                 )}, si deseas votar tienes que hacerlo nuevamente.**`);
               } else {
+
+                for (const reaction of userReactions.values()) {                  
+                  await reaction.users.remove(user.id);
+                }
+                
+                if (emojiName.toLowerCase() == "p1") {
+                  RTSolBattles.member[member.id] = {
+                    p1: 1,
+                    p2: 0
+                  }
+                }else if (emojiName.toLowerCase() == "p2") {
+                  RTSolBattles.member[member.id] = {
+                    p1: 0,
+                    p2: 1
+                  }
+                }
+
+                fs.writeFile(
+                  "./database/utils/adds/votes.json",
+                  JSON.stringify(RTSolBattles),
+                  (err) => {
+                    if (err) console.log(err);
+                  }
+                );
+                
                 member.roles
                   .add("918907276981583932")
                   .catch((err) => console.error);
@@ -244,6 +271,10 @@ ${putEmoji(
                       reason: "It had to be done.",
                     });
                   });
+
+                  for (const reaction of userReactions.values()) {                  
+                    await reaction.users.remove(user.id);
+                  }
               }
             } catch (error) {
               console.error(error);
@@ -253,6 +284,10 @@ ${putEmoji(
       } catch (err) {
         console.log(err);
       }
+
+      for (const reaction of userReactions.values()) {                  
+        await reaction.users.remove(user.id);
+      }
     };
 
     try {
@@ -260,6 +295,9 @@ ${putEmoji(
       if(!msg.embeds) return;            
       if (msg.embeds[0].title.includes("Solana RottenVille-Battles")) {
         applyRole();
+        for (const reaction of userReactions.values()) {                  
+          await reaction.users.remove(user.id);
+        }
       }
     } catch (err) {
       
