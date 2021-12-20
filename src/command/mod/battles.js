@@ -39,7 +39,7 @@ module.exports = class BattlesCommand extends BaseCommand {
     const err = new Error();
     const perm = new Perms();
     const autor = getMember(message, message.author.id);
-    let number = args[3]
+    let number = args[3];
     if (!number) number = 1;
     let [cmd, role] = message.content.split(" ");
     let _competitor_1 = args[1];
@@ -73,10 +73,10 @@ module.exports = class BattlesCommand extends BaseCommand {
 ${putEmoji(
   bot,
   "918868797367148604"
-)} **<@&918875434639323136> #55 VS ${putEmoji(
+)} **<@&918875434639323136> #127 VS ${putEmoji(
           bot,
           "918869733783269436"
-        )} <@&918875434639323136> #218**
+        )} <@&918875434639323136> #219**
 
 **You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
           bot,

@@ -9,7 +9,7 @@ const fetch = require("node-fetch");
 const BaseCommand = require("../../utils/structure/BaseCommand.js");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 //Exportación del Comando Alpaca
-module.exports = class AlpacaCommand extends BaseCommand {
+module.exports = class TokenCommand extends BaseCommand {
     constructor() {
         super(
             "token",
