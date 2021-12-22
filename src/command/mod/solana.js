@@ -1,64 +1,72 @@
 //Importación especifica de Metodos - RichEmbed - Colors - Errors
 const { MessageEmbed } = require("discord.js");
 const { lightbluecolor } = require("../../../database/utils/color/color.json");
-//Importación Clase de Objetos - Conector Error
+const CandyMachineJSON = require("../../../database/utils/adds/CandyMachine_Data.json");
+var theblockchainapi = require("theblockchainapi");
+let defaultClient = theblockchainapi.ApiClient.instance; //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 //Variables js de Node.js
 const fetch = require("node-fetch");
-const solanaWeb3 = require('@solana/web3.js');
 //Importación de la Clase Padre
 const BaseCommand = require("../../utils/structure/BaseCommand.js");
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const fs = require("fs");
 //Exportación del Comando Alpaca
 module.exports = class SolanaCommand extends BaseCommand {
-    constructor() {
-        super(
-            "solana",
-            ["sol"],
-            "Command to use Solana API.",
-            "solana`",
-            "_***Mod***_",
-            "mod"
-        );
-    }
+  constructor() {
+    super(
+      "solana",
+      ["sol"],
+      "Command to use Solana API.",
+      "solana`",
+      "_***Mod***_",
+      "mod"
+    );
+  }
 
-    async run(bot, message, args) {
-        //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-        message.delete().catch((O_o) => { });
-        //Creación de Objetos
-        const err = new Error();
-        const walletAdress = args[0]        
+  async run(bot, message, args) {
+    //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
+    message.delete().catch((O_o) => {});
+    //Creación de Objetos
+    const err = new Error();
+    const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
+    var APIKeyID = defaultClient.authentications["APIKeyID"];
+    APIKeyID.apiKey = "tjcqBAvBw68bF34";
 
-        // Connect to cluster
-        var connection = new solanaWeb3.Connection(
-            solanaWeb3.clusterApiUrl('devnet'),
-            'confirmed',
-        );
+    var APISecretKey = defaultClient.authentications["APISecretKey"];
+    APISecretKey.apiKey = "IjSjwGO2I6ykPiQ";
+    let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
 
-        console.table(solanaWeb3)
+    let request = new theblockchainapi.GetMintedNFTsRequest(); // GetMintedNFTsRequest |
+    request.candy_machine_id = walletAdress;
+    request.network = "mainnet-beta";
 
-        // Generate a new wallet keypair and airdrop SOL
-        var wallet = solanaWeb3.Keypair.generate(walletAdress);        
-        var airdropSignature = await connection.requestAirdrop(
-            wallet.publicKey,
-            solanaWeb3.LAMPORTS_PER_SOL,
-        );
+    let opts = {
+      getMintedNFTsRequest: request,
+    };
 
-        //wait for airdrop confirmation
-        await connection.confirmTransaction(airdropSignature);
+    const result = await apiInstance
+      .solanaGetNFTsMintedFromCandyMachine(opts)
+      .then(
+        (data) => {
+          console.log("API called successfully.");
+          return data;
+        },
+        (error) => {
+          console.error(error);
+          return null;
+        }
+      );
+    CandyMachineJSON.dataNFTs["RottenVille"] = {
+      result: result,
+    };
+    console.table(result);
 
-        // get account info
-        // account data is bytecode that needs to be deserialized
-        // serialization and deserialization is program specic
-        let account = await connection.getAccountInfo(wallet.publicKey);    
-
-        // Connect to cluster
-        var connection = new solanaWeb3.Connection(
-            solanaWeb3.clusterApiUrl('devnet'),
-            'confirmed',
-        );
-
-        
-
-    }
+    fs.writeFile(
+      "./database/utils/adds/CandyMachine_Data.json",
+      JSON.stringify(CandyMachineJSON),
+      (err) => {
+        if (err) console.log(err);
+      }
+    );
+  }
 };

@@ -38,6 +38,7 @@
     "node-fetch": "^2.6.1",
     "pm2": "^5.1.2",
     "pngjs": "^5.0.0",
+    "theblockchainapi": "^1.0.920",
     "twit": "^2.2.11",
     "xmlhttprequest": "^1.8.0"
   }
