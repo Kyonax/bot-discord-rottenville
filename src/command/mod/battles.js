@@ -73,10 +73,10 @@ module.exports = class BattlesCommand extends BaseCommand {
 ${putEmoji(
   bot,
   "918868797367148604"
-)} **<@&918875434639323136> #198 VS ${putEmoji(
+)} **<@&918875434639323136> #200 VS ${putEmoji(
           bot,
           "918869733783269436"
-        )} <@&918875434639323136> #223**
+        )} <@&918875434639323136> #211**
 
 **You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
           bot,
