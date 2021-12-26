@@ -9,6 +9,7 @@ const { generateXP, limitLevel } = require("../../utils/logic/logicMember");
 const { generateCoins } = require("../../utils/logic/logicBank");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
 const {
+  initDatabase,
   memberExist,
   insertMember,
   insertMemberMap,
@@ -47,6 +48,7 @@ module.exports = class MessageEvent extends BaseEvent {
     this.connection = StateManager.connection;
   }
   async run(bot, message) {
+    initDatabase();
     //Reaction specific MessageEmbeds
     await reactionEmbeds(bot, message);
     //Attachment Message

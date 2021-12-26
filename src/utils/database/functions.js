@@ -2,6 +2,13 @@
 const StateManager = require("../database/StateManager");
 //Exportación de las Funciones
 module.exports = {
+  initDatabase: async function () {
+    StateManager.connection.query(`SELECT * FROM GuildMembers`).catch((err) => {
+      if (err) {
+        StateManager.connection.destroy();
+      }
+    });
+  },
   members: async function (guildID) {
     return StateManager.connection.query(
       `SELECT * FROM GuildMembers WHERE guildID='${guildID}'`
