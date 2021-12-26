@@ -26,9 +26,10 @@ module.exports = class TokenCommand extends BaseCommand {
 
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;
     let bodyNet = null;
+    let url = null;
     //Creación de Objetos
     const err = new Error();
     console.table(CandyMachineJSON.dataNFTs.RottenVille.result[0]);
@@ -43,19 +44,21 @@ module.exports = class TokenCommand extends BaseCommand {
     console.log(" ---> MARIA NET");
 
     //Solicitando Json
-    var url =
-      CandyMachineJSON.dataNFTs.RottenVille.result[0].nft_metadata.data.uri;
-    fetch(url)
-      .then((res) => res.json())
-      .then((body) => {
-        if (!body) return err.fetchCrash(bot, message);
-        console.log(body);
-        bodyNet = body;
-        message.channel.send(body.image);
+    for (let i = 0, len = CandyData.length; i < len; i++) {
 
-        for (let i = 0, len = CandyData.length; i < len; i++) {
-          CandyData.forEach((data) => {
-            if (data.nft_metadata.data.name == "Rotten Ville #" + i) {
+
+      CandyData.forEach((data) => {
+
+        if (data.nft_metadata.data.name == "Rotten Ville #" + i) {
+          url = data.nft_metadata.data.uri;
+
+          fetch(url)
+            .then((res) => res.json())
+            .then((body) => {
+              if (!body) return err.fetchCrash(bot, message);
+              console.log(body);
+              bodyNet = body;
+
               CandyRottenVille.CandyMachine.RottenVille.NFT[i] = {
                 name: data.nft_metadata.data.name,
                 symbol: data.nft_metadata.data.symbol,
@@ -67,17 +70,24 @@ module.exports = class TokenCommand extends BaseCommand {
                 attributes: body.attributes,
                 properties: body.properties,
               };
-            }
-          });
-        }
 
-        fs.writeFile(
-          "./database/utils/adds/CandyMachineRottenVille.json",
-          JSON.stringify(CandyRottenVille),
-          (err) => {
-            if (err) console.log(err);
-          }
-        );
+              fs.writeFile(
+                "./database/utils/adds/CandyMachineRottenVille.json",
+                JSON.stringify(CandyRottenVille),
+                (err) => {
+                  if (err) console.log(err);
+                }
+              );
+
+            });
+
+
+        }
       });
+
+
+
+
+    }
   }
 };
