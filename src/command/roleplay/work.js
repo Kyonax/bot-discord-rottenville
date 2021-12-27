@@ -18,7 +18,7 @@ const guilds = new Map();
 module.exports = class WorkCommand extends BaseCommand {
   constructor() {
     super(
-      "citizen",
+      "work",
       ["ciudadano", "cargo", "ocupation"],
       "Command to put your **Ocupation in RottenVille**.",
       "work <@user> <nameWork>`",

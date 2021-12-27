@@ -20,7 +20,7 @@ module.exports = class FetchCommand extends BaseCommand {
             "fetch",
             ["getData"],
             "Command to get the Addres and Compare with database.",
-            "clear`\n**Options:** `<wallet>`",
+            "fetch`\n**Options:** `<wallet>`",
             "_***Pilares - Inmortales - Moderadores***_",
             "mod"
         );
@@ -50,11 +50,16 @@ module.exports = class FetchCommand extends BaseCommand {
         const typeFetch = args[0];
         const member = getMember(message, args[1])
         const walletAdress = args[2];
-
-        let initialize = [new MessageEmbed().setTitle("#1 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#2 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#3 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#4 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#5 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#6 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#7 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#8 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#9 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#10 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#11 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#12 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#13 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#14 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#15 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#16 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#18 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#19 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#20 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#21 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#22 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#23 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#24 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#25 Fetch Rottens in Wallet"), new MessageEmbed().setTitle("#26 Fetch Rottens in Wallet")]
-        let [embed, embed2, embed3, embed4, embed5, embed6, embed8, embed9, embed10, embed11, embed12, embed13, embed14, embed15, embed16, embed17, embed18, embed19, embed20, embed21, embed22, embed23, embed24, embed25] = initialize;
-        let embeds = [embed, embed2, embed3, embed4, embed5, embed6, embed8, embed9, embed10, embed11, embed12, embed13, embed14, embed15, embed16, embed17, embed18, embed19, embed20, embed21, embed22, embed23, embed24, embed25]
-
+        const sizeEmbeds = 51;        
+        let repeatNumbers = []
+        let initialize = []
+        for (let index = 1; index <= sizeEmbeds; index++) {
+            initialize.push(new MessageEmbed().setTitle(`#${index} Fetch Rottens in Wallet`))      
+            repeatNumbers.push(index)      
+            repeatNumbers.push(index)   
+        }                      
+        let [embed, embed2, embed3, embed4, embed5, embed6, embed8, embed9, embed10, embed11, embed12, embed13, embed14, embed15, embed16, embed17, embed18, embed19, embed20, embed21, embed22, embed23, embed24, embed25, embed26, embed27, embed28, embed29, embed30, embed31, embed32, embed33, embed34, embed35, embed36, embed37, embed38, embed39, embed40, embed41, embed42, embed43, embed44, embed45, embed46, embed47, embed48, embed49, embed50] = initialize;
+        let embeds = [embed, embed2, embed3, embed4, embed5, embed6, embed8, embed9, embed10, embed11, embed12, embed13, embed14, embed15, embed16, embed17, embed18, embed19, embed20, embed21, embed22, embed23, embed24, embed25, embed26, embed27, embed28, embed29, embed30, embed31, embed32, embed33, embed34, embed35, embed36, embed37, embed38, embed39, embed40, embed41, embed42, embed43, embed44, embed45, embed46, embed47, embed48, embed49, embed50]        
 
         if (typeFetch == "wallet") {
             //Solicitando Json
@@ -69,26 +74,23 @@ module.exports = class FetchCommand extends BaseCommand {
                         CandyData.forEach((data) => {
                             if (data.token == JSON.parse(xhr.responseText)[index].tokenAddress) {
                                 rottensMember.push(data.name);
-                                try {
-                                    arrayCount.push(parseInt(String(iteratorCount * baseNumber)[0]))
-                                    arrayCount.push(parseInt(String(iteratorCount * baseNumber)[1]))  
-
-                                    embeds.forEach((emb) => {                                        
-                                        if (emb.title.includes(arrayCount[iteratorCount-1])) {
+                                try {                                    
+                                    embeds.forEach((emb) => {
+                                        if (emb.title.includes(repeatNumbers[iteratorCount - 1])) {                                            
                                             emb.setDescription(`**${putEmoji(bot, emoji)} Fetching Candy Machine** actual data from <@${member.id}>`)
                                                 .addField(`Wallet Member `, `**${walletAdress}**`)
                                                 .addField(`${data.name}`, `**◎ ${data.token}**`, false)
                                                 .addField(`Image NFT`, `**${data.image}**`, false)
                                                 .setColor("#00F27F");
 
-                                            data.attributes.forEach((att) => {
-                                                emb.addField(`${att.trait_type}`, `**${att.value}**`, true);
-                                            })
+                                            //data.attributes.forEach((att) => {
+                                            //    emb.addField(`${att.trait_type}`, `**${att.value}**`, true);
+                                            //})
                                             emb.setThumbnail(`${data.image}`);
                                             emb.addField(`---`, `**---**`, false);
                                         }
                                     })
-                                                                                                          
+
                                     iteratorCount = iteratorCount + 1;
                                 } catch (error) {
                                     console.log(error)
@@ -98,12 +100,16 @@ module.exports = class FetchCommand extends BaseCommand {
                         })
                     }
 
-                    embeds.forEach((emb) =>{
-                      console.log(emb);
-                    })
-
-                    console.log(iteratorCount)
-                    console.log(rottensMember)
+                    embeds.forEach((emb) => {
+                        let reference = emb.title;
+                        reference = reference.replace("#", "")
+                        reference = reference.replace(" Fetch Rottens in Wallet", "")
+                        reference = parseInt(reference);
+                        if (reference <= iteratorCount / 2) {
+                            message.channel.send(emb);                                                      
+                        }
+                    })   
+                    console.table(rottensMember)                 
                 }
             };
             xhr.send();
