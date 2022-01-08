@@ -27,7 +27,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     ch.name.includes("💬・general-chat")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("📗・welcome-survivor")
+    ch.name.includes("📯・new-member")
   );
 
   let _embed = new MessageEmbed()
