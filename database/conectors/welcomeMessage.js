@@ -51,8 +51,8 @@ module.exports.welcomeMessage = async (member, bot) => {
         "`👹`" +
         `
 ┊
-┊ **Verify on <#898985535819902996> ** to see the other channels
-┊ and get the role ** <@&895850023311540225> **
+┊ **Holder Verify on <#898986608555073546> ** to see the other channels
+┊ and get the role ** <@&900152631828299826> **
 ┊
 ┊ _If you have any question go to <#898983573607030834> or_
 ┊ **__ask for help on <#899003268473180230>__**
