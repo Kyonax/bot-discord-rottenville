@@ -10,7 +10,7 @@ const CitizenJSON = require("../../../database/utils/adds/citizen.json");
 const { memberExist } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
-const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
+const BaseCommand = require("../../utils/structure/BaseCommand.js");
 const fs = require("fs");
 //Exportación del Comando Clear
 module.exports = class CitizenCommand extends BaseCommand {

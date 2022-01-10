@@ -17,7 +17,7 @@ const Perms = require("../../../database/conectors/perm");
 //Importación de Usuario
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
-const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
+const BaseCommand = require("../../utils/structure/BaseCommand.js");
 const StateManager = require("../../utils/database/StateManager");
 //Mapa de Miembros
 const guildMembers = new Map();
