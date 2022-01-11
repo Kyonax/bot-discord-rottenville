@@ -15,7 +15,7 @@ module.exports = class HelpCommand extends BaseCommand {
     super(
       "help",
       ["h", "ayuda", "commands", "comandos"],
-      "¿No te parece **obvio** su uso?.",
+      "Command to get Help, with any other Command.",
       "help`.\n**Opciones:** `<name_command>`",
       "_***Todos***_",
       "guild"
@@ -35,19 +35,21 @@ module.exports = class HelpCommand extends BaseCommand {
       //Creación de Mensaje Embed para Comandos Admin
       let firstEmbed = new MessageEmbed()
         .setDescription(
-          `Hola **${message.author.username}** yo soy el **Bot principal** del servidor de **${message.guild.name}**, si quieres interactuar conmigo aquí te tengo **${bot.commands.size}** comandos que podrás usar.\n\n\n**Prefix: **` +
+          `Hello there **${message.author.username}** I'm the **Main BOT** from the **${message.guild.name}** server, if you want to interact in the server I give you **${bot.commands.size}** commands that you will be able to use on the Server.\n\n\n**Prefix: **` +
             "`" +
             prefix +
             "`" +
-            " para ver el uso de los comandos **utiliza**: " +
+            " to see the function of the Commands **use**: " +
             "`" +
             prefix +
             "help <command>`" +
-            `\n \n **[FacebookPage Synchronous](https://www.facebook.com/SynchronousTeam)** | **[Paypal Synchronous](https://www.paypal.com/donate/?token=ijA5KviHPtPAygze4xuP1SdR4dF_5tPq8fcEAU7eLxcXVEy04l7cjSB92Wwf8TSjZDNNxW&country.x=CO&locale.x=CO)** \n \n \n`
+            `\n \n **[Twitter RottenVille](https://twitter.com/rotten_ville)** | **[RottenVille Website](https://rottenville.io/)** \n \n \n`
         )
         .setColor(noneColor)
-        .attachFiles(["./database/multimedia/gifs/embeds/HelpCommand.gif"])
-        .setImage("attachment://HelpCommand.gif");
+        .attachFiles([
+          "./database/multimedia/images/demo/server/BannerRottenVille.png",
+        ])
+        .setImage("attachment://BannerRottenVille.png");
       categories.forEach((category) => {
         const dir = bot.commands.filter((c) => c.category === category);
         const capitalise =
@@ -91,8 +93,8 @@ module.exports = class HelpCommand extends BaseCommand {
       embed.setTitle(`**${prefix + cmdName}**`);
       embed.setDescription(command.description);
       embed.addField(
-        "**Propiedades del Comando**",
-        " **Uso:** `" + prefix + command.usage,
+        "**Command propierties**",
+        " **Use:** `" + prefix + command.usage,
         true
       );
       embed.addField(
@@ -102,11 +104,11 @@ module.exports = class HelpCommand extends BaseCommand {
       );
       embed.addField("\u200b", "\u200b", true);
       embed.addField(
-        "**Categoría:**",
+        "**Categories:**",
         `**[${command.category.toUpperCase()}]**`,
         true
       );
-      embed.addField("**Permisos:**", command.perms, true);
+      embed.addField("**Perms:**", command.perms, true);
       embed.addField("\u200b", "\u200b", true);
       message.channel
         .send(embed)
