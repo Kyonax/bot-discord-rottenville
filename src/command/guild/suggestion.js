@@ -13,7 +13,7 @@ module.exports = class WhoisCommand extends BaseCommand {
     super(
       "suggestion",
       ["sug", "sugges", "idea", "ideas"],
-      "Suggestion command, **Suggest your thoughts**.",
+      "Suggest ideas and important changes, **Suggest your thoughts**.",
       "suggestion <text>`.",
       "_***Everyone***_",
       "guild"
@@ -50,7 +50,7 @@ module.exports = class WhoisCommand extends BaseCommand {
     );
     if (!serverChannel) {
       return message.guild.channels
-        .create("👹・community-ideas", {
+        .create("👽・community-ideas", {
           type: "text",
           permissionOverwrites: [
             {

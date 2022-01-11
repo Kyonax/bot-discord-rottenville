@@ -10,10 +10,10 @@ module.exports = class PingCommand extends BaseCommand {
   constructor() {
     super(
       "ping",
-      ["p", "latencia", "latency", "ms"],
-      "Comando para **ver tu Ping** con respecto al Servidor.",
+      ["p", "latency", "ms"],
+      "**Get your Ping Connection** compared to the Bot API with a simple command.",
       "ping`.",
-      "_***Todos***_",
+      "_***Everyone***_",
       "guild"
     );
   }
@@ -26,7 +26,7 @@ module.exports = class PingCommand extends BaseCommand {
     //Emoji from Map
     let msg = null;
     const emoji = synchronous.emojiID[0].afirmado;
-    msg = await message.channel.send(`${putEmoji(bot, emoji)} Calculando...`);
+    msg = await message.channel.send(`${putEmoji(bot, emoji)} Calculating...`);
     embed.setTitle(`${putEmoji(bot, emoji)} Pong`);
     var userLatency = Math.floor(msg.createdAt - message.createdAt);
     var apiLatency = Math.round(bot.ws.ping);
@@ -52,11 +52,8 @@ module.exports = class PingCommand extends BaseCommand {
       apiEmoji = highLatency;
     }
 
-    embed.addField(
-      "**LATENCIA DE USUARIO:**",
-      `${emojiLatency} ${userLatency}ms.`
-    );
-    embed.addField("**LATENCIA DE LA API:**", `${apiEmoji} ${apiLatency}ms.`);
+    embed.addField("**USER RESPONSE:**", `${emojiLatency} ${userLatency}ms.`);
+    embed.addField("**API RESPONSE:**", `${apiEmoji} ${apiLatency}ms.`);
 
     msg.edit(embed).then((msg) => {
       msg.delete({ timeout: 10000, reason: "It had to be done." });

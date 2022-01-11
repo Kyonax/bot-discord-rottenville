@@ -14,10 +14,10 @@ module.exports = class HelpCommand extends BaseCommand {
   constructor() {
     super(
       "help",
-      ["h", "ayuda", "commands", "comandos"],
-      "Command to get Help, with any other Command.",
-      "help`.\n**Opciones:** `<name_command>`",
-      "_***Todos***_",
+      ["h", "support", "helping", "ayuda"],
+      "Use this command to display a panel of **help with the Commands Information**.",
+      "help`.\n**Options:** `<name_command>`",
+      "_***Everyone***_",
       "guild"
     );
   }
@@ -93,7 +93,7 @@ module.exports = class HelpCommand extends BaseCommand {
       embed.setTitle(`**${prefix + cmdName}**`);
       embed.setDescription(command.description);
       embed.addField(
-        "**Command propierties**",
+        "**Command Properties**",
         " **Use:** `" + prefix + command.usage,
         true
       );
@@ -104,7 +104,7 @@ module.exports = class HelpCommand extends BaseCommand {
       );
       embed.addField("\u200b", "\u200b", true);
       embed.addField(
-        "**Categories:**",
+        "**Category:**",
         `**[${command.category.toUpperCase()}]**`,
         true
       );

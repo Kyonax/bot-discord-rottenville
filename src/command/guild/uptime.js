@@ -11,9 +11,9 @@ module.exports = class UptimeCommand extends BaseCommand {
     super(
       "uptime",
       ["up", "onbot"],
-      "Comando para **ver cuanto tiempo** ha estado conectado el **Bot**.",
+      "See how many time the **BOT was online and working**.",
       "uptime`",
-      "_***Todos***_",
+      "_***Everyone***_",
       "guild"
     );
   }
@@ -26,7 +26,7 @@ module.exports = class UptimeCommand extends BaseCommand {
     let msg = null;
     const emoji = synchronous.emojiID[0].afirmado;
 
-    msg = await message.channel.send(`${putEmoji(bot, emoji)} Calculando...`);
+    msg = await message.channel.send(`${putEmoji(bot, emoji)} Calculating...`);
     embed.setTitle(`${putEmoji(bot, emoji)} Uptime`);
 
     function duration(ms) {
@@ -34,17 +34,17 @@ module.exports = class UptimeCommand extends BaseCommand {
       const min = Math.floor((ms / (1000 * 60)) % 60).toString();
       const hrs = Math.floor((ms / (1000 * 60 * 60)) % 60).toString();
       const days = Math.floor((ms / (1000 * 60 * 60 * 24)) % 60).toString();
-      return `${days.padStart(1, "0")} días / ${hrs.padStart(
+      return `${days.padStart(1, "0")} days / ${hrs.padStart(
         2,
         "0"
-      )} horas / ${min.padStart(2, "0")} minutos / ${sec.padStart(
+      )} hours / ${min.padStart(2, "0")} minutes / ${sec.padStart(
         2,
         "0"
-      )} segundos.`;
+      )} seconds.`;
     }
     //Iserción de la información de la Duración activa del Bot
     embed.addField(
-      "**EL BOT HA SIDO INICIADO DESDE:**",
+      "**THE BOT WAS INITIATED SINCE:**",
       `${duration(bot.uptime)}.`
     );
 
