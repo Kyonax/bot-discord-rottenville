@@ -32,7 +32,7 @@ module.exports = class DniCommands extends BaseCommand {
       "card",
       ["vip", "pass"],
       "Command to show the **VIP CARD ROTTENVILLE**.",
-      "dni`\n**Options** `<user>`",
+      "card`\n**Options** `<user>`",
       "Todos",
       "Citizen"
     );
