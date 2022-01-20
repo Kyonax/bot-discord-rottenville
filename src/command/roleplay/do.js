@@ -11,9 +11,9 @@ module.exports = class DoCommand extends BaseCommand {
     super(
       "do",
       ["hacer"],
-      "Comando para **Rolear Entorno**.",
+      "Roleplay Command do something.",
       "do <text>`",
-      "Todos",
+      "Everyone",
       "roleplay"
     );
   }

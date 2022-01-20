@@ -19,7 +19,7 @@ module.exports = class RepCommand extends BaseCommand {
     super(
       "rep",
       ["respeto", "respect"],
-      "Command to give **Respect to a other Citizen**.",
+      "Give respect to a RottenVille Discord Server Member.",
       "rep <user>`",
       "Everyone",
       "DNI"
@@ -31,7 +31,12 @@ module.exports = class RepCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables - Usuario  || Validación - Usuario no permitido
     let member = message.guild.member(
       message.mentions.users.first() || message.guild.members.get(args[0])
@@ -62,7 +67,7 @@ module.exports = class RepCommand extends BaseCommand {
       memberRespect
     );
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     let embed = new MessageEmbed()
       .setAuthor(`${member.displayName}'s DNI`, member.user.displayAvatarURL())
       .setDescription(

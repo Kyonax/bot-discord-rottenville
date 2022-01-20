@@ -1,6 +1,10 @@
 //Importación especifica de Metodos - RichEmbed - putEmoji - Errors - nonecolor Color - afirmado Emoji
 const { MessageEmbed } = require("discord.js");
-const { putEmoji, getMember, initObjectMember } = require("../../utils/misc/functions");
+const {
+  putEmoji,
+  getMember,
+  initObjectMember,
+} = require("../../utils/misc/functions");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { updateGuildRolePlayAge } = require("../../utils/database/functions");
@@ -19,8 +23,8 @@ module.exports = class AgeCommand extends BaseCommand {
     super(
       "age",
       ["edad"],
-      "Command to put your **on the DNI**.",
-      "age <number>`",
+      "Change the age from the DNI.",
+      "age <number> <@user>`",
       "Everyone",
       "DNI"
     );
@@ -32,11 +36,16 @@ module.exports = class AgeCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     if (!args[0]) return err.noAgeDigit(bot, message);
     let autor = message.author;
     const member = getMember(message, args.join(" "));
-    
+
     let ObjectAutor = null;
     ObjectAutor = initObjectMember(
       guilds,
@@ -48,8 +57,8 @@ module.exports = class AgeCommand extends BaseCommand {
     const { moderatorMember } = ObjectAutor;
     //Validación es un Número o no
     if (message.author.id != member.id) {
-        if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
-      }
+      if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
+    }
 
     //Validación es un Número o no
     if (isNaN(args[0]) === true) return err.noCorrectArgumentsAge(bot, message);
@@ -60,14 +69,9 @@ module.exports = class AgeCommand extends BaseCommand {
       member.id,
       age
     );
-    StateManager.emit(
-      "updateMemberAge",
-      message.guild.id,
-      member.id,
-      age
-    );
+    StateManager.emit("updateMemberAge", message.guild.id, member.id, age);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     //Embed de confirmación
     let embed = new MessageEmbed()
       .setAuthor(
@@ -82,9 +86,6 @@ module.exports = class AgeCommand extends BaseCommand {
     });
   }
 };
-
-
-
 
 StateManager.on(
   "membersFetched",
@@ -168,3 +169,4 @@ StateManager.on(
     ObjectMember.moderatorMember = moderatorMember;
   }
 );
+

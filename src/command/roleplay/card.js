@@ -31,9 +31,9 @@ module.exports = class DniCommands extends BaseCommand {
     super(
       "card",
       ["vip", "pass"],
-      "Command to show the **VIP CARD ROTTENVILLE**.",
+      "Deploy a panel with your RottenVille Card Pass.",
       "card`\n**Options** `<user>`",
-      "Todos",
+      "Everyone",
       "Citizen"
     );
   }
@@ -43,7 +43,12 @@ module.exports = class DniCommands extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables Autor - Usuario - Ingreso al Servidor - Role - Length Array - Id de Usuario
     let autor = message.author;
     const member = getMember(message, args.join(" "));
@@ -65,180 +70,183 @@ module.exports = class DniCommands extends BaseCommand {
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     const { moderatorMember } = ObjectAuthor;
-    
+
     let embedCard = new MessageEmbed()
-    .setTitle(`${putEmoji(bot,"910558106008817764")} RT◎ VIP PASS CARD - ${member.displayName}`)
-    .setColor("#41F389")
-    .attachFiles([
-      `./database/multimedia/images/demo/server/${member.id}-min.png`,
-    ])
-    .setImage(`attachment://${message.author.id}-min.png`);
+      .setTitle(
+        `${putEmoji(bot, "910558106008817764")} RT◎ VIP PASS CARD - ${
+          member.displayName
+        }`
+      )
+      .setColor("#41F389")
+      .attachFiles([
+        `./database/multimedia/images/demo/server/${member.id}-min.png`,
+      ])
+      .setImage(`attachment://${message.author.id}-min.png`);
 
     // - Usuarios Restringidos - Canal Existente
     if (moderatorMember === 0) {
-        if (member.id !== autor.id) return perm.moderatorPerms(bot, message);          
-        return message.channel.send(embedCard).then((msg) => {
-          msg.delete({ timeout: 60000, reason: "It had to be done." });
-        });
-      } else {      
-        message.channel.send(embedCard).then((msg) => {
-          msg.delete({ timeout: 60000, reason: "It had to be done." });
-        });
-      }
-
-}};
-
+      if (member.id !== autor.id) return perm.moderatorPerms(bot, message);
+      return message.channel.send(embedCard).then((msg) => {
+        msg.delete({ timeout: 60000, reason: "It had to be done." });
+      });
+    } else {
+      message.channel.send(embedCard).then((msg) => {
+        msg.delete({ timeout: 60000, reason: "It had to be done." });
+      });
+    }
+  }
+};
 
 StateManager.on(
-    "membersRolePlayFetched",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      gameRolePlay,
-      rolePlayRank,
-      memberXP,
-      memberLevel,
-      memberAge,
-      memberRespect,
-      memberWork,
-      memberRelation,
-      memberBiography
-    ) => {
-      rolePlayMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        gameRolePlay: gameRolePlay,
-        rolePlayRank: rolePlayRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberAge: memberAge,
-        memberRespect: memberRespect,
-        memberWork: memberWork,
-        memberRelation: memberRelation,
-        memberBiography: memberBiography,
-      });
-      guildsRoleplay.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
-  
-  StateManager.on(
-    "membersRolePlayUpdate",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      gameRolePlay,
-      rolePlayRank,
-      memberXP,
-      memberLevel,
-      memberAge,
-      memberRespect,
-      memberWork,
-      memberRelation,
-      memberBiography
-    ) => {
-      rolePlayMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        gameRolePlay: gameRolePlay,
-        rolePlayRank: rolePlayRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberAge: memberAge,
-        memberRespect: memberRespect,
-        memberWork: memberWork,
-        memberRelation: memberRelation,
-        memberBiography: memberBiography,
-      });
-      guildsRoleplay.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
+  "membersRolePlayFetched",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    gameRolePlay,
+    rolePlayRank,
+    memberXP,
+    memberLevel,
+    memberAge,
+    memberRespect,
+    memberWork,
+    memberRelation,
+    memberBiography
+  ) => {
+    rolePlayMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      gameRolePlay: gameRolePlay,
+      rolePlayRank: rolePlayRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberAge: memberAge,
+      memberRespect: memberRespect,
+      memberWork: memberWork,
+      memberRelation: memberRelation,
+      memberBiography: memberBiography,
+    });
+    guildsRoleplay.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
 
-  
 StateManager.on(
-    "membersFetched",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      memberLanguage,
-      adminMember,
-      inmortalMember,
-      moderatorMember,
-      serverRank,
-      memberXP,
-      memberLevel,
-      memberBoost,
-      boostMemberTime,
-      warnings
-    ) => {
-      guildMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        memberLanguage: memberLanguage,
-        adminMember: adminMember,
-        inmortalMember: inmortalMember,
-        moderatorMember: moderatorMember,
-        serverRank: serverRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberBoost: memberBoost,
-        boostMemberTime: boostMemberTime,
-        warnings: warnings,
-      });
-      guilds.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
-  
-  StateManager.on(
-    "membersUpdate",
-    (
-      membersGuild,
-      guildID,
-      memberID,
-      memberLanguage,
-      adminMember,
-      inmortalMember,
-      moderatorMember,
-      serverRank,
-      memberXP,
-      memberLevel,
-      memberBoost,
-      boostMemberTime,
-      warnings
-    ) => {
-      guildMembers.set(memberID, {
-        memberID: memberID,
-        guildID: guildID,
-        memberLanguage: memberLanguage,
-        adminMember: adminMember,
-        inmortalMember: inmortalMember,
-        moderatorMember: moderatorMember,
-        serverRank: serverRank,
-        memberXP: memberXP,
-        memberLevel: memberLevel,
-        memberBoost: memberBoost,
-        boostMemberTime: boostMemberTime,
-        warnings: warnings,
-      });
-      guilds.set(guildID, {
-        Member: membersGuild,
-      });
-    }
-  );
-  
-  StateManager.on(
-    "updateModeratorMember",
-    (guildID, memberID, moderatorMember) => {
-      let ObjectMember = null;
-      ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-      ObjectMember.moderatorMember = moderatorMember;
-    }
-  );
+  "membersRolePlayUpdate",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    gameRolePlay,
+    rolePlayRank,
+    memberXP,
+    memberLevel,
+    memberAge,
+    memberRespect,
+    memberWork,
+    memberRelation,
+    memberBiography
+  ) => {
+    rolePlayMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      gameRolePlay: gameRolePlay,
+      rolePlayRank: rolePlayRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberAge: memberAge,
+      memberRespect: memberRespect,
+      memberWork: memberWork,
+      memberRelation: memberRelation,
+      memberBiography: memberBiography,
+    });
+    guildsRoleplay.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
+
+StateManager.on(
+  "membersFetched",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    memberLanguage,
+    adminMember,
+    inmortalMember,
+    moderatorMember,
+    serverRank,
+    memberXP,
+    memberLevel,
+    memberBoost,
+    boostMemberTime,
+    warnings
+  ) => {
+    guildMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      memberLanguage: memberLanguage,
+      adminMember: adminMember,
+      inmortalMember: inmortalMember,
+      moderatorMember: moderatorMember,
+      serverRank: serverRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberBoost: memberBoost,
+      boostMemberTime: boostMemberTime,
+      warnings: warnings,
+    });
+    guilds.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
+
+StateManager.on(
+  "membersUpdate",
+  (
+    membersGuild,
+    guildID,
+    memberID,
+    memberLanguage,
+    adminMember,
+    inmortalMember,
+    moderatorMember,
+    serverRank,
+    memberXP,
+    memberLevel,
+    memberBoost,
+    boostMemberTime,
+    warnings
+  ) => {
+    guildMembers.set(memberID, {
+      memberID: memberID,
+      guildID: guildID,
+      memberLanguage: memberLanguage,
+      adminMember: adminMember,
+      inmortalMember: inmortalMember,
+      moderatorMember: moderatorMember,
+      serverRank: serverRank,
+      memberXP: memberXP,
+      memberLevel: memberLevel,
+      memberBoost: memberBoost,
+      boostMemberTime: boostMemberTime,
+      warnings: warnings,
+    });
+    guilds.set(guildID, {
+      Member: membersGuild,
+    });
+  }
+);
+
+StateManager.on(
+  "updateModeratorMember",
+  (guildID, memberID, moderatorMember) => {
+    let ObjectMember = null;
+    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
+    ObjectMember.moderatorMember = moderatorMember;
+  }
+);
+

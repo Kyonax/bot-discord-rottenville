@@ -1,6 +1,10 @@
 //Importación especifica de Metodos - RichEmbed - putEmoji - Errors - nonecolor Color - afirmado Emoji
 const { MessageEmbed } = require("discord.js");
-const { putEmoji, getMember, initObjectMember } = require("../../utils/misc/functions");
+const {
+  putEmoji,
+  getMember,
+  initObjectMember,
+} = require("../../utils/misc/functions");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { updateGuildRolePlayBio } = require("../../utils/database/functions");
@@ -20,22 +24,27 @@ module.exports = class BiographyCommand extends BaseCommand {
     super(
       "biography",
       ["biografia", "bio"],
-      "Command to put your **Bio on the DNI**.",
+      "Change the Biography from the DNI.",
       "biography <@user> <text>`",
       "Everyone",
       "DNI"
     );
   }
-  async run(bot, message, args) {    
+  async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables - Usuario  || Validación - Usuario no permitido
     let autor = message.author;
-    const member = getMember(message, args.join(" "));    
+    const member = getMember(message, args.join(" "));
 
     let ObjectAutor = null;
     ObjectAutor = initObjectMember(
@@ -48,8 +57,8 @@ module.exports = class BiographyCommand extends BaseCommand {
     const { moderatorMember } = ObjectAutor;
     //Validación es un Número o no
     if (message.author.id != member.id) {
-        if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
-      }
+      if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
+    }
 
     //Inicialización - Biografía de Usuario para DNI
     const biography = args.slice(1).join(" ");
@@ -66,7 +75,7 @@ module.exports = class BiographyCommand extends BaseCommand {
       biography
     );
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     //Mensaje Embed para el Comando - Envío de Embed por el mismo Canal
     let embed = new MessageEmbed()
       .setAuthor(
@@ -80,8 +89,6 @@ module.exports = class BiographyCommand extends BaseCommand {
     });
   }
 };
-
-
 
 StateManager.on(
   "membersFetched",
@@ -165,3 +172,4 @@ StateManager.on(
     ObjectMember.moderatorMember = moderatorMember;
   }
 );
+

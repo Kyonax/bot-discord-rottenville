@@ -11,9 +11,9 @@ module.exports = class OoocCommand extends BaseCommand {
     super(
       "ooc",
       ["fdp"],
-      "Comando para **Hablar** fuera de Personaje **Roleplay**.",
+      "Roleplay Command Out of Character Text.",
       "ooc <text>`",
-      "Todos",
+      "Everyone",
       "roleplay"
     );
   }

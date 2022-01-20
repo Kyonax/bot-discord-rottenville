@@ -11,9 +11,9 @@ module.exports = class MeCommand extends BaseCommand {
     super(
       "me",
       ["yo"],
-      "Comando para **Rolear Acciones**.",
+      "Roleplay Command character actions.",
       "me <text>`",
-      "Todos",
+      "Everyone",
       "roleplay"
     );
   }

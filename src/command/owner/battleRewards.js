@@ -34,9 +34,9 @@ module.exports = class BattlesCommand extends BaseCommand {
     super(
       "brewards",
       ["battlesrewards", "battlewinner", "bwinner"],
-      "Command to reveal the Winner of the **RottenVille-Battles**.",
+      "Send the data about the RottenVille Battle Selection running.",
       "brewards`",
-      "_***Pilares - Inmortales - Moderadores***_",
+      "_***Admin - Inmortales - Moderadores***_",
       "mod"
     );
   }

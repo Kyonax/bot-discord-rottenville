@@ -29,13 +29,13 @@ module.exports = class BanCommand extends BaseCommand {
     super(
       "ban",
       ["bann", "banned", "baneado", "baneadito", "bancito"],
-      "Comando para **Bannear** a un miembro del Servidor.",
+      "Ban a User from the Discord Server.",
       "ban <user> <reason>`",
-      "***Pilares***",
+      "***Admins***",
       "mod"
     );
   }
-  async run(bot, message, args) {    
+  async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
@@ -44,7 +44,7 @@ module.exports = class BanCommand extends BaseCommand {
     //Inicialización de Variables - Canal - Usuario - Razón - Longitud - ID de Usuario
     let banChannel = message.guild.channels.cache.find(
       (ch) => ch.name === "💬・mod"
-    );    
+    );
     let autor = message.author;
     let member = message.guild.member(
       message.mentions.users.first() || message.guild.members.cache.get(args[0])
@@ -66,7 +66,7 @@ module.exports = class BanCommand extends BaseCommand {
       return err.noValidTargetBan(bot, message);
     if (!reason) return err.noReasonDigit(bot, message);
     if (member.roles.cache.get("766816088024940584"))
-      return perm.cantCatchSynks(bot, message);    
+      return perm.cantCatchSynks(bot, message);
     await insertMemberBans(
       message.guild.id,
       member.id,
@@ -81,7 +81,7 @@ module.exports = class BanCommand extends BaseCommand {
     await deleteMemberRolePlay(message.guild.id, member.id);
     deleteObjectMember(guilds, message.guild.id, member.id);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].danger);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].danger);
     //Mensaje Embed para el Comando
     let embed = new MessageEmbed()
       .setColor(dangerColor)

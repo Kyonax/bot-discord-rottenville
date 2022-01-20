@@ -13,7 +13,7 @@ module.exports = class NewsCommand extends BaseCommand {
     super(
       "say",
       ["text", "decir", "says"],
-      "Comando para **mandar** un **Mensaje con el Bot**",
+      "Send a message with the Bot Account.",
       "say <title> ¬ <description>`",
       "***Owner***",
       "owner"
@@ -64,6 +64,6 @@ module.exports = class NewsCommand extends BaseCommand {
         "database/multimedia/images/demo/server/BarPost_Discord.gif",
       ])
       .setImage("attachment://BarPost_Discord.gif");
-     message.channel.send(embed);
+    message.channel.send(embed);
   }
 };

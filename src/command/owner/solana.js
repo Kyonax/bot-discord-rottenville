@@ -16,7 +16,7 @@ module.exports = class SolanaCommand extends BaseCommand {
     super(
       "solana",
       ["sol"],
-      "Command to use Solana API.",
+      "Save in the Database all the NFTs and their transactions since the MINT day.",
       "solana`",
       "_***Mod***_",
       "mod"

@@ -1,6 +1,10 @@
 //Importación especifica de Metodos - RichEmbed - putEmoji - Errors - nonecolor Color - afirmado Emoji
 const { MessageEmbed } = require("discord.js");
-const { putEmoji, getMember, initObjectMember } = require("../../utils/misc/functions");
+const {
+  putEmoji,
+  getMember,
+  initObjectMember,
+} = require("../../utils/misc/functions");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { RottenVille } = require("../../../database/utils/adds/story.json");
@@ -16,24 +20,25 @@ const guildMembers = new Map();
 const guilds = new Map();
 //Exportación de Comando Age
 module.exports = class AgeCommand extends BaseCommand {
-    constructor() {
-        super(
-            "story",
-            ["origin", "historia", "origen"],
-            "Command to show your **Story**.",
-            "story`",
-            "Everyone",
-            "DNI"
-        );
-    }
+  constructor() {
+    super(
+      "story",
+      ["origin", "historia", "origen"],
+      "Deploy your Rotten story in any channel.",
+      "story`",
+      "Everyone",
+      "DNI"
+    );
+  }
 
-    async run(bot, message, args) {
-        //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-        message.delete().catch((O_o) => { });
-        //Creación de Objetos
-        const err = new Error();
-        const perm = new Perms();
-        const description = RottenVille.citizen["655875670278144031"][0].story;
-        message.channel.send(description);
-    }
+  async run(bot, message, args) {
+    //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
+    message.delete().catch((O_o) => {});
+    //Creación de Objetos
+    const err = new Error();
+    const perm = new Perms();
+    const description = RottenVille.citizen["655875670278144031"][0].story;
+    message.channel.send(description);
+  }
 };
+

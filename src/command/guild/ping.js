@@ -11,7 +11,7 @@ module.exports = class PingCommand extends BaseCommand {
     super(
       "ping",
       ["p", "latency", "ms"],
-      "**Get your Ping Connection** compared to the Bot API with a simple command.",
+      "Evalue the ping Connection from the API to the User.",
       "ping`.",
       "_***Everyone***_",
       "guild"

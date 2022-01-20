@@ -21,8 +21,8 @@ module.exports = class PrefixCommand extends BaseCommand {
     super(
       "set",
       ["colocar", "change"],
-      "Comando para **Colocar o Definir** algún valor de **La Base de Datos** del Servidor.",
-      "set <command> <user> <value>`\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`\n**Valores:** `<true>`,`<false>`",
+      "Set and Define a value from the Database.",
+      "set <command> <user> <value>`\n**Commands:** `<admin>`,`<inmortal>`,`<mod>`\n**Values:** `<true>`,`<false>`",
       "_***Owner***_",
       "owner"
     );

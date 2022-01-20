@@ -25,9 +25,9 @@ module.exports = class BattlesCommand extends BaseCommand {
     super(
       "battles",
       ["batalla", "btl", "battle"],
-      "Command to create **RottenVille-Battles**.",
+      "Create a new RottenVille Battle Selection.",
       "battle`\n**Rol Announcement:** `<rol>`\n**Members:** `@competitor_1` `@competitor_2`",
-      "_***Pilares - Inmortales - Moderadores***_",
+      "_***Admin - Inmortales - Moderadores***_",
       "mod"
     );
   }

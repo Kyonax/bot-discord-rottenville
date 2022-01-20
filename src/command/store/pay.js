@@ -45,8 +45,8 @@ module.exports = class PayCommand extends BaseCommand {
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
-    //Creación de Objetos    
-    const err = new Error();    
+    //Creación de Objetos
+    const err = new Error();
     const perm = new Perms();
     //Inicialización de Variable Usuario
     let autor = getMember(message, message.author.id);
@@ -144,7 +144,12 @@ module.exports = class PayCommand extends BaseCommand {
         true
       );
     } else if (type.toLowerCase() === "boost") {
-      if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+      if (
+        !message.member.roles.cache.some(
+          (role) => role.name === "🏰 RottenVille Citizen"
+        )
+      )
+        return perm.citizenPerms(bot, message);
       let boostB = 1800;
       let boostA = 3200;
       let boostPremium = 6000;
@@ -337,7 +342,12 @@ module.exports = class PayCommand extends BaseCommand {
         );
       }
     } else if (args[0] === "level") {
-      if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+      if (
+        !message.member.roles.cache.some(
+          (role) => role.name === "🏰 RottenVille Citizen"
+        )
+      )
+        return perm.citizenPerms(bot, message);
       let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
       let actualAuthorLevel = parseInt(ObjectAuthor.memberLevel);
       let actualAuthorXP = parseInt(ObjectAuthor.memberXP);

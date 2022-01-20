@@ -22,9 +22,9 @@ module.exports = class WarnCommand extends BaseCommand {
     super(
       "warn",
       ["wr", "advertencia"],
-      "Comando para hacer un **warn** a un **miembro** del Servidor.",
+      "Make a warn to a User.",
       "warn <user> <reason>`",
-      "**Pilares - Inmortales - Moderadores**",
+      "**Admin - Inmortales - Moderadores**",
       "mod"
     );
   }
@@ -43,9 +43,9 @@ module.exports = class WarnCommand extends BaseCommand {
     let reason = args.join(" ").slice(22);
     let warnChannel = message.guild.channels.cache.find(
       (ch) => ch.name === "💬・mod"
-    );    
+    );
     let ObjectAutor = null;
-    let ObjectMember = null;    
+    let ObjectMember = null;
     ObjectMember = initObjectMember(
       guilds,
       ObjectMember,

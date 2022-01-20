@@ -14,48 +14,48 @@ const BaseCommand = require("../../utils/structure/BaseCommand.js");
 const fs = require("fs");
 //Exportación del Comando Clear
 module.exports = class CitizenCommand extends BaseCommand {
-    constructor() {
-        super(
-            "citizen",
-            ["newciti"],
-            "Command to upload a new Citizen in to the Database.",
-            "citizen` `<@user>` - `<wallet>`",
-            "_***Pilares - Inmortales - Moderadores***_",
-            "mod"
-        );
-    }
+  constructor() {
+    super(
+      "citizen",
+      ["newciti"],
+      "Upload a new Citizen to the Database.",
+      "citizen` `<@user>` - `<wallet>`",
+      "_***Admin - Inmortales - Moderadores***_",
+      "mod"
+    );
+  }
 
-    async run(bot, message, args) {
-        //Eliminación del mensaje con Comandos
-        message.delete().catch((O_o) => { });
-        //Creación de Objetos
-        const err = new Error();
-        const perm = new Perms();
-        //Miembro existente
-        const existMember = (
-            await memberExist(message.guild.id, message.author.id)
-        )[0];
-        //Inicialización de Párametros Member
-        const { moderatorMember } = existMember[0];
-        //Insuficientes Permisos para usar el Comando
-        if (moderatorMember != 1) return perm.moderatorPerms(bot, message);
-        //Emoji from Map
-        const emoji = synchronous.emojiID[0].afirmado;
-        const member = getMember(message, args[0]);
-        const walletAdress = args[1];
+  async run(bot, message, args) {
+    //Eliminación del mensaje con Comandos
+    message.delete().catch((O_o) => {});
+    //Creación de Objetos
+    const err = new Error();
+    const perm = new Perms();
+    //Miembro existente
+    const existMember = (
+      await memberExist(message.guild.id, message.author.id)
+    )[0];
+    //Inicialización de Párametros Member
+    const { moderatorMember } = existMember[0];
+    //Insuficientes Permisos para usar el Comando
+    if (moderatorMember != 1) return perm.moderatorPerms(bot, message);
+    //Emoji from Map
+    const emoji = synchronous.emojiID[0].afirmado;
+    const member = getMember(message, args[0]);
+    const walletAdress = args[1];
 
-        CitizenJSON.citizenData.RottenVille.result[`${member.id}`] = {
-            memberID: member.id,
-            wallet: walletAdress
-        }
+    CitizenJSON.citizenData.RottenVille.result[`${member.id}`] = {
+      memberID: member.id,
+      wallet: walletAdress,
+    };
 
-        fs.writeFile(
-            "./database/utils/adds/citizen.json",
-            JSON.stringify(CitizenJSON),
-            (err) => {
-                if (err) console.log(err);
-            }
-        );
+    fs.writeFile(
+      "./database/utils/adds/citizen.json",
+      JSON.stringify(CitizenJSON),
+      (err) => {
+        if (err) console.log(err);
+      }
+    );
+  }
+};
 
-    }
-}

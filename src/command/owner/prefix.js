@@ -9,7 +9,7 @@ const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 const StateManager = require("../../utils/database/StateManager");
-//Inicialización de Mapas guildCommandPrefix 
+//Inicialización de Mapas guildCommandPrefix
 const guildCommandPrefix = new Map();
 //Exportación del Comando prefix
 module.exports = class PrefixCommand extends BaseCommand {
@@ -18,8 +18,8 @@ module.exports = class PrefixCommand extends BaseCommand {
     super(
       "prefix",
       ["prefijo"],
-      "Comando para **Mostrar o Cambiar el Prefix** del Servidor.",
-      "prefix <command>`\n**Comandos:** `<show>`,`<set>`",
+      "Change the main prefix from a Discord Server.",
+      "prefix <command>`\n**Commands:** `<show>`,`<set>`",
       "_***Owner***_",
       "owner"
     );
@@ -99,4 +99,3 @@ module.exports = class PrefixCommand extends BaseCommand {
 StateManager.on("prefixFetched", (guildID, prefix) => {
   guildCommandPrefix.set(guildID, prefix);
 });
-

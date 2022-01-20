@@ -14,8 +14,8 @@ module.exports = class NewsCommand extends BaseCommand {
     super(
       "news",
       ["nws", "noticias"],
-      "Comando para **mandar** una **Notica al Servidor**",
-      "news <type> <title> ¬ <description>`\n**Tipo:** `<server_discord>`, `<server_mta>`",
+      "Send to the News Channel a new Message.",
+      "news <type> <title> ¬ <description>`\n**Type:** `<normal>`, `<holders>`",
       "***Owner***",
       "owner"
     );
@@ -25,13 +25,13 @@ module.exports = class NewsCommand extends BaseCommand {
     addMessageToBin(bot, message);
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
-    //Creación de Objetos    
+    //Creación de Objetos
     const perm = new Perms();
     //Validación Permisos
     if (message.member.id != message.guild.ownerID)
       return perm.ownerPerms(bot, message);
     //Variables
-    let autor = message.author;        
+    let autor = message.author;
     let contentArgs = "";
     let key = "¬";
     let tittle = "None";
@@ -45,7 +45,7 @@ module.exports = class NewsCommand extends BaseCommand {
       }
     }
     tittle = tittle.replace("¬", "");
-    contentArgs = contentArgs.replace("!news", "");    
+    contentArgs = contentArgs.replace("!news", "");
     contentArgs = contentArgs.replace("¬", "");
     contentArgs = contentArgs.replace(tittle, "");
     description = contentArgs;
@@ -62,16 +62,23 @@ module.exports = class NewsCommand extends BaseCommand {
         true
       )
       .setFooter("Central de Periodismo Mundo Kyonax");
-      embed.attachFiles([
-        "database/multimedia/gifs/embeds/BAR.gif",
-      ]);
-      embed.setImage("attachment://BAR.gif");
-      const serverChannel = message.guild.channels.cache.find(
-        (ch) => ch.name === "nuevos-anuncios"
+    embed.attachFiles(["database/multimedia/gifs/embeds/BAR.gif"]);
+    embed.setImage("attachment://BAR.gif");
+    const serverChannel = message.guild.channels.cache.find(
+      (ch) => ch.name === "nuevos-anuncios"
+    );
+    if (!serverChannel) {
+      return message.channel.send(
+        "El Mensaje no se ha podido enviar porque no se ha creado el canal para announcements"
       );
-      if (!serverChannel) {
-        return message.channel.send("El Mensaje no se ha podido enviar porque no se ha creado el canal para announcements")
-      }
-      serverChannel.send(``+putEmoji(bot, "780487068119859220")+` **¡Nuevo anuncio <@&779080288701382667>**`,embed).catch((err) => console.log(err));
+    }
+    serverChannel
+      .send(
+        `` +
+          putEmoji(bot, "780487068119859220") +
+          ` **¡Nuevo anuncio <@&779080288701382667>**`,
+        embed
+      )
+      .catch((err) => console.log(err));
   }
 };

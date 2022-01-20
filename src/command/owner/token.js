@@ -17,7 +17,7 @@ module.exports = class TokenCommand extends BaseCommand {
     super(
       "token",
       ["solanatoken", "soltoken", "wallet"],
-      "Command to get the Tokens of a Wallet.",
+      "Fetch all the Data from the Candy Machine and all the NFTs Transactions.",
       "token`",
       "_***Mod***_",
       "miscellaneous"
@@ -26,7 +26,7 @@ module.exports = class TokenCommand extends BaseCommand {
 
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => { });
+    message.delete().catch((O_o) => {});
     const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;
     let bodyNet = null;
     let url = null;
@@ -45,10 +45,7 @@ module.exports = class TokenCommand extends BaseCommand {
 
     //Solicitando Json
     for (let i = 0, len = CandyData.length; i < len; i++) {
-
-
       CandyData.forEach((data) => {
-
         if (data.nft_metadata.data.name == "Rotten Ville #" + i) {
           url = data.nft_metadata.data.uri;
 
@@ -78,16 +75,9 @@ module.exports = class TokenCommand extends BaseCommand {
                   if (err) console.log(err);
                 }
               );
-
             });
-
-
         }
       });
-
-
-
-
     }
   }
 };

@@ -22,9 +22,9 @@ module.exports = class KickCommand extends BaseCommand {
     super(
       "kick",
       ["kc", "patear", "vetealv", "kickeado"],
-      "Comando para **Kickear** a un miembro del Servidor.",
+      "Kick an User from the Discord Server.",
       "kick <user> <reason>`",
-      "Pilares - Inmortales",
+      "Admin - Inmortales",
       "mod"
     );
   }

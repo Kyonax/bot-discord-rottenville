@@ -172,3 +172,4 @@ StateManager.on(
     ObjectMember.moderatorMember = moderatorMember;
   }
 );
+

@@ -26,9 +26,9 @@ module.exports = class RemoveRoleCommand extends BaseCommand {
     super(
       "removerole",
       ["rr", "roleremove", "quitarrol", "delegar"],
-      "Comando para quitar **roles** a un **miembro** del Servidor.",
+      "Remove a Role to a member from the Server.",
       "removerole <user> <@rol>`",
-      "***Pilares - Inmortales - Moderadores***",
+      "***Admin - Inmortales - Moderadores***",
       "mod"
     );
   }

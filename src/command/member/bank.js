@@ -25,9 +25,9 @@ module.exports = class BankCommand extends BaseCommand {
     super(
       "exposure",
       ["coins", "banco", "monedas", "synkoins"],
-      "Comando para **ver tus Fondos** de tu cuenta bancaria de **Synchronous**.",
-      "bank`\n**Opciones de Admin:** `<user>`",
-      "_***Todos***_",
+      "Deploy a panel with the exposure information.",
+      "bank`\n**Admin Options:** `<user>`",
+      "_***Everyone***_",
       "member"
     );
   }

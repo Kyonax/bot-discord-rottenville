@@ -26,9 +26,9 @@ module.exports = class AddRoleCommand extends BaseCommand {
     super(
       "addrole",
       ["ar", "roleadd", "agregarrol", "ascender"],
-      "Comando para agregar **roles** a un **miembro** del Servidor.",
+      "Add a new Role to a member from the Server.",
       "addrole <user> <@rol>`",
-      "***Pilares - Inmortales - Moderadores***",
+      "***Admin - Inmortales - Moderadores***",
       "mod"
     );
   }

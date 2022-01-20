@@ -11,7 +11,7 @@ module.exports = class UptimeCommand extends BaseCommand {
     super(
       "uptime",
       ["up", "onbot"],
-      "See how many time the **BOT was online and working**.",
+      "Send the time since the bot was deploy.",
       "uptime`",
       "_***Everyone***_",
       "guild"

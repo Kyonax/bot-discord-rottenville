@@ -21,9 +21,9 @@ module.exports = class TryCommand extends BaseCommand {
     super(
       "try",
       ["intentar"],
-      "Comando para **Intentar** algo **Roleplay**.",
-      "try <text>`\n**Opciones:** `<user>`",
-      "Todos",
+      "Roleplay Command try something.",
+      "try <text>`\n**Options:** `<user>`",
+      "Everyone",
       "roleplay"
     );
   }

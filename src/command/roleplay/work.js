@@ -1,6 +1,10 @@
 //Importación especifica de Metodos - RichEmbed - putEmoji - Errors - nonecolor Color - afirmado Emoji
 const { MessageEmbed } = require("discord.js");
-const { putEmoji, getMember, initObjectMember } = require("../../utils/misc/functions");
+const {
+  putEmoji,
+  getMember,
+  initObjectMember,
+} = require("../../utils/misc/functions");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { updateGuildRolePlayWork } = require("../../utils/database/functions");
@@ -22,17 +26,22 @@ module.exports = class WorkCommand extends BaseCommand {
       ["ciudadano", "cargo", "ocupation"],
       "Command to put your **Ocupation in RottenVille**.",
       "work <@user> <nameWork>`",
-      "Todos",
+      "Everyone",
       "roleplay"
     );
   }
-  async run(bot, message, args) {        
+  async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    const err = new Error();    
+    const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables - Usuario  || Validación - Usuario no permitido
     let autor = message.author;
     const member = getMember(message, args.join(" "));
@@ -48,8 +57,8 @@ module.exports = class WorkCommand extends BaseCommand {
     const { moderatorMember } = ObjectAutor;
     //Validación es un Número o no
     if (message.author.id != member.id) {
-        if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
-      }
+      if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
+    }
 
     //Inicialización de Variables
     const work = args.slice(1).join(" ");
@@ -58,14 +67,9 @@ module.exports = class WorkCommand extends BaseCommand {
       member.id,
       work
     );
-    StateManager.emit(
-      "updateMemberWork",
-      message.guild.id,
-      member.id,
-      work
-    );
+    StateManager.emit("updateMemberWork", message.guild.id, member.id, work);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);    
+    let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     //Embed de confirmación
     let embed = new MessageEmbed()
       .setAuthor(
@@ -162,3 +166,4 @@ StateManager.on(
     ObjectMember.moderatorMember = moderatorMember;
   }
 );
+

@@ -13,7 +13,7 @@ module.exports = class WhoisCommand extends BaseCommand {
     super(
       "suggestion",
       ["sug", "sugges", "idea", "ideas"],
-      "Suggest ideas and important changes, **Suggest your thoughts**.",
+      "Send a suggestion message with votation system to a Channel.",
       "suggestion <text>`.",
       "_***Everyone***_",
       "guild"

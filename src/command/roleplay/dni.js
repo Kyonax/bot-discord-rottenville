@@ -31,9 +31,9 @@ module.exports = class DniCommands extends BaseCommand {
     super(
       "dni",
       ["ti", "cc"],
-      "Command to show the **DNI on the Server**.",
+      "Deploy a panel with your DNI data.",
       "dni`\n**Options** `<user>`",
-      "Todos",
+      "Everyone",
       "Citizen"
     );
   }
@@ -43,7 +43,12 @@ module.exports = class DniCommands extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    if (!message.member.roles.cache.some(role => role.name === '🏰 RottenVille Citizen')) return perm.citizenPerms(bot,message);
+    if (
+      !message.member.roles.cache.some(
+        (role) => role.name === "🏰 RottenVille Citizen"
+      )
+    )
+      return perm.citizenPerms(bot, message);
     //Inicialización de Variables Autor - Usuario - Ingreso al Servidor - Role - Length Array - Id de Usuario
     let autor = message.author;
     const member = getMember(message, args.join(" "));
@@ -105,7 +110,7 @@ module.exports = class DniCommands extends BaseCommand {
       .addField(`☄ Respect`, `${memberRespect}`, true)
       .addField(`💼 Citizen Position`, `${memberWork}.`, true)
       .addField(`🚀 Rotten Number`, `${memberRelation}.`, true)
-      
+
       .setColor(noneColor);
 
     if (ObjectMember.gameRolePlay) {
@@ -123,11 +128,11 @@ module.exports = class DniCommands extends BaseCommand {
     //Validación de Variables - Permisos de Comandos - Falta de Usuario - Falta de Razón - Auto Baneo
     // - Usuarios Restringidos - Canal Existente
     if (moderatorMember === 0) {
-      if (member.id !== autor.id) return perm.moderatorPerms(bot, message);          
+      if (member.id !== autor.id) return perm.moderatorPerms(bot, message);
       return message.channel.send(embed).then((msg) => {
         msg.delete({ timeout: 60000, reason: "It had to be done." });
       });
-    } else {      
+    } else {
       message.channel.send(embed).then((msg) => {
         msg.delete({ timeout: 60000, reason: "It had to be done." });
       });

@@ -14,9 +14,9 @@ module.exports = class WhoisCommand extends BaseCommand {
     super(
       "whois",
       ["w", "is"],
-      "Comando para **obtener** datos importantes de un **miembro**.",
-      "whois`.\n**Opciones:** `<user>`",
-      "_***Todos***_",
+      "Get the important data from a User.",
+      "whois`.\n**Options:** `<@user>`",
+      "_***Everyone***_",
       "guild"
     );
   }

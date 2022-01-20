@@ -144,9 +144,9 @@ module.exports = class InventaryCommand extends BaseCommand {
     super(
       "inventory",
       ["lvl", "nivel", "level", "inventario", "xp"],
-      "Comando para **abrir** tu **inventario**.",
-      "inventary`\n**Opciones:** `<user>`",
-      "***Todos***",
+      "Deploy a panel with the Level information.",
+      "inventary`\n**Options:** `<user>`",
+      "***Everyone***",
       "member"
     );
   }

@@ -26,16 +26,14 @@ const bankGuilds = new Map();
 const guildMembers = new Map();
 const guilds = new Map();
 
-module.exports = class CreditCommand extends (
-  BaseCommand
-) {
+module.exports = class CreditCommand extends BaseCommand {
   constructor() {
     super(
       "credit",
       ["prestamo", "moneditas", "donation", "donacion"],
-      "Comando para **Pedirle un Préstamo a Kyonax** de Kyo Shinys",
+      "Add liquidity to an Account.",
       "credit`",
-      "_***Todos***_",
+      "_***Everyone***_",
       "credit"
     );
   }
@@ -69,7 +67,7 @@ module.exports = class CreditCommand extends (
       _GUILD_ID,
       _MEMBER_ID
     );
-    
+
     let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
     const _actual_Member_Coins = parseInt(object_Bank_Member.memberCoins);
 
@@ -169,7 +167,10 @@ module.exports = class CreditCommand extends (
         true
       );
     }
-    message.channel.send(`${_MEMBER} enhorabuena **Has pedido un Crédito por parte del Banco Mundo Kyonax !**`,EMBED);
+    message.channel.send(
+      `${_MEMBER} enhorabuena **Has pedido un Crédito por parte del Banco Mundo Kyonax !**`,
+      EMBED
+    );
   }
 };
 

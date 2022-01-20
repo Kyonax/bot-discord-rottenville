@@ -36,9 +36,9 @@ module.exports = class PutembedsCommand extends BaseCommand {
     super(
       "putembeds",
       ["pembeds", "embedsput", "pem", "colocarembeds"],
-      "Comando para **mandar** los mensajes **Embed** a los canales.",
+      "Send Messages Embeds to a channel.",
       "putembeds <type>`",
-      "***Pilares***",
+      "***Admin***",
       "owner"
     );
   }

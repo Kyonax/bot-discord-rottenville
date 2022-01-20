@@ -15,7 +15,7 @@ module.exports = class HelpCommand extends BaseCommand {
     super(
       "help",
       ["h", "support", "helping", "ayuda"],
-      "Use this command to display a panel of **help with the Commands Information**.",
+      "Display a panel of help with the Commands Information.",
       "help`.\n**Options:** `<name_command>`",
       "_***Everyone***_",
       "guild"

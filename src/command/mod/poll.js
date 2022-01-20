@@ -25,9 +25,9 @@ module.exports = class PollCommand extends BaseCommand {
     super(
       "poll",
       ["encuesta", "enc"],
-      "Comando para **realizar una encuesta** en el Servidor.",
-      "poll`\n**Opciones:** `<rol>`",
-      "_***Pilares - Inmortales - Moderadores***_",
+      "Create a new poll for the members to vote on it.",
+      "poll`\n**Options:** `<rol>`",
+      "_***Admin - Inmortales - Moderadores***_",
       "mod"
     );
   }
