@@ -4,6 +4,7 @@
             "NFT": [
                 {
                     "name": "Rotten Ville #0",
+                    "holder": "9ze87mvs5zPLqpydJzXYFUYcmUNuqW9aZR7mvJHKiJTM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/VGnhSRWYh0xdVKS7adRGYoKme9QMteDT_oohy47djDI",
                     "token": "HFoUEQq967Ei3v4wSp738WDFrrxiCjYpfGEEz4DmTvpG",
@@ -58,6 +59,7 @@
                 },
                 {
                     "name": "Rotten Ville #1",
+                    "holder": "7wqgDtn9REKuGXt4HzC6gGSJmWESfyd5yjpAuBcmWKzM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_X45rX3vETsv1XYdAjRG3NxNblJ096fUlmDZZ6iwS9o",
                     "token": "HY5piYUc8hcLovYGX1qAS9ySRFeJXhAwHvjr12UwKY8j",
@@ -116,6 +118,7 @@
                 },
                 {
                     "name": "Rotten Ville #2",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/IoZ6qNR1LGlUmQyXxFbJPPPPZG3cwdPFFcHLHlibNAM",
                     "token": "9juUz4YycNP2LM43uRcYihRcqh91GAPTWQBEH85JrNPT",
@@ -170,6 +173,7 @@
                 },
                 {
                     "name": "Rotten Ville #3",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zSooAI7oQvc7hxcfaQ-lpSJ9g7MBRUmANrOcFDaYb1g",
                     "token": "BJEJLNiqurnoURnuWY8wn4m9uwMcAm3bzNLqoWPgEUQA",
@@ -224,6 +228,7 @@
                 },
                 {
                     "name": "Rotten Ville #4",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/kc3xt6t37lXjISZ5VUrRUxD_73svsZuTTAudjTGKbac",
                     "token": "6TbQYVvNVBSXWyeTPwQjjNUPPuXCGH64xkk2zt5qxo82",
@@ -274,6 +279,7 @@
                 },
                 {
                     "name": "Rotten Ville #5",
+                    "holder": "6H6SViSicpyzJBMio2NbzQC2SSZv1nLGqrm5wYwdszJC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-i96ozk4zk0wVIG6B2uOVdW8e1HhoIlFKM5tvBRghtU",
                     "token": "89RBC6xBNqUzWiTk538bFvPANwm2QqpiFZDrMvTxntXS",
@@ -332,6 +338,7 @@
                 },
                 {
                     "name": "Rotten Ville #6",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/MYDIFlE9gr2-vvlL242mUA_SFGp6iG-EAJ59XrQf3h8",
                     "token": "GkejL6j9nrWeYyUSjH7d5HtYD7uuX5GZ5LMBr5FGsEv9",
@@ -390,6 +397,7 @@
                 },
                 {
                     "name": "Rotten Ville #7",
+                    "holder": "3s3L8eX7y5M1dBXzWLb2jmXJr8g4FdEwP6eeXwxTrxqx",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Z0dYwGyeYaWovOr1RZBM3e9oTGg-gdUej20kWjDcSzM",
                     "token": "rEKSj9Pw828wqHBRzP1mXq422UCoE2N4BKsf2UAKv9Z",
@@ -448,6 +456,7 @@
                 },
                 {
                     "name": "Rotten Ville #8",
+                    "holder": "6RBAtgByMADxtpdD8xCpc2qorBMWf8HnKEWmT7jE61TF",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Kut80mqc1eEb5kRt7TK16NqYPhLOafJQJTKt0Nu10aU",
                     "token": "55W1hmhMVNZrQFUc4Xw6pPYreBDZEKdoqxyDYMw8YdfV",
@@ -502,6 +511,7 @@
                 },
                 {
                     "name": "Rotten Ville #9",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UZ0_9lZprLywzRGa2plC4D9NVSsXvyJuptnsdY0fvkA",
                     "token": "DpQwz25U7vneZogxRdUe4etAhf2ZM5mooFrqJy49JWDX",
@@ -560,6 +570,7 @@
                 },
                 {
                     "name": "Rotten Ville #10",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/F9fFsGprAgV7oQsocWNmrybzyy3DsoDKpp9lcf-BHXI",
                     "token": "BfcV2dVctF4NejAereJokH3pS9NLcRZseUPiWCDYH6MY",
@@ -614,6 +625,7 @@
                 },
                 {
                     "name": "Rotten Ville #11",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4Mq6g1IrBPOY28EdQ9E5oKQnlZf7GmCYYBrVOsGbYZ0",
                     "token": "2tUpXtXyUoQqWZg9W4k2jB2a2pNpJJcgP9nC3VfaHmfG",
@@ -672,6 +684,7 @@
                 },
                 {
                     "name": "Rotten Ville #12",
+                    "holder": "AYnDaEu9VrZktFLfiqyEErh29vUAiS5JkVqTzJDXFpAW",
                     "symbol": "RV",
                     "uri": "https://arweave.net/K5TxePboUO6oe6a3UvCkcpJGy26Ut1gGorlOFivP0r4",
                     "token": "DZXrFErpPXXCcN5Hw666FHvCcMUWqYc3eoCJfihc3yqq",
@@ -730,6 +743,7 @@
                 },
                 {
                     "name": "Rotten Ville #13",
+                    "holder": "6RBAtgByMADxtpdD8xCpc2qorBMWf8HnKEWmT7jE61TF",
                     "symbol": "RV",
                     "uri": "https://arweave.net/o-tH0U19NH15MvHfjMbRWdab5q9meeNCSa8w5WEgQK8",
                     "token": "Z4NSBLw1kiJ8qLq6rWJiUeqyw9TbJYF1A7ChAJACdkF",
@@ -776,6 +790,7 @@
                 },
                 {
                     "name": "Rotten Ville #14",
+                    "holder": "CNwYoMHFHethLemZRQjyh4qK4uq5N4XGvf8TZSKsb4wS",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4vAskzUcDHXLTh46AgZfTtYiT7e8ZZ201F1qph9oVLs",
                     "token": "G38ofWQfs3QK9ZxgdGspYjvm4tFJCxUwLZ94dPtEnE19",
@@ -830,6 +845,7 @@
                 },
                 {
                     "name": "Rotten Ville #15",
+                    "holder": "6Zh3Dowf6jGw65tMvdGaPdNiiTkt95eVZWtPyRvXjVYn",
                     "symbol": "RV",
                     "uri": "https://arweave.net/LaBSS-GfjyLL9UhH3uJd5y2KhfVqR3-SgKV60hOcQdY",
                     "token": "3JaXgrxxg5zgmHK2Vs1Pw2dHRHCh2eY3MNWGxgRpnuRg",
@@ -888,6 +904,7 @@
                 },
                 {
                     "name": "Rotten Ville #16",
+                    "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/BSWrVbr11NDIz2m-J8f8wTrdQIhraxaZIJbY5pfoju8",
                     "token": "GoF6dUYCft9rd1jBTTjzmGzorZHcfGcQLv45GTuymWsa",
@@ -942,6 +959,7 @@
                 },
                 {
                     "name": "Rotten Ville #17",
+                    "holder": "FSSP1BwC8SAMuFHzTNkMXQpVBViFHXFyMXvuAcPwTiuM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0nuJHK1lV3SooTe3VU1-_C_eJyOZqcHVfjOMKrCrFjk",
                     "token": "prZL8EhiUPTcBWZrHeRf7oKqPpRGka47zbexJd4bBxi",
@@ -996,6 +1014,7 @@
                 },
                 {
                     "name": "Rotten Ville #18",
+                    "holder": "7532pic5LZ3BYpRx5DK6PWdw7HDRHwoELkrrHmJYudFq",
                     "symbol": "RV",
                     "uri": "https://arweave.net/TdXpc0ZHNNatIYmddZD-aYbxB28XVsMYKF5fXaK0Z2g",
                     "token": "h1MZJjcGnnJ4to1tkRVjKgUvjqLbRoFnJY6AaPpA3Ju",
@@ -1050,6 +1069,7 @@
                 },
                 {
                     "name": "Rotten Ville #19",
+                    "holder": "78X8jNxqU5myH47tBgvdiA79zY6V4JN9FSYLpj4VP1Mo",
                     "symbol": "RV",
                     "uri": "https://arweave.net/R48l6iHz8_3159hO_sjUjj87G66_9lm2rgTJa6MPU9o",
                     "token": "D7NF17uuxXJz7REQKE5kWZkULT9jMxM7tjzoTRTday1J",
@@ -1108,6 +1128,7 @@
                 },
                 {
                     "name": "Rotten Ville #20",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xJLEjlGUQroEQL4u9OVO12_v_WMSGNn6O-gpqmfVKwI",
                     "token": "21VMdK6VNmaf9QGBtCrYX6utoxDHGWgop13qPYopgviL",
@@ -1162,6 +1183,7 @@
                 },
                 {
                     "name": "Rotten Ville #21",
+                    "holder": "4YhJ1px6Kd1dmtRAcaFvpovbNV3zLtGvwGa3uYCPhjXc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GYlpTCueCf7nJoDQQB_2dSXTBPaq04XnPM4aMY_dWQs",
                     "token": "5grtHaKSphjK2PfPJ95h1uZqvvhpcPSp6MwoqrZRw7yK",
@@ -1216,6 +1238,7 @@
                 },
                 {
                     "name": "Rotten Ville #22",
+                    "holder": "4Yea5bZ3H3KQkojqfD5hUqRHZ2yqy16m9bogjJWaadbV",
                     "symbol": "RV",
                     "uri": "https://arweave.net/qjuTm10wHv6N2FrvoyPynDuT3_7V_aYeCK4QxMKyGLc",
                     "token": "GFLnXG1bpG6NDYUhYEJ2KuauAvWeB6y42c4uer42zgkR",
@@ -1266,6 +1289,7 @@
                 },
                 {
                     "name": "Rotten Ville #23",
+                    "holder": "C26NzwcPngwfjQbfDwhdz4XkDrZZY5EVa39gVmkRRxV1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/9wkJL1Q6QNfF6OHAUVcNrvjobXR0BM1nsp-KvetHx74",
                     "token": "Dkjg7gPxyzgVCYY4eC7Qvv7xG6iL6S8UkBbB9XnLHXNw",
@@ -1324,6 +1348,7 @@
                 },
                 {
                     "name": "Rotten Ville #24",
+                    "holder": "EfSdAdG3T9RuozRbiMDhrrSfKPWmsbSgLMTL6fgsWuDa",
                     "symbol": "RV",
                     "uri": "https://arweave.net/oU4eBHjWrC3y03GMyFqLjDghybUY1cWWZT24FaaB3ow",
                     "token": "Bgm3yRNmUQtFJjitDV9KSsstoam7ZbP8PFAFvH8TLdrW",
@@ -1382,6 +1407,7 @@
                 },
                 {
                     "name": "Rotten Ville #25",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/9TQbMA8SiXXlm4FnWKl4ZUIETm2SCqapR9eTrgzhqIs",
                     "token": "4MiYVKkfCh3idZjvczs5KEsBWQYY5RLSTkGcxEH5Pj5z",
@@ -1436,6 +1462,7 @@
                 },
                 {
                     "name": "Rotten Ville #26",
+                    "holder": "CYFUcZk3QsaxNaaGLzF4CZxsE1KtxGsaG8BQVhstMygN",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Cs-_Y_udoCfkRiwbU8iY4HvSdJbxIKEU3YiUmu1DIWA",
                     "token": "AgtJtNWVPV9ktpeeUxmTbuMGovQbHDGAT7apNsaneGjf",
@@ -1490,6 +1517,7 @@
                 },
                 {
                     "name": "Rotten Ville #27",
+                    "holder": "6Ymq57fSL47TfKbeiBBDvcgnRZxfsuSrtLVXyGFaJgcA",
                     "symbol": "RV",
                     "uri": "https://arweave.net/NaWEvi6J-PCnlRMGx3MF1D-ll9QI7Y1n4zhlZs9yUh4",
                     "token": "9NLeoPtEHioZ7BUVFPZfdu3rRAWmVgXbmqg45pgeQ2RU",
@@ -1544,6 +1572,7 @@
                 },
                 {
                     "name": "Rotten Ville #28",
+                    "holder": "HunfUpMKtcVQaxLjcYej2nJis9Uz43sFMrdyPBKy33Kx",
                     "symbol": "RV",
                     "uri": "https://arweave.net/3A2kYd639G2o5oLkzTEMY0vMU7_OI4z6SP02poVa5jo",
                     "token": "6oBZty64HiMTZKD5jL2ko3vXSHhy7E5iYcBnrF68axjd",
@@ -1602,6 +1631,7 @@
                 },
                 {
                     "name": "Rotten Ville #29",
+                    "holder": "J8LqB2MhWUWHtyXCKBit1kUAGG6kRcj5j65LupP8v4kC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/dW1vlgRCDQduzcpdb5RxcZ788m2ooeJBIfyXlxeAs44",
                     "token": "CX6fi8pE7h7dwHVsE82ubNHdnpX4sNawMcJBoFg5SCSc",
@@ -1660,6 +1690,7 @@
                 },
                 {
                     "name": "Rotten Ville #30",
+                    "holder": "CYFUcZk3QsaxNaaGLzF4CZxsE1KtxGsaG8BQVhstMygN",
                     "symbol": "RV",
                     "uri": "https://arweave.net/uL_yMWcWvJX4ajOHYRw_WnFeGpT7VEAS8udeHHiDoeA",
                     "token": "2HSpvEG1oufivCKZUHZ89TtzQ7CQS88npozdy8Ltyitw",
@@ -1714,6 +1745,7 @@
                 },
                 {
                     "name": "Rotten Ville #31",
+                    "holder": "C26NzwcPngwfjQbfDwhdz4XkDrZZY5EVa39gVmkRRxV1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4p1aMQhLco9WSWP6VpaIlnCHzJpPc1P8jf3sOeg-Xfs",
                     "token": "FbkLjyhF8SPVGH92Q2edJAqLmaJCbz1PY2vGi9sJyxvX",
@@ -1764,6 +1796,7 @@
                 },
                 {
                     "name": "Rotten Ville #32",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SYBrhB4ut1IeV2jS3vTNlsjXiIHTydtFAoHOJWdRz3I",
                     "token": "8KdFK4LT7UzGS4AmjfeUZRxJWKc7W7Nmd69J2ZuVDR2e",
@@ -1822,6 +1855,7 @@
                 },
                 {
                     "name": "Rotten Ville #33",
+                    "holder": "AYWXcKXRE8XwunpaNYXD4oJt4SRuo2FSLsoZHkejHSfw",
                     "symbol": "RV",
                     "uri": "https://arweave.net/aQM4aNAjUrQMysWpIp8j8QyqBYzY9k2bC_nSUs_YEJU",
                     "token": "3dhw4bGScBV7QHs4S5STiA6R7QsQd25P87dTGnTfr4DP",
@@ -1880,6 +1914,7 @@
                 },
                 {
                     "name": "Rotten Ville #34",
+                    "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/w_iAHIVHRO0m-qDJUnu4OKmM8gHWMEO0eH_LXHA9NUo",
                     "token": "5hkZMUXD7xHvjGX6RtRyQwNTPZnbSzFBnTLzT16ST1fm",
@@ -1934,6 +1969,7 @@
                 },
                 {
                     "name": "Rotten Ville #35",
+                    "holder": "CYFUcZk3QsaxNaaGLzF4CZxsE1KtxGsaG8BQVhstMygN",
                     "symbol": "RV",
                     "uri": "https://arweave.net/IFAcBSNn1I07tskvMh9Rt6Hn3FLRxBSAu3y5aGWbNco",
                     "token": "4trGwpaJ7yZgKaHbDamvqCrov8CbJUKK5e3GQBS5Yxhw",
@@ -1988,6 +2024,7 @@
                 },
                 {
                     "name": "Rotten Ville #36",
+                    "holder": "J7dTtcVRZ4et2ki1QUfMSNePhTWLPCJdqgM5ge5PbHAi",
                     "symbol": "RV",
                     "uri": "https://arweave.net/NparVBHF4bpHubHSo8suzCs3IWvoiOkpevFGG_hGzGY",
                     "token": "6ot4Z93FpVxYnJNyWN9BwaZ7njCpGfi58KF3SRHq7SvV",
@@ -2038,6 +2075,7 @@
                 },
                 {
                     "name": "Rotten Ville #37",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ZPjIDVjEv2cdcrSID9ktyRUjFLRwhB7lF-XacNJfjbs",
                     "token": "JDoi3rQQ9suK94auXDzJ4Cn6HPWRWd9Axn2Tp1VsHDav",
@@ -2096,6 +2134,7 @@
                 },
                 {
                     "name": "Rotten Ville #38",
+                    "holder": "HfDaj5umvBR5pqE7TLWELMYV4PA7ozY5tmXXyzQRoFMf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/b2AdMkHFWiAvTEIVUjJzT4p7pdpNux9sHsbv4PfJKA8",
                     "token": "4BHjK92bm9oybx23Z5DhjXWYrqAqHbAVgn9cgvtcYanA",
@@ -2154,6 +2193,7 @@
                 },
                 {
                     "name": "Rotten Ville #39",
+                    "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/HxoLOcUMrWuuiB0heL229EVT5IEbARc0KkIG6Ao8Njw",
                     "token": "32Hnn3bEHhwD9ZREZRwHEsyCtLXn4GPKnghj8oQ3cRJQ",
@@ -2204,6 +2244,7 @@
                 },
                 {
                     "name": "Rotten Ville #40",
+                    "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/IgmFGbFoUfhz5mbJJ0yNaH-kftlc63GRx9qB4TRjds0",
                     "token": "E9P5x725CCM37h2qMb4zYnCmYoPLbHJhMeMNu74v9hCH",
@@ -2258,6 +2299,7 @@
                 },
                 {
                     "name": "Rotten Ville #41",
+                    "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/qOh5mG47TbxnG4BgJ53WwHToW7kPB5909n2NSetOJiQ",
                     "token": "8zcHQK6GomPLwH5db3SMqoBBPyjdyoGs1Qxr2gKQErzD",
@@ -2316,6 +2358,7 @@
                 },
                 {
                     "name": "Rotten Ville #42",
+                    "holder": "6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/k6jt8AfUWJ7CwAcONcg3yVrNHVpmW_zQTC6sJyQn0Wk",
                     "token": "7FA958h3xiHdkZsFWfgv4SPemeF7PWunML3QFGfeQQSk",
@@ -2374,6 +2417,7 @@
                 },
                 {
                     "name": "Rotten Ville #43",
+                    "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/PS-Q_ilJ2SdUaesW4auGVhXUi0kx1jU5P2PMkE7gpZc",
                     "token": "GSkbPcfPGHZpJukarUcQBPVQorfhCdsS9DBk66UPSm1j",
@@ -2428,6 +2472,7 @@
                 },
                 {
                     "name": "Rotten Ville #44",
+                    "holder": "33pa928oAqjpt38FtTDew2iGgdCv37WBcZ5vXaRw9jZN",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zralt8F3XKqeFib8x6-tJ5TmlRQNak2buwaYmLfOJd0",
                     "token": "8fYWiBx1wKz6M18UoNpwCYJgePn5nkTjaFU4rzJp7maQ",
@@ -2486,6 +2531,7 @@
                 },
                 {
                     "name": "Rotten Ville #45",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/iSbYS9oA4wuchwLl4qs-ZnVAxG57k_sgD1Uc2q6nhJ8",
                     "token": "Go3urLf4wfh7QQ84AAs3tLo1UV2h2NtTFCLUqqVC8wqs",
@@ -2540,6 +2586,7 @@
                 },
                 {
                     "name": "Rotten Ville #46",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/moymv2nPolNK1-xKoiTp_lG78PQE_WT-JdG_9tjHfyw",
                     "token": "D89WrCs5kvQoQnFNKtFz4U8HcY2RegfwjtgvEP41QAGv",
@@ -2586,6 +2633,7 @@
                 },
                 {
                     "name": "Rotten Ville #47",
+                    "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2ThGnskup3iNShaEexQM4xnoKMHYXpQ_cRTGpQEgq8I",
                     "token": "3S5SirbfBnWkV4WFbpxduNd1z7S4nDNvoE4CBpQJ4YH8",
@@ -2640,6 +2688,7 @@
                 },
                 {
                     "name": "Rotten Ville #48",
+                    "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/T3PY1k-8zvb0cZ_f__VStMdzM16UlZMv7PRobOt-soI",
                     "token": "E9RQgMXNjz4BMH4p6ThPFAdhjRZefKpPaQgmgQJJDG5h",
@@ -2698,6 +2747,7 @@
                 },
                 {
                     "name": "Rotten Ville #49",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4YxQ7PNyHGDyve0WXD4Lh6ePk3oxniANrDAoM6WbESE",
                     "token": "D7eUZwHPJuome5nASuqv1JBSDatAJJfrWekibsF4WBUz",
@@ -2756,6 +2806,7 @@
                 },
                 {
                     "name": "Rotten Ville #50",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/QTLmr66K8l5dfbyNjEJv-82auuMxc1NyNDZdksVNfuA",
                     "token": "72sHN5EFoD6CXwst2VobaNujKdc7qNUzuMBP9eH4jKqK",
@@ -2810,6 +2861,7 @@
                 },
                 {
                     "name": "Rotten Ville #51",
+                    "holder": "8tpbt6BGX2hFEv64N9MuH82EYebH5ZxrDCJbCkUCNgcV",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Qg5-FIYlZrhDYn8UV-zZJ_PtuyDSDTp5XR3D60FsSBQ",
                     "token": "H8G8vSmif9Su8Wnx5rqtwTR3rdzt7orccToxPov2c728",
@@ -2864,6 +2916,7 @@
                 },
                 {
                     "name": "Rotten Ville #52",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/wGwZUOB4rkoMj7i-S3zFBNV72FBAvcegX4o3VhYzpv4",
                     "token": "CEu55Bc1ZqEe1r5MMPFPvvkLuT5S9jqP5DUMSLib7MnD",
@@ -2922,6 +2975,7 @@
                 },
                 {
                     "name": "Rotten Ville #53",
+                    "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Hgc2xy1Sj3iNMcQkOz8EI-M1Yj7KHPleyJ8ZWVcBGEU",
                     "token": "4jXyRfcbDA7QcbEGjYdMxFECgPUDz7E6dkGV3HhyfoFi",
@@ -2980,6 +3034,7 @@
                 },
                 {
                     "name": "Rotten Ville #54",
+                    "holder": "MmzhBSV5ZUH3xSvD1xEYXymiKoGaTtFfuW7jeUtCMHp",
                     "symbol": "RV",
                     "uri": "https://arweave.net/W-QJS4Ab90KEXWFLC5zRhUZxE5QA04yYwoQrLgwVvnU",
                     "token": "KMUvZcdoYdJdA2kr6hKwZ2mN3xRFJSBQyaGQMP2maDs",
@@ -3038,6 +3093,7 @@
                 },
                 {
                     "name": "Rotten Ville #55",
+                    "holder": "D6xu2joBHScAkP8BcC2UzKLpHnzeYENymk2NztTsEM5t",
                     "symbol": "RV",
                     "uri": "https://arweave.net/bd8GOgiJjatewXREkrhrVOsl4z2rrCkpq8u83K9AU48",
                     "token": "DimZ456TwYscyU8MbqABRANX9k11DVmbycvpYYMP83BP",
@@ -3096,6 +3152,7 @@
                 },
                 {
                     "name": "Rotten Ville #56",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/vyZcs9L24OVEHD_m9kxX-MfrLGV9jdFyBTHKd9U622k",
                     "token": "FAFNKTmQNMveWVCBakpkND4pKB4sQsy4DS6BQaTrcCzX",
@@ -3154,6 +3211,7 @@
                 },
                 {
                     "name": "Rotten Ville #57",
+                    "holder": "8hrhh2pwUkovqkza6GZSRivwFQrYMJvHaFkbeMVNBQjK",
                     "symbol": "RV",
                     "uri": "https://arweave.net/S6NTTpglU0Gydxg9vrX4dGi-H1p3_VExRXCGOl9xPWQ",
                     "token": "8QmDC3rGfc2TUxdo1emSbWBn2s9xJedhdHtyfh5uXHKQ",
@@ -3212,6 +3270,7 @@
                 },
                 {
                     "name": "Rotten Ville #58",
+                    "holder": "CmiPcrjWxSFs4cw3K8gesxwPNq9P27vPaDn52eRbMDSP",
                     "symbol": "RV",
                     "uri": "https://arweave.net/pwda9LRw0vgoSXAaflliaoSqkyXJ4_mdbEsHOHwW61k",
                     "token": "2rYmXk6yFsf6sJBK6YiLmCFSAxvRFHSqhZgVLjRihr8X",
@@ -3270,6 +3329,7 @@
                 },
                 {
                     "name": "Rotten Ville #59",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/YRjLcOpcWLIR7vgKedlRl2t3E_NNb-33adp4DO7mWiw",
                     "token": "9e8knP51n5MPn5f1FC21kxPy8RpreRcGp33WHVGWb4G5",
@@ -3328,6 +3388,7 @@
                 },
                 {
                     "name": "Rotten Ville #60",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/pzshaJ0Lb4FDGJXSCVARC_2lDVpyJ8eF89l6ICVbYcA",
                     "token": "CVPijCs67ezaVFZxNBeRu9NrMk1Tdm4sJU217R5B4BuZ",
@@ -3386,6 +3447,7 @@
                 },
                 {
                     "name": "Rotten Ville #61",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ble8ykQx4pzzJwcpztap3wq50NUKX2fEZS-kt5lCH9Y",
                     "token": "9d3XZCDu8R4bTvHvGZnjKobspis1t2eeTydSzdagqjo3",
@@ -3440,6 +3502,7 @@
                 },
                 {
                     "name": "Rotten Ville #62",
+                    "holder": "8hrhh2pwUkovqkza6GZSRivwFQrYMJvHaFkbeMVNBQjK",
                     "symbol": "RV",
                     "uri": "https://arweave.net/j64_JgMdQCl_OUW1J1ZaY-RssY7NN6s2yOhqLXMsjMc",
                     "token": "Df1uXZHNGrguzCf2LUzkKi5hjTJ5htTXfxtNp92Qi365",
@@ -3494,6 +3557,7 @@
                 },
                 {
                     "name": "Rotten Ville #63",
+                    "holder": "6r5Q87gd3wLDKfuYAqAFqXNck2YDC2EQXrVrZL96K5QH",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7mNvZbNJ4ZZWOokqKaFC0nX399a4qoYtMVuhclgggfE",
                     "token": "4mcFDwiYtgDGxic3XNmz5kPFGuXmtWCpoc8Mgpxwk9Bx",
@@ -3544,6 +3608,7 @@
                 },
                 {
                     "name": "Rotten Ville #64",
+                    "holder": "7UewgVwkP68KePNcsLfngxxA9F8p25prSRmDRAo9ChG2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/C8WjF57yczEl117g8Rd34u93hGaud3dLlCDebF7XCA0",
                     "token": "3Wk8vuyyFeQyT7Qjzzd5H5d3DSqJjM2d7zcLkQN6tFxc",
@@ -3602,6 +3667,7 @@
                 },
                 {
                     "name": "Rotten Ville #65",
+                    "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UtXWMXzul8APIEHvlrMb8IAtt7nKBS4Lhv0ngEmChOk",
                     "token": "EhWWV8NsSN5UBxPUEB1bKyHrGW68RqRrsQK43UqemHDE",
@@ -3656,6 +3722,7 @@
                 },
                 {
                     "name": "Rotten Ville #66",
+                    "holder": "N2D2J7KS5Be2wrJFjWZd8h3rmUYPauYDkBT7ByBgTm9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/d6QE86cQYCxmGByOx6VaAq1bjq_RcVmU4lNU1_Pw-mM",
                     "token": "2kxW5MJxCtXwSh7LmMetNRLLeScZVaWEtkSMEYxwDcgA",
@@ -3710,6 +3777,7 @@
                 },
                 {
                     "name": "Rotten Ville #67",
+                    "holder": "8xL7Wr6ZaJwmyfnBRiWCX7wUtZ3efP4VC2WUdevtnVMH",
                     "symbol": "RV",
                     "uri": "https://arweave.net/I2RerwtdNaY5--kZidEKa7UbI-7f4TG5sYQ-nG9ZiJY",
                     "token": "BhnnCW3T3ZrZTxiCwGLYXR7P1xsWFK1fr1i3y5i2eoBM",
@@ -3764,6 +3832,7 @@
                 },
                 {
                     "name": "Rotten Ville #68",
+                    "holder": "G6NPYiPdu9Y89BPwFDVRLXioXxm5w8Bpstv2bVCLGKmE",
                     "symbol": "RV",
                     "uri": "https://arweave.net/NIkP5ms2t2dJcP7PUAddnOnEW6tq6v0t9qocsUx3C9U",
                     "token": "E4DxYWRKr9SQHywrDpLasCLWMhH1FXLWtBsxytdcNygX",
@@ -3818,6 +3887,7 @@
                 },
                 {
                     "name": "Rotten Ville #69",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/MvLX5SJuw9Ikrtf0yIOzW0vTkw2cNByxP4JS-sPmgAE",
                     "token": "GmFKugsWL5nWL2MC6kBkTEmzxJDYsZnsz4zv1KaDGZse",
@@ -3868,6 +3938,7 @@
                 },
                 {
                     "name": "Rotten Ville #70",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/O6u0uPtQ5bhRf5eUyDm11_tSf7CBfibctnqAQz2K3kg",
                     "token": "c4QSpTxjbCxabayaCKoawcHfrcQEb3siP88TgxmHpxa",
@@ -3930,6 +4001,7 @@
                 },
                 {
                     "name": "Rotten Ville #71",
+                    "holder": "4Zv9nJonEL26Rg7N8LKwD7ovEszBNU6jDgN7p2eWTNAo",
                     "symbol": "RV",
                     "uri": "https://arweave.net/PKZKfuzBCx_l4iLk4k6OGl_kn90Y-k5gM9FOdms_LKA",
                     "token": "UhFqpZNeBRETCL2DuBHVFAUHBaP6LZVe75GXUaooGvf",
@@ -3988,6 +4060,7 @@
                 },
                 {
                     "name": "Rotten Ville #72",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Qdy5HGOeB7RIBBQai9muwxIvVDExJBgJn5HwLTlq9eI",
                     "token": "7UXt6GrRMCdAePjco8y297Amsj426rBZm5Kwf88FhCuK",
@@ -4046,6 +4119,7 @@
                 },
                 {
                     "name": "Rotten Ville #73",
+                    "holder": "9H3WVr3bafut5DH4dyh2tJXGVW143ZWCL57ZmHmWneb5",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Gp3AKCJRj1aMHiMYcZuColuomF_VqAzSTtDaqMykJ5s",
                     "token": "21kei1KWup8437JMbVXHNaAJ7rPct1dmkYeCa6i2tewo",
@@ -4104,6 +4178,7 @@
                 },
                 {
                     "name": "Rotten Ville #74",
+                    "holder": "CcWekZsCodvZSEyjz7WHFAFzptWJc2Jv8e7W4VjkE6fi",
                     "symbol": "RV",
                     "uri": "https://arweave.net/miHwOD9c3bK2KbtFHQ1HmR3r_saGxO-WBZPHL9I0Euc",
                     "token": "A4CfFmxMBKGkDnBa3dHXsuZFz3ruzyeaKpcaexUXe2CV",
@@ -4158,6 +4233,7 @@
                 },
                 {
                     "name": "Rotten Ville #75",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-P5FI9ic1Gj7-5cGmWaPUkKfIfK9YJEXivUwlgxHN7g",
                     "token": "J4RSSGhVpsGkruXLxD7tS7nVKUmKgSzopmSYy96rd6eg",
@@ -4204,6 +4280,7 @@
                 },
                 {
                     "name": "Rotten Ville #76",
+                    "holder": "6Ho7cQkPKZu5RxoKGBLKXY1dDtatYzWHbRn73ZHQAmYv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/DZV19F41Xm7RX1FzzBpx915_HbWwlOz3DM29tFpniUE",
                     "token": "E2EyjHkAGtRzosuNT8P6MXb8J5xdXXJyJHLR3m4fMxYQ",
@@ -4258,6 +4335,7 @@
                 },
                 {
                     "name": "Rotten Ville #77",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/OBa_o0_D0_BNEl5H9sop7GD7r9k7LsL7lnsNlJxmImk",
                     "token": "4MykWcUBqtDfpzj3nbNJxfun7GR7tbvdEuQqWJqdCRUU",
@@ -4312,6 +4390,7 @@
                 },
                 {
                     "name": "Rotten Ville #78",
+                    "holder": "6Ho7cQkPKZu5RxoKGBLKXY1dDtatYzWHbRn73ZHQAmYv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/WJ-hmq4er59S61OoNUWHHkAFlYvo7gzuRN6ddxUALGE",
                     "token": "4NEjWnrmRWfkJKodqXThMcRHizGk6Pv8SJJp3uWymanf",
@@ -4366,6 +4445,7 @@
                 },
                 {
                     "name": "Rotten Ville #79",
+                    "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_E8G8AqaUgvCDfaNDEkn9diVcP26iZKlFcaLuuNOtfs",
                     "token": "5XWL37wPPT37J1B4yrBogrvxhhgjByejpSbinLYHdMEi",
@@ -4424,6 +4504,7 @@
                 },
                 {
                     "name": "Rotten Ville #80",
+                    "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/okAld0D2xFC80mVOtDTzJc7uap88fdqnaRq38LdFd74",
                     "token": "7sYHPrP5PZBFt88YQtWHLjxs1WGK1kTghnKvoWAovLXT",
@@ -4478,6 +4559,7 @@
                 },
                 {
                     "name": "Rotten Ville #81",
+                    "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/rcCTopfCZe4QK9HqVXwSOKeeFmNig_A2rCDIxb3XYrc",
                     "token": "6primuz9TEHBSdf1zv2P3rxY9DKxxZM48ToizbnHbkQL",
@@ -4536,6 +4618,7 @@
                 },
                 {
                     "name": "Rotten Ville #82",
+                    "holder": "Azjk2SQKTAdqSYyiVK4t89XnZGkV8SkTojcwp3QWbNbb",
                     "symbol": "RV",
                     "uri": "https://arweave.net/RAcGMSYMMPEZv44XN3Z3MR5itUyRL0iJ03ZmaHjkqpM",
                     "token": "4EwFFTHBzgBTWVRJuPrMz4MAyaz8Q1uRHXy9ALmugLah",
@@ -4594,6 +4677,7 @@
                 },
                 {
                     "name": "Rotten Ville #83",
+                    "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
                     "symbol": "RV",
                     "uri": "https://arweave.net/tk5ny4vDwJDraQGOj8TSASfhnRP1sJQfYbCV5T-Ggx4",
                     "token": "J7sZVEPofCZLUN1j1YNKmxQFrqBkH7N5ynj3EWckK11b",
@@ -4652,6 +4736,7 @@
                 },
                 {
                     "name": "Rotten Ville #84",
+                    "holder": "G96xwUR7g9bLeRXWmQgjp1ihMTL32xFJWTdMp66FM1YB",
                     "symbol": "RV",
                     "uri": "https://arweave.net/HM7Esnt21tdNTgZTC_7OCLDoCkjkaUaWx3NZ1W2BHsg",
                     "token": "9VhsLPuuUpFR4vBT92yQiiDuB6XEEy7ynwiCGVXv7e8h",
@@ -4714,6 +4799,7 @@
                 },
                 {
                     "name": "Rotten Ville #85",
+                    "holder": "6RP5zKXyWfmGDPKwbghaN3DZwU9VuTf87CTksDqLvdVH",
                     "symbol": "RV",
                     "uri": "https://arweave.net/9dNBaAiazj2g8jg3Pm7jYdM3S782yCReEo8TUbxo-NI",
                     "token": "CGwiXJaknWK2EcdAjyvTdQAbzQQPckQvFVLd2MHojHrz",
@@ -4772,6 +4858,7 @@
                 },
                 {
                     "name": "Rotten Ville #86",
+                    "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
                     "symbol": "RV",
                     "uri": "https://arweave.net/bSEfXTOYiTqon8ii8l0qgjrU86UzWgGGYwW67m2m-tg",
                     "token": "5VYH3jDtVyFiAPf8w3h9gjCRwj315kRGUB5p7xVP9Jx3",
@@ -4826,6 +4913,7 @@
                 },
                 {
                     "name": "Rotten Ville #87",
+                    "holder": "9H3WVr3bafut5DH4dyh2tJXGVW143ZWCL57ZmHmWneb5",
                     "symbol": "RV",
                     "uri": "https://arweave.net/x_qFmtz7Y1f8MDRVR5BgBQVQ3rwYxCiCDl2yzcj0rsM",
                     "token": "5oZ12LnyE6Fw1GwfQrkUxzkhCFWnYGrrpx1br3Ph6Ek8",
@@ -4884,6 +4972,7 @@
                 },
                 {
                     "name": "Rotten Ville #88",
+                    "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Curf_gsLGxFtEZAtm91VktqwCwwiqwBryf1poTduamk",
                     "token": "45tbHEe1uisGA7X6GE6UzAT9cQaSVAH4Lmz9WZjkBpJ4",
@@ -4938,6 +5027,7 @@
                 },
                 {
                     "name": "Rotten Ville #89",
+                    "holder": "8LAnvxpF7kL1iUjDRjmP87xiuyCx4yX3ZRAoDCChKe1L",
                     "symbol": "RV",
                     "uri": "https://arweave.net/pvVzlXA6bhB9vLKnqsay7z-XZ_jlBlfrdYruyHtQlPc",
                     "token": "382Up2ztRwRvkLpYcsTXnC2MDvbFj2UxsH2eVkBwkyrH",
@@ -4992,6 +5082,7 @@
                 },
                 {
                     "name": "Rotten Ville #90",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SD_Wn6gl3-YxlKSOhTa7xLH2w2Z57qd3nvinlbELKyM",
                     "token": "2LpC5LUbhjDwx5Htj3rjazACF57eiGvkyyWUGyB8cRCv",
@@ -5042,6 +5133,7 @@
                 },
                 {
                     "name": "Rotten Ville #91",
+                    "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
                     "symbol": "RV",
                     "uri": "https://arweave.net/5jb-ogRpBQ4Isf3vLKQ9UTgtgs3ReJWvQCfhY31PT7Q",
                     "token": "8uxRc6fwQwLhjLAwn97UpbuLDUThZ8vkT4iEcjyJANAp",
@@ -5100,6 +5192,7 @@
                 },
                 {
                     "name": "Rotten Ville #92",
+                    "holder": "8LAnvxpF7kL1iUjDRjmP87xiuyCx4yX3ZRAoDCChKe1L",
                     "symbol": "RV",
                     "uri": "https://arweave.net/aAfotCV72ANRaEBotkm2i-BSin2tOJoHhdBhxOkFmFQ",
                     "token": "3TyC4UXy8wJyRkh8sLoTjrkSYKK1YFm2owsnaaRb34jb",
@@ -5154,6 +5247,7 @@
                 },
                 {
                     "name": "Rotten Ville #93",
+                    "holder": "YZPJovd9e5MT7W7zwkoDkCc6c7KUhi5dzut3pVDKw4F",
                     "symbol": "RV",
                     "uri": "https://arweave.net/vnLJ-uRxmnzfFjBQUrXMUbiCm17NmUIXV03QzudPot4",
                     "token": "RXaEMhm3wbSmiv7HBj1eSGsg5WtctzfNpzCPLN7djN1",
@@ -5212,6 +5306,7 @@
                 },
                 {
                     "name": "Rotten Ville #94",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/so_HXx7AjDYUE6HHa663QVYfNNUCDbRr-kB8_ePyN_M",
                     "token": "CHrHUdwQLEe77MAfR6wQAUrU1VcLqVEyQ3Ltm6D5E6Sb",
@@ -5274,6 +5369,7 @@
                 },
                 {
                     "name": "Rotten Ville #95",
+                    "holder": "5CgA9UCf5AMA7sxXUqHFGNardYyay1SbugBBpLPAXQUg",
                     "symbol": "RV",
                     "uri": "https://arweave.net/diDKmCh8Yxzk2DXRrXDKtiNcx-MCz65SQVDVIiKFxrg",
                     "token": "HrGxRBNeSiY6wq6sfuLyLEP6RDLyVjGYewptnnUGUgL6",
@@ -5328,6 +5424,7 @@
                 },
                 {
                     "name": "Rotten Ville #96",
+                    "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
                     "symbol": "RV",
                     "uri": "https://arweave.net/c3E-ZtfPUDKfYmqAR_DyObxc-dA65T1Y-qrr02u4KMs",
                     "token": "2WLoRVVsEGGDHMdRn6hm4QWGo992WYM9U6xKXL8YrWT4",
@@ -5390,6 +5487,7 @@
                 },
                 {
                     "name": "Rotten Ville #97",
+                    "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
                     "symbol": "RV",
                     "uri": "https://arweave.net/txuBtkBS4GQWC40LAMVhclG_1TppMe0BQC78jydtTM8",
                     "token": "3PGrigYvek83bXuwGb7KDwHZkVTrk4x6oF8ZaDebY4oB",
@@ -5444,6 +5542,7 @@
                 },
                 {
                     "name": "Rotten Ville #98",
+                    "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FiCfNofAonbOZgHpDkwpxGJw7DPefQ-qh-vzd8IQfS8",
                     "token": "EhP1dH3dw7bnRJwLrNcR9C3Nmh2VUWNiY853QrBL9m8X",
@@ -5502,6 +5601,7 @@
                 },
                 {
                     "name": "Rotten Ville #99",
+                    "holder": "74iyKiY1pvWPFNDibs8Aegj1BGPUzVRmDn8KkZcZkdKj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/HysCAM3uWqCnrZZsoEBPfT-BeBrM6Ip0-o6OvJZteyQ",
                     "token": "8aGgRjCShkV8r2MDkivsavQDGqJLQuLk7DP5W1qitPf2",
@@ -5560,6 +5660,7 @@
                 },
                 {
                     "name": "Rotten Ville #100",
+                    "holder": "74iyKiY1pvWPFNDibs8Aegj1BGPUzVRmDn8KkZcZkdKj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/rpDvUId3VPTJ4KzenetjEEdH5-eFVKtRRfgw5ALEmXA",
                     "token": "Er4gAUhoHJwCjLKcwwj48vGhGswFbJK47Cru68Z4vgW6",
@@ -5618,6 +5719,7 @@
                 },
                 {
                     "name": "Rotten Ville #101",
+                    "holder": "74iyKiY1pvWPFNDibs8Aegj1BGPUzVRmDn8KkZcZkdKj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/CjMzMYqqHQr2BZTYFt_I-2Bvey6qiMQhz4oaXuslIgE",
                     "token": "9dLLgmsASokRSRrJYJKNrQyt46uKMAerX1sv1YvsEKpe",
@@ -5672,6 +5774,7 @@
                 },
                 {
                     "name": "Rotten Ville #102",
+                    "holder": "74iyKiY1pvWPFNDibs8Aegj1BGPUzVRmDn8KkZcZkdKj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/jicNkwqZctKOmT-CI_kigmH9zxkGT2ljldvbsL9TENw",
                     "token": "FK7toWbHh5FPGL5VssR6zkPKpPsHEJywa7zRo57aVQjc",
@@ -5730,6 +5833,7 @@
                 },
                 {
                     "name": "Rotten Ville #103",
+                    "holder": "CazMdTcRtMtRoKMwDW5wmB8aAKXkGBrwcJvW3kGiVtd4",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Hx3xsmByI3bds7IsogRXZUnjWWRBA5uvpM47u1P5gG4",
                     "token": "3dtWrV1PhdXksZ3HC6GpH8J5hY9aYZkWyEZirrAa76tu",
@@ -5842,10 +5946,12 @@
                                 "share": 50
                             }
                         ]
-                    }
+                    },
+                    "holder": "Bt8yFZP7ibCPfiEC3Au4SVq7pspyH4DhD6Hb9586dU6L"
                 },
                 {
                     "name": "Rotten Ville #105",
+                    "holder": "DU6HmvzVo123X6KuUyjbr9x32AQFxB5jNDjmVp8mYkpu",
                     "symbol": "RV",
                     "uri": "https://arweave.net/moiCiQl81z7y8jk5JN5Rb-eUg8FrlIozNVV5tD2LDGM",
                     "token": "7hNEEkt6A4nJ4drHANZnAVDu9uVBR31f51dWMsiC75R4",
@@ -5904,6 +6010,7 @@
                 },
                 {
                     "name": "Rotten Ville #106",
+                    "holder": "EYSS9x8s4QmEnYj9eHyZub1NPEw51dznGh57RqR5QAfT",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Xty3o5fWrtGyblRPsL3izVnVscCxYSTf6jo8Wonln7E",
                     "token": "5dQUsC836FJVjScLhzN292LuEST598yVpx6uePaJVKVk",
@@ -5958,6 +6065,7 @@
                 },
                 {
                     "name": "Rotten Ville #107",
+                    "holder": "74iyKiY1pvWPFNDibs8Aegj1BGPUzVRmDn8KkZcZkdKj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2TsbTgYSI8v_9Qs3JvHSNgx30GXvRN18TJQurIDl6PU",
                     "token": "HryxqAnf98S89fjTAEc49c9Pte8vwVvBSMBoY9aosxdC",
@@ -6016,6 +6124,7 @@
                 },
                 {
                     "name": "Rotten Ville #108",
+                    "holder": "Bt8yFZP7ibCPfiEC3Au4SVq7pspyH4DhD6Hb9586dU6L",
                     "symbol": "RV",
                     "uri": "https://arweave.net/vRvoKsH8Wf-ixVNn7mMEbcC2_WTH1D0jL3r97z-HGnw",
                     "token": "BMGh4VtcCVW6dtgL1L3wdg8NoJaUSbUWdEvbVjyCZzCa",
@@ -6078,6 +6187,7 @@
                 },
                 {
                     "name": "Rotten Ville #109",
+                    "holder": "5CgA9UCf5AMA7sxXUqHFGNardYyay1SbugBBpLPAXQUg",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Gwn0e_z0NL4TuJHmgYUO86QdQg3ToeDgkLCPBwDYhKs",
                     "token": "cYE9cVMJecwTeYYQGw4K7XC45z4hNg4uBJJoWBUnzxY",
@@ -6136,6 +6246,7 @@
                 },
                 {
                     "name": "Rotten Ville #110",
+                    "holder": "8AEzJhfwSp6ArpF62dziZe6XvK63GBS4Dqvnsodvfuep",
                     "symbol": "RV",
                     "uri": "https://arweave.net/i-HGUJa2EcVQSftoSNfoKH_B0Rb9WCs3pCIB0eGTDUA",
                     "token": "2k6LB2LGFW77iEXAhZmWi5npbfY5tBjDa9EtfRD9qj5V",
@@ -6186,6 +6297,7 @@
                 },
                 {
                     "name": "Rotten Ville #111",
+                    "holder": "649DDy9Jepxc6b92mC4QmsQVaBpbPoHZ9i1M9EEMtxiS",
                     "symbol": "RV",
                     "uri": "https://arweave.net/iNmHTI0se23VQ62hK9PGU9CMBz-gOQL2Ec3T4dMVwcA",
                     "token": "HbZjHsWVb4GbMUUxdwmAjDZriwg8FsX5icb7jugLcjfk",
@@ -6244,6 +6356,7 @@
                 },
                 {
                     "name": "Rotten Ville #112",
+                    "holder": "xH5Ux2ejKfGLFLCmwrsMWye3CUNE2JafN2zW39DNP9Z",
                     "symbol": "RV",
                     "uri": "https://arweave.net/U9wKJfvUZuH2xY8xpHufaXv1GGnFhEpNWjSHg0y96RU",
                     "token": "9C5h3uKPTp9GHbsWnM7C3ZAZSiGA6ba7K41eLWyrSjAY",
@@ -6298,6 +6411,7 @@
                 },
                 {
                     "name": "Rotten Ville #113",
+                    "holder": "FfaM1nLR1g8jdUr7AeMWBwFZExh8XgbsGgDXtKRHFfCM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/lDM8uT6KBdMhX5O6tbDy2ukYk82XeVWPGdvGb3QF4Ac",
                     "token": "KdzRbBxYQfSLcssgJAHYGSVZpJHf163qjvCgBG7rjud",
@@ -6352,6 +6466,7 @@
                 },
                 {
                     "name": "Rotten Ville #114",
+                    "holder": "VKmLjVugnyu5T3eDz7ah64t8D22zapVABYxHGDKiftS",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-uckHnBF2ZurHk78BsD2_5l0JW8ZP_uXUo509nNLrhk",
                     "token": "9N9dnM8LNuNo16gmWFhmw2FtFRQ4dkYzbCusYy1v3yoA",
@@ -6406,6 +6521,7 @@
                 },
                 {
                     "name": "Rotten Ville #115",
+                    "holder": "9hjd4xdZKy8gj13kcvk8HW62m2hVALrsSZWXV38YxbGC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0ci4nDb-o288ugQmVRjn3HUxv9TOj573mZ-tubp3_Jg",
                     "token": "8UBFQZqAqcbj7561sKJNGapimkdW7jUfNNzaCoDMQ11f",
@@ -6464,6 +6580,7 @@
                 },
                 {
                     "name": "Rotten Ville #116",
+                    "holder": "A5795uy3QuKC2GH55d4qMqfrxYRFoxJUwXm3VA3jbmev",
                     "symbol": "RV",
                     "uri": "https://arweave.net/B6N9vBp-GW92puB6kQRcpEtPFP4MxjFEzXc_cVzKins",
                     "token": "87Vcy7Le5LSSKPeU8v3hm3paUhDuX8ruxGGmidfuiNgw",
@@ -6518,6 +6635,7 @@
                 },
                 {
                     "name": "Rotten Ville #117",
+                    "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zh7zVp3I-W0up-Ho84-O5Z8VsjhW4MjiLtfgBn7smU8",
                     "token": "Hr9Zo3sECQn7PPp4QrFVcp9C8gDain28jpjbtxNUTJHH",
@@ -6576,6 +6694,7 @@
                 },
                 {
                     "name": "Rotten Ville #118",
+                    "holder": "2jmKj7MKDqT7bK9up2cbxf1fLfBhjhu5QtdR7wGwKFRD",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FPSKA7KyD_M94zFcwDPl6afd2HW1Gi3PcNIxB3aw7p8",
                     "token": "9nLPYT9MhDnKXoCpFfxuaogkZwK1EAaU8hE8ECnRNdeS",
@@ -6630,6 +6749,7 @@
                 },
                 {
                     "name": "Rotten Ville #119",
+                    "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4ox5pFIayiYA3SlsReFcF3cmqo5wkKSUVWhC4f-n1rg",
                     "token": "5FoZLioN9n8UUuPcL2MNNVi9H8HbiUdGoktyU2pDrMdt",
@@ -6684,6 +6804,7 @@
                 },
                 {
                     "name": "Rotten Ville #120",
+                    "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/gl0emREdoi17XflVf1-jVRqkj-DuLRTtaINZa8959do",
                     "token": "F8CiVCKePrAyKjeRxkVCAmXtZ3Xyi2zAkEtB15hXWnwu",
@@ -6742,6 +6863,7 @@
                 },
                 {
                     "name": "Rotten Ville #121",
+                    "holder": "9iUeQLG82tFoJwegErk5bhDTaDvqRHnkewQumUz3MPpL",
                     "symbol": "RV",
                     "uri": "https://arweave.net/CK3flPtkjYKdV8pVjpKBYe8AfSUcJn68NMT95NCu0d0",
                     "token": "VL4DxYw3LDDqNAdj2JiTtfRQdBKvN6arzNHQUuduKH4",
@@ -6800,6 +6922,7 @@
                 },
                 {
                     "name": "Rotten Ville #122",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/isIy64734XfQJR2ZrKFapAOnWkuZSnXyMCBRsE7ELpk",
                     "token": "9U51cVAiSdjiVSYVpdmQTk7YM35Lwayu4fyVRyeduZRq",
@@ -6858,6 +6981,7 @@
                 },
                 {
                     "name": "Rotten Ville #123",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/L7KQEuGvq8DhBjYQ7m3MrfffhyOmQjUAoF_Ag20fxc0",
                     "token": "HpC6CHjhVuooKj1qsaqFXpXSPrp7ZQBhTjdbnJwQDiK8",
@@ -6912,6 +7036,7 @@
                 },
                 {
                     "name": "Rotten Ville #124",
+                    "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_qH_r3mJDGS3ByxCWv1ZA2IyPN1HuAbUdc5hCE-HGZQ",
                     "token": "HXk5T21nMEHLPmqZct8htpKhwEtGnKgqCyeDHKp2yFg3",
@@ -6966,6 +7091,7 @@
                 },
                 {
                     "name": "Rotten Ville #125",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2QmdA-kNcUhjM_PDmYJpqe761c51ibR6u3bwRlLFRRs",
                     "token": "F5xUe7EpiyFwUSKKUyEjNe4zn56QaKwL25tDUjDuhgKz",
@@ -7024,6 +7150,7 @@
                 },
                 {
                     "name": "Rotten Ville #126",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/x4Iy7Ed1TXFxvS5Dslq0k3bfJkgN908cCB6d3BGNRTY",
                     "token": "8mPj6k81GRGabbMsiBkvqFVQCkBwa6ocK1LeZa2ANriq",
@@ -7078,6 +7205,7 @@
                 },
                 {
                     "name": "Rotten Ville #127",
+                    "holder": "4w8ydbHaTDFoyK1vgzZSGcF1cYzGDrM1fnhgw2us1qf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/PChNWHRgCGB1dFPeTEtA1pItUOZ3z31GFiLFsg9cKyM",
                     "token": "CEr4SeFVJ7ggfeeUkywLg9ppwXqjB9VfKmTuJhbtGAbn",
@@ -7136,6 +7264,7 @@
                 },
                 {
                     "name": "Rotten Ville #128",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/IQ3kziYv3egVYzGPE_fF_tEXTk1b6C7MayzEN45J5JM",
                     "token": "24E4w1NgJZXxYEFf9quRcGF8Hi7iBHSPmwWPmxb3xjKk",
@@ -7194,6 +7323,7 @@
                 },
                 {
                     "name": "Rotten Ville #129",
+                    "holder": "2po8jYgJupPpt8BNfqzwbJENWYC4LASW23D3Ph8vnAS2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7P0DZ44ouCiqw1-GHexFePXSoObQ1bXyRu9ie_i9ffc",
                     "token": "EN6qpq9i7NBCFDKTk6WUPfWexV2JWFLdU6JT2jtE4jow",
@@ -7248,6 +7378,7 @@
                 },
                 {
                     "name": "Rotten Ville #130",
+                    "holder": "6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/deFGNrpARX-WDnytEctT9K9QrODBYrH-ENv1UBTH8Kc",
                     "token": "2iRjp1dN3imTvc5qU8ZXoqWfpEkzwi9arnjRJG9oDMhw",
@@ -7306,6 +7437,7 @@
                 },
                 {
                     "name": "Rotten Ville #131",
+                    "holder": "A5795uy3QuKC2GH55d4qMqfrxYRFoxJUwXm3VA3jbmev",
                     "symbol": "RV",
                     "uri": "https://arweave.net/sxlIWzVKtZRaISVHTIRtSFYiYmFhEG9IWhPQLglTIKk",
                     "token": "9qHnVXjQZVvZs6FPnTMtu6C9HWjCqKMbZfx1rjZGQNYv",
@@ -7364,6 +7496,7 @@
                 },
                 {
                     "name": "Rotten Ville #132",
+                    "holder": "9hhg1DHWjQkrvBPCxsBqfsN7ojNRrwSuR9eqRZ1r6tgv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/nI1dPIqrwyJV_1qJZaR631sYz6DfnZ_NFFH-X3TNQiE",
                     "token": "FxHKCMLwhbdM3ePcdtCPsnP9c65s2yohfxAfZu4h4Kwb",
@@ -7418,6 +7551,7 @@
                 },
                 {
                     "name": "Rotten Ville #133",
+                    "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
                     "symbol": "RV",
                     "uri": "https://arweave.net/8bkssq0MlMmILCsXI0qJS9aci0Gpk4zqLC5U4heTCvU",
                     "token": "9Ymue7kuoq2WMxBDemF8RW3FQpzTY4EL1Bcysjf8idSc",
@@ -7476,6 +7610,7 @@
                 },
                 {
                     "name": "Rotten Ville #134",
+                    "holder": "7Uec8JnfNPePFoz4cwJvZdqUQFcsUL1EUf6gLhpxS13x",
                     "symbol": "RV",
                     "uri": "https://arweave.net/WNG70Kq246pfVQM2cRFWeGRJ5s0JGTnCdoCLboaHnyU",
                     "token": "H8EmPTrwHbA9ejSUz91ggNQW8ubsmAM1tc5W3bBc5PhK",
@@ -7534,6 +7669,7 @@
                 },
                 {
                     "name": "Rotten Ville #135",
+                    "holder": "HR8ryQinu5CTvLcHC4hSM6udZgqQ1KdRfJmwvjy7ZxUe",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Hwnc-I-AL36J6g_25rpL9NT-rVzeYk-7IAFFcE8YH2s",
                     "token": "ApDtZcd4ZeBT6rAnDLWepMiX5DxPzT4vZfWNFT9iKzvN",
@@ -7584,6 +7720,7 @@
                 },
                 {
                     "name": "Rotten Ville #136",
+                    "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
                     "symbol": "RV",
                     "uri": "https://arweave.net/YmVK0sk_k3qQba2Trqdh2jCWADwk5-PNDUT8bMuA7XU",
                     "token": "EzJ5iPhB6M9hUwDZH3n9tJoPJ3AhAmXSNiB5fScrCKB4",
@@ -7642,6 +7779,7 @@
                 },
                 {
                     "name": "Rotten Ville #137",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-5rjYSHFQdWLfZ-Odmj2SGqT4FU96U_ZMsLAZf3_RUw",
                     "token": "8ZeGSsDCAjMq7Jb7UVhNuMVPi17BwXouiAA7BxD47UWG",
@@ -7696,6 +7834,7 @@
                 },
                 {
                     "name": "Rotten Ville #138",
+                    "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
                     "symbol": "RV",
                     "uri": "https://arweave.net/YEOMPFDwfpfROz3L4K1jn41EfBxJGhrgGvtGdWdRhMU",
                     "token": "3H1ScGzhL528dAynKbz2LMAgZJwZgqJB9Mh8WsosNLnL",
@@ -7754,6 +7893,7 @@
                 },
                 {
                     "name": "Rotten Ville #139",
+                    "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
                     "symbol": "RV",
                     "uri": "https://arweave.net/leakf5SvBfHQOqWOW-FuN6hCj5CJBZfp6v73gMrd-F8",
                     "token": "6juJTBDY3c4NXzzP1btdnBLmZtBhKVx9PAMVEceztgb3",
@@ -7812,6 +7952,7 @@
                 },
                 {
                     "name": "Rotten Ville #140",
+                    "holder": "HR8ryQinu5CTvLcHC4hSM6udZgqQ1KdRfJmwvjy7ZxUe",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GGwfhKefnhLgb2OjWyoP-7Z8F62qI7IEOSg8WUPixY4",
                     "token": "DUjj9kiQZ6UACuKndbDxT8y6SExmmh9XfPbgA5SF77G9",
@@ -7866,6 +8007,7 @@
                 },
                 {
                     "name": "Rotten Ville #141",
+                    "holder": "MmzhBSV5ZUH3xSvD1xEYXymiKoGaTtFfuW7jeUtCMHp",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FBhdmmjHg3yLgGdpk1UG9NtCwjLsGq-qPLg-eapI21w",
                     "token": "Fk1YjbnhTnamPoyJaApDATAS72Ct53ijfPUjUnb9A2p9",
@@ -7920,6 +8062,7 @@
                 },
                 {
                     "name": "Rotten Ville #142",
+                    "holder": "649DDy9Jepxc6b92mC4QmsQVaBpbPoHZ9i1M9EEMtxiS",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UF7fYE_Gcygipi57gcmbGjAPKPR6VVwHWpzgdLcH7Uc",
                     "token": "6eQc9K1MZyyWUENAVRy1b2ZynFELjfwiAdQ97qSDhLna",
@@ -7974,6 +8117,7 @@
                 },
                 {
                     "name": "Rotten Ville #143",
+                    "holder": "5oxsYQhTNgDux41iQZAZqXfok2LyU6kMfhvexfccpMDd",
                     "symbol": "RV",
                     "uri": "https://arweave.net/JtCpr11ln6DM3yGBW0CG01USlSZhKQ8kBi_lj2WYe_Q",
                     "token": "32TQtbRwtCMZDVso36AqgFTFvNjQdeXqCVWycPwYsis4",
@@ -8024,6 +8168,7 @@
                 },
                 {
                     "name": "Rotten Ville #144",
+                    "holder": "f6h4CPZrvUbnQvAvvMddZgaMf28XW8W9XPTvwC5exqU",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xHNpnuvdrzDMn2p5HKMvcbUfj8nk68b-Btdh1zCVrLY",
                     "token": "6EDX3JjNSxjDxqXkCEvWPEGruwVsuZGDbsUw6dt1KYGa",
@@ -8078,6 +8223,7 @@
                 },
                 {
                     "name": "Rotten Ville #145",
+                    "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/C6Pmt-xKdn3A-WEeTZSmakTrLEiS5EEJz5WoD7dBnF8",
                     "token": "8HHeaee9LxxFZHW1Wp4kbY7mvXX5J1nMzyyGzBBM9MzZ",
@@ -8136,6 +8282,7 @@
                 },
                 {
                     "name": "Rotten Ville #146",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/BxBLnhQLFslUIsnu-NSo-byC4zJitr-xA8j7KbZZe0g",
                     "token": "Fm4qCKmAaAx7YBLfuYR2L48kguMjiYHZbWsEEZ6U76mV",
@@ -8194,6 +8341,7 @@
                 },
                 {
                     "name": "Rotten Ville #147",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UkzZufmImBElM96X5mzhe2StuH9nd-Ccq94DGfiii_g",
                     "token": "473AEEV3syKmKfQsicrGL52prueAzW9H8GDqHRwgtiJB",
@@ -8252,6 +8400,7 @@
                 },
                 {
                     "name": "Rotten Ville #148",
+                    "holder": "Ah3vphUsM9iGhUw96zaW5yofwWF3ymjWvC8cEJTRMTj2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/XxlyXa2kqQ8TSTMMp54ZSf8_a9Yhz8zPw9MvjwI9YSA",
                     "token": "E4nAHvmyfqeyW24WbLt7V6QBwWwvsi63udpv6iwMfnuK",
@@ -8310,6 +8459,7 @@
                 },
                 {
                     "name": "Rotten Ville #149",
+                    "holder": "C3Sz8ZKnQtj7TPHgGpSQcx5BfMeWxjyJ6hUnB5RrWjnh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SJQgl7rBLQcQncf6yns66eTFrzaADFF2gVgn7n4j9IY",
                     "token": "AixytEwNixmbXmVPNFEQtuojB6v5hoeG6swdzk724hXF",
@@ -8368,6 +8518,7 @@
                 },
                 {
                     "name": "Rotten Ville #150",
+                    "holder": "FoEE3z4q6vv42Q3ohqwbtaEa4ZaN66AomoQPLaGi9AA7",
                     "symbol": "RV",
                     "uri": "https://arweave.net/TdVgVgAa5KeJjZea3guQwNPwi0s3UQJA12DcbvmwQEA",
                     "token": "GZL4GKMHrxfLicD1sE2Sqpv97ic4BJSJFzN6HNteKQV7",
@@ -8426,6 +8577,7 @@
                 },
                 {
                     "name": "Rotten Ville #151",
+                    "holder": "FoEE3z4q6vv42Q3ohqwbtaEa4ZaN66AomoQPLaGi9AA7",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GNPs22-gtzwDKrQMhVzrnylzo9_iVuRndNZFAZRmrOE",
                     "token": "3JEMxcFJHLr5A14CZm1k4CWfRwkdnux2mnsc2MHu8Z4Y",
@@ -8484,6 +8636,7 @@
                 },
                 {
                     "name": "Rotten Ville #152",
+                    "holder": "FoEE3z4q6vv42Q3ohqwbtaEa4ZaN66AomoQPLaGi9AA7",
                     "symbol": "RV",
                     "uri": "https://arweave.net/XkSGYP2zuJK4Jfd__6ogmt43D-qAfiIUjrLoX5MsxIo",
                     "token": "2dNhTCmHsAGXzysZztgB11RP6zw1v2KEvN3zFEHjuyHc",
@@ -8542,6 +8695,7 @@
                 },
                 {
                     "name": "Rotten Ville #153",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/geUE4lo9-znfMUs0OaOsOYbUwjdKQW7G7AXuPFRTdec",
                     "token": "BBEAofF7LmikGZBewFAc6W6ycrRHwyoiPvXVoi2h4XfH",
@@ -8600,6 +8754,7 @@
                 },
                 {
                     "name": "Rotten Ville #154",
+                    "holder": "Cv5Jn1it6YHVWr7Q473vpZuGGBLQ9GjfuLhCfGmpDoSN",
                     "symbol": "RV",
                     "uri": "https://arweave.net/YuGGkbD04pO9RH7_p7LueC7ui6iufkisterG8JztsB4",
                     "token": "9rxcuDwUPGiPPge9d8u9NyNGfJhYegsdddfG9AWRAkkV",
@@ -8658,6 +8813,7 @@
                 },
                 {
                     "name": "Rotten Ville #155",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GBaxi2vQn1wT9SX_bu_erkwrocIh-ym5TH_5ZUzSCWA",
                     "token": "8ihGqcistiNqEdigYJWmYAoRhZsKTi6DRHMSZoCRtAJq",
@@ -8712,6 +8868,7 @@
                 },
                 {
                     "name": "Rotten Ville #156",
+                    "holder": "CSuo2NAqxSJGWp9wAA5icusMYjLvroLLXF9HmP3hyX9X",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-4lpftmSJYgGth-iG2ewAscwoaVuEJpuoBhPNh4rkvk",
                     "token": "Aaf6ducbbBfNgm9WTanRYviBqqxvHub9jMTRCLFiF5Ys",
@@ -8770,6 +8927,7 @@
                 },
                 {
                     "name": "Rotten Ville #157",
+                    "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/9lMWTpTb_93IsFEeB08Bq6xvqqWzLxloVPzFl6j79iA",
                     "token": "KsA3wvFWfS6d7fZXijSsDK2oDGMGqwcdZJCZmq4dscj",
@@ -8828,6 +8986,7 @@
                 },
                 {
                     "name": "Rotten Ville #158",
+                    "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SnrZzyLGbHy7u7MQFiSXLOhJcURJofd72FRqHdooMcc",
                     "token": "FTBWamKdAB7wHsR2z7oFjjzGseoNo2qzNR5SkWg31QYF",
@@ -8886,6 +9045,7 @@
                 },
                 {
                     "name": "Rotten Ville #159",
+                    "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/yALXjNsDt4jUUWQEyfboEjOQHaxnNxPNYhtdJ9kNNFI",
                     "token": "B6sCWyMcbEaTA68AFVRyUtLMj8XK1Vo8om6zeBrRqxKX",
@@ -8940,6 +9100,7 @@
                 },
                 {
                     "name": "Rotten Ville #160",
+                    "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Xj1bMN0zHdJeJdAzzLajBP7vV-2xhlzYSSCCZ2An8LY",
                     "token": "Bn4LLde4W7s1Hp7XijbknrnrBrUrEnTcg9y7yhs6TtkP",
@@ -9002,6 +9163,7 @@
                 },
                 {
                     "name": "Rotten Ville #161",
+                    "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/KR5L6H0pO-Qd7P_bHNLBmLcAacn7uy46bFT7l9kZWdA",
                     "token": "FKMzp6y5MMGZwkUV5wW1FNkNEgRPETWpFPf4En694FLt",
@@ -9060,6 +9222,7 @@
                 },
                 {
                     "name": "Rotten Ville #162",
+                    "holder": "EfSdAdG3T9RuozRbiMDhrrSfKPWmsbSgLMTL6fgsWuDa",
                     "symbol": "RV",
                     "uri": "https://arweave.net/A4xHfB1qFEn62Jjh-Qy3w3C7Gl6VVt-HspASkLOjodY",
                     "token": "2m1UGybzXpcczb8awAEoQp1csrd21TexdRL5ysi4TWAF",
@@ -9118,6 +9281,7 @@
                 },
                 {
                     "name": "Rotten Ville #163",
+                    "holder": "GiTxBc3Bgkq9CRgwqPb1yiGXTUZRgvSAzUD3vngScfSZ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/QO1dGHEoAKIidaY4RyweZRMERateXT8AJbtPlBGfBRI",
                     "token": "Hhc7aEAjJCXN4X8umLP3iNk4dVCjNYXuzBREtYEpRbiZ",
@@ -9172,6 +9336,7 @@
                 },
                 {
                     "name": "Rotten Ville #164",
+                    "holder": "G5KJC53dir8XcjGT9GovdvBkHv22td9WyZDDQvhymPc4",
                     "symbol": "RV",
                     "uri": "https://arweave.net/eg_MDi9kWnra8kkubVAQY19dArHH7gjYlIZWMQldT2w",
                     "token": "84stLoX6wrXKkYnPyYnvE3eeGDDU7MLt29ePpbGotuBP",
@@ -9230,6 +9395,7 @@
                 },
                 {
                     "name": "Rotten Ville #165",
+                    "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SNDMke9EBu3FoayTUyBwAI6LhACvFjiQs4-JZv8zzoI",
                     "token": "GtDZWHVRGPZ1n6tzWdaCFBvdYNQsETKp5pL9tCXSeY89",
@@ -9284,6 +9450,7 @@
                 },
                 {
                     "name": "Rotten Ville #166",
+                    "holder": "E3VmBBDzqotNGUiLdov9i9jhcigJionF4Av7NjekW81n",
                     "symbol": "RV",
                     "uri": "https://arweave.net/akIrI58mLtCvntvvGUgn1ARPGDbAS3jNCn7srLITwro",
                     "token": "DddgJMZiHuBgeNXJzk9EbQwnJWHDBLPpXtX8A1YrMQGz",
@@ -9342,6 +9509,7 @@
                 },
                 {
                     "name": "Rotten Ville #167",
+                    "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
                     "symbol": "RV",
                     "uri": "https://arweave.net/8urVeInClfM9wAXCxYexwvPmwH4nDIj3U-vXJVRzg1o",
                     "token": "ABp6Y7Yy9mRSCuxDv3668N3Ug8eRbVDxcpuH5tm33Frt",
@@ -9400,6 +9568,7 @@
                 },
                 {
                     "name": "Rotten Ville #168",
+                    "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
                     "symbol": "RV",
                     "uri": "https://arweave.net/eaz0DQtski14pSRzhT6hhf-U_UUfFaHSY2mRZKMCATg",
                     "token": "WbBvnC17EPA8pY2kWSzDNMTZcPcTNageBaAd22VdQzc",
@@ -9454,6 +9623,7 @@
                 },
                 {
                     "name": "Rotten Ville #169",
+                    "holder": "9EZJmqG3yBLjTSZC5AK7YtDVAig5CB8vUsB18cGLrpBv",
                     "symbol": "RV",
                     "uri": "https://arweave.net/fc5_RfcZnSA2onS4ScxiXcr9GaKjHcJkQizsm5WANYM",
                     "token": "37iFU4TQ9Lkj26Lf6QvaSNmJkc8kwUyXLrpG3oApqrGM",
@@ -9516,6 +9686,7 @@
                 },
                 {
                     "name": "Rotten Ville #170",
+                    "holder": "HTPVCLv8WTng3CT8b9Z8Knu4DJMq1Hu26PqsmPyFjpWc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/nvztogHpw8whynQDF7JqaKBXQaRWbMjgz646QPdIGGk",
                     "token": "DuhGgUoLNUR7BFwQcvh75tdaRqSjTAjYFJAc6Gg9p8rT",
@@ -9574,6 +9745,7 @@
                 },
                 {
                     "name": "Rotten Ville #171",
+                    "holder": "HTPVCLv8WTng3CT8b9Z8Knu4DJMq1Hu26PqsmPyFjpWc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FAgy7R4fyNzep0gt8gKiLQ1-7hlZe24S-FXQGCOjapQ",
                     "token": "5RuqrJmXDc9Znubd2Bn1eJ3vUE8jGK4a4G2RkwoueLDw",
@@ -9628,6 +9800,7 @@
                 },
                 {
                     "name": "Rotten Ville #172",
+                    "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
                     "symbol": "RV",
                     "uri": "https://arweave.net/6u1YJ9JHSgRjr0KY8gviPZwH-f75ZMKLGhDBkdmOxlE",
                     "token": "53gxaQsAffsgwPBXsTiakB44PvPTuBczydn6rioARGBU",
@@ -9686,6 +9859,7 @@
                 },
                 {
                     "name": "Rotten Ville #173",
+                    "holder": "9SEycz66VrPnAhhH8sXWQzb11FuBaLYiYuMFNrAxxeQj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/wlxar3tZYetKFQMGTkyXPcSFsYXureET4_QyYTHl1N4",
                     "token": "4cXrEjeaPhYd4J5QAn1axTu119peByojC22kArgB6jb6",
@@ -9740,6 +9914,7 @@
                 },
                 {
                     "name": "Rotten Ville #174",
+                    "holder": "762rdtb9JopJm4tLBnXkoZBTwiHJCKFQrSWXTuJwCnxi",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-qTL7k9rO9V__B6SFHc12t_LbzAQBeTVizL8XVc5TyY",
                     "token": "Hc2EaMMrfAXVPm3JfdZqX9TrZeUSUgH526zEoyToVThS",
@@ -9794,6 +9969,7 @@
                 },
                 {
                     "name": "Rotten Ville #175",
+                    "holder": "TRqz8aVNq6JWfx2yu5A9UvJjMTgxqedv7qv2UvZ9fZ1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/lWLSHCFPjbZWEtHjiE8lfx10BmUBj7NqF6Iit0UADzI",
                     "token": "25CyALjN4Ho9PcWyfepmnc3yHtfhWBkgC6uZBoLr85oc",
@@ -9852,6 +10028,7 @@
                 },
                 {
                     "name": "Rotten Ville #176",
+                    "holder": "4Yea5bZ3H3KQkojqfD5hUqRHZ2yqy16m9bogjJWaadbV",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ahAAkGDGGbgjBGkaF_PvrtgCfXpgCGQGF_79gJir2LQ",
                     "token": "4r3ggRrpmM1d3aEUirUyGq5n76scphnpqGezpcdCYChH",
@@ -9910,6 +10087,7 @@
                 },
                 {
                     "name": "Rotten Ville #177",
+                    "holder": "4tGCYzmAziSntjJpiAuWGuLS5trNh91tY1X9RXGU96vJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/XSr9BoCnR_LCB9jEom42OCxxYjPZsKvzBNfmUOg-2fQ",
                     "token": "9bk77E1V6v11wWuMu3QtXGv6RY8LvrUfHP6AkVNCQq3G",
@@ -9964,6 +10142,7 @@
                 },
                 {
                     "name": "Rotten Ville #178",
+                    "holder": "3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU",
                     "symbol": "RV",
                     "uri": "https://arweave.net/kF774sQ3G9deOV7sngKMXMuiED43CG3xLbfBwWHEJq0",
                     "token": "2gKnPuF3dopwBPJ1xS4pqEVWQhoqjHQVK3YEhUgphZvF",
@@ -10022,6 +10201,7 @@
                 },
                 {
                     "name": "Rotten Ville #179",
+                    "holder": "4tGCYzmAziSntjJpiAuWGuLS5trNh91tY1X9RXGU96vJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_nV_aYLtTDWlTywa68i55aEn4oNk07nUjBVATTj2c8U",
                     "token": "9vxBLxSx9ms7wDCc7TDn9f9doWGoJeSuVAf6XvY8XZX6",
@@ -10068,6 +10248,7 @@
                 },
                 {
                     "name": "Rotten Ville #180",
+                    "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/A-ER1PNE7cNKI00BucXnZnlAxWARITdEsDMYvBVeXIo",
                     "token": "J12yqE2oGoNSQ1CJwa3k6Gw3qGEppkPa2xPszAFtnDMq",
@@ -10114,6 +10295,7 @@
                 },
                 {
                     "name": "Rotten Ville #181",
+                    "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/auF8iw9icNki9QIoH8_0hpw6N4LkOZYZSR2D3lKX_uU",
                     "token": "3gbUVHVjZkGPxvR79kMN1bVDooWCxvktPnYg9X77JUWx",
@@ -10172,6 +10354,7 @@
                 },
                 {
                     "name": "Rotten Ville #182",
+                    "holder": "8J7BxXt3NPt7BwLN2VPcBxEGnNwf6c9qKafn33qSFYiK",
                     "symbol": "RV",
                     "uri": "https://arweave.net/J_eJ4E-FX2YfrjOMznf51tsotji-1wYV-Xt1MSKdT0Y",
                     "token": "HgfCB43wLxQtxK3cJ8NEPzwBtjmvxNMxZhYiLiCvGU19",
@@ -10226,6 +10409,7 @@
                 },
                 {
                     "name": "Rotten Ville #183",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zqZgPGNeq379rK7DBcIBB54RfOW1YK6Hydz6VbIZDFs",
                     "token": "DbBBorXToPSjJonM7R47zW6qFSpvGvWQ6X267nxpXE1j",
@@ -10284,6 +10468,7 @@
                 },
                 {
                     "name": "Rotten Ville #184",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/h5CpbxzIOXzuyEbXAw70G-N9Fokzb-xwkBZP-Ia-Vjk",
                     "token": "794HLe6n7zjza6xhjvkXR6PwKiE5nzLnjRycRJH8CAQw",
@@ -10346,6 +10531,7 @@
                 },
                 {
                     "name": "Rotten Ville #185",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/OoWeaKzR0jDBnMOuqgV5f9NAfJlb36b7HZMoB0M9gYc",
                     "token": "2KphzS4DawynpEaRuDAPKYGAvWCfaH9ipu5DfRXQcVet",
@@ -10404,6 +10590,7 @@
                 },
                 {
                     "name": "Rotten Ville #186",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GFl-PpRDE-ZGbWPBJDbdXP40SbespOBcTrRPvXxdGhE",
                     "token": "HdkzphZEqu67Xxn69rDNyg9tVicZamJQPdhjrXiXNW2D",
@@ -10458,6 +10645,7 @@
                 },
                 {
                     "name": "Rotten Ville #187",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SujlvIVOXe1MiIJXp4gfp7mjro7G3T166VgzZeQJrec",
                     "token": "Fm6MyDz419YA6HgJK7Y2auh69eTJppx7vMxQJDhatQUm",
@@ -10512,6 +10700,7 @@
                 },
                 {
                     "name": "Rotten Ville #188",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/QSJQBCWMFa7AGB7TBuy2rzwdF751aV23oxDSoqlcL00",
                     "token": "HicBmsdbiGZfUojPpEH1gQdVXnU5CzdJ63EbbEnVgaaW",
@@ -10566,6 +10755,7 @@
                 },
                 {
                     "name": "Rotten Ville #189",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SDkNokbTKcXl5P3URzfq5SYzHORzO9Qn_WaDRq-19iQ",
                     "token": "9ZJwtYxP2RxYf3J6ybqfE4yEpgNRzJKxWP3ruTtfvzs5",
@@ -10624,6 +10814,7 @@
                 },
                 {
                     "name": "Rotten Ville #190",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zm8n9KQIWNLv7yjTN7wNh5MEc1cARbWUN1yG0wtLTVw",
                     "token": "FK6zYVDTSJ35cuCNHQkAzS7HHdr4L5BQdPWftjT9HLoD",
@@ -10682,6 +10873,7 @@
                 },
                 {
                     "name": "Rotten Ville #191",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Vkd8CUckNxNUA7ap_8evhR4USQJ7vNzSV7Q8DGZfNJM",
                     "token": "h9kL3UXngPHvTEs9X2Y4kY4CHLdMknpC8w87zHdhJ3o",
@@ -10736,6 +10928,7 @@
                 },
                 {
                     "name": "Rotten Ville #192",
+                    "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
                     "symbol": "RV",
                     "uri": "https://arweave.net/aew5v35asZ2to01Z_dQR9zrotzSO7XDvL6tBPZ7KySY",
                     "token": "7rzmorKER34VcsNUAitRf3sduBDra2JCUPsQ2g8HfupV",
@@ -10794,6 +10987,7 @@
                 },
                 {
                     "name": "Rotten Ville #193",
+                    "holder": "3gMxUvGdfRMnHHd2eQ4LvqYRjxCbSvfEnmTPBscb8edB",
                     "symbol": "RV",
                     "uri": "https://arweave.net/nQPJ9E6-GpgIkv61lv76q_Lt0srilTZzGqYaDHGxGw4",
                     "token": "7QCVjPomSHHqZT1oq2wziGQ1PszPMtnKQ9eNoZ6bTmrf",
@@ -10852,6 +11046,7 @@
                 },
                 {
                     "name": "Rotten Ville #194",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/l9PTW8FJoYb7x4pPs3hRzhrY7kdGlTyFAEFX-WpmqcE",
                     "token": "CLFkG8HAX3GHqJgwMLEC1uUjEbJTuJPa5Yp33p9ncjuZ",
@@ -10906,6 +11101,7 @@
                 },
                 {
                     "name": "Rotten Ville #195",
+                    "holder": "BYAjC2F3eYJKYfrHaNkR313wRGWesoYMA8YmXfynuyoD",
                     "symbol": "RV",
                     "uri": "https://arweave.net/3GIHpzxH0rTUAJ2a6pPoPsjlaYpbDAa0-xT5btb5kXA",
                     "token": "CCRboCCjhq6jRKZ23fjPMw1J32cbngW46NBRC6WtgpfN",
@@ -10964,6 +11160,7 @@
                 },
                 {
                     "name": "Rotten Ville #196",
+                    "holder": "8U2ece535g31zCYEaNrD7WfRGsWc4c8fFSm66oWvodB1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/J8Lkx8fixkxYnPiqkErnnNdEu0HDZDrhPRFFTTBXfpg",
                     "token": "HmPKUppnqUfSyJYfxwUg1NSFQCgvyqpNdTLb95aPmAbn",
@@ -11018,6 +11215,7 @@
                 },
                 {
                     "name": "Rotten Ville #197",
+                    "holder": "EePtPwaxGHYish1nsHJuwZyGPBTpbhqsXV8KJzQXKhn",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0KbCeVg1Ssat_Zk65P7ehQC1HESYg4Q75WETkisgzi8",
                     "token": "6fgAjZi1k2CTBcxqk8oibFchT1VNLJfEVe2eznnnvwo6",
@@ -11076,6 +11274,7 @@
                 },
                 {
                     "name": "Rotten Ville #198",
+                    "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/gEQjOtBuAI-AmkeOyP6QbdyRdHsu9fCbdrEim0x4NFk",
                     "token": "ALr78Akdfu64WqQC524FwaxRjCHpeHhgNjeBA2yhC8cs",
@@ -11138,6 +11337,7 @@
                 },
                 {
                     "name": "Rotten Ville #199",
+                    "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
                     "symbol": "RV",
                     "uri": "https://arweave.net/5XdtBfV1zc1Ky_15HV5a2ggSE3S2miqBn2f9JYhM2lw",
                     "token": "8b9MGKCkWMqZecuLJpZgV7T4yk2dhMdFgeHgQHCT6oRy",
@@ -11192,6 +11392,7 @@
                 },
                 {
                     "name": "Rotten Ville #200",
+                    "holder": "N2D2J7KS5Be2wrJFjWZd8h3rmUYPauYDkBT7ByBgTm9",
                     "symbol": "RV",
                     "uri": "https://arweave.net/1NxPXrNSoRqzlAiCjhVGb-DZD8dPZnQuaQa45FnJUXA",
                     "token": "4hu4ADY3puHMtoMNcLRdrPRRTSKy3KUNvNF57n5hoBTX",
@@ -11250,6 +11451,7 @@
                 },
                 {
                     "name": "Rotten Ville #201",
+                    "holder": "GNqKSPopeefemB5Hix47NMa7r5QDufKuX8zggFHvv3Wp",
                     "symbol": "RV",
                     "uri": "https://arweave.net/iXg2ZXEF6y5fZezI7kJAUmst6FOfLLghfkJXoXpLaXY",
                     "token": "BimTEtF4oX4z5nwdT2Rr1XPRKiwmFyAsXz1LkTaggo3z",
@@ -11308,6 +11510,7 @@
                 },
                 {
                     "name": "Rotten Ville #202",
+                    "holder": "545bF8sW6AksQDUBk6qjANAXcH2ndsFA3sYD2eumc6LB",
                     "symbol": "RV",
                     "uri": "https://arweave.net/66Zt6PsjQDmuUDSULTnRfbNvyZbsa4XewA6EdnGEhrk",
                     "token": "31UKzpbqoxwv5TYmiFAHz7SmQSKAxHTuLRUp2CyyQEgK",
@@ -11362,6 +11565,7 @@
                 },
                 {
                     "name": "Rotten Ville #203",
+                    "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0YOMcV_SCgHnH4H35_vzOt5SzNCQYCh1JPT3Hx7wi_E",
                     "token": "3C2Bw9bzEQDpq3PS6VNbLs2CbSzWpxubSwpnxFVkz7K2",
@@ -11424,6 +11628,7 @@
                 },
                 {
                     "name": "Rotten Ville #204",
+                    "holder": "FstLEnMVhdm33Fap33bYM6BSxJhwCR9fv3B5ZePvdeHL",
                     "symbol": "RV",
                     "uri": "https://arweave.net/o9VcACybekus4f426kCMFWblYywxV-us-ypo7vM757E",
                     "token": "EfD2SpU4tDw2QaKhJ8tA5eaZsrac1vjAdVGgfJCAfcf4",
@@ -11478,6 +11683,7 @@
                 },
                 {
                     "name": "Rotten Ville #205",
+                    "holder": "GZxFjJ35Cx6oLjyiswkJ2Lwnot4Gz5jEhhC6gahMNNzU",
                     "symbol": "RV",
                     "uri": "https://arweave.net/X5n2U14sj9AU7qxmjNUnU3hD0jgFl9Bb-jTkH6T1H4U",
                     "token": "3ot52LmQsqsN6iXgJj3wX1EWdq8pdKykrAH8Cw9KtDqj",
@@ -11536,6 +11742,7 @@
                 },
                 {
                     "name": "Rotten Ville #206",
+                    "holder": "3696ECpH3atkrCZesU1RAEMom8aayQKNvw1mEsJ795LZ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xBIW__XFdktEuSrTtbt2cGfTf2rKLlB4xl52BGHZhRI",
                     "token": "Ajz3SJF58e54SJaoSrnJBnBgycCpz3fyfWezvuJnhWgo",
@@ -11590,6 +11797,7 @@
                 },
                 {
                     "name": "Rotten Ville #207",
+                    "holder": "3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mUDq60MdltZPvamQL_eJdcGlnIgtzlXQNt9cHtJEh9c",
                     "token": "AQ4ZnHCMrtF1z4xxkEoCicDPXt2Rie2Rd9DjDVeJRW7i",
@@ -11640,6 +11848,7 @@
                 },
                 {
                     "name": "Rotten Ville #208",
+                    "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
                     "symbol": "RV",
                     "uri": "https://arweave.net/I1Su6BjgZVWSw2mNIaLZKdBK-1s3rgPGtZvgBBcWHdQ",
                     "token": "9Km2kr3f1eiKo1UUqzaysc4NhdhezfBQh4z6qEki2ZAU",
@@ -11694,6 +11903,7 @@
                 },
                 {
                     "name": "Rotten Ville #209",
+                    "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
                     "symbol": "RV",
                     "uri": "https://arweave.net/luRLMcPgbobWHOgBCo1OPYrRJ2KF2YKH_WzVG0eCo4o",
                     "token": "Ev4s49vdrhW44Y2pd1HcgKGXNdHNb2UGWwEm7soQRy2t",
@@ -11752,6 +11962,7 @@
                 },
                 {
                     "name": "Rotten Ville #210",
+                    "holder": "EvvEQnHtS7Lreet8kwyWLep4UxRz5kc19DWT7Y9XiANe",
                     "symbol": "RV",
                     "uri": "https://arweave.net/vZTnvpC2GXGaIZlnfu02hbmz903fbcogrmmDWuIPVfc",
                     "token": "3QeYVVQGjgEtUBkSpHbXm4aZ8s82hmxYruPsTAm9xKTV",
@@ -11810,6 +12021,7 @@
                 },
                 {
                     "name": "Rotten Ville #211",
+                    "holder": "4KJL1PbhFjpFoNcfqszQJfL4dDrw71K3zwmEvd5oqFCM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/VCpKuEBSIa6lvcC-z1bJlhvssRgxxegFdhvSmgA7704",
                     "token": "66116ZEExPS5Y9YsqvM9ZK5NETH8CZtmXYUynioALLaf",
@@ -11864,6 +12076,7 @@
                 },
                 {
                     "name": "Rotten Ville #212",
+                    "holder": "5e6rPqAchphdHphCtFrWZZoWgJ91GKXnM9GGDfrYMfFJ",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2d7uKiafgSpj49A18vMZ6nsHH19X8It80lr5-5kwDRA",
                     "token": "2aT7pXFKWHhRKBueUhG1Nhi9yejjkN7Wc4a5HgnnmCJS",
@@ -11918,6 +12131,7 @@
                 },
                 {
                     "name": "Rotten Ville #213",
+                    "holder": "HDWecTXNhxGJyMTmhrrVoSRP9r7uev4NuvP15GBEvtUX",
                     "symbol": "RV",
                     "uri": "https://arweave.net/l4J2S-gNHJFqm_p5VwCNxs3ONbwE2eMZAlOC-6cqWGI",
                     "token": "nAcbovUJeW3V4VeuSSDs7XwStwsgrEKn99vN3pgy9NX",
@@ -11976,6 +12190,7 @@
                 },
                 {
                     "name": "Rotten Ville #214",
+                    "holder": "CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-AohwgVpByesD0Oa8WP0YEwWSLfLA3AX6AJhpbxVyn8",
                     "token": "9Ctt1CdhdECqwftvQEM2hWwNJ2iRfLcypTvYcuZ2N4f8",
@@ -12030,6 +12245,7 @@
                 },
                 {
                     "name": "Rotten Ville #215",
+                    "holder": "CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p",
                     "symbol": "RV",
                     "uri": "https://arweave.net/1V6msIJ-WffZrIT3S2TedLPOXfbhzQ87RUnD6Mtr8xE",
                     "token": "784zgq3iPT1y9MTdXVvyZvfnW5kKJwYosNoKo6XuEh2y",
@@ -12088,6 +12304,7 @@
                 },
                 {
                     "name": "Rotten Ville #216",
+                    "holder": "3naipZmCBDzqRiQPkiQC9XYXPeToqnGGxXqp7c98Xvz6",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UzZkO1RVPYUBL2fCHvCBMTKHGaFdERypYg4neC1C4HE",
                     "token": "6nX54x6i1wgapXe1Nnnf8sgsPckveZNK2HUnUPDBN2N6",
@@ -12142,6 +12359,7 @@
                 },
                 {
                     "name": "Rotten Ville #217",
+                    "holder": "GvKmgtHtCnyPhijYSukKnFPSSJZmq5isqJWY5rpg79xT",
                     "symbol": "RV",
                     "uri": "https://arweave.net/TmdYyuU-FeGuxJ193XAKtJjCbW6DMwZPynq526nYupw",
                     "token": "BFrJQF8Rp7i5NtcJ5mA4dCLUD3mnqa1qgu5rZAFqpXPL",
@@ -12196,6 +12414,7 @@
                 },
                 {
                     "name": "Rotten Ville #218",
+                    "holder": "CW1RytTu2J5udGsc3WaYG6hqySNH5ztbHz4figo7btmE",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ECz5AWMeo56OSMmgeQ4waIw7ANn_8KU9YuTCTlLIa84",
                     "token": "4pbzJyR4xsNTwm1BKupR2PdDLbYNUUwZmHCn8rGrKm9F",
@@ -12250,6 +12469,7 @@
                 },
                 {
                     "name": "Rotten Ville #219",
+                    "holder": "DGEmPUPWTyLPPGVDpcKKX7Nrmtu9cMKngZEqfUZ8N58f",
                     "symbol": "RV",
                     "uri": "https://arweave.net/qTnZrI57tyJee4UwrMuCzmSL7fkF3H0D3chrVmLCge0",
                     "token": "6MH9zgPYEGe1z2huKEiUtSeh5pQwzpWNnyREBZLA7Qto",
@@ -12308,6 +12528,7 @@
                 },
                 {
                     "name": "Rotten Ville #220",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/F5fhxYao7eEdTv-5SRpf_xKHPGDGGJ3l9ggarG0pSlE",
                     "token": "3L8z2knKXNxen7CtLNKN6ToQ94zBqLLEcq1UdWFHuJTa",
@@ -12354,6 +12575,7 @@
                 },
                 {
                     "name": "Rotten Ville #221",
+                    "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
                     "symbol": "RV",
                     "uri": "https://arweave.net/UOREBu_B0M2_QoIMc3WDnqyciXK-ZXNKgU60KUJ2N6o",
                     "token": "6RYVtCnwtn61rNWd1zHGRu6PVaXjirsn5mBjRA3nvrPU",
@@ -12412,6 +12634,7 @@
                 },
                 {
                     "name": "Rotten Ville #222",
+                    "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7UIkXveryfDBOzSxZszG8-x80fUvAPuLgOUujDQVVCo",
                     "token": "9VUbmzrf4rcd3uXkrkQkTcd7N38WE4rrZQzSNYehq8Zn",
@@ -12470,6 +12693,7 @@
                 },
                 {
                     "name": "Rotten Ville #223",
+                    "holder": "6bziB7ZCzy9gS9bK6Xj2iVqFqvAL7mRr4T78EGyK7Ymt",
                     "symbol": "RV",
                     "uri": "https://arweave.net/GE5YDEgVXlZCFhk2T21gqyYTdWLwxsrIRCrYf_se3cc",
                     "token": "AVxo7RHaK1nBCf8WdGE9oo7kKhJjihPzFcLXGCrba1jF",
@@ -12528,6 +12752,7 @@
                 },
                 {
                     "name": "Rotten Ville #224",
+                    "holder": "HfDaj5umvBR5pqE7TLWELMYV4PA7ozY5tmXXyzQRoFMf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/cXII7pmlrUYJrffTO-p5K89Ir5FECrir6wcz0Ze2crQ",
                     "token": "9hAPQiZhHzTpE2s126tXDfWT89ydWsHbF5aC3FMXyYGA",
@@ -12590,6 +12815,7 @@
                 },
                 {
                     "name": "Rotten Ville #225",
+                    "holder": "8wvgHLTdQvmDaGMbKVMdn5RdYs7dXjN9BT75EC9knEpS",
                     "symbol": "RV",
                     "uri": "https://arweave.net/J0r9SWQzvFjRMWIGTKBQ6v-OaO26ltma1w2JOgd203c",
                     "token": "4E9cEXJiZfGQSmKcDbtmCQLHEGEoHA979Px27Tg6ShXG",
@@ -12648,6 +12874,7 @@
                 },
                 {
                     "name": "Rotten Ville #226",
+                    "holder": "3naipZmCBDzqRiQPkiQC9XYXPeToqnGGxXqp7c98Xvz6",
                     "symbol": "RV",
                     "uri": "https://arweave.net/uXsUaBJBtd6Q-e0Uk1RUopy9zY3oLtq-dXlD_4Ics3A",
                     "token": "6td7SAVQzJhebLPzpYm7LEYbGGyYY3QVsaxcGeDFDefv",
@@ -12706,6 +12933,7 @@
                 },
                 {
                     "name": "Rotten Ville #227",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/hEX4OeJJVtTcZseB8qd_HCePT01oMC2LA_D-dkKqcro",
                     "token": "CBT7eTjrZgTgx7e3KvhiyDU41GSo2LvGFrnfnLh1CKnc",
@@ -12764,6 +12992,7 @@
                 },
                 {
                     "name": "Rotten Ville #228",
+                    "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
                     "symbol": "RV",
                     "uri": "https://arweave.net/TZRDaSwNuBU3g2_TkF3BB6AO7szj0jbkTuqIZcNLum4",
                     "token": "DmZhWx4R4XPVtWBnN6QGwt7FCc3EjZm8tnUZ9L5UWmvb",
@@ -12826,6 +13055,7 @@
                 },
                 {
                     "name": "Rotten Ville #229",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FHwcD8rmafjJp2ymGMI3mUzDkLx6RI4wRWTspiK7aoM",
                     "token": "FURyUR8NpsZ4vHFd6YPH28KRpR9BpAAB8AanejFFdjx7",
@@ -12880,6 +13110,7 @@
                 },
                 {
                     "name": "Rotten Ville #230",
+                    "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2m7ppTXJgv--Mh5mL5R34M5pax07d3bQbcBoqkJYhRY",
                     "token": "9bJUKSY1ZbE3BrPB28giXTJ34qBJ548LKj6sEeL1brJo",
@@ -12926,6 +13157,7 @@
                 },
                 {
                     "name": "Rotten Ville #231",
+                    "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Md-vaeqwwnWBvJQ4VgfjuMxXKQgXN3YSwII8X_Vd4F8",
                     "token": "AZJuuLmVb71icsDi3k9LkEPXuZSpjLEULdXQCVpZ6UN2",
@@ -12984,6 +13216,7 @@
                 },
                 {
                     "name": "Rotten Ville #232",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xVFOUHBo5S-6V-HVrDPXhepY6ovmklTpA4rkoaNSHnk",
                     "token": "C9uc35ZYEQsrL3pcYoGibfXznVhDwWugLF9AbRKRP68k",
@@ -13042,6 +13275,7 @@
                 },
                 {
                     "name": "Rotten Ville #233",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-qcEiTLvlQzTGUYIO6hO1EcOqa5wrDT7jfjqY84NPkA",
                     "token": "TZakDAtoWhHVGVYNRCCMXRsoyHzELdn6o4TEjortaHY",
@@ -13100,6 +13334,7 @@
                 },
                 {
                     "name": "Rotten Ville #234",
+                    "holder": "7YTQM5ZvkeTjHggB5R94EwsPqzctoDEK9xHKEd7CmU5n",
                     "symbol": "RV",
                     "uri": "https://arweave.net/z4U6MfN3U8XLvf3QEasimvtXBxPLkNb-uHsEofnNvik",
                     "token": "9EwsiaHbN84noaxsp5q829b2Y3rhHh8xBCJqH3xFZkM3",
@@ -13158,6 +13393,7 @@
                 },
                 {
                     "name": "Rotten Ville #235",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7OvMXA9k_q_HH787-LMClPzCKaVVuQUWwql0SDeAetY",
                     "token": "6jYFiTDus6QeoVvuTLtpF38yieqZhsJRZb6d575H2vxo",
@@ -13216,6 +13452,7 @@
                 },
                 {
                     "name": "Rotten Ville #236",
+                    "holder": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
                     "symbol": "RV",
                     "uri": "https://arweave.net/b0CmBVcsVcMmM3gl9xV8Mw1awyf6_Mgy0eIhsf3iwds",
                     "token": "ADti14y9LzE5pGV3ZLtwfqdNAJ7z2XAY4bTY9y5wK8Zd",
@@ -13278,6 +13515,7 @@
                 },
                 {
                     "name": "Rotten Ville #237",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/sXjX_MqOKDOxnXD1LFUAzwr_KMY-o9B78Fj-w-SsFLY",
                     "token": "jtrwrrsQNco2vKCsLgnVXGzZgz4sbDeCPm5u1pvJDEY",
@@ -13336,6 +13574,7 @@
                 },
                 {
                     "name": "Rotten Ville #238",
+                    "holder": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
                     "symbol": "RV",
                     "uri": "https://arweave.net/nJ9V0WLukU0RK_CItsn1ut4BEJzKzxhAgzZA165-oN0",
                     "token": "HLaQthLmirCxNotW3WH2SpZmE1TdWxqZgyh8GYWAjQ4K",
@@ -13390,6 +13629,7 @@
                 },
                 {
                     "name": "Rotten Ville #239",
+                    "holder": "D2h8zZ6SfuxLxVAtyJkffChTLEeCeL7WLmL35MCVEbXR",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4M_ZgAsATjOAx9DNkLp-OSmQ4YD4Sl8xUBaSZkcnYRw",
                     "token": "AR648FTkTjxi47KqkWic2FEoipvCbnnS2bZhHUXkFPnP",
@@ -13452,6 +13692,7 @@
                 },
                 {
                     "name": "Rotten Ville #240",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/5xie6Qx5j2urXHa7XTu88fKETuUSgJKbLfKDEcVa1b8",
                     "token": "wWCqEwyrwgQ55KAr2qMyL6eHvZgep6AwQv1jeMKXios",
@@ -13510,6 +13751,7 @@
                 },
                 {
                     "name": "Rotten Ville #241",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/WHj-L0MHDv1BQ4mLNy14q1kQl7-TPoq3IhBjeg1E8Ec",
                     "token": "8tKBHedTUB8PVQL3p5THfXdWxFyxxEVnjRjGfCA9nr9Z",
@@ -13568,6 +13810,7 @@
                 },
                 {
                     "name": "Rotten Ville #242",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Yo9P2XZW1vw7YJo_RpLQSu9qWcj-LmJJbFYayd4XSzg",
                     "token": "8PhnSmuywYJ1yQGNSb3FchcX1FPfxknFzvwQmSy11izx",
@@ -13618,6 +13861,7 @@
                 },
                 {
                     "name": "Rotten Ville #243",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/1JBpjVoQ9jqdpYMLzHK8MmeVjLdDiXvk21wj9cWftes",
                     "token": "6QBsCrJqn8n6v4nCBn8aTsAsQR9LHgeoeKb2NT6pKuAu",
@@ -13668,6 +13912,7 @@
                 },
                 {
                     "name": "Rotten Ville #244",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SWxl19Hef9QcYKxxkiwjKLJc107o7vdcP2tpLvkkRyA",
                     "token": "rb6146s2tcs92C8i6RRBRwNfKV9VGatyiND76UHdd9H",
@@ -13726,6 +13971,7 @@
                 },
                 {
                     "name": "Rotten Ville #245",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/5LNv_VW9gtZWVEJE27nS_9ZroKZvAgFnOTiaWC7rRuQ",
                     "token": "85Lx5mpKHNLJS8j2m8xTucSrQ7SsVHhbjzaZVPRfR4h2",
@@ -13784,6 +14030,7 @@
                 },
                 {
                     "name": "Rotten Ville #246",
+                    "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_2w4ro1iZoi7ER5PuxsmSSj3gStc-FVgvXbMxQSk3Eg",
                     "token": "58WT7JmrjUKVk4HXB9L9nhfo5twerw9jHAhmHpA2nWZn",
@@ -13842,6 +14089,7 @@
                 },
                 {
                     "name": "Rotten Ville #247",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ldZL1VufX50Sj0c2q2pWTBuHt66TXDsUYDN_Iid4asQ",
                     "token": "Ak7WqMAxBQ9n88C9sxnc3grYV7aepuUwuDtumyAhQmBh",
@@ -13896,6 +14144,7 @@
                 },
                 {
                     "name": "Rotten Ville #248",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/aJN696Xwjv6P-TZpKEPYrK-z8lecJLQ92zCgKVpF6OY",
                     "token": "FRao2xvTVjskPTZWT81eNmQ3x1AAwks1V8K9TvHpmKqS",
@@ -13946,6 +14195,7 @@
                 },
                 {
                     "name": "Rotten Ville #249",
+                    "holder": "4w8ydbHaTDFoyK1vgzZSGcF1cYzGDrM1fnhgw2us1qf",
                     "symbol": "RV",
                     "uri": "https://arweave.net/huqBmg9MxoR-Xdu38FrvwHlTp5zXC-asLYgM_6gNJVg",
                     "token": "ERU3sfGQE2Jxw92QTCZSu3Awubz8eUoVre1wkEMkYWYi",
@@ -14004,6 +14254,7 @@
                 },
                 {
                     "name": "Rotten Ville #250",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Fv7jDfEon0EPpLuA-PSRilylRBkB6LGaO7DCJF3AzNs",
                     "token": "7D9c8UWB16zT8ZRHGMqty8SZLSfb2up3ymFjxHsw3Deu",
@@ -14062,6 +14313,7 @@
                 },
                 {
                     "name": "Rotten Ville #251",
+                    "holder": "7umdrWsNttyCrJxymfRLc4i1DUYc67es45oY3Gz3QFav",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7T4mZLT8IMQmtOTT-AclnbiJbu02Bqk8z4Hc7ngbodk",
                     "token": "HjsUdkQdLRH2xoaZZY3pfxTUcsh8mH1YskFmcsKCCM85",
@@ -14120,6 +14372,7 @@
                 },
                 {
                     "name": "Rotten Ville #252",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/H0twXiweXTVlbjtVGJGlLcsC-m-A62khigQIkJg4cIs",
                     "token": "BSnz2XqAfgx2AZZVv49AS78JUZ8ZjsXBr6R5DMSqxjTF",
@@ -14178,6 +14431,7 @@
                 },
                 {
                     "name": "Rotten Ville #253",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/4Hz9PHaf6S-ebUt40--cKVlD5tOneABiy-7tNWoP_CM",
                     "token": "21R7GuN8fv6NES4qp2AL4VMkRchCX4cmea7qhtjm3k2f",
@@ -14236,6 +14490,7 @@
                 },
                 {
                     "name": "Rotten Ville #254",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xEzGGpfKZXLB8wHTQUtMFi0Tl-N_RCG47p7J25RyZfM",
                     "token": "HiuEebuETGdrXG6DtAKMKPsg9pvKDSdCguoSpDupjRP1",
@@ -14294,6 +14549,7 @@
                 },
                 {
                     "name": "Rotten Ville #255",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/W_HB-ShoIVwxBLo9EZwd3a0ccX9QjJqLhUEx5pjgGnE",
                     "token": "8uk5JjFyF4A7HVQ6jPqM7EAfuLSstUoHifLoCSWQwL3W",
@@ -14352,6 +14608,7 @@
                 },
                 {
                     "name": "Rotten Ville #256",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/wt1jzX_GBPfHq3YyFNGxtuKsDH-lq1wJjV-RBPUUeUI",
                     "token": "12RjhswfLY52fUW2M4H8PkMCwoAdTnyidyELpY5dLrSK",
@@ -14410,6 +14667,7 @@
                 },
                 {
                     "name": "Rotten Ville #257",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/JJ7X5YaWYo83ZUmiH8V9O_SRUeoNcfP6qUHhCdLYD7I",
                     "token": "BrKuHgFRoqfvcuT11VbD1NzfrMsKFRRM1ekXcKomK9oE",
@@ -14464,6 +14722,7 @@
                 },
                 {
                     "name": "Rotten Ville #258",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/tEhpJrRGQHmiE7tR0wxw7NTFAZCPGhJ3PVAX44arGCI",
                     "token": "HTp7cySFqMiRzkdoafef4tb8jzTDkCKc4ue5JZzpyEVH",
@@ -14522,6 +14781,7 @@
                 },
                 {
                     "name": "Rotten Ville #259",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/cP39zzrfCMBE5mpvmR_0PXcnZcOALyOHipsNZpLEKDc",
                     "token": "EiVP1z7fqD8364jFDRKQBcdBN6zcngrPujahNs9wabLA",
@@ -14576,6 +14836,7 @@
                 },
                 {
                     "name": "Rotten Ville #260",
+                    "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
                     "symbol": "RV",
                     "uri": "https://arweave.net/WhBS5yIExOplaQ3kJFplzKb-J4JUkvmFrIcqEvig0WM",
                     "token": "A3rsW6EYPYYJU1myswaJvun9cmp5cA5NfxK9qkRiQjtA",
@@ -14626,6 +14887,7 @@
                 },
                 {
                     "name": "Rotten Ville #261",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/l9L7Pk5AuK4st-tu7KrWAXpJCPFrwWnyV7GM0jcx3gI",
                     "token": "AwJ86oehUW7iGbsTbcFUbj2DtxjT42Hqwp9TQofzN6n3",
@@ -14676,6 +14938,7 @@
                 },
                 {
                     "name": "Rotten Ville #262",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/gZtbL0o0XVJsBFk79RGGcDFHYpJCJaj1qyHiPnNXXkA",
                     "token": "7cvdy6wFmqymg2QSShVZw1KxLA8HtM2D4XTmGBzA5ioC",
@@ -14730,6 +14993,7 @@
                 },
                 {
                     "name": "Rotten Ville #263",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ljAuyCbUo7bxl9c9d8zjVYwVkYrTydFotJuvfz-t4UM",
                     "token": "Bu6NT8LUMHPehiGfftYvLZC4ZNNwsFPgo8jNDrhy8kbd",
@@ -14784,6 +15048,7 @@
                 },
                 {
                     "name": "Rotten Ville #264",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/KF4H1oXqTO6Lk0pvjq4SVdbs018iA1WllfyULPpKLI4",
                     "token": "BDoBpSBJv9kQomzEbtK8P1A8GKNojkRo9kVogKEVxn7h",
@@ -14842,6 +15107,7 @@
                 },
                 {
                     "name": "Rotten Ville #265",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/rXrMyTJO5pRwyM4r793hHNKH-eaBCRrax4aZzLaw3eg",
                     "token": "BMZPyFEVpDTNVhoLVkRRsu4hfsdfqctnxzEXpzrRWKYd",
@@ -14900,6 +15166,7 @@
                 },
                 {
                     "name": "Rotten Ville #266",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/EROeHB75wpvQP9xnn-9mvQy9CaZ6qVIRppIqs3yagi4",
                     "token": "9Qn6eLRdJACy6xB8d1Ue7mWWhxsZupWbSMp7Zff2pSKK",
@@ -14954,6 +15221,7 @@
                 },
                 {
                     "name": "Rotten Ville #267",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/eImnSjM97P_Ed_mHbJ5e_uhlUOZ89GnPE0_XW3tpSIk",
                     "token": "Eu5gVuDzzqu8w862KRqkWZL2XpfEiGjSDUcrRsQwiN6e",
@@ -15008,6 +15276,7 @@
                 },
                 {
                     "name": "Rotten Ville #268",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ZU-aO6AHlgA_jLz_8OUx8G6QKgV9c9wk0nyQeF9GW2M",
                     "token": "61Hi5rB59quqEDGuQLpbqWDgqsTmcmxkdbXxWTBq2ZnG",
@@ -15066,6 +15335,7 @@
                 },
                 {
                     "name": "Rotten Ville #269",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/popJgMCq8ARflDDqQcHzuTHRnqGeJ9KJxkphumd86uM",
                     "token": "FGmvYUjkyD1G6vXy3e6Pfsde2S8tDtt5DQgHfTW9oUq8",
@@ -15120,6 +15390,7 @@
                 },
                 {
                     "name": "Rotten Ville #270",
+                    "holder": "Er7SpA8FXZmoWAZCqi1LB8zT8TthL1741GSebxwB8qVX",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mh6lpM4vHQVgU0ixeR-SqE3tFaEuBsYKLm3JPVaUvqE",
                     "token": "EDC6q1PwSJ38ZSwztmjc3hyJrhr8aBHfZDQrydXHpyQ3",
@@ -15182,6 +15453,7 @@
                 },
                 {
                     "name": "Rotten Ville #271",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/EXml4cIWbBowtN4QYdruYnMITrCUlTcF37pUzRleLGo",
                     "token": "DbDnEL3ExKjeoemcLxaAdHjwV5n5VrsCP4P5PtBcpb8d",
@@ -15236,6 +15508,7 @@
                 },
                 {
                     "name": "Rotten Ville #272",
+                    "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
                     "symbol": "RV",
                     "uri": "https://arweave.net/sn_TmQFvnvOKf8E58lrhArgBOuVgF097vLp2-wPY1Lc",
                     "token": "CzJanouTaf9hPc7QdPW2SrTGmZtcFyee4fp3R3RkXCyA",
@@ -15290,6 +15563,7 @@
                 },
                 {
                     "name": "Rotten Ville #273",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/psz4JvZiZjErMPg97Dbnhe6nJs-G_PT4GIZoi97rNOs",
                     "token": "3apoeLLybWbPTmU6Ntj5XdmaawFM7Wwp1Lu3ZvYw8cfk",
@@ -15348,6 +15622,7 @@
                 },
                 {
                     "name": "Rotten Ville #274",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/KQouxLZOZbYrm7SrUd8rcGuqrw8HwBjtGa_D3ZNc_kg",
                     "token": "5q9SzY79C1eqQPsubSe7ddQhtGFXTXvuKkXpXKfDYR5E",
@@ -15402,6 +15677,7 @@
                 },
                 {
                     "name": "Rotten Ville #275",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ZkJN8TdHf1ZzgKdgu8XkVFdkHkR-wluXE6Fzw7P_mVA",
                     "token": "5CzVo49akrRWUJqUgojVhVYGessG5Ha4X2fCa3cZCWDV",
@@ -15456,6 +15732,7 @@
                 },
                 {
                     "name": "Rotten Ville #276",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/C7a7bOfpyGGAxuP6w2Y9hzyEaeoCtgHhkDHx1sA8tds",
                     "token": "Bwi4GdLpvWn9b45zshENKtXVtGH3zx5tTcJKS5e18Z5m",
@@ -15514,6 +15791,7 @@
                 },
                 {
                     "name": "Rotten Ville #277",
+                    "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mhezrPKPzv9GCYtoY4vQdUIx-1S3cYcdfqGHiRwVT_Q",
                     "token": "5GR5uxUr7E4b2nKd2AdSb9RqYycoCfKjyXZEBRKmvsAN",
@@ -15560,6 +15838,7 @@
                 },
                 {
                     "name": "Rotten Ville #278",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mNxcAUxYHhkvm9rOkOzLoDwNzmxI8tskPDSS5JxLKUw",
                     "token": "FnjX4QGT9EgwsMvRYYtnyJzTzrwZzBbXi83wh4W3E7qM",
@@ -15618,6 +15897,7 @@
                 },
                 {
                     "name": "Rotten Ville #279",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/rotdKy_LxawqeM1WZJrQrT7eDR2STEejwnKHnFkPWrQ",
                     "token": "C6aqn3awuewXYufGHwdwmU22m1mAEQqqs8PcFwAvdtuF",
@@ -15672,6 +15952,7 @@
                 },
                 {
                     "name": "Rotten Ville #280",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/neTfaBNBJhelKS05dV7zXskZQm0liaNx3HRIDi_o5HM",
                     "token": "ApLgeeFpcy2KpXDVRNEcjMy9wN3Um5mu42yE1tRSXXm9",
@@ -15726,6 +16007,7 @@
                 },
                 {
                     "name": "Rotten Ville #281",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/BU-eFVnjV6f2HslR07Sp8snsEjjj7ZgfTCrfk3eG48o",
                     "token": "FKN6u2x1qXfppyeE1QDVNVTjFcYu5ZoRAJc2wG4R5ywD",
@@ -15780,6 +16062,7 @@
                 },
                 {
                     "name": "Rotten Ville #282",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/KfplTGE_22ZKtmn0QNQanVamiDRaQu7SY8iAv157MBU",
                     "token": "7QCeuGSmKWvQ3sUYwnUevWpZdczpHihajQi2hZAiF5ZV",
@@ -15834,6 +16117,7 @@
                 },
                 {
                     "name": "Rotten Ville #283",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/3BzgAJFFUr186UqefwzKbDhwpbS0fQNgMewUN7dAyOY",
                     "token": "Fsp1AyzFRr5oYyWZwKCmfjLj2udZnwx7W7dcv9yEmjrX",
@@ -15892,6 +16176,7 @@
                 },
                 {
                     "name": "Rotten Ville #284",
+                    "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/W0_klQgy48ZeUCsmfb_RUAYfqg5U_2r9o-_66JDTgMs",
                     "token": "2BaijHXHzt9Jt89hc8raE3ud8TpJdabbKhsxZHbnygY7",
@@ -15954,6 +16239,7 @@
                 },
                 {
                     "name": "Rotten Ville #285",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/uyVrcU1CWr2Uz44ZYKxBky266satDN67AsCJQ2kJirQ",
                     "token": "7Z3z2t6cgHRxjfKEYvyUf6byqT3iSeB6e6TFUmHtydMV",
@@ -16012,6 +16298,7 @@
                 },
                 {
                     "name": "Rotten Ville #286",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0OdpN_C_C0qyxTexupmLp9BLBTk8Npyao05SlmvLNpE",
                     "token": "CxmdWrsnRS1Qdt8gWNfqshNsWsjFQkcyo4Uhe2oXh3dx",
@@ -16070,6 +16357,7 @@
                 },
                 {
                     "name": "Rotten Ville #287",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/cJNd6cDksCU7QP8YS4xEGNddVzOl-uK7gIWsBLdfRK8",
                     "token": "868VpV3m7FakrDtLFNUznRsML3QJTnAEfXzckdK4JfF3",
@@ -16128,6 +16416,7 @@
                 },
                 {
                     "name": "Rotten Ville #288",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Nxw8E99-WQ4LJySec131E7f-sYCuiVq82p66rm2V3Sw",
                     "token": "EqyvQU5VgkJ8iXBnCBZZKXK5FWDCbaJv2EJ4RdiWQydm",
@@ -16182,6 +16471,7 @@
                 },
                 {
                     "name": "Rotten Ville #289",
+                    "holder": "7CB5Vyep45gFoP6qQm57gRDc6GD4r7zjN9zTbAnVMPot",
                     "symbol": "RV",
                     "uri": "https://arweave.net/jpMRJkGEebEQNzWwbLUw6AXV-PaU3lfYGSS7ECCmFc0",
                     "token": "5m3Y9urBTcQCiqpt7wXd4mMhDtbTjoscPHwRkgWPjw5Q",
@@ -16244,6 +16534,7 @@
                 },
                 {
                     "name": "Rotten Ville #290",
+                    "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zZ-JZT_cdUAqy5cPfHarOpK77vT4rCJC0V1_7-swiWE",
                     "token": "DeFR9xra6Nyt2ygX91HZQLBsrcW5tSg16akJQX2ucD4G",
@@ -16298,6 +16589,7 @@
                 },
                 {
                     "name": "Rotten Ville #291",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/2OY1iDr9koRxrXOrqCIk1_asaO5IHigTUpb9yrXKqfc",
                     "token": "DM9o5FFyfq86nBckASLsXJMsNnW4bP9vaasy4EiUc7Ui",
@@ -16352,6 +16644,7 @@
                 },
                 {
                     "name": "Rotten Ville #292",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/I2GMl0hGHHpIDxI7dmHcnK9NG5tPXU9fullvxrfRYog",
                     "token": "44aSyHR1FwoV3QHihTtUqCsTBFRu1k82dUKuhPY1W7ie",
@@ -16414,6 +16707,7 @@
                 },
                 {
                     "name": "Rotten Ville #293",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/ObsAQwWGqpFcRH-eRntK7qfP4XfcfnQDRVsZI_E09Dw",
                     "token": "9EicPTqFj5oe1nRsRCiVqmwbEazM9py5vqaQ3f4Lzzm7",
@@ -16468,6 +16762,7 @@
                 },
                 {
                     "name": "Rotten Ville #294",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/wi9c0aI7BxbPxfHuPR7SicMvKgHsp4Wf89uxY3nY_nA",
                     "token": "AeCJHPXQVnVm5ZYMJAZo1RCpUGctNFNUEpiem9uRB5ij",
@@ -16526,6 +16821,7 @@
                 },
                 {
                     "name": "Rotten Ville #295",
+                    "holder": "21m5e3ZQyjh6Es7siF7GQ7swby43dTg5ePGTfaENPTDU",
                     "symbol": "RV",
                     "uri": "https://arweave.net/7ptaRftsUx9Ih7-m2E9X-oG2AilOwo8pGeo7eCkII70",
                     "token": "BSTeAc9TUCF4hBm29kuSgHXwtruv8kojAiQMHxDLqqee",
@@ -16580,6 +16876,7 @@
                 },
                 {
                     "name": "Rotten Ville #296",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/D0VBNt6f8BQJc5BKdUIPUulZQFaHuXI92jkiatCm6Ak",
                     "token": "CzexXuQYJDSvr9YKYeuzKYv3UBD9gp8yucfzG6zMUj18",
@@ -16634,6 +16931,7 @@
                 },
                 {
                     "name": "Rotten Ville #297",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Hpq9XesNUIC_kuh51LDY6T1aABef6fjbRurQ-t8VRlc",
                     "token": "8nYY3BdprymrBupwS9FxF1koB1TY4BwRHWoCxuteVyS2",
@@ -16692,6 +16990,7 @@
                 },
                 {
                     "name": "Rotten Ville #298",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/j_tfdlCCATgpr8jkCl5eY9eRdApy6oISu3IvTVThwDg",
                     "token": "4TQR4aXqAs8Y3XTmMNuK6zSAt4iQShG6MtHeBbx32fur",
@@ -16750,6 +17049,7 @@
                 },
                 {
                     "name": "Rotten Ville #299",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/H9vG8Oe1OinUd6_YigM6DhCxiw55kwqCUOgYVk8draA",
                     "token": "BTR3QfYeBXYjgaMLcJUy1GmNjDagfvdYBXJLQynATecm",
@@ -16808,6 +17108,7 @@
                 },
                 {
                     "name": "Rotten Ville #300",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/JjMJ3S-4l03Ov9O8pS_hkZNEMcrwUjqNinZxDAWA-Wo",
                     "token": "4wWS3aiyYtvSdpMgXSDGvBaShgHFpNjQkNCjNmqfxgQV",
@@ -16866,6 +17167,7 @@
                 },
                 {
                     "name": "Rotten Ville #301",
+                    "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/N7mlIML7P8ycaWSirqxRV7CTRkIOsvgVHRTiFygd6ow",
                     "token": "FDHNBgMa6TySuzWsVcoH7XvPs3dXLQYVB8knEPqZmdtj",
@@ -16924,6 +17226,7 @@
                 },
                 {
                     "name": "Rotten Ville #302",
+                    "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
                     "symbol": "RV",
                     "uri": "https://arweave.net/tgYEvb5Ng6--WqCFOfX2dUQs8hWwEdqipsl9sl0SFqc",
                     "token": "4Uc2ibJggqxSvYGeJ29hYYwY4Yat5D3Z16L2BUfzSsAF",
@@ -16978,6 +17281,7 @@
                 },
                 {
                     "name": "Rotten Ville #303",
+                    "holder": "Er7SpA8FXZmoWAZCqi1LB8zT8TthL1741GSebxwB8qVX",
                     "symbol": "RV",
                     "uri": "https://arweave.net/-po1yebOCwXgqQd0u-0iScsZlYYhxn_LHc66Cmlud6A",
                     "token": "FGP8AakQwKH45mf4ZNGjvcazVNgVXTQXKUpaE3ZuZtdS",
@@ -17032,6 +17336,7 @@
                 },
                 {
                     "name": "Rotten Ville #304",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/_o_VcFMZxWz1v_a-sFlps_ZZV5RIcayZvQb1duxl698",
                     "token": "3sXRBbvoeZFgtEiZgPFodL86XijGB41k7s8UPponEUAo",
@@ -17086,6 +17391,7 @@
                 },
                 {
                     "name": "Rotten Ville #305",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/J7FzFBj7IrMjBPWNELmS1owfimLNZz_1dPfz1zeDLj8",
                     "token": "HWjTU7qDYSM3oyCDubSGugmvCfDzzYFayNfLJgTTLC9d",
@@ -17148,6 +17454,7 @@
                 },
                 {
                     "name": "Rotten Ville #306",
+                    "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
                     "symbol": "RV",
                     "uri": "https://arweave.net/sIuFg3Sk07KhS3SNSxjCD1Hjkn86wIi36LQEKpg4SLA",
                     "token": "8kEkchuecGDkMG777Ezn4o1He5bNoJv9kZtbgsgH1Dw6",
@@ -17206,6 +17513,7 @@
                 },
                 {
                     "name": "Rotten Ville #307",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/RntH8Z3C9LxqP4DGxa2sR3gQlHZchiAndRL5q_WWZsI",
                     "token": "HEGaiq9SdJmPWh5jrd2LbcCGgqxffKyiRQnDdffwyDoH",
@@ -17260,6 +17568,7 @@
                 },
                 {
                     "name": "Rotten Ville #308",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/XOznDJMg9r6a6mX_ndgRd17cUqYko0sXuB0ZqXznJ54",
                     "token": "4iW2rbEUHtf6hW8LyoPmXiRpodRiBz9S6NDN7pw63sbc",
@@ -17322,6 +17631,7 @@
                 },
                 {
                     "name": "Rotten Ville #309",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mHXny9jciWK2EUkLQt-puJXQWrrTS8Ju80LhTKt886w",
                     "token": "2DbNKmMLPY2cWKj5DppAqjcicLtKNhZ1CVtrYDTMcDnW",
@@ -17380,6 +17690,7 @@
                 },
                 {
                     "name": "Rotten Ville #310",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mt2ZsCki-6iEtZgSoGefzcfM3fy5240AFhF5fE03pXw",
                     "token": "Et7Vh9rFmPsMQWW8tzXtVz2Cqsv7QoQyY4gDUeW3j6ke",
@@ -17438,6 +17749,7 @@
                 },
                 {
                     "name": "Rotten Ville #311",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/z1zxyarICViTg6n6p0z10U3CZbSU51PgYP4J8nCj8Sk",
                     "token": "8zdpLCHYHmFUUWU9TqM9GjmjF2SKTgVinkRritMwdhGa",
@@ -17492,6 +17804,7 @@
                 },
                 {
                     "name": "Rotten Ville #312",
+                    "holder": "7ZrzDosgbkYBBrVncfipq6UZWdBg2JKvaDZVnYKWQttT",
                     "symbol": "RV",
                     "uri": "https://arweave.net/xizvHr-u9qH53BEiObkWCDvOzKncAxn_fyH0z7QdMjA",
                     "token": "GtcWwtoXi3XmU5969gq3So2r8AyAbYPQg85xr7AhjmvJ",
@@ -17550,6 +17863,7 @@
                 },
                 {
                     "name": "Rotten Ville #313",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/FmT-NKBpNM42ypaPH9bXXY50AbjTz0BzKGkknNL9fL4",
                     "token": "G19AEbxgQf1ws14ypzSgZBnHLhaUEvsiaiD9Fr9KLFPX",
@@ -17608,6 +17922,7 @@
                 },
                 {
                     "name": "Rotten Ville #314",
+                    "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
                     "symbol": "RV",
                     "uri": "https://arweave.net/5FJp4fvsDd7YMKwVPRtJZL7lVcoMpqbsxVGlCTEDy-s",
                     "token": "2TiNW9a2Fc8oPhv5aJZZTXcaP9hZrFn8cvW6gVfpTEQ4",
@@ -17666,6 +17981,7 @@
                 },
                 {
                     "name": "Rotten Ville #315",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/6s5fpCUn5tbFH_IEkKeuM1fjasghn6mEfcYnZXNPZ4M",
                     "token": "8Scx5csPRraySnEgazTSCzphr4VPbr2nsQdtk29qT1ec",
@@ -17724,6 +18040,7 @@
                 },
                 {
                     "name": "Rotten Ville #316",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/zo1dYt74DqeiSiuQQgppqSnipUPuiTwNDb1rMnXFuVs",
                     "token": "CjD38QTSyeZwBE52S6CpZ7Sr7dweQ2sSm7pVRA7yxGEe",
@@ -17782,6 +18099,7 @@
                 },
                 {
                     "name": "Rotten Ville #317",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/lpLt4jZtQw5SX_k7IbUoUMoJ1BWle1DZMU3Mw2norWE",
                     "token": "8DNmhPNpfVfPEJsxg4BnnLsRspeetmKku6o2e9xZ5Agn",
@@ -17840,6 +18158,7 @@
                 },
                 {
                     "name": "Rotten Ville #318",
+                    "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mMdp6oRWTx2qJrmBE50ZAk-u2ddjqImjiDv28RqGlFo",
                     "token": "BQ2RxwA1Z5VJ9R7ST6Qd35MSvDz3PwJWWjDf25W31YDD",
@@ -17886,6 +18205,7 @@
                 },
                 {
                     "name": "Rotten Ville #319",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/SeuFkGlP8u25lcf3SlW6KjaKoCVX4yzOM3YMIPUHUPw",
                     "token": "7BwyYpTKxzHzbRg7HqzqpJn3uq5wxNvFwkGU71cM32PQ",
@@ -17944,6 +18264,7 @@
                 },
                 {
                     "name": "Rotten Ville #320",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/mcANKrFSM_qdgvQq94TGWEnvqk_6KGRB0-I5Mx7Yz6w",
                     "token": "FWyF5bJsnCrPJrEew3GpqqnaA3HV35NAA9Kbqoz88dse",
@@ -17998,6 +18319,7 @@
                 },
                 {
                     "name": "Rotten Ville #321",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/cX9AUl9Q46uI_kJfYpVr-TosJ4Hi5J4D276PNM_-qvs",
                     "token": "81y5tQArsDhsujgzM9BmPmfdRfzFaz6covw1n4g5Saoo",
@@ -18060,6 +18382,7 @@
                 },
                 {
                     "name": "Rotten Ville #322",
+                    "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Q-kOg0U_4Gp2VCkAltUYfg0fCTFQ1PGDaB_8Y9QdswQ",
                     "token": "88Zuy9MqdqwYefEnZnupQUPqx3Kki13N7CH1J3cw6cZ6",
@@ -18118,6 +18441,7 @@
                 },
                 {
                     "name": "Rotten Ville #323",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/OXHOI2k8NAV2Xkzga0krNIUOCxJrbTFv4AZHQNzXc8k",
                     "token": "Gqb6g9JiZAMKZdyp8CEofjgtr3qx9ShcD9qwqwHS4LKF",
@@ -18172,6 +18496,7 @@
                 },
                 {
                     "name": "Rotten Ville #324",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/KKBC2PTJ9yfeekLmvMvT16wcer4UBSatm7yATMcVKgs",
                     "token": "cKBM5Yc9qxkLGdm5kGbt9kqvX1kVFqVQvC2i3VcPLJy",
@@ -18230,6 +18555,7 @@
                 },
                 {
                     "name": "Rotten Ville #325",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/k94Dgqw3-fvE-JCQKXt5t3QVPXT7Z0Zyqotffg2ud0E",
                     "token": "BcQjNYQGG5qq2ytS4Wv1Be5sUZqSpJJdbU7QsomEoDkz",
@@ -18284,6 +18610,7 @@
                 },
                 {
                     "name": "Rotten Ville #326",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/Bnd9sx7VhRnSPNBar3Yw-aK_ehjCds0mxptEcg0AzPs",
                     "token": "HCUf4pJLPmHJRamcBqnAch4CRHzbPB6LvFFz42LxnBjz",
@@ -18342,6 +18669,7 @@
                 },
                 {
                     "name": "Rotten Ville #327",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/oKuEczpVefwriLZ_YPNlx_LfOilu2eciqURdclFYRPY",
                     "token": "4bkYqiTX9PimF5G75R7zhVLXzvjhSUcFoFrJfr45dvxK",
@@ -18400,6 +18728,7 @@
                 },
                 {
                     "name": "Rotten Ville #328",
+                    "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
                     "symbol": "RV",
                     "uri": "https://arweave.net/75EkNNJC6KubwtoevJgTB2eP-Vb6qAjk_Wm5eKn0IkQ",
                     "token": "FNVyLL5Aa56t5QPwTz8q1iAcbEKGwdNvyjUBViRi77jF",
@@ -18450,6 +18779,7 @@
                 },
                 {
                     "name": "Rotten Ville #329",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/pA8R9IqNAmua66sKoc0RjsSHZa6YgNCEgECvDePDPZU",
                     "token": "8grTR8viThhL9YvNkCet6rpkKe5nc4JLUxUtVUSBDVex",
@@ -18508,6 +18838,7 @@
                 },
                 {
                     "name": "Rotten Ville #330",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/f7clCZ8nbTOI6l-ssFfv2oyDBd4Xax5_S6fhzo868bo",
                     "token": "5R2cNq286WahXTMDuB9kKhDQ3w2wwuq5JJhj2tvjehJa",
@@ -18562,6 +18893,7 @@
                 },
                 {
                     "name": "Rotten Ville #331",
+                    "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
                     "symbol": "RV",
                     "uri": "https://arweave.net/yhqhydalNzMFfuXo7llau2Gt92mlk5RdX-uWLPcwp_Y",
                     "token": "4AC5KYSLtooNeppG9yNn1Hi3nu34yKXnGW7a2yTwADc5",
