@@ -1,0 +1,61 @@
+spl-token transfer 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A 33 5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn --fund-recipient
+Transfer 33 tokens
+  Sender: 79Vk7ZwFqbESDRJYf18x1J2PyznLiCPK6XsoAW4eWb7J
+  Recipient: 5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn
+  Recipient associated token account: 4kRgeM1a9Be9Zbne26QCJVYStyie6Ez1sMjKpBX3DkeG
+  Funding recipient: 4kRgeM1a9Be9Zbne26QCJVYStyie6Ez1sMjKpBX3DkeG (0.00203928 SOL)
+
+Signature: 2V1EagbwcHxwFoJeV3Ddk9HbAXVt5WwVxT1gQfnXGLC8dTvvuSaC9HTuJmxD3quv2kq7xkDMkRSWbnBkhQnfrrdM
+
+
+
+ Kyonax: ~ ❯ spl-token create-token
+Creating token 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A
+
+Signature: ZzFyzn47HoAybwEnjFZUPjJqakt5unB9nCgJtmH4sT5mrMCFXA5ASS7xTLZYkiVXg7GEJY6ZTkJqRYMFcvgihMZ
+
+ Kyonax: ~ ❯ spl-token create-token
+Creating token CXuWWPgwFwC771pGLh7zGuYi9NhhJ1HBSVwz2WCPvUih
+
+Signature: 4sWXWiEP7GosRPCEjJU91MsT5DpExgmGNSoR4kMC5AbUcoPvELUDYRgYGkBSmLQzjDh5Q6cc9HbsQBVMCMs9huhi
+
+ Kyonax: ~ ❯ spl-token create account 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A
+error: The subcommand 'create' wasn't recognized
+        Did you mean 'create-token'?
+
+If you believe you received this message in error, try re-running with 'spl-token.exe -- create'
+
+USAGE:
+    spl-token.exe [FLAGS] [OPTIONS] <SUBCOMMAND>
+
+For more information try --help
+ Kyonax: ~ ❯ spl-token create-account 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A
+Creating account 79Vk7ZwFqbESDRJYf18x1J2PyznLiCPK6XsoAW4eWb7J
+
+Signature: jBT4AGAZhY7aVvViubcRKEHkRh4666MhWJaAnEhATirZDhPe6oM2qg9AhVzvvW9cbV7mn1vKJm58NZSpvbxqJp8
+
+ Kyonax: ~ ❯ spl-token create-account CXuWWPgwFwC771pGLh7zGuYi9NhhJ1HBSVwz2WCPvUih
+Creating account DAqDWCEc2GVQa6KtJTD96rSHPzqBDFhmj2stvuo4ikUt
+
+Signature: 3oFzCye1RTeQXd5t7Zx4kpDkTU1dXDQmug8NFLnwe2JJcpSkXLvK87XMZdzGu24SNwn1UeostG9jsebsYNx9wC7G
+
+ Kyonax: ~ ❯ solana balance
+1.99296824 SOL
+ Kyonax: ~ ❯ spl-token mint 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A 333 Aw2RcguLDM1Yg6Zm7wZYKrXCRE1fz8TNZpmV8dtELx9w
+Minting 333 tokens
+  Token: 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A    
+  Recipient: Aw2RcguLDM1Yg6Zm7wZYKrXCRE1fz8TNZpmV8dtELx9w
+Account could not be parsed as token account: pubkey=Aw2RcguLDM1Yg6Zm7wZYKrXCRE1fz8TNZpmV8dtELx9w
+ Kyonax: ~ ❯ spl-token mint 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A 333 79Vk7ZwFqbESDRJYf18x1J2PyznLiCPK6XsoAW4eWb7J
+Minting 333 tokens
+  Token: 2De9dvC9YWNj7Gt9pxTK9zqJJF5ujhE4DKPUcwznaf4A    
+  Recipient: 79Vk7ZwFqbESDRJYf18x1J2PyznLiCPK6XsoAW4eWb7J
+
+Signature: C3Cjz2s6TGgSb2ujmHeM7UhL8dcneU4oxtNYJdUbYSgfPK6qyiK33FvjkKAXHTMXkbzzhQ9uCQGvFRCJeAPBZ24
+
+ Kyonax: ~ ❯ spl-token mint CXuWWPgwFwC771pGLh7zGuYi9NhhJ1HBSVwz2WCPvUih 666 DAqDWCEc2GVQa6KtJTD96rSHPzqBDFhmj2stvuo4ikUt
+Minting 666 tokens
+  Token: CXuWWPgwFwC771pGLh7zGuYi9NhhJ1HBSVwz2WCPvUih    
+  Recipient: DAqDWCEc2GVQa6KtJTD96rSHPzqBDFhmj2stvuo4ikUt
+
+Signature: 3BiUjfpZ7u9QKSRzfBV6j1pkm2dmTTU64VzPkK8hd7soLzq7US9xfY4n3odPrB5nWvLs1LzLTh8ZTyUKTPSbuctg
