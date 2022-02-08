@@ -1,7 +1,7 @@
 {
     "CandyMachine": {
         "RottenVille": {
-            "NFT": [
+            "NFT": [ 
                 {
                     "name": "Rotten Ville #0",
                     "holder": "9ze87mvs5zPLqpydJzXYFUYcmUNuqW9aZR7mvJHKiJTM",
@@ -6521,7 +6521,7 @@
                 },
                 {
                     "name": "Rotten Ville #115",
-                    "holder": "9hjd4xdZKy8gj13kcvk8HW62m2hVALrsSZWXV38YxbGC",
+                    "holder": "HSQSzxgDgxHDrcstHkVtZyHvFSg1wneF5TFfBn93rSio",
                     "symbol": "RV",
                     "uri": "https://arweave.net/0ci4nDb-o288ugQmVRjn3HUxv9TOj573mZ-tubp3_Jg",
                     "token": "8UBFQZqAqcbj7561sKJNGapimkdW7jUfNNzaCoDMQ11f",

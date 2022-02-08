@@ -1,0 +1,1868 @@
+{
+    "Airdrops": {
+        "#000": {
+            "holder": "9ze87mvs5zPLqpydJzXYFUYcmUNuqW9aZR7mvJHKiJTM",
+            "token": "HFoUEQq967Ei3v4wSp738WDFrrxiCjYpfGEEz4DmTvpG",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        },"#001": {
+            "holder": "7wqgDtn9REKuGXt4HzC6gGSJmWESfyd5yjpAuBcmWKzM",
+            "token": "HY5piYUc8hcLovYGX1qAS9ySRFeJXhAwHvjr12UwKY8j",
+            "elixir": "Cosmica",
+            "elixir_token": "BioYgweUUXoAoTWKvJGmx1JYF5guFgnYbivmaKiBghJ2",
+            "marketplace": false
+        },"#002": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "9juUz4YycNP2LM43uRcYihRcqh91GAPTWQBEH85JrNPT",
+            "elixir": "Electromagnetic",
+            "elixir_token": "EsQeULv878dxZB32UEspTBKsyS91LVjvwoFmk52YBHtK",
+            "marketplace": false
+        },"#003": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BJEJLNiqurnoURnuWY8wn4m9uwMcAm3bzNLqoWPgEUQA",
+            "elixir": "Cosmic",
+            "elixir_token": "7jaZvBamBHGwDz7bAMP1jSqeXBuHc7ymvVGxqQrXywHm",
+            "marketplace": false
+        },"#004": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "6TbQYVvNVBSXWyeTPwQjjNUPPuXCGH64xkk2zt5qxo82",
+            "elixir": "Cosmic",
+            "elixir_token": "9cqdFzAUyLm9WPrm2xkw75XozCp6jXkDUBWo7UguTys9",
+            "marketplace": false
+        },"#005": { 
+            "holder": "6H6SViSicpyzJBMio2NbzQC2SSZv1nLGqrm5wYwdszJC",
+            "token": "89RBC6xBNqUzWiTk538bFvPANwm2QqpiFZDrMvTxntXS",
+            "elixir": "En Duda",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#006": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "GkejL6j9nrWeYyUSjH7d5HtYD7uuX5GZ5LMBr5FGsEv9",
+            "elixir": "Nuclear",
+            "elixir_token": "4aJxLv76epUiPhV7Bywcshejz94ox1d4kYGNJSvC4c8B",
+            "marketplace": false
+        },"#007": { Duda
+            "holder": "3s3L8eX7y5M1dBXzWLb2jmXJr8g4FdEwP6eeXwxTrxqx",
+            "token": "rEKSj9Pw828wqHBRzP1mXq422UCoE2N4BKsf2UAKv9Z",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        },"#008": {
+            "holder": "6RBAtgByMADxtpdD8xCpc2qorBMWf8HnKEWmT7jE61TF",
+            "token": "55W1hmhMVNZrQFUc4Xw6pPYreBDZEKdoqxyDYMw8YdfV",
+            "elixir": "Nuclear",
+            "elixir_token": "3urtcvRn4KfZnjGbknqRxQ3hu9EGagFnhswgpu7jykSu",
+            "marketplace": false
+        },"#009": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "DpQwz25U7vneZogxRdUe4etAhf2ZM5mooFrqJy49JWDX",
+            "elixir": "Solar",
+            "elixir_token": "13abQgCnWoXt4fKFeHaFo8hATJb84xS6TySiCQN8FQ9Y",
+            "marketplace": false
+        },"#010": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BfcV2dVctF4NejAereJokH3pS9NLcRZseUPiWCDYH6MY",
+            "elixir": "Nuclear",
+            "elixir_token": "7dbDSZDcc5QrMnfLHy7F2rHaV9SDb66oSUZFmUorgMa7",
+            "marketplace": false
+        },"#011": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "2tUpXtXyUoQqWZg9W4k2jB2a2pNpJJcgP9nC3VfaHmfG",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6VPAXWA8xW3Uhv1os1vEKwSifxoLoeMkYm2nmCGXTnTZ",
+            "marketplace": false
+        },"#012": {
+            "holder": "AYnDaEu9VrZktFLfiqyEErh29vUAiS5JkVqTzJDXFpAW",
+            "token": "DZXrFErpPXXCcN5Hw666FHvCcMUWqYc3eoCJfihc3yqq",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#013": {
+            "holder": "6RBAtgByMADxtpdD8xCpc2qorBMWf8HnKEWmT7jE61TF",
+            "token": "Z4NSBLw1kiJ8qLq6rWJiUeqyw9TbJYF1A7ChAJACdkF",
+            "elixir": "Electromagnetic",
+            "elixir_token": "8TPjj634Wr2dDdT6M8gpjth2yN53ZW5rP2p769gf6DXo",
+            "marketplace": false
+        },"#014": {
+            "holder": "CNwYoMHFHethLemZRQjyh4qK4uq5N4XGvf8TZSKsb4wS",
+            "token": "G38ofWQfs3QK9ZxgdGspYjvm4tFJCxUwLZ94dPtEnE19",
+            "elixir": "Cosmic",
+            "elixir_token": "HethkRBQNdyFw4tYNmm9AiMkz8vyWiRcjHDfektnwtLM",
+            "marketplace": false
+        },"#015": {
+            "holder": "6Zh3Dowf6jGw65tMvdGaPdNiiTkt95eVZWtPyRvXjVYn",
+            "token": "3JaXgrxxg5zgmHK2Vs1Pw2dHRHCh2eY3MNWGxgRpnuRg",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GCBRQJWsW7cCkAX62VoyaiRF81vxx71nMHe62Cw3nyfu",
+            "marketplace": false
+        },"#016": {
+            "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
+            "token": "GoF6dUYCft9rd1jBTTjzmGzorZHcfGcQLv45GTuymWsa",
+            "elixir": "Solar",
+            "elixir_token": "DVsEdtE2HgmQadDc1bANif9froiiFUoZwXKWLttCXyp2",
+            "marketplace": false
+        },"#017": {
+            "holder": "9SEycz66VrPnAhhH8sXWQzb11FuBaLYiYuMFNrAxxeQj",
+            "token": "prZL8EhiUPTcBWZrHeRf7oKqPpRGka47zbexJd4bBxi",
+            "elixir": "Nuclear",
+            "elixir_token": "GbC2FbbPC4knJTrHfA27qVXAtGhrg5EmNyrpyYahzmnG",
+            "marketplace": false
+        },"#018": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "h1MZJjcGnnJ4to1tkRVjKgUvjqLbRoFnJY6AaPpA3Ju",
+            "elixir": "Solar",
+            "elixir_token": "TsFV2vXNmHhXHfGAis971EPdBK9TgP1Uapn5Q4L1xks",
+            "marketplace": false
+        },"#019": {
+            "holder": "78X8jNxqU5myH47tBgvdiA79zY6V4JN9FSYLpj4VP1Mo",
+            "token": "D7NF17uuxXJz7REQKE5kWZkULT9jMxM7tjzoTRTday1J",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#020": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "21VMdK6VNmaf9QGBtCrYX6utoxDHGWgop13qPYopgviL",
+            "elixir": "Solar",
+            "elixir_token": "9anoaijL93Cmdr1gEMFAJy6vrfZy1ZtSkP1DSyadcudL",
+            "marketplace": false
+        },"#021": { Duda
+            "holder": "4YhJ1px6Kd1dmtRAcaFvpovbNV3zLtGvwGa3uYCPhjXc",
+            "token": "5grtHaKSphjK2PfPJ95h1uZqvvhpcPSp6MwoqrZRw7yK",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        },"#022": {
+            "holder": "4Yea5bZ3H3KQkojqfD5hUqRHZ2yqy16m9bogjJWaadbV",
+            "token": "GFLnXG1bpG6NDYUhYEJ2KuauAvWeB6y42c4uer42zgkR",
+            "elixir": "Cosmic",
+            "elixir_token": "GEEYJ1EYrezAmpCtH4GXj9HQM5hM6hc1mEQyu9dW9uUq",
+            "marketplace": false
+        },"#023": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "Dkjg7gPxyzgVCYY4eC7Qvv7xG6iL6S8UkBbB9XnLHXNw",
+            "elixir": "Solar",
+            "elixir_token": "53JmBWaH35XVwXdGJF7mp52KFPD4ESiJ2Gc7J5RjxLEg",
+            "marketplace": false
+        },"#024": {
+            "holder": "EfSdAdG3T9RuozRbiMDhrrSfKPWmsbSgLMTL6fgsWuDa",
+            "token": "Bgm3yRNmUQtFJjitDV9KSsstoam7ZbP8PFAFvH8TLdrW",
+            "elixir": "Solar",
+            "elixir_token": "6baV9VZBgCBZv4uEfjcFwo5WsZDAgDSrfZNHCk1Giexh",
+            "marketplace": false
+        },"#025": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "4MiYVKkfCh3idZjvczs5KEsBWQYY5RLSTkGcxEH5Pj5z",
+            "elixir": "Electromagnetic",
+            "elixir_token": "614n6jLBHrwBrtHLi9ZBCpydPqA3XQAa9feDkHevQEMR",
+            "marketplace": false
+        },"#026": {
+            "holder": "8ReVPXbM2BP8uq6uWjh9c76UdzXSu9iGmMnHcQYuS9XR",
+            "token": "AgtJtNWVPV9ktpeeUxmTbuMGovQbHDGAT7apNsaneGjf",
+            "elixir": "Solar",
+            "elixir_token": "BbuMj16mg28rjaYTX2n5AHYMPRWsAFcXj6NMJ7mZU4u4",
+            "marketplace": false
+        },"#027": {
+            "holder": "6Ymq57fSL47TfKbeiBBDvcgnRZxfsuSrtLVXyGFaJgcA",
+            "token": "9NLeoPtEHioZ7BUVFPZfdu3rRAWmVgXbmqg45pgeQ2RU",
+            "elixir": "Electromagnetic",
+            "elixir_token": "8XRwMaUoSZbTwueQZhF4zDBpVXjD7j9vHPx4aWbCgeHi",
+            "marketplace": false
+        },"#028": {
+            "holder": "HunfUpMKtcVQaxLjcYej2nJis9Uz43sFMrdyPBKy33Kx",
+            "token": "6oBZty64HiMTZKD5jL2ko3vXSHhy7E5iYcBnrF68axjd",
+            "elixir": "Nuclear",
+            "elixir_token": "DnwZbyKSaSoWmVF9GwLcdeKyoD9TTaCT2faSaMs2SdkQ",
+            "marketplace": false
+        },"#029": {
+            "holder": "HSQSzxgDgxHDrcstHkVtZyHvFSg1wneF5TFfBn93rSio",
+            "token": "CX6fi8pE7h7dwHVsE82ubNHdnpX4sNawMcJBoFg5SCSc",
+            "elixir": "Nuclear",
+            "elixir_token": "A1Yt7rCXJWshd8DA3f1j5V5bGVo1BXHro65wTGEmNqtu",
+            "marketplace": false
+        }, "#030": {
+            "holder": "CYFUcZk3QsaxNaaGLzF4CZxsE1KtxGsaG8BQVhstMygN",
+            "token": "2HSpvEG1oufivCKZUHZ89TtzQ7CQS88npozdy8Ltyitw",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#031": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "FbkLjyhF8SPVGH92Q2edJAqLmaJCbz1PY2vGi9sJyxvX",
+            "elixir": "Electromagnetic",
+            "elixir_token": "bckWk7SyVYDh1LC22ffaQybnFJAkgLwQKJskfnSkHP8",
+            "marketplace": false
+        }, "#032": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "8KdFK4LT7UzGS4AmjfeUZRxJWKc7W7Nmd69J2ZuVDR2e",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#033": {
+            "holder": "AYWXcKXRE8XwunpaNYXD4oJt4SRuo2FSLsoZHkejHSfw",
+            "token": "3dhw4bGScBV7QHs4S5STiA6R7QsQd25P87dTGnTfr4DP",
+            "elixir": "Solar",
+            "elixir_token": "cDXHrk2qkpTNjTtQkMVbief2cAdR7QKgvafQq5C113V",
+            "marketplace": false
+        },"#034": {
+            "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
+            "token": "5hkZMUXD7xHvjGX6RtRyQwNTPZnbSzFBnTLzT16ST1fm",
+            "elixir": "Solar",
+            "elixir_token": "4htULK113AcmSputaqEeE58i2tXSiXgC2vWtRVy4edYk",
+            "marketplace": false
+        },"#035": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "4trGwpaJ7yZgKaHbDamvqCrov8CbJUKK5e3GQBS5Yxhw",
+            "elixir": "Solar",
+            "elixir_token": "AHfjpmfMLhYCjFwms1WfUvd2EeVe3VJAVJTMSDfTuepR",
+            "marketplace": false
+        }, "#036": {
+            "holder": "J7dTtcVRZ4et2ki1QUfMSNePhTWLPCJdqgM5ge5PbHAi",
+            "token": "6ot4Z93FpVxYnJNyWN9BwaZ7njCpGfi58KF3SRHq7SvV",
+            "elixir": "Nuclear",
+            "elixir_token": "BLesvNtXBTjWhgmno5QRGxkuHxcgzVdEjRTF5C7pEvWQ",
+            "marketplace": false
+        }, "#037": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "JDoi3rQQ9suK94auXDzJ4Cn6HPWRWd9Axn2Tp1VsHDav",
+            "elixir": "Nuclear",
+            "elixir_token": "AXbjYB9gejjjsVYNoDjCAfopZ92pv5YcjPoDtNKPjuC",
+            "marketplace": false
+        },"#038": {
+            "holder": "HfDaj5umvBR5pqE7TLWELMYV4PA7ozY5tmXXyzQRoFMf",
+            "token": "4BHjK92bm9oybx23Z5DhjXWYrqAqHbAVgn9cgvtcYanA",
+            "elixir": "Electromagnetic",
+            "elixir_token": "Cb5fJtJBhXEw5p81xg2Yn4xL2pu4wpN5W5zXzuj2fUJc",
+            "marketplace": false
+        },"#039": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "32Hnn3bEHhwD9ZREZRwHEsyCtLXn4GPKnghj8oQ3cRJQ",
+            "elixir": "Electromagnetic",
+            "elixir_token": "J2t43kbhdHpZxJsTnrD6uqwUTW7cVmcTuosKZgg1arti",
+            "marketplace": false
+        },"#040": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "E9P5x725CCM37h2qMb4zYnCmYoPLbHJhMeMNu74v9hCH",
+            "elixir": "Nuclear",
+            "elixir_token": "HYpEJcHjK1LgAe8UWQkZoAvVmnVpMMTp3UgssmRY1DRC",
+            "marketplace": false
+        }, "#041": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "8zcHQK6GomPLwH5db3SMqoBBPyjdyoGs1Qxr2gKQErzD",
+            "elixir": "Cosmic",
+            "elixir_token": "5g1YTyB4k29zTPpymYuei5FRmVLXZoxS2y1btk1aJsLe",
+            "marketplace": false
+        },"#042": {
+            "holder": "6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv",
+            "token": "7FA958h3xiHdkZsFWfgv4SPemeF7PWunML3QFGfeQQSk",
+            "elixir": "Nuclear",
+            "elixir_token": "6JX7aV51dEtaLhckdk8bsMjo5GdcWqdcvrFAzkkseapY",
+            "marketplace": false
+        }, "#043": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "GSkbPcfPGHZpJukarUcQBPVQorfhCdsS9DBk66UPSm1j",
+            "elixir": "Electromagnetic",
+            "elixir_token": "5QmkruKJYksQUVsKdorGLCWq6QHhfELYD8fd9Pd5gCBn",
+            "marketplace": false
+        },"#044": {
+            "holder": "33pa928oAqjpt38FtTDew2iGgdCv37WBcZ5vXaRw9jZN",
+            "token": "8fYWiBx1wKz6M18UoNpwCYJgePn5nkTjaFU4rzJp7maQ",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#045": {
+            "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
+            "token": "Go3urLf4wfh7QQ84AAs3tLo1UV2h2NtTFCLUqqVC8wqs",
+            "elixir": "Cosmic",
+            "elixir_token": "W5nhLfdFWRg6uJs6MhdogsEY9VGc2zD2e3htLY5T91G",
+            "marketplace": false
+        }, "#046": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "D89WrCs5kvQoQnFNKtFz4U8HcY2RegfwjtgvEP41QAGv",
+            "elixir": "Cosmic",
+            "elixir_token": "BPoW4TGGE1A1gXpyoStTEaZ6TKSc53QhzogohsgcmKCB",
+            "marketplace": false
+        },"#047": {
+            "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
+            "token": "3S5SirbfBnWkV4WFbpxduNd1z7S4nDNvoE4CBpQJ4YH8",
+            "elixir": "Electromagnetic",
+            "elixir_token": "HFPtNp4tNaW8tamLTPWje2r5B59QwAEcmUywW4w5WBbe",
+            "marketplace": false
+        },"#048": {
+            "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
+            "token": "E9RQgMXNjz4BMH4p6ThPFAdhjRZefKpPaQgmgQJJDG5h",
+            "elixir": "Solar",
+            "elixir_token": "DxwqnwDAt81gxqxDsjEwMkSSLPAwoRpaWayfRXqjDzT6",
+            "marketplace": false
+        },"#049": { 
+            "holder": "8ReVPXbM2BP8uq6uWjh9c76UdzXSu9iGmMnHcQYuS9XR",
+            "token": "D7eUZwHPJuome5nASuqv1JBSDatAJJfrWekibsF4WBUz",
+            "elixir": "Solar",
+            "elixir_token": "BRxKjFH4pjDH9hNWZpjooqscEZ8U6CGQrX9f9B9oi8re",
+            "marketplace": false
+        }, "#050": {
+            "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
+            "token": "72sHN5EFoD6CXwst2VobaNujKdc7qNUzuMBP9eH4jKqK",
+            "elixir": "Nuclear",
+            "elixir_token": "Gv5YFykHT4rKck2wHMHvHkCkfrRSJgrukKViEfrAXRhy",
+            "marketplace": false
+        }, "#051": {
+            "holder": "8tpbt6BGX2hFEv64N9MuH82EYebH5ZxrDCJbCkUCNgcV",
+            "token": "H8G8vSmif9Su8Wnx5rqtwTR3rdzt7orccToxPov2c728",
+            "elixir": "Solar",
+            "elixir_token": "GavBNeH1GnHPGQTJd6JgLZTKckRQ5guW8x1aHPD9cNPH",
+            "marketplace": false
+        }, "#052": {
+            "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
+            "token": "CEu55Bc1ZqEe1r5MMPFPvvkLuT5S9jqP5DUMSLib7MnD",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6nfegvG2nPjdkpwpBKKrkPpPCwRENE1Y9iGCxpAi6tA6",
+            "marketplace": false
+        },"#053": {
+            "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
+            "token": "4jXyRfcbDA7QcbEGjYdMxFECgPUDz7E6dkGV3HhyfoFi",
+            "elixir": "Solar",
+            "elixir_token": "7Q5VSmaSQX5H8ThfAVquRmLdkXk6XWW7hQ6AMgP1jTzs",
+            "marketplace": false
+        }, "#054": {
+            "holder": "MagicEden",
+            "token": "KMUvZcdoYdJdA2kr6hKwZ2mN3xRFJSBQyaGQMP2maDs",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        },"#055": {
+            "holder": "D6xu2joBHScAkP8BcC2UzKLpHnzeYENymk2NztTsEM5t",
+            "token": "DimZ456TwYscyU8MbqABRANX9k11DVmbycvpYYMP83BP",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GLw2awcB8NntmKBcaYZCTTFWWU9i4miXKsNHrs6rqEbS",
+            "marketplace": false
+        },"#056": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "FAFNKTmQNMveWVCBakpkND4pKB4sQsy4DS6BQaTrcCzX",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#057": {
+            "holder": "8hrhh2pwUkovqkza6GZSRivwFQrYMJvHaFkbeMVNBQjK",
+            "token": "8QmDC3rGfc2TUxdo1emSbWBn2s9xJedhdHtyfh5uXHKQ",
+            "elixir": "Cosmic",
+            "elixir_token": "GUUD5PWSMcjr69sikM2sXD2Xs8qFP8jgePSgrxZPo1CB",
+            "marketplace": false
+        }, "#058": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "2rYmXk6yFsf6sJBK6YiLmCFSAxvRFHSqhZgVLjRihr8X",
+            "elixir": "Cosmic",
+            "elixir_token": "3CodUux69nGKqJey7UedAmYgMu4v4b4ziheKDDeVcmnS",
+            "marketplace": false
+        }, "#059": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "9e8knP51n5MPn5f1FC21kxPy8RpreRcGp33WHVGWb4G5",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#060": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "CVPijCs67ezaVFZxNBeRu9NrMk1Tdm4sJU217R5B4BuZ",
+            "elixir": "Cosmic",
+            "elixir_token": "AEgMsKcqf1yLMPZvQcP1f8bPoGKMwcSqLgUsvnYNxNoG",
+            "marketplace": false
+        }, "#061": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "9d3XZCDu8R4bTvHvGZnjKobspis1t2eeTydSzdagqjo3",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#062": {
+            "holder": "8hrhh2pwUkovqkza6GZSRivwFQrYMJvHaFkbeMVNBQjK",
+            "token": "Df1uXZHNGrguzCf2LUzkKi5hjTJ5htTXfxtNp92Qi365",
+            "elixir": "Electromagnetic",
+            "elixir_token": "ErereehJScZQaTBqAaGoXrsY77xbpLH6hSFqm9CEHk9S",
+            "marketplace": false
+        },"#063": {
+            "holder": "6r5Q87gd3wLDKfuYAqAFqXNck2YDC2EQXrVrZL96K5QH",
+            "token": "4mcFDwiYtgDGxic3XNmz5kPFGuXmtWCpoc8Mgpxwk9Bx",
+            "elixir": "Solar",
+            "elixir_token": "Hwr9JP2NghdPDBe3E7g2H1XSpR4Xfxq8FmwPbYbPmRcv",
+            "marketplace": false
+        }, "#064": {
+            "holder": "7UewgVwkP68KePNcsLfngxxA9F8p25prSRmDRAo9ChG2",
+            "token": "3Wk8vuyyFeQyT7Qjzzd5H5d3DSqJjM2d7zcLkQN6tFxc",
+            "elixir": "Nuclear",
+            "elixir_token": "9x2Fse47rXcAnTzpkxuyuy2KjSVyad1RmjBJAav89WuU",
+            "marketplace": false
+        },"#065": { Duda
+            "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
+            "token": "EhWWV8NsSN5UBxPUEB1bKyHrGW68RqRrsQK43UqemHDE",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#066": { Duda
+            "holder": "N2D2J7KS5Be2wrJFjWZd8h3rmUYPauYDkBT7ByBgTm9",
+            "token": "2kxW5MJxCtXwSh7LmMetNRLLeScZVaWEtkSMEYxwDcgA",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#067": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "BhnnCW3T3ZrZTxiCwGLYXR7P1xsWFK1fr1i3y5i2eoBM",
+            "elixir": "Cosmic",
+            "elixir_token": "Gg44uQam1CJ5GCgeAbzXEFktkCe9Za6t7ySMTNddGRLj",
+            "marketplace": false
+        }, "#068": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "E4DxYWRKr9SQHywrDpLasCLWMhH1FXLWtBsxytdcNygX",
+            "elixir": "Cosmic",
+            "elixir_token": "6py2LDnUL88wTYUh1k98eT3LRXdECoVV7EbmPjaHtBGD",
+            "marketplace": false
+        }, "#069": {
+            "holder": "HSQSzxgDgxHDrcstHkVtZyHvFSg1wneF5TFfBn93rSio",
+            "token": "GmFKugsWL5nWL2MC6kBkTEmzxJDYsZnsz4zv1KaDGZse",
+            "elixir": "Electromagnetic",
+            "elixir_token": "CKcHP9isPjKoJQ1sJPDYRgnU29jxsYXFvEd29dkPbLRX",
+            "marketplace": false
+        }, "#070": { 
+            "holder": "A58Wk83bCHfRkdkGEmFHnvth8jGkGxivUHQHTkVEpwe8",
+            "token": "c4QSpTxjbCxabayaCKoawcHfrcQEb3siP88TgxmHpxa",
+            "elixir": "Cosmic",
+            "elixir_token": "DTdatAuoKBT58z34Ucb9PkrjsR9ouHzdUNZ4gxcpoiMe",
+            "marketplace": false
+        }, "#071": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "UhFqpZNeBRETCL2DuBHVFAUHBaP6LZVe75GXUaooGvf",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6JH3g2Koo75b3Q2DojrxS4kAMhBuKjZPp6vidMLv4xU2",
+            "marketplace": false
+        }, "#072": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "7UXt6GrRMCdAePjco8y297Amsj426rBZm5Kwf88FhCuK",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#073": {
+            "holder": "9H3WVr3bafut5DH4dyh2tJXGVW143ZWCL57ZmHmWneb5",
+            "token": "21kei1KWup8437JMbVXHNaAJ7rPct1dmkYeCa6i2tewo",
+            "elixir": "Nuclear",
+            "elixir_token": "FwDkhGPFvmfsTXuKCjR6o3bRmEzL39XmgzYDQJP5fRDT",
+            "marketplace": false
+        }, "#074": { 
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "A4CfFmxMBKGkDnBa3dHXsuZFz3ruzyeaKpcaexUXe2CV",
+            "elixir": "Electromagnetic",
+            "elixir_token": "AiY2MaRo3mN3WS5Uzc1G8fajvX1G6BzEZjmgcZ2MWLTF",
+            "marketplace": false
+        }, "#075": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "J4RSSGhVpsGkruXLxD7tS7nVKUmKgSzopmSYy96rd6eg",
+            "elixir": "Solar",
+            "elixir_token": "4862zwXwBbPy19Q3LsR8nMp7QGQ5TTpFhtNty9wfVC8Y",
+            "marketplace": false
+        }, "#076": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "E2EyjHkAGtRzosuNT8P6MXb8J5xdXXJyJHLR3m4fMxYQ",
+            "elixir": "Nuclear",
+            "elixir_token": "6aSTHWc4Q414qyLzncHWy1Z7tKKHYkJPqn9cjQ57rmNH",
+            "marketplace": false
+        }, "#077": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "4MykWcUBqtDfpzj3nbNJxfun7GR7tbvdEuQqWJqdCRUU",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#078": { 
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "4NEjWnrmRWfkJKodqXThMcRHizGk6Pv8SJJp3uWymanf",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9DtBruACHGNBCp4V7Tkj14U51585neFo9fANyQCbFswr",
+            "marketplace": false
+        }, "#079": {
+            "holder": "2eKaS15zxpaJgAbABr1TRHNu5kxLpNjVFgigwftKkotV",
+            "token": "5XWL37wPPT37J1B4yrBogrvxhhgjByejpSbinLYHdMEi",
+            "elixir": "Solar",
+            "elixir_token": "9WgftjWxKKFMmTN9KSkEiwZY3TVaF6opDsphDjfhCzb5",
+            "marketplace": false
+        }, "#080": { Duda
+            "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
+            "token": "7sYHPrP5PZBFt88YQtWHLjxs1WGK1kTghnKvoWAovLXT",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#081": { Duda
+            "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
+            "token": "6primuz9TEHBSdf1zv2P3rxY9DKxxZM48ToizbnHbkQL",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#082": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "4EwFFTHBzgBTWVRJuPrMz4MAyaz8Q1uRHXy9ALmugLah",
+            "elixir": "Solar",
+            "elixir_token": "DshmFeWJtECVS62KCW58pHCWKKekyUoHhKxyqe5Co5bJ",
+            "marketplace": false
+        }, "#083": { Duda
+            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+            "token": "J7sZVEPofCZLUN1j1YNKmxQFrqBkH7N5ynj3EWckK11b",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#084": {
+            "holder": "Solsea",
+            "token": "9VhsLPuuUpFR4vBT92yQiiDuB6XEEy7ynwiCGVXv7e8h",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        }, "#085": {
+            "holder": "6RP5zKXyWfmGDPKwbghaN3DZwU9VuTf87CTksDqLvdVH",
+            "token": "CGwiXJaknWK2EcdAjyvTdQAbzQQPckQvFVLd2MHojHrz",
+            "elixir": "Nuclear",
+            "elixir_token": "2AnDsWcGN8EK5fNSXqEXekBvveobije8Vi7A2Yc3zaBs",
+            "marketplace": false
+        }, "#086": {
+            "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
+            "token": "5VYH3jDtVyFiAPf8w3h9gjCRwj315kRGUB5p7xVP9Jx3",
+            "elixir": "Cosmic",
+            "elixir_token": "Ai4hfFos4tnrURSNQhCszkDy9RFJdrEpTTsdtgdcKj8Q",
+            "marketplace": false
+        }, "#087": {
+            "holder": "9H3WVr3bafut5DH4dyh2tJXGVW143ZWCL57ZmHmWneb5",
+            "token": "5oZ12LnyE6Fw1GwfQrkUxzkhCFWnYGrrpx1br3Ph6Ek8",
+            "elixir": "Solar",
+            "elixir_token": "2GLWV9aFMmACh6s9xCtuZo83NWPSwbwCjKhrbDi3Gg37",
+            "marketplace": false
+        }, "#088": {
+            "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
+            "token": "45tbHEe1uisGA7X6GE6UzAT9cQaSVAH4Lmz9WZjkBpJ4",
+            "elixir": "Cosmic",
+            "elixir_token": "4ozotvaNTy5ymGxV37m7VpfNvMRsyUVzkaap9bvMUn9Z",
+            "marketplace": false
+        }, "#089": {
+            "holder": "8LAnvxpF7kL1iUjDRjmP87xiuyCx4yX3ZRAoDCChKe1L",
+            "token": "382Up2ztRwRvkLpYcsTXnC2MDvbFj2UxsH2eVkBwkyrH",
+            "elixir": "Nuclear",
+            "elixir_token": "HYrwtT8donKGakBtH4GHJLphFPAG6qo9u9tUwyYLmmhG",
+            "marketplace": false
+        }, "#090": { Duda
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "2LpC5LUbhjDwx5Htj3rjazACF57eiGvkyyWUGyB8cRCv",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#091": {
+            "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
+            "token": "8uxRc6fwQwLhjLAwn97UpbuLDUThZ8vkT4iEcjyJANAp",
+            "elixir": "Electromagnetic",
+            "elixir_token": "5YurnE8mw4az8xdGdTnY45KL6rm2fsgKTw75CTXgiztm",
+            "marketplace": false
+        }, "#092": { Duda
+            "holder": "8LAnvxpF7kL1iUjDRjmP87xiuyCx4yX3ZRAoDCChKe1L",
+            "token": "3TyC4UXy8wJyRkh8sLoTjrkSYKK1YFm2owsnaaRb34jb",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#093": {
+            "holder": "YZPJovd9e5MT7W7zwkoDkCc6c7KUhi5dzut3pVDKw4F",
+            "token": "RXaEMhm3wbSmiv7HBj1eSGsg5WtctzfNpzCPLN7djN1",
+            "elixir": "Solar",
+            "elixir_token": "DrQ9Bg9jsXXhK2nRVpEub3xD76YzCnqnLHoUmFrtoG5U",
+            "marketplace": false
+        }, "#094": {
+            "holder": "E3VmBBDzqotNGUiLdov9i9jhcigJionF4Av7NjekW81n",
+            "token": "CHrHUdwQLEe77MAfR6wQAUrU1VcLqVEyQ3Ltm6D5E6Sb",
+            "elixir": "Cosmic",
+            "elixir_token": "Gme3gicLNXAD6Q1BfFpUgnfJWJpQ9BxfA3XwYfpYKNcZ",
+            "marketplace": false
+        }, "#095": {
+            "holder": "DprSCmpUHVcKFHM5jnReCVHknGmokQ25jFK84NfhkS1Z",
+            "token": "HrGxRBNeSiY6wq6sfuLyLEP6RDLyVjGYewptnnUGUgL6",
+            "elixir": "Cosmic",
+            "elixir_token": "BVLXALA8NupEYvSbeBYG6as8gSEa8a8vK1tjDCNgqzuk",
+            "marketplace": false
+        }, "#096": {
+            "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
+            "token": "2WLoRVVsEGGDHMdRn6hm4QWGo992WYM9U6xKXL8YrWT4",
+            "elixir": "Nuclear",
+            "elixir_token": "2diBdf95F1FpExj415iyB8KtVebnL9mF9vNWKtpDtRsn",
+            "marketplace": false
+        }, "#097": {
+            "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
+            "token": "3PGrigYvek83bXuwGb7KDwHZkVTrk4x6oF8ZaDebY4oB",
+            "elixir": "Solar",
+            "elixir_token": "ArAn916g3AUG9fvY4XKxhgQoSGqK9ppeoS9rs82s4x9i",
+            "marketplace": false
+        }, "#098": {
+            "holder": "HXwiAAKEmdSb9QK2mnmq7mYprGrtmK4vYQjpZui7mZdD",
+            "token": "EhP1dH3dw7bnRJwLrNcR9C3Nmh2VUWNiY853QrBL9m8X",
+            "elixir": "Cosmic",
+            "elixir_token": "27NLxB1yeXPGMVnTbdCFxX8MhtpMFfThCcTD4wDY6xgW",
+            "marketplace": false
+        }, "#099": { 
+            "holder": "HpMAMYu92FGigCA4Q6H8cn4fciMvGYLu1kJxPLxpq24A",
+            "token": "8aGgRjCShkV8r2MDkivsavQDGqJLQuLk7DP5W1qitPf2",
+            "elixir": "Cosmic",
+            "elixir_token": "2AT9eR3RFTypY7713FvY2BmNuKQFhDKJTrEmULDUmwnb",
+            "marketplace": false
+        }, "#100": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "Er4gAUhoHJwCjLKcwwj48vGhGswFbJK47Cru68Z4vgW6",
+            "elixir": "Solar",
+            "elixir_token": "3u8LnEJNbGzJP8R1x8oYhvKqiM8SgZbzbGYDMB6ZHFU1",
+            "marketplace": false
+        }, "#101": {
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "9dLLgmsASokRSRrJYJKNrQyt46uKMAerX1sv1YvsEKpe",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FCZ8xgHZ7TbqSEZTAjy4QQxotbSe5qKAiZnMX525Qwn6",
+            "marketplace": false
+        }, "#102": {
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "FK7toWbHh5FPGL5VssR6zkPKpPsHEJywa7zRo57aVQjc",
+            "elixir": "Solar",
+            "elixir_token": "5hg1Y7F9MA8Hqse2MJ4CTtrp7C8UrJfatVbG2kcjYg6o",
+            "marketplace": false
+        }, "#103": {
+            "holder": "CazMdTcRtMtRoKMwDW5wmB8aAKXkGBrwcJvW3kGiVtd4",
+            "token": "3dtWrV1PhdXksZ3HC6GpH8J5hY9aYZkWyEZirrAa76tu",
+            "elixir": "Electromagnetic",
+            "elixir_token": "CUNGPpbD6n9MDvYk663PQT4qPkDbQPvAr2pTG7i24sEx",
+            "marketplace": false
+        },"#104": {
+            "holder": "Bt8yFZP7ibCPfiEC3Au4SVq7pspyH4DhD6Hb9586dU6L",
+            "token": "YY3Fspx5JnXVG8BGG2prhtr2RhD4a6MmsLddxJuzWbt",
+            "elixir": "Solar",
+            "elixir_token": "HSkQjzp2ZtqEFz6U9odXRWh4WdB64AJRPQ8FbaLA8GVd",
+            "marketplace": false
+        },"#105": {
+            "holder": "DU6HmvzVo123X6KuUyjbr9x32AQFxB5jNDjmVp8mYkpu",
+            "token": "7hNEEkt6A4nJ4drHANZnAVDu9uVBR31f51dWMsiC75R4",
+            "elixir": "Cosmic",
+            "elixir_token": "6pd6NqJ4KUw6LoBQ1AnjEPrKSdr1RweF72F5qSWuXCst",
+            "marketplace": false
+        }, "#106": { 
+            "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
+            "token": "HFoUEQq967Ei3v4wSp738WDFrrxiCjYpfGEEz4DmTvpG",
+            "elixir": "Solar",
+            "elixir_token": "4TkKfw3Keg3K8tU4WYzy4iabpMKzZ8TrYH9D36a93VE1",
+            "marketplace": false
+        }, "#107": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "HryxqAnf98S89fjTAEc49c9Pte8vwVvBSMBoY9aosxdC",
+            "elixir": "Cosmic",
+            "elixir_token": "EKed3nPsEv7X1TYKzc2RSQGW6Kfgd2MDySVRZDiGWoL7",
+            "marketplace": false
+        }, "#108": {
+            "holder": "Bt8yFZP7ibCPfiEC3Au4SVq7pspyH4DhD6Hb9586dU6L",
+            "token": "BMGh4VtcCVW6dtgL1L3wdg8NoJaUSbUWdEvbVjyCZzCa",
+            "elixir": "Solar",
+            "elixir_token": "24fz9hAWzmMCNo1Y2giEJE5S5ZW8HfGeLrspsWfRgDSX",
+            "marketplace": false
+        }, "#109": { Duda
+            "holder": "5CgA9UCf5AMA7sxXUqHFGNardYyay1SbugBBpLPAXQUg",
+            "token": "cYE9cVMJecwTeYYQGw4K7XC45z4hNg4uBJJoWBUnzxY",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#110": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "2k6LB2LGFW77iEXAhZmWi5npbfY5tBjDa9EtfRD9qj5V",
+            "elixir": "Nuclear",
+            "elixir_token": "8WbR6WTTTHVDayp6Fk7466ZBzobk8cfDz53hhgzqd8Dt",
+            "marketplace": false
+        }, "#111": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "HbZjHsWVb4GbMUUxdwmAjDZriwg8FsX5icb7jugLcjfk",
+            "elixir": "Electromagnetic",
+            "elixir_token": "3UmXrQSQNPQkJb8sHYCUn6pxKMYP5GprRSLFQ35SyXjr",
+            "marketplace": false
+        }, "#112": {
+            "holder": "xH5Ux2ejKfGLFLCmwrsMWye3CUNE2JafN2zW39DNP9Z",
+            "token": "9C5h3uKPTp9GHbsWnM7C3ZAZSiGA6ba7K41eLWyrSjAY",
+            "elixir": "Nuclear",
+            "elixir_token": "BUjVvBCXDhcWVGEbxkiFptSLxnd5srPyd4fa1eP8RCXd",
+            "marketplace": false
+        }, "#113": {
+            "holder": "HSQSzxgDgxHDrcstHkVtZyHvFSg1wneF5TFfBn93rSio",
+            "token": "KdzRbBxYQfSLcssgJAHYGSVZpJHf163qjvCgBG7rjud",
+            "elixir": "Cosmic",
+            "elixir_token": "5geEBWe5oJwjdSCtrKjjFkyN4reg6y6Ay1TZBWg5s856",
+            "marketplace": false
+        }, "#114": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "9N9dnM8LNuNo16gmWFhmw2FtFRQ4dkYzbCusYy1v3yoA",
+            "elixir": "Nuclear",
+            "elixir_token": "9vJptswb1tHy8DwKJmcoCe4nSjadBejpGMkMdNMhGZpY",
+            "marketplace": false
+        }, "#115": {
+            "holder": "HSQSzxgDgxHDrcstHkVtZyHvFSg1wneF5TFfBn93rSio",
+            "token": "8UBFQZqAqcbj7561sKJNGapimkdW7jUfNNzaCoDMQ11f",
+            "elixir": "Cosmic",
+            "elixir_token": "Eucq9uPG4gmiqdbmLxg2CJQdntWnuM8oC5ndpqEARJro",
+            "marketplace": false
+        }, "#116": {
+            "holder": "A5795uy3QuKC2GH55d4qMqfrxYRFoxJUwXm3VA3jbmev",
+            "token": "87Vcy7Le5LSSKPeU8v3hm3paUhDuX8ruxGGmidfuiNgw",
+            "elixir": "Solar",
+            "elixir_token": "FZwNrnPeMhxssJHK8DLVMDLbezrpzwPCq96HK5V4pDAo",
+            "marketplace": false
+        }, "#117": {
+            "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
+            "token": "Hr9Zo3sECQn7PPp4QrFVcp9C8gDain28jpjbtxNUTJHH",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FY5WJwyEqaeJDVj5NyxroyDDozbTSmzgaykf4iJex526",
+            "marketplace": false
+        }, "#118": {
+            "holder": "Solsea",
+            "token": "9nLPYT9MhDnKXoCpFfxuaogkZwK1EAaU8hE8ECnRNdeS",
+            "elixir": "none",
+            "elixir_token": "none",
+            "marketplace": true
+        }, "#119": {
+            "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
+            "token": "5FoZLioN9n8UUuPcL2MNNVi9H8HbiUdGoktyU2pDrMdt",
+            "elixir": "Cosmic",
+            "elixir_token": "FzFhxLEpgVRVYmirLJviVtELUpGr4LY2vmWYWxHFiSgJ",
+            "marketplace": false
+        }, "#120": {
+            "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
+            "token": "F8CiVCKePrAyKjeRxkVCAmXtZ3Xyi2zAkEtB15hXWnwu",
+            "elixir": "Cosmic",
+            "elixir_token": "4SbUmf9Qu5syjMKFbR5TVzWiKvZjiK69Enm2B6rjimSm",
+            "marketplace": false
+        }, "#121": {
+            "holder": "9iUeQLG82tFoJwegErk5bhDTaDvqRHnkewQumUz3MPpL",
+            "token": "VL4DxYw3LDDqNAdj2JiTtfRQdBKvN6arzNHQUuduKH4",
+            "elixir": "Solar",
+            "elixir_token": "9EfoLxiBjzVgsrfNv7cvCDgrGAVv5RAFBU2AQfCstpzX",
+            "marketplace": false
+        }, "#122": { Duda
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "9U51cVAiSdjiVSYVpdmQTk7YM35Lwayu4fyVRyeduZRq",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#123": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "HpC6CHjhVuooKj1qsaqFXpXSPrp7ZQBhTjdbnJwQDiK8",
+            "elixir": "Nuclear",
+            "elixir_token": "3hugrsn51Tzop16JC6z2rKukA1dWS5ApVpPbc67CDheu",
+            "marketplace": false
+        }, "#124": { Duda
+            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+            "token": "HXk5T21nMEHLPmqZct8htpKhwEtGnKgqCyeDHKp2yFg3",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#125": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "F5xUe7EpiyFwUSKKUyEjNe4zn56QaKwL25tDUjDuhgKz",
+            "elixir": "Cosmic",
+            "elixir_token": "8o3wMRP1yBK4yj5F8HtEksrjgQ5xKF2axmczcGYcRQ3e",
+            "marketplace": false
+        }, "#126": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "8mPj6k81GRGabbMsiBkvqFVQCkBwa6ocK1LeZa2ANriq",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#127": {
+            "holder": "BBRGcYGHecupwk4wH9KoerwsB3zAMLJSMGYUt9xcn77Y",
+            "token": "CEr4SeFVJ7ggfeeUkywLg9ppwXqjB9VfKmTuJhbtGAbn",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#128": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "24E4w1NgJZXxYEFf9quRcGF8Hi7iBHSPmwWPmxb3xjKk",
+            "elixir": "Solar",
+            "elixir_token": "Da8cNP2QdtSC6KHiaXAfcLHWuqsZYaBWGG5HoPTWcf9B",
+            "marketplace": false
+        }, "#129": { Duda
+            "holder": "2po8jYgJupPpt8BNfqzwbJENWYC4LASW23D3Ph8vnAS2",
+            "token": "EN6qpq9i7NBCFDKTk6WUPfWexV2JWFLdU6JT2jtE4jow",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#130": {
+            "holder": "6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv",
+            "token": "2iRjp1dN3imTvc5qU8ZXoqWfpEkzwi9arnjRJG9oDMhw",
+            "elixir": "Solar",
+            "elixir_token": "A6U4mXNKRtnTkpX4aLPLUorpC91rKfa5RvJBjsue4TxB",
+            "marketplace": false
+        }, "#131": {
+            "holder": "A5795uy3QuKC2GH55d4qMqfrxYRFoxJUwXm3VA3jbmev",
+            "token": "9qHnVXjQZVvZs6FPnTMtu6C9HWjCqKMbZfx1rjZGQNYv",
+            "elixir": "Solar",
+            "elixir_token": "GmAPYdj3RRDzxmuY3ciA1q8GfsQkn5TYuiFjnSKQnjy2",
+            "marketplace": false
+        }, "#132": { Duda
+            "holder": "9hhg1DHWjQkrvBPCxsBqfsN7ojNRrwSuR9eqRZ1r6tgv",
+            "token": "FxHKCMLwhbdM3ePcdtCPsnP9c65s2yohfxAfZu4h4Kwb",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#133": {
+            "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
+            "token": "9Ymue7kuoq2WMxBDemF8RW3FQpzTY4EL1Bcysjf8idSc",
+            "elixir": "Cosmic",
+            "elixir_token": "2uK1Jff68EVrECQoZVVRWGGkn57rf5SG4NbveYP45W2w",
+            "marketplace": false
+        }, "#134": {
+            "holder": "DprSCmpUHVcKFHM5jnReCVHknGmokQ25jFK84NfhkS1Z",
+            "token": "H8EmPTrwHbA9ejSUz91ggNQW8ubsmAM1tc5W3bBc5PhK",
+            "elixir": "Nuclear",
+            "elixir_token": "2bWrhwPZT9nKTGHzrN2WPGe8d4BYmLrjtUpUnWyUC3n3",
+            "marketplace": false
+        }, "#135": { Duda
+            "holder": "HR8ryQinu5CTvLcHC4hSM6udZgqQ1KdRfJmwvjy7ZxUe",
+            "token": "ApDtZcd4ZeBT6rAnDLWepMiX5DxPzT4vZfWNFT9iKzvN",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#136": { 
+            "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
+            "token": "EzJ5iPhB6M9hUwDZH3n9tJoPJ3AhAmXSNiB5fScrCKB4",
+            "elixir": "Cosmic",
+            "elixir_token": "5KmcbuU43x8KQcacLSYKmBXYv6x7UZWZfgi42BaSVDCW",
+            "marketplace": false
+        }, "#137": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "8ZeGSsDCAjMq7Jb7UVhNuMVPi17BwXouiAA7BxD47UWG",
+            "elixir": "Solar",
+            "elixir_token": "CpNHMmy1d2tq6fM9wUzJqug8xPgJryYHNfQAEkmZXggC",
+            "marketplace": false
+        }, "#138": {
+            "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
+            "token": "3H1ScGzhL528dAynKbz2LMAgZJwZgqJB9Mh8WsosNLnL",
+            "elixir": "Cosmic",
+            "elixir_token": "H6F39gc26uaqj72VEbsfSd6yuxEpCnmCruGrUMVKqiwG",
+            "marketplace": false
+        }, "#139": {
+            "holder": "QZ5Qt73JEPQq54vGq96N4VvoqcrxfzZAP5Wsvm4xw3Z",
+            "token": "6juJTBDY3c4NXzzP1btdnBLmZtBhKVx9PAMVEceztgb3",
+            "elixir": "Nuclear",
+            "elixir_token": "7f3kZF5A9JDu6dqRq12Z3KtCCdXHvyDewAuArhApvSCS",
+            "marketplace": false
+        }, "#140": {
+            "holder": "HR8ryQinu5CTvLcHC4hSM6udZgqQ1KdRfJmwvjy7ZxUe",
+            "token": "DUjj9kiQZ6UACuKndbDxT8y6SExmmh9XfPbgA5SF77G9",
+            "elixir": "Cosmic",
+            "elixir_token": "Ain8fHK54hZWuVk1iGkLG3B5w4DvMGWmrHVZkW2MYWTz",
+            "marketplace": false
+        },"#141": { Duda
+            "holder": "MmzhBSV5ZUH3xSvD1xEYXymiKoGaTtFfuW7jeUtCMHp",
+            "token": "Fk1YjbnhTnamPoyJaApDATAS72Ct53ijfPUjUnb9A2p9",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#142": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "6eQc9K1MZyyWUENAVRy1b2ZynFELjfwiAdQ97qSDhLna",
+            "elixir": "Cosmic",
+            "elixir_token": "4qyRCSPMFUWq6xG9yP2ycxwsgWYX6PBgge98Ymfg33uU",
+            "marketplace": false
+        }, "#143": {
+            "holder": "5oxsYQhTNgDux41iQZAZqXfok2LyU6kMfhvexfccpMDd",
+            "token": "32TQtbRwtCMZDVso36AqgFTFvNjQdeXqCVWycPwYsis4",
+            "elixir": "Solar",
+            "elixir_token": "BLuyEqnSFwAYH6ELumjPaG3KpRVSG7euodnrrod9JykE",
+            "marketplace": false
+        }, "#144": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "6EDX3JjNSxjDxqXkCEvWPEGruwVsuZGDbsUw6dt1KYGa",
+            "elixir": "Cosmic",
+            "elixir_token": "EeafAwXpnLmuAP6AXHuBF9C63YdfmXdmEpERrdjP45JR",
+            "marketplace": false
+        }, "#145": {
+            "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
+            "token": "8HHeaee9LxxFZHW1Wp4kbY7mvXX5J1nMzyyGzBBM9MzZ",
+            "elixir": "Solar",
+            "elixir_token": "FNgKjes4cDo57aS9dcm5jxyQhCXNpBCe7B6cBYRPpUQU",
+            "marketplace": false
+        }, "#146": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "Fm4qCKmAaAx7YBLfuYR2L48kguMjiYHZbWsEEZ6U76mV",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#147": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "473AEEV3syKmKfQsicrGL52prueAzW9H8GDqHRwgtiJB",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#148": {
+            "holder": "Ah3vphUsM9iGhUw96zaW5yofwWF3ymjWvC8cEJTRMTj2",
+            "token": "E4nAHvmyfqeyW24WbLt7V6QBwWwvsi63udpv6iwMfnuK",
+            "elixir": "Electromagnetic",
+            "elixir_token": "8G1TFCsy9BDD1hK99vYNY9MDFtF1MQor9NVwWQRDG3Bp",
+            "marketplace": false
+        }, "#149": {
+            "holder": "C3Sz8ZKnQtj7TPHgGpSQcx5BfMeWxjyJ6hUnB5RrWjnh",
+            "token": "AixytEwNixmbXmVPNFEQtuojB6v5hoeG6swdzk724hXF",
+            "elixir": "Electromagnetic",
+            "elixir_token": "EMCMhHBctuJwsFvk8ninyxBvu6Jb4i2Wjja3uXX1cAYu",
+            "marketplace": false
+        }, "#150": {
+            "holder": "A58Wk83bCHfRkdkGEmFHnvth8jGkGxivUHQHTkVEpwe8",
+            "token": "GZL4GKMHrxfLicD1sE2Sqpv97ic4BJSJFzN6HNteKQV7",
+            "elixir": "Cosmic",
+            "elixir_token": "5d2upVu7shqvrmcchhwiwKwVPk3RLwuvwKsvPAADiMbB",
+            "marketplace": false
+        }, "#151": {
+            "holder": "DprSCmpUHVcKFHM5jnReCVHknGmokQ25jFK84NfhkS1Z",
+            "token": "3JEMxcFJHLr5A14CZm1k4CWfRwkdnux2mnsc2MHu8Z4Y",
+            "elixir": "Cosmic",
+            "elixir_token": "Gp2B26LakuGCxS23mpk9qQNcLJt4f99R6k9oZVdpqaT1",
+            "marketplace": false
+        }, "#152": {
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "2dNhTCmHsAGXzysZztgB11RP6zw1v2KEvN3zFEHjuyHc",
+            "elixir": "Nuclear",
+            "elixir_token": "6NzXkdWqoge4RtKf9atu9xygMw9saVf4F9boj1trdPfE",
+            "marketplace": false
+        }, "#153": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "BBEAofF7LmikGZBewFAc6W6ycrRHwyoiPvXVoi2h4XfH",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#154": {
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "9rxcuDwUPGiPPge9d8u9NyNGfJhYegsdddfG9AWRAkkV",
+            "elixir": "Nuclear",
+            "elixir_token": "H1cvS73vLtqqU5nkLj1VutND2jAqSkutFQpLGREicfyv",
+            "marketplace": false
+        }, "#155": {
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "token": "8ihGqcistiNqEdigYJWmYAoRhZsKTi6DRHMSZoCRtAJq",
+            "elixir": "Electromagnetic",
+            "elixir_token": "A462LggenheDVVEvaUSQTL8DZrFfsG4hoV6GVHEJiJkp",
+            "marketplace": false
+        }, "#156": {
+            "holder": "CSuo2NAqxSJGWp9wAA5icusMYjLvroLLXF9HmP3hyX9X",
+            "token": "Aaf6ducbbBfNgm9WTanRYviBqqxvHub9jMTRCLFiF5Ys",
+            "elixir": "Solar",
+            "elixir_token": "6UNSBzM83NUt1fBhXRrdoZEXfbrdH3fPtpEbxfQm4HQe",
+            "marketplace": false
+        }, "#157": {
+            "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
+            "token": "KsA3wvFWfS6d7fZXijSsDK2oDGMGqwcdZJCZmq4dscj",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FudDbgADFJtdJm7j8UdQnAqyfqnudc21Zzwg5MAyLYYw",
+            "marketplace": false
+        }, "#158": {
+            "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
+            "token": "FTBWamKdAB7wHsR2z7oFjjzGseoNo2qzNR5SkWg31QYF",
+            "elixir": "Cosmic",
+            "elixir_token": "ohoraQn2fBx2371BcroBw63vDU4ETDCa67M42zjFCdE",
+            "marketplace": false
+        }, "#159": {
+            "holder": "A4WzR3vqonTFUUe7TWNNoWrE7t2zjaKWwRsKob14izwf",
+            "token": "B6sCWyMcbEaTA68AFVRyUtLMj8XK1Vo8om6zeBrRqxKX",
+            "elixir": "Solar",
+            "elixir_token": "HW6YpHFQjNM1WutC9A27cDEFjxcGwcEG7zW27H2hAVPK",
+            "marketplace": false
+        }, "#160": { Duda
+            "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
+            "token": "Bn4LLde4W7s1Hp7XijbknrnrBrUrEnTcg9y7yhs6TtkP",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#161": { Duda
+            "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
+            "token": "FKMzp6y5MMGZwkUV5wW1FNkNEgRPETWpFPf4En694FLt",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#162": { Duda
+            "holder": "EfSdAdG3T9RuozRbiMDhrrSfKPWmsbSgLMTL6fgsWuDa",
+            "token": "2m1UGybzXpcczb8awAEoQp1csrd21TexdRL5ysi4TWAF",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#163": {
+            "holder": "GiTxBc3Bgkq9CRgwqPb1yiGXTUZRgvSAzUD3vngScfSZ",
+            "token": "Hhc7aEAjJCXN4X8umLP3iNk4dVCjNYXuzBREtYEpRbiZ",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9Xtvn92ZNutZuE5xt6f5xAzrQ8j1sCYVoSttKcFLX4sT",
+            "marketplace": false
+        }, "#164": { Duda
+            "holder": "G5KJC53dir8XcjGT9GovdvBkHv22td9WyZDDQvhymPc4",
+            "token": "84stLoX6wrXKkYnPyYnvE3eeGDDU7MLt29ePpbGotuBP",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#165": { Duda
+            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+            "token": "GtDZWHVRGPZ1n6tzWdaCFBvdYNQsETKp5pL9tCXSeY89",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#166": {
+            "holder": "E3VmBBDzqotNGUiLdov9i9jhcigJionF4Av7NjekW81n",
+            "token": "DddgJMZiHuBgeNXJzk9EbQwnJWHDBLPpXtX8A1YrMQGz",
+            "elixir": "Solar",
+            "elixir_token": "71x6NVbAKw7hUCwga7bHoVjt1W4W5rGK4NngVrBEKYrD",
+            "marketplace": false
+        }, "#167": {
+            "holder": "2eKaS15zxpaJgAbABr1TRHNu5kxLpNjVFgigwftKkotV",
+            "token": "ABp6Y7Yy9mRSCuxDv3668N3Ug8eRbVDxcpuH5tm33Frt",
+            "elixir": "Cosmic",
+            "elixir_token": "FgqkFEkLEdWh5m1LHSDTQnzFmpWCfRfmUnvviMcXTsaF",
+            "marketplace": false
+        }, "#168": { Duda
+            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+            "token": "WbBvnC17EPA8pY2kWSzDNMTZcPcTNageBaAd22VdQzc",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#169": { Duda
+            "holder": "9EZJmqG3yBLjTSZC5AK7YtDVAig5CB8vUsB18cGLrpBv",
+            "token": "37iFU4TQ9Lkj26Lf6QvaSNmJkc8kwUyXLrpG3oApqrGM",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#170": { Duda
+            "holder": "HTPVCLv8WTng3CT8b9Z8Knu4DJMq1Hu26PqsmPyFjpWc",
+            "token": "DuhGgUoLNUR7BFwQcvh75tdaRqSjTAjYFJAc6Gg9p8rT",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#171": {
+            "holder": "HTPVCLv8WTng3CT8b9Z8Knu4DJMq1Hu26PqsmPyFjpWc",
+            "token": "5RuqrJmXDc9Znubd2Bn1eJ3vUE8jGK4a4G2RkwoueLDw",
+            "elixir": "Nuclear",
+            "elixir_token": "7zDPCt3f9gegCM2FU7eZG4cxqnYrnS7VuD6TaYAiiuF5",
+            "marketplace": false
+        }, "#172": {
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": "53gxaQsAffsgwPBXsTiakB44PvPTuBczydn6rioARGBU",
+            "elixir": "Electromagnetic",
+            "elixir_token": "7M69SeSnrypYtHqsixpC76SJ2whW5AgDR4Q3WGDg2dSg",
+            "marketplace": false
+        }, "#173": {
+            "holder": "9SEycz66VrPnAhhH8sXWQzb11FuBaLYiYuMFNrAxxeQj",
+            "token": "4cXrEjeaPhYd4J5QAn1axTu119peByojC22kArgB6jb6",
+            "elixir": "Cosmic",
+            "elixir_token": "pHoJqCdJ8YE6nxzFc68y63WaBptQHCnWbeRXegP4ten",
+            "marketplace": false
+        }, "#174": {
+            "holder": "762rdtb9JopJm4tLBnXkoZBTwiHJCKFQrSWXTuJwCnxi",
+            "token": "Hc2EaMMrfAXVPm3JfdZqX9TrZeUSUgH526zEoyToVThS",
+            "elixir": "Nuclear",
+            "elixir_token": "4U1fWDHcmJFz4tLHJZ2Cb9e1TtET2SJMixi3o4pYDoUE",
+            "marketplace": false
+        }, "#175": {
+            "holder": "TRqz8aVNq6JWfx2yu5A9UvJjMTgxqedv7qv2UvZ9fZ1",
+            "token": "25CyALjN4Ho9PcWyfepmnc3yHtfhWBkgC6uZBoLr85oc",
+            "elixir": "Electromagnetic",
+            "elixir_token": "MpFZoQgCaiZC4ymKUKFTEvNNB4ZWXwDQWoPedpFhX1a",
+            "marketplace": false
+        }, "#176": {
+            "holder": "4Yea5bZ3H3KQkojqfD5hUqRHZ2yqy16m9bogjJWaadbV",
+            "token": "4r3ggRrpmM1d3aEUirUyGq5n76scphnpqGezpcdCYChH",
+            "elixir": "Nuclear",
+            "elixir_token": "BNPVjobYuvcv31z7UsswD5eTuyitMuGxbsMq2y4V13S5",
+            "marketplace": false
+        }, "#177": {
+            "holder": "4tGCYzmAziSntjJpiAuWGuLS5trNh91tY1X9RXGU96vJ",
+            "token": "9bk77E1V6v11wWuMu3QtXGv6RY8LvrUfHP6AkVNCQq3G",
+            "elixir": "Solar",
+            "elixir_token": "3qUwPs6C9ZNUCKj7r4nixrZXtLvcR8wNx6gEKAfp2Up7",
+            "marketplace": false
+        }, "#178": {
+            "holder": "3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU",
+            "token": "2gKnPuF3dopwBPJ1xS4pqEVWQhoqjHQVK3YEhUgphZvF",
+            "elixir": "Solar",
+            "elixir_token": "Bnm4dLKVc4KkGcD4n8zH3H8QZipfqrB4pdw9u7wbYifb",
+            "marketplace": false
+        }, "#179": {
+            "holder": "4tGCYzmAziSntjJpiAuWGuLS5trNh91tY1X9RXGU96vJ",
+            "token": "9vxBLxSx9ms7wDCc7TDn9f9doWGoJeSuVAf6XvY8XZX6",
+            "elixir": "Solar",
+            "elixir_token": "2WG4Ti12E7MpD4YnSeN8WdCAzx7viRgxeTGjbPrCB1ki",
+            "marketplace": false
+        }, "#180": {
+            "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
+            "token": "J12yqE2oGoNSQ1CJwa3k6Gw3qGEppkPa2xPszAFtnDMq",
+            "elixir": "Solar",
+            "elixir_token": "J6r6EefrkQWAhEaaALuM1ExZzoNcjMkCmJhXGHM4gxkf",
+            "marketplace": false
+        }, "#181": {
+            "holder": "GAFNEdYa4REf6wsnp7cBaWUuTQy3vPn9dPLgQEiPoYh1",
+            "token": "3gbUVHVjZkGPxvR79kMN1bVDooWCxvktPnYg9X77JUWx",
+            "elixir": "Solar",
+            "elixir_token": "CKtY2ThzYKcu9iXsCxARUhAy9HTBYJ9JEoBy98hj8r1i",
+            "marketplace": false
+        }, "#182": {
+            "holder": "8J7BxXt3NPt7BwLN2VPcBxEGnNwf6c9qKafn33qSFYiK",
+            "token": "HgfCB43wLxQtxK3cJ8NEPzwBtjmvxNMxZhYiLiCvGU19",
+            "elixir": "Electromagnetic",
+            "elixir_token": "iUq4a5XuKh7hbPjg391oecCzvzPzCrsEjxzE6d6ypom",
+            "marketplace": false
+        }, "#183": { duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "DbBBorXToPSjJonM7R47zW6qFSpvGvWQ6X267nxpXE1j",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#184": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "794HLe6n7zjza6xhjvkXR6PwKiE5nzLnjRycRJH8CAQw",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#185": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "2KphzS4DawynpEaRuDAPKYGAvWCfaH9ipu5DfRXQcVet",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#186": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "HdkzphZEqu67Xxn69rDNyg9tVicZamJQPdhjrXiXNW2D",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#187": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "Fm6MyDz419YA6HgJK7Y2auh69eTJppx7vMxQJDhatQUm",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#188": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "HicBmsdbiGZfUojPpEH1gQdVXnU5CzdJ63EbbEnVgaaW",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#189": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "9ZJwtYxP2RxYf3J6ybqfE4yEpgNRzJKxWP3ruTtfvzs5",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#190": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "FK6zYVDTSJ35cuCNHQkAzS7HHdr4L5BQdPWftjT9HLoD",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#191": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "h9kL3UXngPHvTEs9X2Y4kY4CHLdMknpC8w87zHdhJ3o",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#192": { Duda
+            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+            "token": "7rzmorKER34VcsNUAitRf3sduBDra2JCUPsQ2g8HfupV",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#193": {
+            "holder": "3gMxUvGdfRMnHHd2eQ4LvqYRjxCbSvfEnmTPBscb8edB",
+            "token": "7QCVjPomSHHqZT1oq2wziGQ1PszPMtnKQ9eNoZ6bTmrf",
+            "elixir": "Nuclear",
+            "elixir_token": "D9ZMYe8XtFjhJA4sWRukv7BSbJfDXcUdmeYyZQEh8CBv",
+            "marketplace": false
+        }, "#194": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "CLFkG8HAX3GHqJgwMLEC1uUjEbJTuJPa5Yp33p9ncjuZ",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#195": {
+            "holder": "BYAjC2F3eYJKYfrHaNkR313wRGWesoYMA8YmXfynuyoD",
+            "token": "CCRboCCjhq6jRKZ23fjPMw1J32cbngW46NBRC6WtgpfN",
+            "elixir": "Nuclear",
+            "elixir_token": "7msxGCAeqB5R8dsquuRB2H1ayDgRajTYgJTWVJkMadbX",
+            "marketplace": false
+        }, "#196": { Duda
+            "holder": "8U2ece535g31zCYEaNrD7WfRGsWc4c8fFSm66oWvodB1",
+            "token": "HmPKUppnqUfSyJYfxwUg1NSFQCgvyqpNdTLb95aPmAbn",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#197": { Duda
+            "holder": "EePtPwaxGHYish1nsHJuwZyGPBTpbhqsXV8KJzQXKhn",
+            "token": "6fgAjZi1k2CTBcxqk8oibFchT1VNLJfEVe2eznnnvwo6",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#198": {
+            "holder": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9",
+            "token": "ALr78Akdfu64WqQC524FwaxRjCHpeHhgNjeBA2yhC8cs",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9d7vW5D1x84Tzz99LQ1eXHxJzyYMF4pYu4v2mETvzLKj",
+            "marketplace": false
+        }, "#199": {
+            "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
+            "token": "8b9MGKCkWMqZecuLJpZgV7T4yk2dhMdFgeHgQHCT6oRy",
+            "elixir": "Cosmic",
+            "elixir_token": "69hfaeNCCWVnkPNgvAWHn3rP4KwF2MNauEDku1oTgmfw",
+            "marketplace": false
+        }, "#200": {
+            "holder": "N2D2J7KS5Be2wrJFjWZd8h3rmUYPauYDkBT7ByBgTm9",
+            "token": "4hu4ADY3puHMtoMNcLRdrPRRTSKy3KUNvNF57n5hoBTX",
+            "elixir": "Cosmic",
+            "elixir_token": "DJcNvUWHj6sMEUhfY15xp13rJrMkzzN2x8orTdStVo7K",
+            "marketplace": false
+        }, "#201": {
+            "holder": "GNqKSPopeefemB5Hix47NMa7r5QDufKuX8zggFHvv3Wp",
+            "token": "BimTEtF4oX4z5nwdT2Rr1XPRKiwmFyAsXz1LkTaggo3z",
+            "elixir": "Solar",
+            "elixir_token": "EqjrSZsQTfy6wbtyQtpWGnUh58KwqqyPVcBJ8ryiPPXJ",
+            "marketplace": false
+        }, "#202": {
+            "holder": "545bF8sW6AksQDUBk6qjANAXcH2ndsFA3sYD2eumc6LB",
+            "token": "31UKzpbqoxwv5TYmiFAHz7SmQSKAxHTuLRUp2CyyQEgK",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GotZuohZprzA7Aerkauq78eZt3MF57JXecpDM7D8DwUA",
+            "marketplace": false
+        }, "#203": {
+            "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
+            "token": "3C2Bw9bzEQDpq3PS6VNbLs2CbSzWpxubSwpnxFVkz7K2",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GgfWmSueaGkCsaE23qYAH9ZGuhLZvw7si9dotSYtUMV3",
+            "marketplace": false
+        }, "#204": { Duda
+            "holder": "FstLEnMVhdm33Fap33bYM6BSxJhwCR9fv3B5ZePvdeHL",
+            "token": "EfD2SpU4tDw2QaKhJ8tA5eaZsrac1vjAdVGgfJCAfcf4",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#205": {
+            "holder": "GZxFjJ35Cx6oLjyiswkJ2Lwnot4Gz5jEhhC6gahMNNzU",
+            "token": "3ot52LmQsqsN6iXgJj3wX1EWdq8pdKykrAH8Cw9KtDqj",
+            "elixir": "Cosmic",
+            "elixir_token": "Br6a9qFfeb1kyZi7LLGBbpBUAEaVvYN4oB1k7GQTkchT",
+            "marketplace": false
+        }, "#206": {
+            "holder": "3696ECpH3atkrCZesU1RAEMom8aayQKNvw1mEsJ795LZ",
+            "token": "Ajz3SJF58e54SJaoSrnJBnBgycCpz3fyfWezvuJnhWgo",
+            "elixir": "Nuclear",
+            "elixir_token": "HX6Xb618pKdCnjDyqZopWvAmCUAYFciUcmptYJuacDzs",
+            "marketplace": false
+        }, "#207": {
+            "holder": "3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU",
+            "token": "AQ4ZnHCMrtF1z4xxkEoCicDPXt2Rie2Rd9DjDVeJRW7i",
+            "elixir": "Cosmic",
+            "elixir_token": "J8YdsoB8XUn3RWN6oyr5m2u6AoqT8VkWzh16bXs12rxG",
+            "marketplace": false
+        }, "#208": {
+            "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
+            "token": "9Km2kr3f1eiKo1UUqzaysc4NhdhezfBQh4z6qEki2ZAU",
+            "elixir": "Nuclear",
+            "elixir_token": "4Bb8GQXHoH8H9eZVi3HpAzFWsNhRsQZrYEoe6KC1KCp2",
+            "marketplace": false
+        }, "#209": {
+            "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
+            "token": "Ev4s49vdrhW44Y2pd1HcgKGXNdHNb2UGWwEm7soQRy2t",
+            "elixir": "Nuclear",
+            "elixir_token": "DKCJ3TeVsw1zzFMRjeRKkYb2GJGa4Y1wLFWvYCua3yFH",
+            "marketplace": false
+        }, "#210": { Duda
+            "holder": "EvvEQnHtS7Lreet8kwyWLep4UxRz5kc19DWT7Y9XiANe",
+            "token": "3QeYVVQGjgEtUBkSpHbXm4aZ8s82hmxYruPsTAm9xKTV",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#211": {
+            "holder": "4KJL1PbhFjpFoNcfqszQJfL4dDrw71K3zwmEvd5oqFCM",
+            "token": "66116ZEExPS5Y9YsqvM9ZK5NETH8CZtmXYUynioALLaf",
+            "elixir": "Cosmic",
+            "elixir_token": "2SQKKr8tHgLMvNbrukzJMRAYNg2HKDNLW5fofp2yHVSB",
+            "marketplace": false
+        }, "#212": { Duda
+            "holder": "5e6rPqAchphdHphCtFrWZZoWgJ91GKXnM9GGDfrYMfFJ",
+            "token": "2aT7pXFKWHhRKBueUhG1Nhi9yejjkN7Wc4a5HgnnmCJS",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#213": { Duda
+            "holder": "HDWecTXNhxGJyMTmhrrVoSRP9r7uev4NuvP15GBEvtUX",
+            "token": "nAcbovUJeW3V4VeuSSDs7XwStwsgrEKn99vN3pgy9NX",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#214": {
+            "holder": "CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p",
+            "token": "9Ctt1CdhdECqwftvQEM2hWwNJ2iRfLcypTvYcuZ2N4f8",
+            "elixir": "Nuclear",
+            "elixir_token": "2hkRARZ6FKJRJMHK2UpbbMg2h6Q2JqVmkDGcp6H1Rrht",
+            "marketplace": false
+        }, "#215": {
+            "holder": "CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p",
+            "token": "784zgq3iPT1y9MTdXVvyZvfnW5kKJwYosNoKo6XuEh2y",
+            "elixir": "Solar",
+            "elixir_token": "G6SppfRx2Xbv6pVxanZ7zYPYcUxJeF9dHQfFvBosjQrX",
+            "marketplace": false
+        }, "#216": {
+            "holder": "3naipZmCBDzqRiQPkiQC9XYXPeToqnGGxXqp7c98Xvz6",
+            "token": "6nX54x6i1wgapXe1Nnnf8sgsPckveZNK2HUnUPDBN2N6",
+            "elixir": "Solar",
+            "elixir_token": "9Fz1fFYnTUDvUeRfEntJnHdtiqb1ymFhByXgZMBkyiNb",
+            "marketplace": false
+        }, "#217": {
+            "holder": "GvKmgtHtCnyPhijYSukKnFPSSJZmq5isqJWY5rpg79xT",
+            "token": "BFrJQF8Rp7i5NtcJ5mA4dCLUD3mnqa1qgu5rZAFqpXPL",
+            "elixir": "Solar",
+            "elixir_token": "4xG7ETYs2C7UmzRm9Bs1TQC3byQHihDiHwq3ZAFLr1wz",
+            "marketplace": false
+        }, "#218": {
+            "holder": "CW1RytTu2J5udGsc3WaYG6hqySNH5ztbHz4figo7btmE",
+            "token": "4pbzJyR4xsNTwm1BKupR2PdDLbYNUUwZmHCn8rGrKm9F",
+            "elixir": "Cosmic",
+            "elixir_token": "9gh4mbEV8XMw5cJoZLh8pSnUxPwTPK6WwQeTBLrRppYT",
+            "marketplace": false
+        }, "#219": {
+            "holder": "DGEmPUPWTyLPPGVDpcKKX7Nrmtu9cMKngZEqfUZ8N58f",
+            "token": "6MH9zgPYEGe1z2huKEiUtSeh5pQwzpWNnyREBZLA7Qto",
+            "elixir": "Nuclear",
+            "elixir_token": "B4xJfTRLwMcGCmi3WagDnF1UL2yMEBPZgGVJJNzjmgLK",
+            "marketplace": false
+        }, "#220": { 
+            "holder": "8ReVPXbM2BP8uq6uWjh9c76UdzXSu9iGmMnHcQYuS9XR",
+            "token": "3L8z2knKXNxen7CtLNKN6ToQ94zBqLLEcq1UdWFHuJTa",
+            "elixir": "Electromagnetic",
+            "elixir_token": "E7VyrWt8tcy9zRHvxYgDruCkhywLemNXELsmRTomGd61",
+            "marketplace": false
+        }, "#221": {
+            "holder": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc",
+            "token": "6RYVtCnwtn61rNWd1zHGRu6PVaXjirsn5mBjRA3nvrPU",
+            "elixir": "Nuclear",
+            "elixir_token": "7zp66fmVmoGBwPdAZBeScDiXk7x2W88jJNfiL427oXLo",
+            "marketplace": false
+        }, "#222": { Duda
+            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+            "token": "9VUbmzrf4rcd3uXkrkQkTcd7N38WE4rrZQzSNYehq8Zn",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#223": {
+            "holder": "6bziB7ZCzy9gS9bK6Xj2iVqFqvAL7mRr4T78EGyK7Ymt",
+            "token": "AVxo7RHaK1nBCf8WdGE9oo7kKhJjihPzFcLXGCrba1jF",
+            "elixir": "Solar",
+            "elixir_token": "57xWUKGyFqASxYaBnBewfDaxcZjyD8TjBHjprcJYJdNM",
+            "marketplace": false
+        }, "#224": {
+            "holder": "HfDaj5umvBR5pqE7TLWELMYV4PA7ozY5tmXXyzQRoFMf",
+            "token": "9hAPQiZhHzTpE2s126tXDfWT89ydWsHbF5aC3FMXyYGA",
+            "elixir": "Solar",
+            "elixir_token": "D3QPxZD2XNeFFWMMVSSsZXY3MTrcCnPgbhZCgSnqESi1",
+            "marketplace": false
+        }, "#225": {
+            "holder": "8wvgHLTdQvmDaGMbKVMdn5RdYs7dXjN9BT75EC9knEpS",
+            "token": "4E9cEXJiZfGQSmKcDbtmCQLHEGEoHA979Px27Tg6ShXG",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FbNtyCbU4Z5wjUT9xpQH9nXXYqaDW9kanfjufqvaswfq",
+            "marketplace": false
+        }, "#226": {
+            "holder": "3naipZmCBDzqRiQPkiQC9XYXPeToqnGGxXqp7c98Xvz6",
+            "token": "6td7SAVQzJhebLPzpYm7LEYbGGyYY3QVsaxcGeDFDefv",
+            "elixir": "Nuclear",
+            "elixir_token": "8PnsmnDGcoKTLV7SDjQGh176hc3g5mZeFSY2SDPH5wbY",
+            "marketplace": false
+        }, "#227": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "CBT7eTjrZgTgx7e3KvhiyDU41GSo2LvGFrnfnLh1CKnc",
+            "elixir": "Cosmic",
+            "elixir_token": "9Bfok4NLjw2mdqafzBNyvFGFP1YLVcL3a7X2dTH5nsb4",
+            "marketplace": false
+        }, "#228": {
+            "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
+            "token": "DmZhWx4R4XPVtWBnN6QGwt7FCc3EjZm8tnUZ9L5UWmvb",
+            "elixir": "Nuclear",
+            "elixir_token": "Hh3zM7vcsr67YeMAnAsBjAFexc3eTHH1bXq7H3kqiL41",
+            "marketplace": false
+        }, "#229": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "FURyUR8NpsZ4vHFd6YPH28KRpR9BpAAB8AanejFFdjx7",
+            "elixir": "Nuclear",
+            "elixir_token": "14c88w6Cck294xm3BBw3rYdfzmdGnMCR5zxd9iEjVsze",
+            "marketplace": false
+        }, "#230": {
+            "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
+            "token": "9bJUKSY1ZbE3BrPB28giXTJ34qBJ548LKj6sEeL1brJo",
+            "elixir": "Nuclear",
+            "elixir_token": "6jjWATZo5FoUPa4BwyJ1HTrim9Z6wV99WdgYDvi22AVC",
+            "marketplace": false
+        }, "#231": {
+            "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
+            "token": "AZJuuLmVb71icsDi3k9LkEPXuZSpjLEULdXQCVpZ6UN2",
+            "elixir": "Nuclear",
+            "elixir_token": "DedfXwBvLcucY3ui6zT6Nb4xY4tNgArfP7dj5XTMRhiE",
+            "marketplace": false
+        }, "#232": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "C9uc35ZYEQsrL3pcYoGibfXznVhDwWugLF9AbRKRP68k",
+            "elixir": "Solar",
+            "elixir_token": "GGLppd7PMbsWy36pvo3o1SCKf42aEzeSpXhKtQpSeQDJ",
+            "marketplace": false
+        }, "#233": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "TZakDAtoWhHVGVYNRCCMXRsoyHzELdn6o4TEjortaHY",
+            "elixir": "Nuclear",
+            "elixir_token": "DMvKeh5QVgu4Dbu6Gg7AVXuFn4iDzTnvcrLzFB3yfk3B",
+            "marketplace": false
+        }, "#234": {
+            "holder": "7YTQM5ZvkeTjHggB5R94EwsPqzctoDEK9xHKEd7CmU5n",
+            "token": "9EwsiaHbN84noaxsp5q829b2Y3rhHh8xBCJqH3xFZkM3",
+            "elixir": "Solar",
+            "elixir_token": "GAvRyXSSjS1WosGKRTJHorEft4NarH7kUAuDrhHzMyD3",
+            "marketplace": false
+        }, "#235": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "6jYFiTDus6QeoVvuTLtpF38yieqZhsJRZb6d575H2vxo",
+            "elixir": "Nuclear",
+            "elixir_token": "B9GDxCc1bjXkNBCPsRFgVV3fm74wUzzKRgzvhGtR4eyS",
+            "marketplace": false
+        }, "#236": {
+            "holder": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
+            "token": "ADti14y9LzE5pGV3ZLtwfqdNAJ7z2XAY4bTY9y5wK8Zd",
+            "elixir": "Cosmic",
+            "elixir_token": "8JchsjXP1mqJWCmQkA6k4tn7PwgFft97bSaBmSbjJieP",
+            "marketplace": false
+        }, "#237": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "jtrwrrsQNco2vKCsLgnVXGzZgz4sbDeCPm5u1pvJDEY",
+            "elixir": "Nuclear",
+            "elixir_token": "AiMxzGz5BSEcmfex8LusLBEGtqoRdApJnJjow7c7Lx2n",
+            "marketplace": false
+        }, "#238": {
+            "holder": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
+            "token": "HLaQthLmirCxNotW3WH2SpZmE1TdWxqZgyh8GYWAjQ4K",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GyPjzGG8K14NzsJ3GuHTkGfvHcEYbRoYQGtcmqp5kT3b",
+            "marketplace": false
+        }, "#239": {
+            "holder": "D2h8zZ6SfuxLxVAtyJkffChTLEeCeL7WLmL35MCVEbXR",
+            "token": "AR648FTkTjxi47KqkWic2FEoipvCbnnS2bZhHUXkFPnP",
+            "elixir": "Cosmic",
+            "elixir_token": "HCWYmRAtFtjzgdphhNTCxQdHV85ecVuYxRf2kwfKJDDx",
+            "marketplace": false
+        }, "#240": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "wWCqEwyrwgQ55KAr2qMyL6eHvZgep6AwQv1jeMKXios",
+            "elixir": "Cosmic",
+            "elixir_token": "AWngLspCQZ4zbheSJZxdg6SGpes3uvvUwH5B5CTk26hY",
+            "marketplace": false
+        }, "#241": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "8tKBHedTUB8PVQL3p5THfXdWxFyxxEVnjRjGfCA9nr9Z",
+            "elixir": "Electromagnetic",
+            "elixir_token": "8An56xJEzVB69szQoc8bBqubfBV5k4awgT76Pq8UWhZv",
+            "marketplace": false
+        }, "#242": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "8PhnSmuywYJ1yQGNSb3FchcX1FPfxknFzvwQmSy11izx",
+            "elixir": "Cosmic",
+            "elixir_token": "7Ld46XPH3eZFRJmXbxK4sUkDS9dY5UzzXAzJErkA5pB5",
+            "marketplace": false
+        }, "#243": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "6QBsCrJqn8n6v4nCBn8aTsAsQR9LHgeoeKb2NT6pKuAu",
+            "elixir": "Electromagnetic",
+            "elixir_token": "44xjbrK8q2iL6fcVPTuP4BHgHDyK5aNpJacg4VP7oJZJ",
+            "marketplace": false
+        }, "#244": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "rb6146s2tcs92C8i6RRBRwNfKV9VGatyiND76UHdd9H",
+            "elixir": "Nuclear",
+            "elixir_token": "97YDQ6gi3XwjeEQBrmdSqTJdGxasjEMzvepQiCfzX41V",
+            "marketplace": false
+        }, "#245": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "85Lx5mpKHNLJS8j2m8xTucSrQ7SsVHhbjzaZVPRfR4h2",
+            "elixir": "Solar",
+            "elixir_token": "7sq8p89hxF8Avvjf1GEfX1sUVF1wFuNEnmP2VmMEdMJc",
+            "marketplace": false
+        }, "#246": {
+            "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
+            "token": "58WT7JmrjUKVk4HXB9L9nhfo5twerw9jHAhmHpA2nWZn",
+            "elixir": "Solar",
+            "elixir_token": "GNGdHuuVgVURTi5FZYQ5S6yEr9NDi5283x6zTSkTPM1i",
+            "marketplace": false
+        }, "#247": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "Ak7WqMAxBQ9n88C9sxnc3grYV7aepuUwuDtumyAhQmBh",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GJmBdRQkbLLpMj44iqGN48uHN77Y3QN7Qw14nCXTm5eo",
+            "marketplace": false
+        }, "#248": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "FRao2xvTVjskPTZWT81eNmQ3x1AAwks1V8K9TvHpmKqS",
+            "elixir": "Solar",
+            "elixir_token": "6JMvwLwKVh3WUAjb3KDzoTXs6BbjM7rj9c11nwzcdjF4",
+            "marketplace": false
+        }, "#249": {
+            "holder": "4w8ydbHaTDFoyK1vgzZSGcF1cYzGDrM1fnhgw2us1qf",
+            "token": "ERU3sfGQE2Jxw92QTCZSu3Awubz8eUoVre1wkEMkYWYi",
+            "elixir": "Nuclear",
+            "elixir_token": "79sEeaNtj6CFZgiLuYHePqi1M6tt8wY1VarhNAEbxgBr",
+            "marketplace": false
+        }, "#250": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "7D9c8UWB16zT8ZRHGMqty8SZLSfb2up3ymFjxHsw3Deu",
+            "elixir": "Solar",
+            "elixir_token": "9sPrbjnx7MkfcdFa8zxM9wabL7zzodXXi1g2fknJxrwu",
+            "marketplace": false
+        }, "#251": { Duda
+            "holder": "7umdrWsNttyCrJxymfRLc4i1DUYc67es45oY3Gz3QFav",
+            "token": "HjsUdkQdLRH2xoaZZY3pfxTUcsh8mH1YskFmcsKCCM85",
+            "elixir": "Solar",
+            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "marketplace": false
+        }, "#252": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BSnz2XqAfgx2AZZVv49AS78JUZ8ZjsXBr6R5DMSqxjTF",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6xERHfH2Jn6VFHpv3p4hip73EpfQ58iNXVR4UJq3i2VJ",
+            "marketplace": false
+        }, "#253": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "21R7GuN8fv6NES4qp2AL4VMkRchCX4cmea7qhtjm3k2f",
+            "elixir": "Nuclear",
+            "elixir_token": "26vqsq92uczgg6VpRqaSUsMZUMmZjcXUiPfDngAV4rrc",
+            "marketplace": false
+        }, "#254": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "HiuEebuETGdrXG6DtAKMKPsg9pvKDSdCguoSpDupjRP1",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9g1PsQhnGtggwzikGN7kEK2risRdHxmnjHfHCRNu2SbX",
+            "marketplace": false
+        }, "#255": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "8uk5JjFyF4A7HVQ6jPqM7EAfuLSstUoHifLoCSWQwL3W",
+            "elixir": "Cosmic",
+            "elixir_token": "5FLghg9mo9qxtKEv415jiro5c7wDC8wrBJTcovM2LetB",
+            "marketplace": false
+        }, "#256": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "12RjhswfLY52fUW2M4H8PkMCwoAdTnyidyELpY5dLrSK",
+            "elixir": "Electromagnetic",
+            "elixir_token": "Ch8dyFZipt4SQF7AY8D6T5vtKJcrfY1DbizRDoW7X2n8",
+            "marketplace": false
+        }, "#257": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BrKuHgFRoqfvcuT11VbD1NzfrMsKFRRM1ekXcKomK9oE",
+            "elixir": "Nuclear",
+            "elixir_token": "EKu3MqrqdXReVAgtrjEh9BGSTjc29LS6MbYHzrsdyFMg",
+            "marketplace": false
+        }, "#258": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "HTp7cySFqMiRzkdoafef4tb8jzTDkCKc4ue5JZzpyEVH",
+            "elixir": "Nuclear",
+            "elixir_token": "4MvbwZpSb9UdZh8aovm6cGjWvVXXT37s3dqJEBfFqdVA",
+            "marketplace": false
+        }, "#259": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "EiVP1z7fqD8364jFDRKQBcdBN6zcngrPujahNs9wabLA",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9hzLdQwiAqBcEBV91G2yd1WHjgkUTLjck2JM54zhLF7w",
+            "marketplace": false
+        }, "#260": {
+            "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
+            "token": "A3rsW6EYPYYJU1myswaJvun9cmp5cA5NfxK9qkRiQjtA",
+            "elixir": "Electromagnetic",
+            "elixir_token": "CLJiTL79Fx4x8q9BiruAzU34aaoXekSPf61guVECX4dT",
+            "marketplace": false
+        }, "#261": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "AwJ86oehUW7iGbsTbcFUbj2DtxjT42Hqwp9TQofzN6n3",
+            "elixir": "Cosmic",
+            "elixir_token": "AVJ9FAhR2PDipLP4VgRHkEa8Q8MLKwKWwDXhma1Yb9xf",
+            "marketplace": false
+        }, "#262": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "7cvdy6wFmqymg2QSShVZw1KxLA8HtM2D4XTmGBzA5ioC",
+            "elixir": "Cosmic",
+            "elixir_token": "5bXXNJSh2mU38Lt5hAwwf8XzSZa5AjWpkvRadtPWLG3R",
+            "marketplace": false
+        }, "#263": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "Bu6NT8LUMHPehiGfftYvLZC4ZNNwsFPgo8jNDrhy8kbd",
+            "elixir": "Solar",
+            "elixir_token": "4scUZnwzUMka4DB3YoZ8r9fcD4GkZxP9e4wTM2Lw8mPp",
+            "marketplace": false
+        }, "#264": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BDoBpSBJv9kQomzEbtK8P1A8GKNojkRo9kVogKEVxn7h",
+            "elixir": "Cosmic",
+            "elixir_token": "HNgt9SMwKDeVnipyGSexqBu18zKFQeSyC6c4oCFNp1Mt",
+            "marketplace": false
+        }, "#265": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BMZPyFEVpDTNVhoLVkRRsu4hfsdfqctnxzEXpzrRWKYd",
+            "elixir": "Solar",
+            "elixir_token": "4V9rPyPrHTD6U8pwoRhJXPqxFax8wDVtKT1MBrMjXPoT",
+            "marketplace": false
+        }, "#266": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "9Qn6eLRdJACy6xB8d1Ue7mWWhxsZupWbSMp7Zff2pSKK",
+            "elixir": "Solar",
+            "elixir_token": "E8QVPyn8a4AZz6J8E6HJ22iBnexZNinNW4v7nkRDL7cD",
+            "marketplace": false
+        }, "#267": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "Eu5gVuDzzqu8w862KRqkWZL2XpfEiGjSDUcrRsQwiN6e",
+            "elixir": "Electromagnetic",
+            "elixir_token": "Amfzu2w4crkRCjo4R6rkjqN58iYfGUcso9Y6WQrNp852",
+            "marketplace": false
+        }, "#268": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "61Hi5rB59quqEDGuQLpbqWDgqsTmcmxkdbXxWTBq2ZnG",
+            "elixir": "Solar",
+            "elixir_token": "5V7SrPjYqZjpeKdbxPc8RZM7zHFaAbZCWGYNuvdsBaJ7",
+            "marketplace": false
+        }, "#269": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "FGmvYUjkyD1G6vXy3e6Pfsde2S8tDtt5DQgHfTW9oUq8",
+            "elixir": "Nuclear",
+            "elixir_token": "8tToV1tC7EvYfWxCrJHvs8qoJFWdcwJz1sSSNTD56cdt",
+            "marketplace": false
+        }, "#270": {
+            "holder": "Er7SpA8FXZmoWAZCqi1LB8zT8TthL1741GSebxwB8qVX",
+            "token": "EDC6q1PwSJ38ZSwztmjc3hyJrhr8aBHfZDQrydXHpyQ3",
+            "elixir": "Solar",
+            "elixir_token": "GxUuzhNRr7MHmeVYFpL1BvfoB4b4tJDQ34cZ2nWXyWw9",
+            "marketplace": false
+        }, "#271": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "DbDnEL3ExKjeoemcLxaAdHjwV5n5VrsCP4P5PtBcpb8d",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6kFpmQiNT4QJdUyWopXXHjZrvzDQtL975iP8xWKp55RU",
+            "marketplace": false
+        }, "#272": {
+            "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
+            "token": "CzJanouTaf9hPc7QdPW2SrTGmZtcFyee4fp3R3RkXCyA",
+            "elixir": "Nuclear",
+            "elixir_token": "5vA6biaRJFxSDeefBSujM9bN5MCenqg6CquBRAXfYb3Q",
+            "marketplace": false
+        }, "#273": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "3apoeLLybWbPTmU6Ntj5XdmaawFM7Wwp1Lu3ZvYw8cfk",
+            "elixir": "Cosmic",
+            "elixir_token": "6oUsXk2R5drnYDWzrtVMKERhDpKYBSzddLRdKQmvhu4v",
+            "marketplace": false
+        }, "#274": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "5q9SzY79C1eqQPsubSe7ddQhtGFXTXvuKkXpXKfDYR5E",
+            "elixir": "Electromagnetic",
+            "elixir_token": "DNrSmgyrTWXdUSseayGKAdxmog7r4CnKFMiTNjCTEV7X",
+            "marketplace": false
+        }, "#275": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "5CzVo49akrRWUJqUgojVhVYGessG5Ha4X2fCa3cZCWDV",
+            "elixir": "Electromagnetic",
+            "elixir_token": "AyzcrL3Ah7HSfCRCMSy8p1AG5i4vjqTabFaXLp2LN8Sk",
+            "marketplace": false
+        }, "#276": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "Bwi4GdLpvWn9b45zshENKtXVtGH3zx5tTcJKS5e18Z5m",
+            "elixir": "Cosmic",
+            "elixir_token": "GutFgS1gvuZhFRNrhtEpYWZ3az7TX1SYPhrrYULQpvnX",
+            "marketplace": false
+        }, "#277": {
+            "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
+            "token": "5GR5uxUr7E4b2nKd2AdSb9RqYycoCfKjyXZEBRKmvsAN",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6pCeFjGL7B3KzyaG4QKPRo2CEopNqUSeKjTScuicTEbg",
+            "marketplace": false
+        }, "#278": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "FnjX4QGT9EgwsMvRYYtnyJzTzrwZzBbXi83wh4W3E7qM",
+            "elixir": "Nuclear",
+            "elixir_token": "EqK3iAZGwuFKXW8uXs1xpp1eaLVbuM7UjPn5ZH7N5pZi",
+            "marketplace": false
+        }, "#279": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "C6aqn3awuewXYufGHwdwmU22m1mAEQqqs8PcFwAvdtuF",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FvXoXobiznVgsroXhgmmxsNioiFLB5xpkJr5qzPBsncA",
+            "marketplace": false
+        }, "#280": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "ApLgeeFpcy2KpXDVRNEcjMy9wN3Um5mu42yE1tRSXXm9",
+            "elixir": "Nuclear",
+            "elixir_token": "63V5odDoHQBze7JLUsygVFXrjjiDFJWg9dy5nYHFeFdq",
+            "marketplace": false
+        }, "#281": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "FKN6u2x1qXfppyeE1QDVNVTjFcYu5ZoRAJc2wG4R5ywD",
+            "elixir": "Nuclear",
+            "elixir_token": "9Nhaytu2GvEHnub8eoDNivXFjdj6hgcrpRExsPa2HRoR",
+            "marketplace": false
+        }, "#282": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "7QCeuGSmKWvQ3sUYwnUevWpZdczpHihajQi2hZAiF5ZV",
+            "elixir": "Electromagnetic",
+            "elixir_token": "7FQNmedP9ZCNPn3BCMb46WYLRs9T5BH5N3vVxqEgJggm",
+            "marketplace": false
+        }, "#283": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "Fsp1AyzFRr5oYyWZwKCmfjLj2udZnwx7W7dcv9yEmjrX",
+            "elixir": "Cosmic",
+            "elixir_token": "CNNo2p882V6q8mX9fq2RCqVt7xxD2YgQ8LH8h6TdeSvC",
+            "marketplace": false
+        }, "#284": {
+            "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
+            "token": "2BaijHXHzt9Jt89hc8raE3ud8TpJdabbKhsxZHbnygY7",
+            "elixir": "Cosmic",
+            "elixir_token": "HoCEzDWWgta2FJM7Zoo7nzUDiAuD1ZbLyrQAC79eFPFy",
+            "marketplace": false
+        }, "#285": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "7Z3z2t6cgHRxjfKEYvyUf6byqT3iSeB6e6TFUmHtydMV",
+            "elixir": "Electromagnetic",
+            "elixir_token": "JAwFhdk2yVqTup7SpDxbUMdhP6VTSY78nGqg2HYn3j7x",
+            "marketplace": false
+        }, "#286": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "CxmdWrsnRS1Qdt8gWNfqshNsWsjFQkcyo4Uhe2oXh3dx",
+            "elixir": "Nuclear",
+            "elixir_token": "3dqQSxDE6e8ZcbF59fJGHDyn5LHMsiV53NAdHSULKm1e",
+            "marketplace": false
+        }, "#287": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "868VpV3m7FakrDtLFNUznRsML3QJTnAEfXzckdK4JfF3",
+            "elixir": "Solar",
+            "elixir_token": "CiFYVeECkhXYYQuvX5S4zVy8sT4JB7J8HkMoxrYQfsDb",
+            "marketplace": false
+        }, "#288": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "EqyvQU5VgkJ8iXBnCBZZKXK5FWDCbaJv2EJ4RdiWQydm",
+            "elixir": "Solar",
+            "elixir_token": "4H4tpa7zGLnMqyW1zhio1VboxLDAVibHHRQVZijLtGE9",
+            "marketplace": false
+        }, "#289": {
+            "holder": "7CB5Vyep45gFoP6qQm57gRDc6GD4r7zjN9zTbAnVMPot",
+            "token": "5m3Y9urBTcQCiqpt7wXd4mMhDtbTjoscPHwRkgWPjw5Q",
+            "elixir": "Electromagnetic",
+            "elixir_token": "D2bK2zBdGbEySX2NYhtcgNaaPRfKZQZEMW52hsL4uK4W",
+            "marketplace": false
+        }, "#290": {
+            "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
+            "token": "DeFR9xra6Nyt2ygX91HZQLBsrcW5tSg16akJQX2ucD4G",
+            "elixir": "Electromagnetic",
+            "elixir_token": "2PjKEJ7njBtjUScGYZrCAd7T6yMYxFVxn6rC5oDfUy77",
+            "marketplace": false
+        }, "#291": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "DM9o5FFyfq86nBckASLsXJMsNnW4bP9vaasy4EiUc7Ui",
+            "elixir": "Cosmic",
+            "elixir_token": "426UXiPAnWNNcLRPxkjuPHPUEfzi7Yauo7EF6xwg3Ef2",
+            "marketplace": false
+        }, "#292": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "44aSyHR1FwoV3QHihTtUqCsTBFRu1k82dUKuhPY1W7ie",
+            "elixir": "Nuclear",
+            "elixir_token": "4ahCu3xyn2AjYQ5UhqQg69vHSVZKYpx4JJXVcFxTwmXN",
+            "marketplace": false
+        }, "#293": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "9EicPTqFj5oe1nRsRCiVqmwbEazM9py5vqaQ3f4Lzzm7",
+            "elixir": "Electromagnetic",
+            "elixir_token": "9vwhpe2yQbPStGo8Tjh8MawUeZikohEi8TjhbmfF5gqa",
+            "marketplace": false
+        }, "#294": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "AeCJHPXQVnVm5ZYMJAZo1RCpUGctNFNUEpiem9uRB5ij",
+            "elixir": "Electromagnetic",
+            "elixir_token": "6HAXHF6uLEKp9CUY4trUYWaFgbHdAcwtheG9mvvrEgwe",
+            "marketplace": false
+        }, "#295": {
+            "holder": "21m5e3ZQyjh6Es7siF7GQ7swby43dTg5ePGTfaENPTDU",
+            "token": "BSTeAc9TUCF4hBm29kuSgHXwtruv8kojAiQMHxDLqqee",
+            "elixir": "Electromagnetic",
+            "elixir_token": "Hr7j2PggwAf8FtnjwuhfXhoLkAda3Z3m7iwK5jgQ2CrF",
+            "marketplace": false
+        }, "#296": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "CzexXuQYJDSvr9YKYeuzKYv3UBD9gp8yucfzG6zMUj18",
+            "elixir": "Cosmic",
+            "elixir_token": "CMAiCjbxDAGMimE1urtsh6gosChzm9fywpydpX43vVUg",
+            "marketplace": false
+        }, "#297": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "8nYY3BdprymrBupwS9FxF1koB1TY4BwRHWoCxuteVyS2",
+            "elixir": "Nuclear",
+            "elixir_token": "Av1PAPffgW2QHcNXWmM3snJESSYvqmbimCLAP5HpsRgX",
+            "marketplace": false
+        }, "#298": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "4TQR4aXqAs8Y3XTmMNuK6zSAt4iQShG6MtHeBbx32fur",
+            "elixir": "Solar",
+            "elixir_token": "ET3m4PcuuJoUDk89bH4egoVeXdnhZ82neNnPPwcQMHbP",
+            "marketplace": false
+        }, "#299": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "BTR3QfYeBXYjgaMLcJUy1GmNjDagfvdYBXJLQynATecm",
+            "elixir": "Electromagnetic",
+            "elixir_token": "vCu5CNKN8VPE5EAs4sQTGwSjAcV1aaxmAA8urBT6K3e",
+            "marketplace": false
+        }, "#300": {
+            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+            "token": "4wWS3aiyYtvSdpMgXSDGvBaShgHFpNjQkNCjNmqfxgQV",
+            "elixir": "Nuclear",
+            "elixir_token": "DMSwJXdoERyt4pPSRTHdCbRSqqh4YKKXQecJJ6KEEuw7",
+            "marketplace": false
+        }, "#301": {
+            "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
+            "token": "FDHNBgMa6TySuzWsVcoH7XvPs3dXLQYVB8knEPqZmdtj",
+            "elixir": "Solar",
+            "elixir_token": "3M94yR1Zs86HLWofPXuNb5LGigUDseF5JUNNUE31Uu9e",
+            "marketplace": false
+        }, "#302": {
+            "holder": "48UwyNQxjLnofV42uUA8JWAKXYVHePaoih9ZH6Gq1Pc2",
+            "token": "4Uc2ibJggqxSvYGeJ29hYYwY4Yat5D3Z16L2BUfzSsAF",
+            "elixir": "Electromagnetic",
+            "elixir_token": "GBpde1NhXRoH1ox4ovoCgcfaS7Lc9RfoMjMVkQoWNina",
+            "marketplace": false
+        }, "#303": {
+            "holder": "Er7SpA8FXZmoWAZCqi1LB8zT8TthL1741GSebxwB8qVX",
+            "token": "FGP8AakQwKH45mf4ZNGjvcazVNgVXTQXKUpaE3ZuZtdS",
+            "elixir": "Cosmic",
+            "elixir_token": "5tVJSfkZpSL9yau2YrZv3mVxwZNLdEjVYEkFswB6jN9E",
+            "marketplace": false
+        },                
+        "#306": {
+            "holder": "CDh9EGMThgRc4V1VaC8kMHj9ttsVfBqXzvRiFi1za3vM",
+            "token": "8kEkchuecGDkMG777Ezn4o1He5bNoJv9kZtbgsgH1Dw6",
+            "elixir": "Cosmic",
+            "elixir_token": "9ZmgSJdKQ39JWYdkZL1fXnfwuX2nrhFUpDgQTr4TAg4Z",
+            "marketplace": false
+        }, "#312": {
+            "holder": "7ZrzDosgbkYBBrVncfipq6UZWdBg2JKvaDZVnYKWQttT",
+            "token": "GtcWwtoXi3XmU5969gq3So2r8AyAbYPQg85xr7AhjmvJ",
+            "elixir": "Solar",
+            "elixir_token": "hR5KkzSBaimyCh6LbaGSTUr3vofnaTHjkjb6k2Ue86C",
+            "marketplace": false
+        }, "#314": {
+            "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
+            "token": "2TiNW9a2Fc8oPhv5aJZZTXcaP9hZrFn8cvW6gVfpTEQ4",
+            "elixir": "Solar",
+            "elixir_token": "JBpDGJgqfVd2SjMyaMddob54bCeNqASHsL2or5k77tcS",
+            "marketplace": false
+        }, "#318": {
+            "holder": "H1fnQ74QpJFeuyY1BZJvib6EuK6YuhK7qCM7boAfPQfC",
+            "token": "BQ2RxwA1Z5VJ9R7ST6Qd35MSvDz3PwJWWjDf25W31YDD",
+            "elixir": "Electromagnetic",
+            "elixir_token": "FBozKKbsTwdMpPYDkd7CfMi7K18dD9aXgzQub2zXGdKW",
+            "marketplace": false
+        }, "#322": {
+            "holder": "9mkDD3WYpTq7iZccriVpme9shXWoc8mfyr7xS2WV7Q94",
+            "token": "88Zuy9MqdqwYefEnZnupQUPqx3Kki13N7CH1J3cw6cZ6",
+            "elixir": "Cosmic",
+            "elixir_token": "H7GAk7rkNS45aWyhi3eTddrtUQwoGGgDy4jyayzkKvdL",
+            "marketplace": false
+        }, "#328": {
+            "holder": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo",
+            "token": "FNVyLL5Aa56t5QPwTz8q1iAcbEKGwdNvyjUBViRi77jF",
+            "elixir": "Cosmic",
+            "elixir_token": "HtmsXNh85RjnXodAekTmLxPP4PF9UEErQUkR5oBghfRg",
+            "marketplace": false
+        },
+        "error": "9AEhdM5CVhchb9pr3MntzDYt2fA2Kkt7BNWnfwtnYxBk",
+        "ownwer": "9ze87mvs5zPLqpydJzXYFUYcmUNuqW9aZR7mvJHKiJTM"
+    } 
+}
