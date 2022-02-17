@@ -15,17 +15,45 @@ const axios = require('axios').default;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const { Console } = require("console");
 
-const holderFetching = async (url, holder) => {
+const holderFetching = async (url, holder, tokenAddress) => {
 
   try {
-    const { data } = await axios.get(url)
-    holder = data.data[0].owner
+    const { data } = await axios.get(url)    
+    holder = await holderReview(data.data[0].owner, tokenAddress)   
     return holder
   } catch (error) {
     console.log(error)
   }
 
 }
+
+const holderReview = async(holder, tokenAddress) =>{
+  let holder_perma = holder;
+  let state = 0
+  
+  try {
+    const url = `https://api.solscan.io/account/tokens?address=${holder}`;
+    const {data} = await axios.get(url)
+    data.data.forEach(dt => {
+      if (tokenAddress === dt.tokenAddress) {
+        holder = holder_perma
+        state = 1
+        console.log(`ADRESS OF WALLET ${holder} = ${dt.tokenAddress} compare to ${tokenAddress}`)                   
+        return holder
+      }else{
+        if (state === 0) {
+          holder = "Incoherence Holder";
+        }              
+      }    
+      console.log(`HOLDER STATE: ${holder}`)   
+    });
+    return holder
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+
 
 //Exportación del Comando Alpaca
 module.exports = class HolderCommand extends BaseCommand {
@@ -60,8 +88,8 @@ module.exports = class HolderCommand extends BaseCommand {
     function myLoop() {
       setTimeout(async function () {
         if (CandyData.length != 0) {
-          url_2 = `https://public-api.solscan.io/token/holders?tokenAddress=${CandyData[indice].nft_metadata.mint}`;
-          holderObj = await holderFetching(url_2, holder)
+          url_2 = `https://public-api.solscan.io/token/holders?tokenAddress=${CandyData[indice].nft_metadata.mint}`;          
+          holderObj = await holderFetching(url_2, holder, CandyData[indice].nft_metadata.mint)
 
 
           if (holderObj != undefined) {

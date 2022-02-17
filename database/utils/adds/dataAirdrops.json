@@ -42,8 +42,8 @@
             "elixir": "Nuclear",
             "elixir_token": "4aJxLv76epUiPhV7Bywcshejz94ox1d4kYGNJSvC4c8B",
             "marketplace": false
-        },"#007": { Duda
-            "holder": "3s3L8eX7y5M1dBXzWLb2jmXJr8g4FdEwP6eeXwxTrxqx",
+        },"#007": { 
+            "holder": "Duda",
             "token": "rEKSj9Pw828wqHBRzP1mXq422UCoE2N4BKsf2UAKv9Z",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -73,8 +73,8 @@
             "elixir_token": "6VPAXWA8xW3Uhv1os1vEKwSifxoLoeMkYm2nmCGXTnTZ",
             "marketplace": false
         },"#012": {
-            "holder": "AYnDaEu9VrZktFLfiqyEErh29vUAiS5JkVqTzJDXFpAW",
-            "token": "DZXrFErpPXXCcN5Hw666FHvCcMUWqYc3eoCJfihc3yqq",
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
+            "token": ["DZXrFErpPXXCcN5Hw666FHvCcMUWqYc3eoCJfihc3yqq", "4dnmeG3wrQhA6ppnqc3LsSJxmdhSC8JyndFWVSrkfHZ2"],
             "elixir": "none",
             "elixir_token": "none",
             "marketplace": true
@@ -126,8 +126,8 @@
             "elixir": "Solar",
             "elixir_token": "9anoaijL93Cmdr1gEMFAJy6vrfZy1ZtSkP1DSyadcudL",
             "marketplace": false
-        },"#021": { Duda
-            "holder": "4YhJ1px6Kd1dmtRAcaFvpovbNV3zLtGvwGa3uYCPhjXc",
+        },"#021": { 
+            "holder": "Duda",
             "token": "5grtHaKSphjK2PfPJ95h1uZqvvhpcPSp6MwoqrZRw7yK",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -181,10 +181,10 @@
             "elixir_token": "A1Yt7rCXJWshd8DA3f1j5V5bGVo1BXHro65wTGEmNqtu",
             "marketplace": false
         }, "#030": {
-            "holder": "CYFUcZk3QsaxNaaGLzF4CZxsE1KtxGsaG8BQVhstMygN",
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "2HSpvEG1oufivCKZUHZ89TtzQ7CQS88npozdy8Ltyitw",
-            "elixir": "none",
-            "elixir_token": "none",
+            "elixir": "Electromagnetic",
+            "elixir_token": "DXP8yzgKnBBYHpZE5K4gz1W7jDFANG28MyiFKs5Ev4BG",
             "marketplace": true
         },"#031": {
             "holder": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1",
@@ -192,8 +192,8 @@
             "elixir": "Electromagnetic",
             "elixir_token": "bckWk7SyVYDh1LC22ffaQybnFJAkgLwQKJskfnSkHP8",
             "marketplace": false
-        }, "#032": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        }, "#032": { 
+            "holder": "Duda",
             "token": "8KdFK4LT7UzGS4AmjfeUZRxJWKc7W7Nmd69J2ZuVDR2e",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -217,10 +217,10 @@
             "elixir_token": "AHfjpmfMLhYCjFwms1WfUvd2EeVe3VJAVJTMSDfTuepR",
             "marketplace": false
         }, "#036": {
-            "holder": "J7dTtcVRZ4et2ki1QUfMSNePhTWLPCJdqgM5ge5PbHAi",
+            "holder": ["J7dTtcVRZ4et2ki1QUfMSNePhTWLPCJdqgM5ge5PbHAi","7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh"],
             "token": "6ot4Z93FpVxYnJNyWN9BwaZ7njCpGfi58KF3SRHq7SvV",
-            "elixir": "Nuclear",
-            "elixir_token": "BLesvNtXBTjWhgmno5QRGxkuHxcgzVdEjRTF5C7pEvWQ",
+            "elixir": ["Nuclear","Cosmic"],
+            "elixir_token": ["BLesvNtXBTjWhgmno5QRGxkuHxcgzVdEjRTF5C7pEvWQ","Du7FcJNswQg1gcweicR1aVhRa79WJGk9CWgGtVF2wmgW"],
             "marketplace": false
         }, "#037": {
             "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
@@ -325,10 +325,10 @@
             "elixir_token": "7Q5VSmaSQX5H8ThfAVquRmLdkXk6XWW7hQ6AMgP1jTzs",
             "marketplace": false
         }, "#054": {
-            "holder": "MagicEden",
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "KMUvZcdoYdJdA2kr6hKwZ2mN3xRFJSBQyaGQMP2maDs",
-            "elixir": "none",
-            "elixir_token": "none",
+            "elixir": "Solar",
+            "elixir_token": "Dw6GXowTtxUAqa2yid17hMsGgbMRn2i4cvt8Y7V7UbpN",
             "marketplace": true
         },"#055": {
             "holder": "D6xu2joBHScAkP8BcC2UzKLpHnzeYENymk2NztTsEM5t",
@@ -336,8 +336,8 @@
             "elixir": "Electromagnetic",
             "elixir_token": "GLw2awcB8NntmKBcaYZCTTFWWU9i4miXKsNHrs6rqEbS",
             "marketplace": false
-        },"#056": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        },"#056": { 
+            "holder": "Duda",
             "token": "FAFNKTmQNMveWVCBakpkND4pKB4sQsy4DS6BQaTrcCzX",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -354,8 +354,8 @@
             "elixir": "Cosmic",
             "elixir_token": "3CodUux69nGKqJey7UedAmYgMu4v4b4ziheKDDeVcmnS",
             "marketplace": false
-        }, "#059": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        }, "#059": { 
+            "holder": "Duda",
             "token": "9e8knP51n5MPn5f1FC21kxPy8RpreRcGp33WHVGWb4G5",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -366,8 +366,8 @@
             "elixir": "Cosmic",
             "elixir_token": "AEgMsKcqf1yLMPZvQcP1f8bPoGKMwcSqLgUsvnYNxNoG",
             "marketplace": false
-        }, "#061": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        }, "#061": { 
+            "holder": "Duda",
             "token": "9d3XZCDu8R4bTvHvGZnjKobspis1t2eeTydSzdagqjo3",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -390,17 +390,17 @@
             "elixir": "Nuclear",
             "elixir_token": "9x2Fse47rXcAnTzpkxuyuy2KjSVyad1RmjBJAav89WuU",
             "marketplace": false
-        },"#065": { Duda
+        },"#065": { 
             "holder": "AeaxUMdiuHn38rPJ7C5T9Vnm1PDAHHZa7ymjfZSgSu9S",
             "token": "EhWWV8NsSN5UBxPUEB1bKyHrGW68RqRrsQK43UqemHDE",
             "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir_token": "8QLy8DDwF57Yc1vntTdd2Si9ebdKhxCn8i4CuLFAZreN",
             "marketplace": false
-        }, "#066": { Duda
-            "holder": "N2D2J7KS5Be2wrJFjWZd8h3rmUYPauYDkBT7ByBgTm9",
+        }, "#066": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "2kxW5MJxCtXwSh7LmMetNRLLeScZVaWEtkSMEYxwDcgA",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Electromagnetic",
+            "elixir_token": "7WxSkt7dNLsRT5rWDLpCakgPFiG9MytEKm7sEE7KSTWu",
             "marketplace": false
         }, "#067": {
             "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
@@ -432,8 +432,8 @@
             "elixir": "Electromagnetic",
             "elixir_token": "6JH3g2Koo75b3Q2DojrxS4kAMhBuKjZPp6vidMLv4xU2",
             "marketplace": false
-        }, "#072": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        }, "#072": { 
+            "holder": "Duda",
             "token": "7UXt6GrRMCdAePjco8y297Amsj426rBZm5Kwf88FhCuK",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -462,8 +462,8 @@
             "elixir": "Nuclear",
             "elixir_token": "6aSTHWc4Q414qyLzncHWy1Z7tKKHYkJPqn9cjQ57rmNH",
             "marketplace": false
-        }, "#077": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#077": { 
+            "holder": "Duda",
             "token": "4MykWcUBqtDfpzj3nbNJxfun7GR7tbvdEuQqWJqdCRUU",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -480,14 +480,14 @@
             "elixir": "Solar",
             "elixir_token": "9WgftjWxKKFMmTN9KSkEiwZY3TVaF6opDsphDjfhCzb5",
             "marketplace": false
-        }, "#080": { Duda
-            "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
+        }, "#080": { 
+            "holder": "Duda",
             "token": "7sYHPrP5PZBFt88YQtWHLjxs1WGK1kTghnKvoWAovLXT",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#081": { Duda
-            "holder": "B8JDBiPp48qcomqLZT7h6XPsNEZK5uLt2stLxKLH3Qqf",
+        }, "#081": { 
+            "holder": "Duda",
             "token": "6primuz9TEHBSdf1zv2P3rxY9DKxxZM48ToizbnHbkQL",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -498,17 +498,17 @@
             "elixir": "Solar",
             "elixir_token": "DshmFeWJtECVS62KCW58pHCWKKekyUoHhKxyqe5Co5bJ",
             "marketplace": false
-        }, "#083": { Duda
-            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+        }, "#083": { 
+            "holder": "Duda",
             "token": "J7sZVEPofCZLUN1j1YNKmxQFrqBkH7N5ynj3EWckK11b",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
         }, "#084": {
-            "holder": "Solsea",
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "9VhsLPuuUpFR4vBT92yQiiDuB6XEEy7ynwiCGVXv7e8h",
-            "elixir": "none",
-            "elixir_token": "none",
+            "elixir": "Electromagnetic",
+            "elixir_token": "DzPcSBWrfWfkgMrnwjqxdM2iPCzTqg8dNaeJmPiBVdPq",
             "marketplace": true
         }, "#085": {
             "holder": "6RP5zKXyWfmGDPKwbghaN3DZwU9VuTf87CTksDqLvdVH",
@@ -540,8 +540,8 @@
             "elixir": "Nuclear",
             "elixir_token": "HYrwtT8donKGakBtH4GHJLphFPAG6qo9u9tUwyYLmmhG",
             "marketplace": false
-        }, "#090": { Duda
-            "holder": "5nQMm2dsNyF6LM4sjMdggmpriCtpVqAh2x94Q8Kc3h8J",
+        }, "#090": { 
+            "holder": "Duda",
             "token": "2LpC5LUbhjDwx5Htj3rjazACF57eiGvkyyWUGyB8cRCv",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -552,8 +552,8 @@
             "elixir": "Electromagnetic",
             "elixir_token": "5YurnE8mw4az8xdGdTnY45KL6rm2fsgKTw75CTXgiztm",
             "marketplace": false
-        }, "#092": { Duda
-            "holder": "8LAnvxpF7kL1iUjDRjmP87xiuyCx4yX3ZRAoDCChKe1L",
+        }, "#092": { 
+            "holder": "Duda",
             "token": "3TyC4UXy8wJyRkh8sLoTjrkSYKK1YFm2owsnaaRb34jb",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -654,11 +654,11 @@
             "elixir": "Solar",
             "elixir_token": "24fz9hAWzmMCNo1Y2giEJE5S5ZW8HfGeLrspsWfRgDSX",
             "marketplace": false
-        }, "#109": { Duda
-            "holder": "5CgA9UCf5AMA7sxXUqHFGNardYyay1SbugBBpLPAXQUg",
+        }, "#109": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "cYE9cVMJecwTeYYQGw4K7XC45z4hNg4uBJJoWBUnzxY",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Cosmic",
+            "elixir_token": "oYpQUJU7YAJVnfgRxXgDvTWtjWTUVngZcucdRaEP8tM",
             "marketplace": false
         }, "#110": {
             "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
@@ -697,10 +697,10 @@
             "elixir_token": "Eucq9uPG4gmiqdbmLxg2CJQdntWnuM8oC5ndpqEARJro",
             "marketplace": false
         }, "#116": {
-            "holder": "A5795uy3QuKC2GH55d4qMqfrxYRFoxJUwXm3VA3jbmev",
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "87Vcy7Le5LSSKPeU8v3hm3paUhDuX8ruxGGmidfuiNgw",
-            "elixir": "Solar",
-            "elixir_token": "FZwNrnPeMhxssJHK8DLVMDLbezrpzwPCq96HK5V4pDAo",
+            "elixir": "Electromagnetic",
+            "elixir_token": "AT7sWFeyyWFTBvcSwPVbMHr3JKB3ueEnfmDujZEMpTB8",
             "marketplace": false
         }, "#117": {
             "holder": "3ofPxBVacgcykqJDbNoVu5KqdQXmg7PtoNTfyFTf46mJ",
@@ -732,8 +732,8 @@
             "elixir": "Solar",
             "elixir_token": "9EfoLxiBjzVgsrfNv7cvCDgrGAVv5RAFBU2AQfCstpzX",
             "marketplace": false
-        }, "#122": { Duda
-            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+        }, "#122": { 
+            "holder": "Duda",
             "token": "9U51cVAiSdjiVSYVpdmQTk7YM35Lwayu4fyVRyeduZRq",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -744,8 +744,8 @@
             "elixir": "Nuclear",
             "elixir_token": "3hugrsn51Tzop16JC6z2rKukA1dWS5ApVpPbc67CDheu",
             "marketplace": false
-        }, "#124": { Duda
-            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+        }, "#124": { 
+            "holder": "Duda",
             "token": "HXk5T21nMEHLPmqZct8htpKhwEtGnKgqCyeDHKp2yFg3",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -756,11 +756,11 @@
             "elixir": "Cosmic",
             "elixir_token": "8o3wMRP1yBK4yj5F8HtEksrjgQ5xKF2axmczcGYcRQ3e",
             "marketplace": false
-        }, "#126": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
-            "token": "8mPj6k81GRGabbMsiBkvqFVQCkBwa6ocK1LeZa2ANriq",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+        }, "#126": { 
+            "holder": "Duda",
+            "token": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
+            "elixir": "Nuclear",
+            "elixir_token": "EeEKMsAkmhchoizn2w4YCPHgXyNTdZCobZuzwwxYDxcT",
             "marketplace": false
         }, "#127": {
             "holder": "BBRGcYGHecupwk4wH9KoerwsB3zAMLJSMGYUt9xcn77Y",
@@ -774,8 +774,8 @@
             "elixir": "Solar",
             "elixir_token": "Da8cNP2QdtSC6KHiaXAfcLHWuqsZYaBWGG5HoPTWcf9B",
             "marketplace": false
-        }, "#129": { Duda
-            "holder": "2po8jYgJupPpt8BNfqzwbJENWYC4LASW23D3Ph8vnAS2",
+        }, "#129": { 
+            "holder": "Duda",
             "token": "EN6qpq9i7NBCFDKTk6WUPfWexV2JWFLdU6JT2jtE4jow",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -792,11 +792,11 @@
             "elixir": "Solar",
             "elixir_token": "GmAPYdj3RRDzxmuY3ciA1q8GfsQkn5TYuiFjnSKQnjy2",
             "marketplace": false
-        }, "#132": { Duda
-            "holder": "9hhg1DHWjQkrvBPCxsBqfsN7ojNRrwSuR9eqRZ1r6tgv",
+        }, "#132": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "FxHKCMLwhbdM3ePcdtCPsnP9c65s2yohfxAfZu4h4Kwb",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Cosmic",
+            "elixir_token": "HqKCUQToGsmDzhA9ruirBoYFMGNG9YbBJqSDnB1HYFLp",
             "marketplace": false
         }, "#133": {
             "holder": "CsrDzbRGkbLp3uvMwoCfFVAjk8PXTLQgGCk46uXj2d69",
@@ -810,8 +810,8 @@
             "elixir": "Nuclear",
             "elixir_token": "2bWrhwPZT9nKTGHzrN2WPGe8d4BYmLrjtUpUnWyUC3n3",
             "marketplace": false
-        }, "#135": { Duda
-            "holder": "HR8ryQinu5CTvLcHC4hSM6udZgqQ1KdRfJmwvjy7ZxUe",
+        }, "#135": { 
+            "holder": "Duda",
             "token": "ApDtZcd4ZeBT6rAnDLWepMiX5DxPzT4vZfWNFT9iKzvN",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -846,8 +846,8 @@
             "elixir": "Cosmic",
             "elixir_token": "Ain8fHK54hZWuVk1iGkLG3B5w4DvMGWmrHVZkW2MYWTz",
             "marketplace": false
-        },"#141": { Duda
-            "holder": "MmzhBSV5ZUH3xSvD1xEYXymiKoGaTtFfuW7jeUtCMHp",
+        },"#141": { 
+            "holder": "Duda",
             "token": "Fk1YjbnhTnamPoyJaApDATAS72Ct53ijfPUjUnb9A2p9",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -876,17 +876,17 @@
             "elixir": "Solar",
             "elixir_token": "FNgKjes4cDo57aS9dcm5jxyQhCXNpBCe7B6cBYRPpUQU",
             "marketplace": false
-        }, "#146": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#146": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "Fm4qCKmAaAx7YBLfuYR2L48kguMjiYHZbWsEEZ6U76mV",
             "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir_token": "FvxMPLbsyNe1a69GWZ2X4VRhtLGqZJRNybskLUMvyHa3",
             "marketplace": false
-        }, "#147": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#147": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "473AEEV3syKmKfQsicrGL52prueAzW9H8GDqHRwgtiJB",
             "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir_token": "Fu39yyX8upz4DKBGu2N8uFjeqe2cX5kyTAh2DrF4MqWZ",
             "marketplace": false
         }, "#148": {
             "holder": "Ah3vphUsM9iGhUw96zaW5yofwWF3ymjWvC8cEJTRMTj2",
@@ -918,11 +918,11 @@
             "elixir": "Nuclear",
             "elixir_token": "6NzXkdWqoge4RtKf9atu9xygMw9saVf4F9boj1trdPfE",
             "marketplace": false
-        }, "#153": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#153": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "BBEAofF7LmikGZBewFAc6W6ycrRHwyoiPvXVoi2h4XfH",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Nuclear",
+            "elixir_token": "GcF1JUZAWDxHXoPTsUJGVw7dw9NCDej2EghXNvW7xCek",
             "marketplace": false
         }, "#154": {
             "holder": "GV6YJrUNuVqCB3aQty839bJP4drw3PUpt8PQMADWyA7i",
@@ -960,20 +960,20 @@
             "elixir": "Solar",
             "elixir_token": "HW6YpHFQjNM1WutC9A27cDEFjxcGwcEG7zW27H2hAVPK",
             "marketplace": false
-        }, "#160": { Duda
-            "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
+        }, "#160": { 
+            "holder": "Duda",
             "token": "Bn4LLde4W7s1Hp7XijbknrnrBrUrEnTcg9y7yhs6TtkP",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#161": { Duda
-            "holder": "2tQTktKgoHn9n6MFeTPZUSLX9Ah3ioT7rBLsMYKq6ucc",
+        }, "#161": { 
+            "holder": "Duda",
             "token": "FKMzp6y5MMGZwkUV5wW1FNkNEgRPETWpFPf4En694FLt",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#162": { Duda
-            "holder": "EfSdAdG3T9RuozRbiMDhrrSfKPWmsbSgLMTL6fgsWuDa",
+        }, "#162": { 
+            "holder": "Duda",
             "token": "2m1UGybzXpcczb8awAEoQp1csrd21TexdRL5ysi4TWAF",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -984,14 +984,14 @@
             "elixir": "Electromagnetic",
             "elixir_token": "9Xtvn92ZNutZuE5xt6f5xAzrQ8j1sCYVoSttKcFLX4sT",
             "marketplace": false
-        }, "#164": { Duda
-            "holder": "G5KJC53dir8XcjGT9GovdvBkHv22td9WyZDDQvhymPc4",
+        }, "#164": { 
+            "holder": "Duda",
             "token": "84stLoX6wrXKkYnPyYnvE3eeGDDU7MLt29ePpbGotuBP",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#165": { Duda
-            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+        }, "#165": { 
+            "holder": "Duda",
             "token": "GtDZWHVRGPZ1n6tzWdaCFBvdYNQsETKp5pL9tCXSeY89",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1008,20 +1008,20 @@
             "elixir": "Cosmic",
             "elixir_token": "FgqkFEkLEdWh5m1LHSDTQnzFmpWCfRfmUnvviMcXTsaF",
             "marketplace": false
-        }, "#168": { Duda
-            "holder": "CHww9FPoBNB48DZrQ2GAokUrkyrARh1MXLfkRAyYpiME",
+        }, "#168": { 
+            "holder": "Duda",
             "token": "WbBvnC17EPA8pY2kWSzDNMTZcPcTNageBaAd22VdQzc",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#169": { Duda
-            "holder": "9EZJmqG3yBLjTSZC5AK7YtDVAig5CB8vUsB18cGLrpBv",
+        }, "#169": { 
+            "holder": "Duda",
             "token": "37iFU4TQ9Lkj26Lf6QvaSNmJkc8kwUyXLrpG3oApqrGM",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#170": { Duda
-            "holder": "HTPVCLv8WTng3CT8b9Z8Knu4DJMq1Hu26PqsmPyFjpWc",
+        }, "#170": { 
+            "holder": "Duda",
             "token": "DuhGgUoLNUR7BFwQcvh75tdaRqSjTAjYFJAc6Gg9p8rT",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1098,62 +1098,62 @@
             "elixir": "Electromagnetic",
             "elixir_token": "iUq4a5XuKh7hbPjg391oecCzvzPzCrsEjxzE6d6ypom",
             "marketplace": false
-        }, "#183": { duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#183": { 
+            "holder": "Duda",
             "token": "DbBBorXToPSjJonM7R47zW6qFSpvGvWQ6X267nxpXE1j",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#184": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#184": { 
+            "holder": "Duda",
             "token": "794HLe6n7zjza6xhjvkXR6PwKiE5nzLnjRycRJH8CAQw",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#185": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#185": { 
+            "holder": "Duda",
             "token": "2KphzS4DawynpEaRuDAPKYGAvWCfaH9ipu5DfRXQcVet",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#186": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#186": { 
+            "holder": "Duda",
             "token": "HdkzphZEqu67Xxn69rDNyg9tVicZamJQPdhjrXiXNW2D",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#187": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#187": { 
+            "holder": "Duda",
             "token": "Fm6MyDz419YA6HgJK7Y2auh69eTJppx7vMxQJDhatQUm",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#188": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#188": { 
+            "holder": "Duda",
             "token": "HicBmsdbiGZfUojPpEH1gQdVXnU5CzdJ63EbbEnVgaaW",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#189": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#189": { 
+            "holder": "9JZfTtrWC4LPFk3FvKWoUqebzvgh4MdiDH2PyBxJc8R9",
             "token": "9ZJwtYxP2RxYf3J6ybqfE4yEpgNRzJKxWP3ruTtfvzs5",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Nuclear",
+            "elixir_token": "Gu1jGtNtPKGJjPCwXnRoukCZ799LaLV9XEoFD5Ljukdz",
             "marketplace": false
-        }, "#190": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#190": { 
+            "holder": "Duda",
             "token": "FK6zYVDTSJ35cuCNHQkAzS7HHdr4L5BQdPWftjT9HLoD",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#191": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#191": { 
+            "holder": "Duda",
             "token": "h9kL3UXngPHvTEs9X2Y4kY4CHLdMknpC8w87zHdhJ3o",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#192": { Duda
-            "holder": "2u5grhxVZo2VvAr8eCLAKZ7gNxdA8Aze6eNzhSfobEoj",
+        }, "#192": { 
+            "holder": "Duda",
             "token": "7rzmorKER34VcsNUAitRf3sduBDra2JCUPsQ2g8HfupV",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1164,8 +1164,8 @@
             "elixir": "Nuclear",
             "elixir_token": "D9ZMYe8XtFjhJA4sWRukv7BSbJfDXcUdmeYyZQEh8CBv",
             "marketplace": false
-        }, "#194": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#194": { 
+            "holder": "Duda",
             "token": "CLFkG8HAX3GHqJgwMLEC1uUjEbJTuJPa5Yp33p9ncjuZ",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1176,14 +1176,14 @@
             "elixir": "Nuclear",
             "elixir_token": "7msxGCAeqB5R8dsquuRB2H1ayDgRajTYgJTWVJkMadbX",
             "marketplace": false
-        }, "#196": { Duda
-            "holder": "8U2ece535g31zCYEaNrD7WfRGsWc4c8fFSm66oWvodB1",
+        }, "#196": { 
+            "holder": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh",
             "token": "HmPKUppnqUfSyJYfxwUg1NSFQCgvyqpNdTLb95aPmAbn",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Electromagnetic",
+            "elixir_token": "7RTE6VTRbitKWxfn1M9bnEjqpYPwu9CH4pa27of9ipX",
             "marketplace": false
-        }, "#197": { Duda
-            "holder": "EePtPwaxGHYish1nsHJuwZyGPBTpbhqsXV8KJzQXKhn",
+        }, "#197": { 
+            "holder": "Duda",
             "token": "6fgAjZi1k2CTBcxqk8oibFchT1VNLJfEVe2eznnnvwo6",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1224,8 +1224,8 @@
             "elixir": "Electromagnetic",
             "elixir_token": "GgfWmSueaGkCsaE23qYAH9ZGuhLZvw7si9dotSYtUMV3",
             "marketplace": false
-        }, "#204": { Duda
-            "holder": "FstLEnMVhdm33Fap33bYM6BSxJhwCR9fv3B5ZePvdeHL",
+        }, "#204": { 
+            "holder": "Duda",
             "token": "EfD2SpU4tDw2QaKhJ8tA5eaZsrac1vjAdVGgfJCAfcf4",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1260,8 +1260,8 @@
             "elixir": "Nuclear",
             "elixir_token": "DKCJ3TeVsw1zzFMRjeRKkYb2GJGa4Y1wLFWvYCua3yFH",
             "marketplace": false
-        }, "#210": { Duda
-            "holder": "EvvEQnHtS7Lreet8kwyWLep4UxRz5kc19DWT7Y9XiANe",
+        }, "#210": { 
+            "holder": "Duda",
             "token": "3QeYVVQGjgEtUBkSpHbXm4aZ8s82hmxYruPsTAm9xKTV",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1272,14 +1272,14 @@
             "elixir": "Cosmic",
             "elixir_token": "2SQKKr8tHgLMvNbrukzJMRAYNg2HKDNLW5fofp2yHVSB",
             "marketplace": false
-        }, "#212": { Duda
-            "holder": "5e6rPqAchphdHphCtFrWZZoWgJ91GKXnM9GGDfrYMfFJ",
+        }, "#212": { 
+            "holder": "Duda",
             "token": "2aT7pXFKWHhRKBueUhG1Nhi9yejjkN7Wc4a5HgnnmCJS",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
             "marketplace": false
-        }, "#213": { Duda
-            "holder": "HDWecTXNhxGJyMTmhrrVoSRP9r7uev4NuvP15GBEvtUX",
+        }, "#213": { 
+            "holder": "Duda",
             "token": "nAcbovUJeW3V4VeuSSDs7XwStwsgrEKn99vN3pgy9NX",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
@@ -1332,11 +1332,11 @@
             "elixir": "Nuclear",
             "elixir_token": "7zp66fmVmoGBwPdAZBeScDiXk7x2W88jJNfiL427oXLo",
             "marketplace": false
-        }, "#222": { Duda
-            "holder": "4qS71JsiqKgVtpAMCfuPCYSkqyYJxHTA2PyfxJzX4i8Q",
+        }, "#222": { 
+            "holder": "HRmufL12k4PdfweECFnMNkMg5sen7VcYVxsvYHEMy52N",
             "token": "9VUbmzrf4rcd3uXkrkQkTcd7N38WE4rrZQzSNYehq8Zn",
-            "elixir": "Solar",
-            "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
+            "elixir": "Nuclear",
+            "elixir_token": "C2rEnYtf57rJ3VHJtBdpAFHfGDeQRL8AXiAKcrNyQ7Mi",
             "marketplace": false
         }, "#223": {
             "holder": "6bziB7ZCzy9gS9bK6Xj2iVqFqvAL7mRr4T78EGyK7Ymt",
@@ -1506,8 +1506,8 @@
             "elixir": "Solar",
             "elixir_token": "9sPrbjnx7MkfcdFa8zxM9wabL7zzodXXi1g2fknJxrwu",
             "marketplace": false
-        }, "#251": { Duda
-            "holder": "7umdrWsNttyCrJxymfRLc4i1DUYc67es45oY3Gz3QFav",
+        }, "#251": { 
+            "holder": "Duda",
             "token": "HjsUdkQdLRH2xoaZZY3pfxTUcsh8mH1YskFmcsKCCM85",
             "elixir": "Solar",
             "elixir_token": "4nNxEdFt5WyFd6y8yXcVVoStabMZ81NuRtzJRdcV9MdC",
