@@ -34,14 +34,9 @@ async function edit(firstImage, secondImage, name, username) {
 async function secondStep(inImage, name, username) {
   gm(backgroundNewUser)
     .fill("#ffffff")
+    .font("Helvetica-Bold", 140)
     .fontSize(40)
-    .drawText(6, 212, `${name}`, "North")
-    .bitdepth(8)
-    .colors(128)
-    .quality(10)
-    .dither(false)
-    .filter("Point")
-    .antialias(false)
+    .drawText(6, 212, `${name}`, "North")            
     .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
