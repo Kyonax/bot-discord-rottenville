@@ -37,6 +37,10 @@ async function secondStep(inImage, name, username) {
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
+    .fill("#34e637")    
+    .font("Helvetica", 20)
+    .drawText(16, 262, `${name}`, "North")
+    .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
       if (err) console.log("Error!: " + err);
