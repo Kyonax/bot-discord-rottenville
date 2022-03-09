@@ -20,7 +20,7 @@ const { stripIndents } = require("common-tags");
 const Error = require("../conectors/error");
 
 //NewUserGif
-const backgroundNewUser = "database/multimedia/gifs/DiscordWelcome.png";
+const backgroundNewUser = "database/multimedia/images/DiscordWelcome.png";
 //Funciones
 async function edit(firstImage, secondImage, name, username) {
   circleImage(firstImage, username);
