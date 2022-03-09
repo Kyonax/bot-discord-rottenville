@@ -111,7 +111,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 ╰
     `
         ).attachFiles([
-          `database/images/magik/exports/${member.user.username}.png`,
+          `database/multimedia/images/magik/exports/${member.user.username}.png`,
         ])
         .setImage(`attachment://${member.user.username}.png`);
 
