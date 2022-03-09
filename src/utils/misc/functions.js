@@ -59,7 +59,7 @@ module.exports = {
     const path = Path.resolve(
       __dirname,
       "",
-      `database/images/users/avatar/${name}.jpg`
+      `database/multimedia/images/users/avatar/${name}.jpg`
     );
     const response = await Axios({
       method: "GET",
@@ -106,16 +106,16 @@ module.exports = {
         this.pack().pipe(
           fs.createWriteStream(
             __dirname +
-              `/database/images/users/circleAvatar/${name}CircleImage.png`
+              `/database/multimedia/images/users/circleAvatar/${name}CircleImage.png`
           )
         );
       });
   },
   resizeImage: async function (name) {
-    gm(`database/images/users/circleAvatar/${name}CircleImage.png`)
+    gm(`database/multimedia/images/users/circleAvatar/${name}CircleImage.png`)
       .resize(198, 198)
       .write(
-        `database/images/users/circleAvatar/${name}CircleImageR.png`,
+        `database/multimedia/images/users/circleAvatar/${name}CircleImageR.png`,
         function (err) {
           if (err) console.log("Error!: " + err);
         }
