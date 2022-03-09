@@ -5,8 +5,7 @@ const {
   resizeImage,
   putEmoji,
   downloadUser,
-  getMember,
-  putEmoji,
+  getMember,  
   delay,
   initObjectMember,
 } = require("../../src/utils/misc/functions");
