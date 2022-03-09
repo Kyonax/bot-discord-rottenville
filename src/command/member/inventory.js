@@ -158,7 +158,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     const perm = new Perms();
 
     const channelLevelUP = message.guild.channels.cache.find(
-      (ch) => ch.name === "👹・level-u"
+      (ch) => ch.name === "👽・level-up"
     );
     if (message.channel.id !== "898994751305576488")
       return err.noCorrectChannel(bot, message, `849365833327181874`);
