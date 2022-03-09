@@ -1,26 +1,3 @@
-//Importación especifica de Metodos
-const {
-  circleImage,
-  delay,
-  resizeImage,
-  putEmoji,
-  downloadUser
-} = require("../../functions.js");
-const {
-  kyonax,
-  clever,
-  thrizz,
-  pixxa,
-} = require("../../database/utils/emojis.json");
-const { whitecolor } = require("../../database/utils/colors.json");
-//Importación de Archivos Json creados por Kyonax
-const allUsers = require("../../database/users/users.json");
-//Importación de paquetes JS de Node.js
-var fs = require("fs"),
-  gm = require("gm"),
-  imageMagick = gm.subClass({
-    imageMagick: true,
-  });
 //NewUserGif
 const backgroundNewUser = "database/multimedia/gifs/DiscordWelcome.png";
 //Funciones
@@ -53,6 +30,11 @@ async function secondStep(inImage, name, username) {
 
 const { MessageEmbed } = require("discord.js");
 const {
+  circleImage,
+  delay,
+  resizeImage,
+  putEmoji,
+  downloadUser,
   getMember,
   putEmoji,
   delay,
