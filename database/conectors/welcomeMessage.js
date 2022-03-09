@@ -40,13 +40,13 @@ module.exports.welcomeMessage = async (member, bot) => {
       `**╭・———— » ` +
       "`👽`" +
       ` — Be part of RottenVille —-**
-┊ **Follow the rules of the Server, **
-┊ read all the Rules that you will
-┊ find in <#928319200139812864> ・` +
+┊ **Follow the rules of the Server and read all **
+┊ the Rules that you will find on
+┊ <#928319200139812864> ・` +
       "`🏁`" +
       `
 ┊
-┊ Verify as a Holder to get full acces
+┊ **Verify as a Holder** to get full acces
 ┊ _"protocol under develop"_・` +
       "`👹`" +
       `
@@ -62,7 +62,7 @@ module.exports.welcomeMessage = async (member, bot) => {
   try {
     _HELLO_CHANNEL.send(_RANDOM_SALUTE);
     _SERVER_CHANNEL_.send(
-      `**Welcome ${_MEMBER} to RottenVille Laboratory!! Check this out before Verify.**`,
+      `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out before Verify.**`,
       _embed
     );
   } catch (error) {
