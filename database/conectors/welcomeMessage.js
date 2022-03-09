@@ -1,3 +1,20 @@
+const { MessageEmbed } = require("discord.js");
+const {
+  circleImage,
+  delay,
+  resizeImage,
+  putEmoji,
+  downloadUser,
+  getMember,
+  putEmoji,
+  delay,
+  initObjectMember,
+} = require("../../src/utils/misc/functions");
+
+const { stripIndents } = require("common-tags");
+
+const Error = require("../conectors/error");
+
 //NewUserGif
 const backgroundNewUser = "database/multimedia/gifs/DiscordWelcome.png";
 //Funciones
@@ -27,23 +44,6 @@ async function secondStep(inImage, name, username) {
       if (err) console.log("Error!: " + err);
     });
 }
-
-const { MessageEmbed } = require("discord.js");
-const {
-  circleImage,
-  delay,
-  resizeImage,
-  putEmoji,
-  downloadUser,
-  getMember,
-  putEmoji,
-  delay,
-  initObjectMember,
-} = require("../../src/utils/misc/functions");
-
-const { stripIndents } = require("common-tags");
-
-const Error = require("../conectors/error");
 
 module.exports.welcomeMessage = async (member, bot) => {
 
