@@ -6,14 +6,14 @@ var fs = require("fs"),
   imageMagick = gm.subClass({
     imageMagick: true,
   });
-const {  
-  delay,  
-  putEmoji,  
-  getMember,    
+const {
+  delay,
+  putEmoji,
+  getMember,
   initObjectMember,
 } = require("../../src/utils/misc/functions");
 
-const {circleImage,resizeImage,downloadUser} = require("../../src/utils/magik/functions")
+const { circleImage, resizeImage, downloadUser } = require("../../src/utils/magik/functions")
 
 const { stripIndents } = require("common-tags");
 
@@ -33,8 +33,9 @@ async function edit(firstImage, secondImage, name, username) {
 }
 async function secondStep(inImage, name, username) {
   gm(backgroundNewUser)
-    
-    
+
+    .font("Helvetica-Bold", 140)
+    .drawText(6, 212, `${name}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
@@ -43,7 +44,7 @@ async function secondStep(inImage, name, username) {
 }
 
 module.exports.welcomeMessage = async (member, bot) => {
-  
+
   const memberImage = member.user.displayAvatarURL({
     format: "png",
     dynamic: false,
