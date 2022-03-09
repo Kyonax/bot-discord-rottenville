@@ -44,10 +44,7 @@ async function secondStep(inImage, name, username) {
 }
 
 module.exports.welcomeMessage = async (member, bot) => {
-
-
-
-  let memberCount = Object.keys(allUsers).length;
+  
   const memberImage = member.user.displayAvatarURL({
     format: "png",
     dynamic: false,
