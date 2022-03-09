@@ -40,8 +40,8 @@ module.exports.welcomeMessage = async (member, bot) => {
       `**╭・———— » ` +
       "`👽`" +
       ` — Be part of RottenVille —-**
-┊ **Follow the rules of the Server and read all **
-┊ the Rules that you will find on
+┊ **Follow the Server rules and start your**
+┊ journey as a Rotten member on this channel
 ┊ <#928319200139812864> ・` +
       "`🏁`" +
       `
