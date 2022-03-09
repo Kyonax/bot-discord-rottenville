@@ -127,7 +127,7 @@ module.exports.welcomeMessage = async (member, bot) => {
       try {
         _HELLO_CHANNEL.send(_RANDOM_SALUTE);
         _SERVER_CHANNEL_.send(
-          `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out before Verify.**`,
+          `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out.**`,
           _embed
         );
       } catch (error) {
