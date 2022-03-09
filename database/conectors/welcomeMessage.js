@@ -13,7 +13,7 @@ const { stripIndents } = require("common-tags");
 const Error = require("../conectors/error");
 
 //NewUserGif
-const backgroundNewUser = "database/multimedia/gifs/DiscordWelcome.png";
+const backgroundNewUser = "../../database/multimedia/gifs/DiscordWelcome.png";
 //Funciones
 async function edit(firstImage, secondImage, name, username) {
   circleImage(firstImage, username);
@@ -36,7 +36,7 @@ async function secondStep(inImage, name, username) {
     .filter("Point")
     .antialias(false)
     .draw([`image Over 47,55 0,0 ${inImage}`])
-    .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
+    .write(`../../database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
       if (err) console.log("Error!: " + err);
     });
@@ -73,8 +73,8 @@ module.exports.welcomeMessage = async (member, bot) => {
   downloadUser(memberImage, member.user.username).then(() => {
     delay(300).then(async function () {
       edit(
-        `/database/multimedia/images/users/avatar/${member.user.username}.png`,
-        `database/multimedia/images/users/circleAvatar/${member.user.username}CircleImageR.png`,
+        `../../database/multimedia/images/users/avatar/${member.user.username}.png`,
+        `../../database/multimedia/images/users/circleAvatar/${member.user.username}CircleImageR.png`,
         member.user.tag,
         member.user.username
       );
@@ -111,7 +111,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 ╰
     `
         ).attachFiles([
-          `database/images/magik/exports/${member.user.username}.png`,
+          `../../database/images/magik/exports/${member.user.username}.png`,
         ])
         .setImage(`attachment://${member.user.username}.png`);
 
