@@ -22,24 +22,25 @@ const Error = require("../conectors/error");
 //NewUserGif
 const backgroundNewUser = "database/multimedia/images/DiscordWelcome.png";
 //Funciones
-async function edit(firstImage, secondImage, name, username,size) {
+async function edit(firstImage, secondImage, name, username, size) {
   circleImage(firstImage, username);
   delay(2000).then(function () {
     resizeImage(username);
   });
   delay(4000).then(function () {
-    secondStep(secondImage, name, username,size);
+    secondStep(secondImage, name, username, size);
   });
 }
-async function secondStep(inImage, name, username,size) {
+async function secondStep(inImage, name, username, size) {
   gm(backgroundNewUser)
-    .fill("#34e637")    
+    .gravity("West")
+    .fill("#34e637")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
-    .fill("#F5FBF3")    
+    .fill("#F5FBF3")
     .font("Helvetica", 20)
-    .drawText(136, 254, `${"#"+size+1}`, "North")
+    .drawText(136, 254, `${"#" + size + 1}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
@@ -55,7 +56,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     size: 128,
   });
 
-  
+
   var memberCount = bot.users.cache.size
   const _GUILD_ID = member.guild.id;
   const _MEMBER_ID = member.user.id;
