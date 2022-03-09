@@ -1,5 +1,7 @@
 //Importación Functions de Database
 const { updateGuildServerRank,updateGuildRolePlayRank } = require("../database/functions");
+const Path = require("path");
+const Axios = require("axios");
 //Exportación de las Funciones Generales
 module.exports = {
   getMember: function (message, toFind = "") {
