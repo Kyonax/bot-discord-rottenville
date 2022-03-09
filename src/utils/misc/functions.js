@@ -59,7 +59,7 @@ module.exports = {
     const path = Path.resolve(
       __dirname,
       "",
-      `database/multimedia/images/users/avatar/${name}.jpg`
+      `database/multimedia/images/users/avatar/${name}.png`
     );
     const response = await Axios({
       method: "GET",

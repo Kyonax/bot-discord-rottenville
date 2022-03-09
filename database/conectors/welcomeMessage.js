@@ -74,7 +74,7 @@ module.exports.welcomeMessage = async (member, bot) => {
   downloadUser(memberImage, member.user.username).then(() => {
     delay(300).then(async function () {
       edit(
-        `/database/multimedia/images/users/avatar/${member.user.username}.jpg`,
+        `/database/multimedia/images/users/avatar/${member.user.username}.png`,
         `database/multimedia/images/users/circleAvatar/${member.user.username}CircleImageR.png`,
         member.user.tag,
         member.user.username
