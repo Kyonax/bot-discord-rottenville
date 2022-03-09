@@ -55,6 +55,7 @@ module.exports = {
     } while (d2 - d < ms);
   },
   downloadUser: async function (imageUrl, name) {
+    console.log("DOING STUFF COOKING")
     const url = imageUrl;
     const path = Path.resolve(
       __dirname,
