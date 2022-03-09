@@ -1,13 +1,12 @@
 const { MessageEmbed } = require("discord.js");
-const {
-  circleImage,
-  delay,
-  resizeImage,
-  putEmoji,
-  downloadUser,
+const {  
+  delay,  
+  putEmoji,  
   getMember,    
   initObjectMember,
 } = require("../../src/utils/misc/functions");
+
+const {circleImage,resizeImage,downloadUser} = require("../../src/utils/magik/functions")
 
 const { stripIndents } = require("common-tags");
 
