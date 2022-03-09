@@ -24,7 +24,7 @@ module.exports.welcomeMessage = async (member, bot) => {
   ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("💬・testing-team")
+    ch.name.includes("💬・general-chat")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
     ch.name.includes("📯・new-member")
