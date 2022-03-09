@@ -55,7 +55,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     size: 128,
   });
 
-  const guild = bot.guilds.get("894634118267146272");
+  const guild = bot.guilds.cache.size("894634118267146272");
   var memberCount = guild.members.filter(member => !member.user.bot).size;
   const _GUILD_ID = member.guild.id;
   const _MEMBER_ID = member.user.id;
