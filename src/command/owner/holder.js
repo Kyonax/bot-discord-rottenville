@@ -11,49 +11,7 @@ const fetch = require("node-fetch");
 //Importación de la Clase Padre
 const BaseCommand = require("../../utils/structure/BaseCommand.js");
 const fs = require("fs");
-const axios = require('axios').default;
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const { Console } = require("console");
-
-const holderFetching = async (url, holder, tokenAddress) => {
-
-  try {
-    const { data } = await axios.get(url)    
-    holder = await holderReview(data.data[0].owner, tokenAddress)   
-    return holder
-  } catch (error) {
-    console.log(error)
-  }
-
-}
-
-const holderReview = async(holder, tokenAddress) =>{
-  let holder_perma = holder;
-  let state = 0
-  
-  try {
-    const url = `https://api.solscan.io/account/tokens?address=${holder}`;
-    const {data} = await axios.get(url)
-    data.data.forEach(dt => {
-      if (tokenAddress === dt.tokenAddress) {
-        holder = holder_perma
-        state = 1
-        console.log(`ADRESS OF WALLET ${holder} = ${dt.tokenAddress} compare to ${tokenAddress}`)                   
-        return holder
-      }else{
-        if (state === 0) {
-          holder = "Incoherence Holder";
-        }              
-      }    
-      console.log(`HOLDER STATE: ${holder}`)   
-    });
-    return holder
-  } catch (error) {
-    console.log(error)
-  }
-
-}
-
 
 //Exportación del Comando Alpaca
 module.exports = class HolderCommand extends BaseCommand {
@@ -70,74 +28,82 @@ module.exports = class HolderCommand extends BaseCommand {
 
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => { });
+    message.delete().catch((O_o) => {});
     const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;
     let bodyNet = null;
     let url = null;
     let mint = null;
     let holder = null;
-    let holderObj = null;
     //Creación de Objetos
     const err = new Error();
-
     //Solicitando Json
-    var url_2 = null;
-    let i_2 = 1
-    let indice = 0
-    let indice_2 = 0
-    function myLoop() {
-      setTimeout(async function () {
-        if (CandyData.length != 0) {
-          url_2 = `https://public-api.solscan.io/token/holders?tokenAddress=${CandyData[indice].nft_metadata.mint}`;          
-          holderObj = await holderFetching(url_2, holder, CandyData[indice].nft_metadata.mint)
+    for (let i = 0, len = CandyData.length; i < len; i++) {
+      CandyData.forEach((data) => {
+        if (data.nft_metadata.data.name == "Rotten Ville #" + i) {
+          url = data.nft_metadata.data.uri;
+          mint = data.nft_metadata.mint;
 
+          //Solicitando Json
+          var url_2 = `https://public-api.solscan.io/token/holders?tokenAddress=${mint}`;
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", url_2);
+          xhr.setRequestHeader("Accept", "application/json");
 
-          if (holderObj != undefined) {
-            CandyRottenVille.CandyMachine.RottenVille.NFT.forEach((candy_rottenville) => {
-              try {
-                if (CandyData[indice].nft_metadata.mint === candy_rottenville.token) {
-                  console.log("HOLDER x MINT ORIGIN OWNER:\nORIGIN MINT TOKEN= " + CandyData[indice].nft_metadata.mint + "\nMINT TOKEN CANDY = " + candy_rottenville.token + "\nHOLDER OBJ = " + holderObj + "\nIndice:"+indice_2+"\n\n")
-                  CandyRottenVille.CandyMachine.RottenVille.NFT[indice_2].holder = holderObj                  
-                } else {
-                  
-                }
-                indice_2++
-              } catch (error) {
-                console.log(error)
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              for (
+                let index = 0;
+                index < JSON.parse(xhr.responseText).length;
+                index++
+              ) {
+                console.table(data);
+                holder = data.owner;
               }
-            })
-          }
-          indice_2 = 0
-
-
-
-
-
-          fs.writeFile(
-            "./database/utils/adds/CandyMachineRottenVille.json",
-            JSON.stringify(CandyRottenVille),
-            (err) => {
-              if (err) console.log(err);
             }
-          );
+          };
 
-        } else {
-          return console.log("No ROTENSSS!!!")
+          xhr.send();
+
+          fetch(url_2)
+            .then((res) => res.text())
+            .then((body) => {
+              if (!body) return err.fetchCrash(bot, message);
+              bodyNet = body;
+              console.table(body);
+              holder = body.owner;
+            })
+            .catch((err) => console.log(err));
+
+          fetch(url)
+            .then((res) => res.json())
+            .then((body) => {
+              if (!body) return err.fetchCrash(bot, message);
+              bodyNet = body;
+
+              CandyRottenVille.CandyMachine.RottenVille.NFT[i] = {
+                name: data.nft_metadata.data.name,
+                mintAddress: mint,
+                holder: holder,
+                symbol: data.nft_metadata.data.symbol,
+                uri: data.nft_metadata.data.uri,
+                token: data.nft_metadata.mint,
+                image: body.image,
+                external_url: body.external_url,
+                edition: body.edition,
+                attributes: body.attributes,
+                properties: body.properties,
+              };
+
+              fs.writeFile(
+                "./database/utils/adds/CandyMachineRottenVille.json",
+                JSON.stringify(CandyRottenVille),
+                (err) => {
+                  if (err) console.log(err);
+                }
+              );
+            });
         }
-
-        i_2++
-        indice++
-
-        if (i_2 < CandyData.length) {
-          myLoop()
-        } else {
-          console.log("GAME OVER")
-        }
-
-      }, 1000)
+      });
     }
-
-    myLoop();
-
   }
 };

@@ -24,7 +24,7 @@ module.exports.welcomeMessage = async (member, bot) => {
   ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("💬・general-chat")
+    ch.name.includes("💬・testing-team")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
     ch.name.includes("📯・new-member")
@@ -34,34 +34,35 @@ module.exports.welcomeMessage = async (member, bot) => {
     .setColor("#13ea83")
     .setThumbnail(member.user.displayAvatarURL())
     .setFooter(
-      "📣 Collection comming soon・check out our twitter.com/rotten_ville"
+      "📣 RottenVille Project・check out our twitter.com/rotten_ville"
     )
     .setDescription(
-      `**╭・—————— » ` +
-        "`👽`" +
-        ` — Welcome to Rottenville! —-**
-┊ **This community have rules that you must follow, **
-┊ for this you have to read and implement each rule that
-┊ appear in <#898963212433764373> ・` +
-        "`📖`" +
-        `
+      `**╭・———— » ` +
+      "`👽`" +
+      ` — Be part of RottenVille —-**
+┊ **Follow the rules of the Server, **
+┊ read all the Rules that you will
+┊ find in <#928319200139812864> ・` +
+      "`🏁`" +
+      `
 ┊
-┊ If you want to know more about the server and how to get
-┊ the **Premium Roles** go to <#898983390227865650> ・` +
-        "`👹`" +
-        `
+┊ Verify as a Holder to get full acces
+┊ _"protocol under develop"_・` +
+      "`👹`" +
+      `
 ┊
-┊ **Holder Verify on <#898986608555073546> ** to see the other channels
-┊ and get the role ** <@&900152631828299826> **
+┊ **Member Verify <#950907434988367933> **
+┊ you will get ** <@&895850023311540225> **
 ┊
-┊ _If you have any question go to <#898983573607030834> or_
+┊ _If you have any question <#898983573607030834> or_
 ┊ **__ask for help on <#899003268473180230>__**
 ╰
     `
     );
   try {
+    _HELLO_CHANNEL.send(_RANDOM_SALUTE);
     _SERVER_CHANNEL_.send(
-      `**Hey ${_MEMBER} check this out before Verify.**`,
+      `**Welcome ${_MEMBER} to RottenVille Laboratory!! Check this out before Verify.**`,
       _embed
     );
   } catch (error) {
