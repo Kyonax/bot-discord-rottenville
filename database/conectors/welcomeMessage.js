@@ -1,3 +1,56 @@
+//Importación especifica de Metodos
+const {
+  circleImage,
+  delay,
+  resizeImage,
+  putEmoji,
+  downloadUser
+} = require("../../functions.js");
+const {
+  kyonax,
+  clever,
+  thrizz,
+  pixxa,
+} = require("../../database/utils/emojis.json");
+const { whitecolor } = require("../../database/utils/colors.json");
+//Importación de Archivos Json creados por Kyonax
+const allUsers = require("../../database/users/users.json");
+//Importación de paquetes JS de Node.js
+var fs = require("fs"),
+  gm = require("gm"),
+  imageMagick = gm.subClass({
+    imageMagick: true,
+  });
+//NewUserGif
+const backgroundNewUser = "database/multimedia/gifs/DiscordWelcome.png";
+//Funciones
+async function edit(firstImage, secondImage, name, username) {
+  circleImage(firstImage, username);
+  delay(2000).then(function () {
+    resizeImage(username);
+  });
+  delay(4000).then(function () {
+    secondStep(secondImage, name, username);
+  });
+}
+async function secondStep(inImage, name, username) {
+  gm(backgroundNewUser)
+    .fill("#ffffff")
+    .fontSize(40)
+    .drawText(6, 212, `${name}`, "North")
+    .bitdepth(8)
+    .colors(128)
+    .quality(10)
+    .dither(false)
+    .filter("Point")
+    .antialias(false)
+    .draw([`image Over 47,55 0,0 ${inImage}`])
+    .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
+      console.log("Done! SecondStep");
+      if (err) console.log("Error!: " + err);
+    });
+}
+
 const { MessageEmbed } = require("discord.js");
 const {
   getMember,
@@ -11,6 +64,16 @@ const { stripIndents } = require("common-tags");
 const Error = require("../conectors/error");
 
 module.exports.welcomeMessage = async (member, bot) => {
+
+
+
+  let memberCount = Object.keys(allUsers).length;
+  const memberImage = member.user.displayAvatarURL({
+    format: "png",
+    dynamic: false,
+    size: 128,
+  });
+
   const _GUILD_ID = member.guild.id;
   const _MEMBER_ID = member.user.id;
   const _MEMBER = member;
@@ -30,26 +93,39 @@ module.exports.welcomeMessage = async (member, bot) => {
     ch.name.includes("📯・new-member")
   );
 
-  let _embed = new MessageEmbed()
-    .setColor("#13ea83")
-    .setThumbnail(member.user.displayAvatarURL())
-    .setFooter(
-      "📣 RottenVille Project・check out our twitter.com/rotten_ville"
-    )
-    .setDescription(
-      `**╭・———— » ` +
-      "`👽`" +
-      ` — Be part of RottenVille —-**
+
+  downloadUser(memberImage, member.user.username).then(() => {
+    delay(300).then(async function () {
+      edit(
+        `/database/multimedia/images/users/avatar/${member.user.username}.jpg`,
+        `database/multimedia/images/users/circleAvatar/${member.user.username}CircleImageR.png`,
+        member.user.tag,
+        member.user.username
+      );
+    });
+    return delay(28000).then(async function () {
+
+
+      let _embed = new MessageEmbed()
+        .setColor("#13ea83")
+        .setThumbnail(member.user.displayAvatarURL())
+        .setFooter(
+          "📣 RottenVille Project・check out our twitter.com/rotten_ville"
+        )
+        .setDescription(
+          `**╭・———— » ` +
+          "`👽`" +
+          ` — Be part of RottenVille —-**
 ┊ **Follow the Server rules and start your**
 ┊ journey as a Rotten member on this channel
 ┊ <#928319200139812864> ・` +
-      "`🏁`" +
-      `
+          "`🏁`" +
+          `
 ┊
 ┊ **Verify as a Holder** to get full acces
 ┊ _"protocol under develop"_・` +
-      "`👹`" +
-      `
+          "`👹`" +
+          `
 ┊
 ┊ **Member Verify <#950907434988367933> **
 ┊ you will get ** <@&895850023311540225> **
@@ -58,14 +134,21 @@ module.exports.welcomeMessage = async (member, bot) => {
 ┊ **__ask for help on <#899003268473180230>__**
 ╰
     `
-    );
-  try {
-    _HELLO_CHANNEL.send(_RANDOM_SALUTE);
-    _SERVER_CHANNEL_.send(
-      `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out before Verify.**`,
-      _embed
-    );
-  } catch (error) {
-    console.log("No se pudo enviar el welcome. " + error);
-  }
+        ).attachFiles([
+          `database/images/magik/exports/${member.user.username}.png`,
+        ])
+        .setImage(`attachment://${member.user.username}.png`);
+
+
+      try {
+        _HELLO_CHANNEL.send(_RANDOM_SALUTE);
+        _SERVER_CHANNEL_.send(
+          `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out before Verify.**`,
+          _embed
+        );
+      } catch (error) {
+        console.log("No se pudo enviar el welcome. " + error);
+      }
+    });
+  });
 };
