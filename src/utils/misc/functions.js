@@ -2,6 +2,13 @@
 const { updateGuildServerRank,updateGuildRolePlayRank } = require("../database/functions");
 const Path = require("path");
 const Axios = require("axios");
+
+PNG = require("pngjs").PNG;
+var fs = require("fs"),
+  gm = require("gm"),
+  imageMagick = gm.subClass({
+    imageMagick: true,
+  });
 //Exportación de las Funciones Generales
 module.exports = {
   getMember: function (message, toFind = "") {
