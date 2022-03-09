@@ -1,4 +1,11 @@
 const { MessageEmbed } = require("discord.js");
+//Inicialización de js de Node.js
+PNG = require("pngjs").PNG;
+var fs = require("fs"),
+  gm = require("gm"),
+  imageMagick = gm.subClass({
+    imageMagick: true,
+  });
 const {  
   delay,  
   putEmoji,  
