@@ -33,7 +33,7 @@ async function edit(firstImage, secondImage, name, username, size) {
 }
 async function secondStep(inImage, name, username, size) {
   gm(backgroundNewUser)
-    .gravity("West")
+    .gravity("East")
     .fill("#34e637")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
@@ -62,12 +62,16 @@ module.exports.welcomeMessage = async (member, bot) => {
   const _MEMBER_ID = member.user.id;
   const _MEMBER = member;
   const _SALUTE = [
-    `**Hey!! ${_MEMBER} welcome to RottenVille Gang**, make sure to read all the Server Rules <#898963212433764373>, and start to get **Alpha Radiation ${putEmoji(
+    `**Hey!! ${_MEMBER} welcome to RottenVille Gang**, make sure to read all the Server Rules <#928319200139812864>, and start to get **Rotten Points ${putEmoji(
       bot,
       "901151325117636618"
     )}**`,
     `What? A new Survivor? **Welcome ${_MEMBER} to the RottenVille Gang, enjoy your stay!!!**`,
     `**Gang gang, We have a new member in our Gang, congrats ${_MEMBER}** and Welcome to RottenVille!`,
+    `**The RottenVerse welcomes you ${_MEMBER}** with open arms, be the best version of you, be a Rotten.`,
+    `Yo!!! ${_MEMBER} I thought you were not coming, I'm very happy to have you right here, ready to become a Rotten?`,
+    `**Are you ${_MEMBER} right? Welcome to RottenVille!!** The Rottens DAO was waiting for your arrive!!`,
+    `**The Metaverse is very huge ${_MEMBER},** We are very happy that you made the decision to be part of the RottenVerse.`
   ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>

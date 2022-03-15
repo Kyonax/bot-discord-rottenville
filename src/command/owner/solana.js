@@ -1,8 +1,8 @@
 //Importación especifica de Metodos - RichEmbed - Colors - Errors
 const { MessageEmbed } = require("discord.js");
 const { lightbluecolor } = require("../../../database/utils/color/color.json");
-const CandyMachineJSON = require("../../../database/utils/adds/CandyMachine_Airdrop_Data.json");
-const CandyMachineJSON2 = require("../../../database/utils/adds/CandyMachine_Airdrop_Data2.json");
+const CandyMachineJSON = require("../../../database/utils/adds/CandyMachine_Data.json");
+//const CandyMachineJSON2 = require("../../../database/utils/adds/CandyMachine_Data2.json");
 var theblockchainapi = require("theblockchainapi");
 let defaultClient = theblockchainapi.ApiClient.instance; //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
@@ -30,12 +30,12 @@ module.exports = class SolanaCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
-    const walletAdress = "6es28ywC9gGrf2BFXyEKWyGEbG4P6dZMVTLBqx1xxKTe";
+    const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
     var APIKeyID = defaultClient.authentications["APIKeyID"];
-    APIKeyID.apiKey = "tjcqBAvBw68bF34";
+    APIKeyID.apiKey = "6yJMqQjBZmGfc8F";
 
     var APISecretKey = defaultClient.authentications["APISecretKey"];
-    APISecretKey.apiKey = "IjSjwGO2I6ykPiQ";
+    APISecretKey.apiKey = "lvcDMI7f9xhSKoW";
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
 
     let request = new theblockchainapi.GetMintedNFTsRequest(); // GetMintedNFTsRequest |
@@ -45,7 +45,7 @@ module.exports = class SolanaCommand extends BaseCommand {
        
 
     
-    let candyMachineId = "6es28ywC9gGrf2BFXyEKWyGEbG4P6dZMVTLBqx1xxKTe"; // String | The ID of the candy machine
+    let candyMachineId = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E"; // String | The ID of the candy machine
     
     console.log("This takes about 45 seconds... Starting the API call...")
     
@@ -82,25 +82,18 @@ let result2 = await apiInstance.solanaGetAllNFTsFromCandyMachine(network, candyM
       result: result,
     };
 
-    CandyMachineJSON2.dataNFTs["RottenVille"] = {
-      result: result2,
-    };
+    //CandyMachineJSON2.dataNFTs["RottenVille"] = {
+     // result: result2,
+    //};
 
     console.table(result);
 
     fs.writeFile(
-      "./database/utils/adds/CandyMachine_Airdrop_Data.json",
+      "./database/utils/adds/CandyMachine_Data.json",
       JSON.stringify(CandyMachineJSON),
       (err) => {
         if (err) console.log(err);
       }
-    );
-    fs.writeFile(
-      "./database/utils/adds/CandyMachine_Airdrop_Data2.json",
-      JSON.stringify(CandyMachineJSON2),
-      (err) => {
-        if (err) console.log(err);
-      }
-    );
+    );    
   }
 };
