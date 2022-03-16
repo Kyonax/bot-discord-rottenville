@@ -1,1 +1,72 @@
-{"citizenData":{"RottenVille":{"result":{"655875670278144031":{"memberID":"655875670278144031","wallet":"21m5e3ZQyjh6Es7siF7GQ7swby43dTg5ePGTfaENPTDU"},"470365676054249473":{"memberID":"470365676054249473","wallet":"sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9"},"848644710541164595":{"memberID":"848644710541164595","wallet":"CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p"},"786581213430546452":{"memberID":"786581213430546452","wallet":"8tpbt6BGX2hFEv64N9MuH82EYebH5ZxrDCJbCkUCNgcV"},"896239286851076146":{"memberID":"896239286851076146","wallet":"7CB5Vyep45gFoP6qQm57gRDc6GD4r7zjN9zTbAnVMPot"},"325830555746828289":{"memberID":"325830555746828289","wallet":"9SEycz66VrPnAhhH8sXWQzb11FuBaLYiYuMFNrAxxeQj"},"886141095770218508":{"memberID":"886141095770218508","wallet":"D2h8zZ6SfuxLxVAtyJkffChTLEeCeL7WLmL35MCVEbXR"},"557288621061963786":{"memberID":"557288621061963786","wallet":"4w8ydbHaTDFoyK1vgzZSGcF1cYzGDrM1fnhgw2us1qf"},"212019900170895361":{"memberID":"212019900170895361","wallet":"DGEmPUPWTyLPPGVDpcKKX7Nrmtu9cMKngZEqfUZ8N58f"},"791031195269988354":{"memberID":"791031195269988354","wallet":"7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1"},"509537196840321024":{"memberID":"509537196840321024","wallet":"FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc"},"752252250893713448":{"memberID":"752252250893713448","wallet":"3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU"},"719877402616135702":{"memberID":"719877402616135702","wallet":"7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh"},"796131204713021456":{"memberID":"796131204713021456","wallet":"6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv"},"701792795362590811":{"memberID":"701792795362590811","wallet":"99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo"},"248204538941538308":{"memberID":"248204538941538308","wallet":"5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn"}}}}}
+{
+    "citizenData": {
+        "RottenVille": {
+            "result": {
+                "655875670278144031": {
+                    "memberID": "655875670278144031",
+                    "wallet": "21m5e3ZQyjh6Es7siF7GQ7swby43dTg5ePGTfaENPTDU"
+                },
+                "470365676054249473": {
+                    "memberID": "470365676054249473",
+                    "wallet": "sCczYCiWsYeuk3S7mbYDMxpojdeXLHWMUP2Qwr8Zqz9"
+                },
+                "848644710541164595": {
+                    "memberID": "848644710541164595",
+                    "wallet": "CcaeqDZgnSXnrfQWAvPb5vM3Vf7ERYKCkXVGES7U3m8p"
+                },
+                "786581213430546452": {
+                    "memberID": "786581213430546452",
+                    "wallet": "8tpbt6BGX2hFEv64N9MuH82EYebH5ZxrDCJbCkUCNgcV"
+                },
+                "896239286851076146": {
+                    "memberID": "896239286851076146",
+                    "wallet": "7CB5Vyep45gFoP6qQm57gRDc6GD4r7zjN9zTbAnVMPot"
+                },
+                "325830555746828289": {
+                    "memberID": "325830555746828289",
+                    "wallet": "9SEycz66VrPnAhhH8sXWQzb11FuBaLYiYuMFNrAxxeQj"
+                },
+                "886141095770218508": {
+                    "memberID": "886141095770218508",
+                    "wallet": "D2h8zZ6SfuxLxVAtyJkffChTLEeCeL7WLmL35MCVEbXR"
+                },
+                "557288621061963786": {
+                    "memberID": "557288621061963786",
+                    "wallet": "4w8ydbHaTDFoyK1vgzZSGcF1cYzGDrM1fnhgw2us1qf"
+                },
+                "212019900170895361": {
+                    "memberID": "212019900170895361",
+                    "wallet": "DGEmPUPWTyLPPGVDpcKKX7Nrmtu9cMKngZEqfUZ8N58f"
+                },
+                "791031195269988354": {
+                    "memberID": "791031195269988354",
+                    "wallet": "7UFdDokGLBGctLbZPcWyZQ7Wk4eMa6R8j5cdNVN1Ruu1"
+                },
+                "509537196840321024": {
+                    "memberID": "509537196840321024",
+                    "wallet": "FQCbtYqjAq54LXtPRLi2tcCei2LCEw3wMtXW2mtjVYGc"
+                },
+                "752252250893713448": {
+                    "memberID": "752252250893713448",
+                    "wallet": "3N6r6AjppQFDw8uzdEUbSee8pYCoB5uQVkr43eDs1JyU"
+                },
+                "719877402616135702": {
+                    "memberID": "719877402616135702",
+                    "wallet": "7hvUzDe4VtHUXvY5bTkmmNSksy64m9gMbRoy6ozUVWgh"
+                },
+                "796131204713021456": {
+                    "memberID": "796131204713021456",
+                    "wallet": "6B51ajDvfdeQ7XPHK6fNRQHdbXvqNM3SppXneqQMyaBv"
+                },
+                "701792795362590811": {
+                    "memberID": "701792795362590811",
+                    "wallet": "99HMuGsJEEMN1QVbN7cx1SchgWxwujZKt2UUNkTFYyFo"
+                },
+                "248204538941538308": {
+                    "memberID": "248204538941538308",
+                    "wallet": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn"
+                }
+            }
+        }
+    }
+}
