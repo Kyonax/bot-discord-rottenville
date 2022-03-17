@@ -32,10 +32,10 @@ module.exports = class SolanaCommand extends BaseCommand {
     let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
     const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
     var APIKeyID = defaultClient.authentications["APIKeyID"];
-    APIKeyID.apiKey = "FPv8WcgqELAwD2f";
+    APIKeyID.apiKey = "SWXl8DxHmby1AlQ";
 
     var APISecretKey = defaultClient.authentications["APISecretKey"];
-    APISecretKey.apiKey = "djjduc9RpPH2iJ4";
+    APISecretKey.apiKey = "MRiE0FPVZErGVwT";
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
 
     let request = new theblockchainapi.GetMintedNFTsRequest(); // GetMintedNFTsRequest |
