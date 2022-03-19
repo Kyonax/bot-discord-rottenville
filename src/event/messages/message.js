@@ -317,7 +317,7 @@ module.exports = class MessageEvent extends BaseEvent {
           memberID,
           newCoins
         );
-        StateManager.emit("updateCoins", guildID, memberID, newCoins);
+        //StateManager.emit("updateCoins", guildID, memberID, newCoins);
         objectBankMember.memberCoins = newCoins;
         //Rank Members
         let usersRank = [];
