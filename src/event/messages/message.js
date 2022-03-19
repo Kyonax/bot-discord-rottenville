@@ -193,13 +193,13 @@ module.exports = class MessageEvent extends BaseEvent {
             curboost,
             curBoostTime
           );
-          StateManager.emit(
+          /*StateManager.emit(
             "updateBoostMemberTime",
             guildID,
             memberID,
             curboost,
             curBoostTime
-          );
+          );*/
           objectMember.boostMemberTime = curBoostTime;
           if (curBoostTime === 0) {
             const updateMemberBoost = await updateGuildMemberBoost(
@@ -208,13 +208,13 @@ module.exports = class MessageEvent extends BaseEvent {
               1,
               curBoostTime
             );
-            StateManager.emit(
+            /*StateManager.emit(
               "updateMemberBoost",
               guildID,
               memberID,
               1,
               curBoostTime
-            );
+            );*/
             objectMember.memberBoost = 1;
             //Inicialización de Variables Emojis - guildEmojis
             const emojiF = putEmoji(bot, synchronous.emojiID[0].f);
