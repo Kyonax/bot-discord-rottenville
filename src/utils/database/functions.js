@@ -5,6 +5,7 @@ module.exports = {
   initDatabase: async function () {
     StateManager.connection.query(`SELECT * FROM GuildMembers`).catch((err) => {
       if (err) {
+        console.log(err);
         StateManager.connection.destroy();
       }
     });

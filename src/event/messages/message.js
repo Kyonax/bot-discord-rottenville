@@ -86,19 +86,19 @@ module.exports = class MessageEvent extends BaseEvent {
           console.log("El Nuevo Usuario Agregado a la Tabla GuildMembers")
         )
         .catch((err) => console.log(err));
-      await insertMemberMap(guildID, userID, guildMembers, guilds)
+      /*await insertMemberMap(guildID, userID, guildMembers, guilds)
         .then(() =>
           console.log("El Nuevo Usuario Agregado al Mapa GuildMembers")
         )
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err));*/
       await insertMemberBank(guildID, userID)
         .then(() =>
           console.log("El Nuevo Usuario Agregado a la Tabla GuildBank")
         )
         .catch((err) => console.log(err));
-      await insertBankMemberMap(guildID, userID, guildMembersBank, bankGuilds)
+      /*await insertBankMemberMap(guildID, userID, guildMembersBank, bankGuilds)
         .then(() => console.log("El Nuevo Usuario Agregado al Mapa GuildBank"))
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err));*/
       return;
     }
     //Get the ObjectMember by Maps
