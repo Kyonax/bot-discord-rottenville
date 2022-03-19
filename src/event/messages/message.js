@@ -300,13 +300,13 @@ module.exports = class MessageEvent extends BaseEvent {
           updateXP,
           newLevel
         );
-        StateManager.emit(
+        /*StateManager.emit(
           "updateMemberXP",
           guildID,
           memberID,
           updateXP,
           newLevel
-        );
+        );*/
         objectMember.memberLevel = newLevel;
         objectMember.memberXP = updateXP;
         //Ganancia de Coins por Miembro
