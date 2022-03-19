@@ -274,7 +274,7 @@ module.exports = class MessageEvent extends BaseEvent {
               })
               .catch((err) => console.log(err));
           }
-          roleRewards(message, bot, newLevel);
+          //roleRewards(message, bot, newLevel);
           const levelUpEmbed = new MessageEmbed()
             .setAuthor(message.author.username, bot.user.displayAvatarURL())
             .setColor("#13ea83")
@@ -300,13 +300,13 @@ module.exports = class MessageEvent extends BaseEvent {
           updateXP,
           newLevel
         );
-        /*StateManager.emit(
+        StateManager.emit(
           "updateMemberXP",
           guildID,
           memberID,
           updateXP,
           newLevel
-        );*/
+        );
         objectMember.memberLevel = newLevel;
         objectMember.memberXP = updateXP;
         //Ganancia de Coins por Miembro
@@ -317,7 +317,7 @@ module.exports = class MessageEvent extends BaseEvent {
           memberID,
           newCoins
         );
-        //StateManager.emit("updateCoins", guildID, memberID, newCoins);
+        StateManager.emit("updateCoins", guildID, memberID, newCoins);
         objectBankMember.memberCoins = newCoins;
         //Rank Members
         let usersRank = [];
