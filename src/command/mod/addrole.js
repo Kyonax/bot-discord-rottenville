@@ -16,10 +16,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de Miembros
-const guildMembers = new Map();
-const guilds = new Map();
 //Exportación de Comando Addrole
 module.exports = class AddRoleCommand extends BaseCommand {
   constructor() {
@@ -44,13 +40,25 @@ module.exports = class AddRoleCommand extends BaseCommand {
     if (!member) return err.noUserDigitARole(bot, message);
     let autor = message.author;
     let role = args[1];
-    let ObjectAutor = null;
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      autor.id
-    );
+    let _jsonString, ObjectMember = null, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectMember = _member           
+      }
+      
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    });         
+    
     const { moderatorMember, adminMember, inmortalMember } = ObjectAutor;
     if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
     if (member == "allmembers") {
@@ -84,13 +92,7 @@ module.exports = class AddRoleCommand extends BaseCommand {
           message.guild.members.cache.get(args[0])
       );
     }
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(
-      guilds,
-      ObjectMember,
-      message.guild.id,
-      member.id
-    );
+
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     //Validaciones - Permisos de Uso - Usuario - Rol - Rol Encontrado
@@ -120,14 +122,7 @@ module.exports = class AddRoleCommand extends BaseCommand {
         console.log(err);
       }
       ObjectMember.inmortalMember = 1;
-      ObjectMember.moderatorMember = 1;
-      StateManager.emit("updateInmortalMember", message.guild.id, member.id, 1);
-      StateManager.emit(
-        "updateModeratorMember",
-        message.guild.id,
-        member.id,
-        1
-      );
+      ObjectMember.moderatorMember = 1;     
     }
     if (role == "867484139506237441") {
       try {
@@ -135,13 +130,7 @@ module.exports = class AddRoleCommand extends BaseCommand {
       } catch (err) {
         console.log(err);
       }
-      ObjectMember.moderatorMember = 1;
-      StateManager.emit(
-        "updateModeratorMember",
-        message.guild.id,
-        member.id,
-        1
-      );
+      ObjectMember.moderatorMember = 1;     
     }
     //Inicialización de Emojis y su Uso respectivo
     let emojiRol = putEmoji(bot, synchronous.emojiID[0].rol);
@@ -174,98 +163,3 @@ module.exports = class AddRoleCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateInmortalMember", (guildID, memberID, inmortalMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.inmortalMember = inmortalMember;
-});
-
-StateManager.on(
-  "updateModeratorMember",
-  (guildID, memberID, moderatorMember) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.moderatorMember = moderatorMember;
-  }
-);
-
-StateManager.on("updateAdminMember", (guildID, memberID, adminMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.adminMember = adminMember;
-});

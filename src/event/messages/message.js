@@ -1,41 +1,33 @@
+//Databases
+const guildJSON = require("../../../database/misc/Guild.json");
+const guildBansJSON = require("../../../database/misc/GuildBans.json");
+const guildMembersJSON = require("../../../database/misc/GuildMembers.json");
+const guildBankJSON = require("../../../database/misc/GuildBank.json");
+const guildConfigurableJSON = require("../../../database/misc/GuildConfigurable.json");
+const guildRoleplayMembersJSON = require("../../../database/misc/RolePlayMembers.json");
 //Importación especifíca de Metodos - MessageEmbed - putEmoji Function - functions Database - Colors
 const { MessageEmbed } = require("discord.js");
-const {
-  putEmoji,
-  initObjectMember,
-  sortServerRanks,
-} = require("../../utils/misc/functions");
+const { putEmoji, sortServerRanksJSON } = require("../../utils/misc/functions");
 const { generateXP, limitLevel } = require("../../utils/logic/logicMember");
 const { generateCoins } = require("../../utils/logic/logicBank");
-const { roleRewards } = require("../../../database/conectors/roleRewards");
 const {
-  initDatabase,
-  memberExist,
-  insertMember,
-  insertMemberMap,
-  insertBankMemberMap,
-  memberBankExist,
-  insertMemberBank,
-  updateGuildMemberXP,
-  updateGuildBankCoins,
-  updateGuildMemberBoost,
+  isVariableOnJSON,
+  insertMemberIntoJSON,
+  insertMemberBankIntoJSON,
+  getMember,
+  getMemberBank,
+  isPrefixOnJSON,
+  updateGuildMemberBoostJSON,
+  updateGuildMemberXPJSON,
+  updateGuildBankCoinsJSON,
 } = require("../../utils/database/functions");
+const { roleRewards } = require("../../../database/conectors/roleRewards");
 const { reactionEmbeds } = require("../../utils/misc/reaction");
 const { attachMessageImage } = require("../../utils/misc/attachment");
-const {
-  cleverColor,
-  thrizzColor,
-} = require("../../../database/utils/color/color.json");
+const { thrizzColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de cuerpo de Eventos e importación de Conexión Base de Datos
 const BaseEvent = require("../../utils/structure/BaseEvent");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de pregijos guildCommandPrefix
-const guildCommandPrefix = new Map();
-const guildMembers = new Map();
-const guildMembersBank = new Map();
-const bankGuilds = new Map();
-const guilds = new Map();
 //Inicialización de Variables Cooldown
 let cooldown = new Set();
 let cdseconds = 3;
@@ -44,18 +36,10 @@ module.exports = class MessageEvent extends BaseEvent {
   //Constructor del Objeto
   constructor() {
     super("message");
-    //Conexión con la Base de Datos por medio de StateManager
-    this.connection = StateManager.connection;
   }
   async run(bot, message) {
-    initDatabase();
-    //Reaction specific MessageEmbeds
-    await reactionEmbeds(bot, message);
-    //Attachment Message
-    const attachment = message.attachments;
-    attachment.forEach((messageAttachment) => {
-      attachMessageImage(messageAttachment);
-    });
+    //No DMS no Bot Messages
+    if (message.author.bot || message.channel.type === "dm") return;
     //Restricted Servers
     try {
       switch (message.guild.id) {
@@ -68,79 +52,61 @@ module.exports = class MessageEvent extends BaseEvent {
       }
     } catch (error) {
       console.log(
-        "Se ha registrado una interacción fuera de una Guild. [" + error + "]"
+        "Se ha registrado una interacción fuera de una Guild habilitada. [" +
+          error +
+          "]"
       );
     }
-    //No DMS no Bot Messages
-    if (message.author.bot || message.channel.type === "dm") return;
+    //Reaction specific MessageEmbeds
+    // REACTION MESSAGES OUT OF FUNCTION TODO: await reactionEmbeds(bot, message);
+    //Attachment Message
+    const attachment = message.attachments;
+    attachment.forEach((messageAttachment) => {
+      attachMessageImage(messageAttachment);
+    });
     //Inicialización de Variables guildID - memeberID
     const guildID = message.guild.id;
     const userID = message.author.id;
-    //Desición es un Comando o No
-    const existMemberBank = (await memberBankExist(guildID, userID))[0];
-    const existMember = (await memberExist(guildID, userID))[0];
-    //Validación si no Existe El Usuario
-    if (existMember.length === 0 || existMemberBank.length === 0) {
-      await insertMember(guildID, userID)
-        .then(() =>
-          console.log("El Nuevo Usuario Agregado a la Tabla GuildMembers")
-        )
-        .catch((err) => console.log(err));
-      /*await insertMemberMap(guildID, userID, guildMembers, guilds)
-        .then(() =>
-          console.log("El Nuevo Usuario Agregado al Mapa GuildMembers")
-        )
-        .catch((err) => console.log(err));*/
-      await insertMemberBank(guildID, userID)
-        .then(() =>
-          console.log("El Nuevo Usuario Agregado a la Tabla GuildBank")
-        )
-        .catch((err) => console.log(err));
-      /*await insertBankMemberMap(guildID, userID, guildMembersBank, bankGuilds)
-        .then(() => console.log("El Nuevo Usuario Agregado al Mapa GuildBank"))
-        .catch((err) => console.log(err));*/
-      return;
-    }
-    //Get the ObjectMember by Maps
-    let objectMember = null;
-    objectMember = initObjectMember(
-      guilds,
-      objectMember,
-      message.guild.id,
-      message.author.id
+    //Exist data?
+    const isMemberBank = await isVariableOnJSON(
+      guildBankJSON,
+      userID,
+      "memberID",
+      guildID
     );
-    //Get the ObjectBankMember by Maps
-    let objectBankMember = null;
-    objectBankMember = initObjectMember(
-      bankGuilds,
-      objectBankMember,
-      message.guild.id,
-      message.author.id
+    const isMemberRegistered = await isVariableOnJSON(
+      guildMembersJSON,
+      userID,
+      "memberID",
+      guildID
     );
-    if (!objectMember) {
-      await insertMember(guildID, userID)
-        .then(() =>
-          console.log("Nuevo Usuario Agregado a la Tabla GuildMembers")
-        )
-        .catch((err) => console.log(err));
-      await insertMemberMap(guildID, userID, guildMembers, guilds)
-        .then(() => console.log("Nuevo Usuario Agregado al Mapa GuildMembers"))
-        .catch((err) => console.log(err));
-      return;
-    }
-    if (!objectBankMember) {
-      await insertMemberBank(guildID, userID)
-        .then(() => console.log("Nuevo Usuario Agregado a la Tabla GuildBank"))
-        .catch((err) => console.log(err));
-      await insertBankMemberMap(guildID, userID, guildMembersBank, bankGuilds)
-        .then(() => console.log("Nuevo Usuario Agregado al Mapa GuildBank"))
-        .catch((err) => console.log(err));
-      return;
-    }
-    //Prefix del Servidor
-    const prefix = guildCommandPrefix.get(message.guild.id);
 
+    if (isMemberBank != "registered" || isMemberRegistered != "registered") {
+      const registerMember = await insertMemberIntoJSON(
+        guildMembersJSON,
+        guildID,
+        userID
+      ).then(async () => {
+        const registerMemberBank = await insertMemberBankIntoJSON(
+          guildBankJSON,
+          guildID,
+          userID
+        );
+      });
+      return;
+    }
+
+    const Member = await getMember(guildMembersJSON, userID, guildID);
+    const MemberBank = await getMemberBank(guildBankJSON, userID, guildID);
+
+    //Prefix del Servidor
+    const prefix = await isPrefixOnJSON(
+      guildConfigurableJSON,
+      "guildID",
+      guildID
+    );
     const digitPrefix = message.content.slice(0, prefix.length);
+
     if (digitPrefix === prefix) {
       const [cmdName, ...cmdArgs] = message.content
         .slice(prefix.length)
@@ -149,7 +115,7 @@ module.exports = class MessageEvent extends BaseEvent {
         bot.commands.get(cmdName) || bot.commands.get(bot.aliases.get(cmdName));
       if (command) {
         //Validación El usuario es un Administrador
-        const { inmortalMember, memberID } = objectMember;
+        const { inmortalMember, memberID } = Member;
         if (inmortalMember === 0) {
           if (cooldown.has(memberID)) {
             message.delete();
@@ -158,7 +124,7 @@ module.exports = class MessageEvent extends BaseEvent {
               ` ${putEmoji(
                 bot,
                 emojiCancelado
-              )} Debes esperar almenos **${cdseconds}s** para usar otro comando.`
+              )} You need to wait **${cdseconds}s** to use another command.`
             );
           } else {
             command.run(bot, message, cmdArgs);
@@ -172,50 +138,37 @@ module.exports = class MessageEvent extends BaseEvent {
         }, cdseconds * 1000);
       }
     } else {
-      if (existMember.length > 0 || existMemberBank.length > 0) {
+      if (isMemberBank == "registered" || isMemberRegistered == "registered") {
         //Inicialización de Variables por Objetos
-        const { memberCoins } = existMemberBank[0];
+        const { memberCoins } = MemberBank;
         const {
           memberID,
           memberXP,
           memberLevel,
           memberBoost,
           boostMemberTime,
-        } = objectMember;
+        } = Member;
         //Ganancia de XP por Miembro
         const curboost = parseInt(memberBoost);
         if (curboost > 1) {
           let curBoostTime = parseInt(boostMemberTime);
           curBoostTime = curBoostTime - 1;
-          const upadateMemberBoostTime = await updateGuildMemberBoost(
+          const updateMemberBoostTimeJSON = await updateGuildMemberBoostJSON(
+            guildMembersJSON,
             guildID,
-            memberID,
+            userID,
             curboost,
             curBoostTime
           );
-          /*StateManager.emit(
-            "updateBoostMemberTime",
-            guildID,
-            memberID,
-            curboost,
-            curBoostTime
-          );*/
-          objectMember.boostMemberTime = curBoostTime;
+
           if (curBoostTime === 0) {
-            const updateMemberBoost = await updateGuildMemberBoost(
+            const updateMemberBoostJSON = await updateGuildMemberBoostJSON(
+              guildMembersJSON,
               guildID,
-              memberID,
+              userID,
               1,
               curBoostTime
             );
-            /*StateManager.emit(
-              "updateMemberBoost",
-              guildID,
-              memberID,
-              1,
-              curBoostTime
-            );*/
-            objectMember.memberBoost = 1;
             //Inicialización de Variables Emojis - guildEmojis
             const emojiF = putEmoji(bot, synchronous.emojiID[0].f);
             const emojiBoostB = putEmoji(bot, synchronous.emojiID[0].boostb);
@@ -240,7 +193,7 @@ module.exports = class MessageEvent extends BaseEvent {
                 "**Boosts de Experiencia**",
                 `Si deseas **comprar** otro usa ` +
                   "`" +
-                  guildCommandPrefix.get(guildID) +
+                  prefix +
                   "payboost <base> `" +
                   `${emojiBoostB}` +
                   " Ó `<avanzado> `" +
@@ -294,99 +247,31 @@ module.exports = class MessageEvent extends BaseEvent {
             levelUpEmbed
           );
         }
-        const updateMemberXP = await updateGuildMemberXP(
+        const updateMemberXPJSON = await updateGuildMemberXPJSON(
+          guildMembersJSON,
           guildID,
-          memberID,
+          userID,
           updateXP,
           newLevel
         );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          updateXP,
-          newLevel
-        );
-        objectMember.memberLevel = newLevel;
-        objectMember.memberXP = updateXP;
         //Ganancia de Coins por Miembro
         const coins = generateCoins();
         let newCoins = coins + parseInt(memberCoins);
-        const updateMemberCoins = await updateGuildBankCoins(
+        const updateMemberCoinsJSON = await updateGuildBankCoinsJSON(
+          guildBankJSON,
           guildID,
-          memberID,
+          userID,
           newCoins
         );
-        StateManager.emit("updateCoins", guildID, memberID, newCoins);
-        objectBankMember.memberCoins = newCoins;
         //Rank Members
         let usersRank = [];
-        const updateServerRanks = await sortServerRanks(
+        const updateServerRanks = await sortServerRanksJSON(
+          guildMembersJSON,
           usersRank,
-          guilds,
-          message,
-          StateManager
+          guildID,
+          message
         );
       }
     }
   }
 };
-
-StateManager.on("prefixFetched", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
-
-StateManager.on("prefixUpdate", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);

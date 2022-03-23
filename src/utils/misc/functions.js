@@ -168,6 +168,59 @@ module.exports = {
       }
     }    
   },
+  sortServerRanksJSON: async function (_json_file, usersRank, _guild, message) {
+       
+    let _jsonString, i = 0
+
+
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })    
+
+    JSON.parse(_jsonString).forEach(variable => {
+      if (_guild == variable.guildID) {    
+        usersRank.push({
+          "memberXP": variable.memberXP,
+          "memberID": variable.memberID
+        });        
+      }      
+    });    
+
+    _json_file = JSON.parse(_jsonString);
+    
+    usersRank.sort(function (a, b) {
+      if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
+        return 1;
+      }
+      if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
+
+    _json_file.forEach(variable => {
+      i = 0
+      usersRank.forEach(rank => {
+        if (variable.memberID === rank.memberID) {
+          variable.serverRank = i + 1       
+        }
+        i++
+      });          
+    }); 
+    
+    const writeData = await fs.writeFileSync(
+      "./database/misc/GuildMembers.json",
+      JSON.stringify(_json_file),
+      (err) => {
+        if (err) console.log(err);
+      }
+    );
+    
+  },
   sortServerRanks: function (usersRank, guilds, message, StateManager) {
     const arrayMembers = guilds.get(message.guild.id).Member;
     for (let index = 0; index < arrayMembers.length; index++) {

@@ -12,10 +12,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de Miembros
-const guildMembers = new Map();
-const guilds = new Map();
 //Exportación de Comando Bondage
 module.exports = class KickCommand extends BaseCommand {
   constructor() {
@@ -41,11 +37,11 @@ module.exports = class KickCommand extends BaseCommand {
     );
     let reason = args.join(" ").slice(22);
     let kickChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "💬・mod"
+      (ch) => ch.name === "💬・text-mod"
     );
     if (!kickChannel) {
       return message.guild.channels
-        .create("💬・mod", {
+        .create("💬・text-mod", {
           type: "text",
           permissionOverwrites: [
             {
@@ -57,13 +53,22 @@ module.exports = class KickCommand extends BaseCommand {
         })
         .catch((err) => console.log(err));
     }
-    let ObjectAutor = null;
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      autor.id
-    );
+
+    let _jsonString, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {                   
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    });     
+    
     const { inmortalMember } = ObjectAutor;
     //Validación de Variables - Permisos - Usuario - Razón - AutoBanneo - Usuarios Restringidos - Canal Existente
     if (inmortalMember != 1) return perm.inmortalPerms(bot, message);
@@ -73,8 +78,7 @@ module.exports = class KickCommand extends BaseCommand {
     if (member.roles.cache.get("766816088024940584"))
       return perm.cantCatchSynks(bot, message);
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].warning);
-    if (message.guild.id != synchronous.guildID) emoji = "⚠";
+    let emoji = putEmoji(bot, synchronous.emojiID[0].warning);    
     //Mensaje Embed del Comando
     let embed = new MessageEmbed()
       .setColor(warningColor)
@@ -91,83 +95,3 @@ module.exports = class KickCommand extends BaseCommand {
     kickChannel.send(embed);
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateInmortalMember", (guildID, memberID, inmortalMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.inmortalMember = inmortalMember;
-});

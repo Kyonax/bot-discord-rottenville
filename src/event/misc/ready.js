@@ -9,26 +9,17 @@ const {
   StatusLanguageRoles,
   StatusLanguageUsers,
 } = require("../../utils/languages/languageStatus");
+const { insertNewGuildIntoJSON, isGuildOnJSON } = require("../../utils/database/functions");
+const guildJSON = require("../../../database/misc/Guild.json");
+const guildConfigurableJSON = require("../../../database/misc/GuildConfigurable.json");
 //Importación de cuerpo de Eventos e importación de Conexión Base de Datos
 const BaseEvent = require("../../utils/structure/BaseEvent");
-const StateManager = require("../../utils/database/StateManager");
 const { twitter } = require("../../utils/misc/twitter");
-//Mapas
-const guildCommandPrefix = new Map();
-const guildBans = new Map();
-const guildMembers = new Map();
-const guildMembersBank = new Map();
-const guilds = new Map();
-const bankGuilds = new Map();
-const rolePlayMembers = new Map();
-const guildsRoleplay = new Map();
 //Exportación de Evento ready
 module.exports = class ReadyEvent extends BaseEvent {
   //Constructor del Objeto
   constructor() {
-    super("ready");
-    //Conexión con la Base de Datos por medio de StateManager
-    this.connection = StateManager.connection;
+    super("ready");    
   }
   async run(bot) {
     const Twitter_Notify = await twitter(bot);
@@ -48,7 +39,16 @@ module.exports = class ReadyEvent extends BaseEvent {
     let auxNumberOfRoles = 0;
     let auxNumberOfEmojis = 0;
     //Selección y conexión Con DATOS de la Guild Correspondiente
-    bot.guilds.cache.forEach((guild) => {
+    bot.guilds.cache.forEach(async (guild)  => {
+      let guildRegistered, guildConfigurableRegistered
+      let dataRegistered = await isGuildOnJSON(guildJSON,guildConfigurableJSON,guild.id)
+      guildRegistered = dataRegistered[0]
+      guildConfigurableRegistered = dataRegistered[1]
+      
+      if (guildRegistered != "registered" || guildConfigurableRegistered != "registered") {
+        const newGuildRegister = await insertNewGuildIntoJSON(guildJSON,guildConfigurableJSON,guild.id,guild.ownerID);
+        console.log(`NEW GUILD REGISTERED - Guild: ${guild.id} & Owner: ${guild.ownerID}`)
+      }
       //Numero de Miembros Totales
       auxNumberOfMembers = numberOfMembers;
       numberOfMembers = auxNumberOfMembers + guild.members.cache.size;
@@ -66,175 +66,20 @@ module.exports = class ReadyEvent extends BaseEvent {
       //Nombre de todos los Roles
       guild.roles.cache.forEach((rol) => {
         nameOfRoles.push(rol.name);
-      });
-      //Conexión e Implementación del Respectivo Prefijo
-      this.connection
-        .query(
-          `SELECT cmdPrefix FROM GuildConfigurable WHERE guildID = '${guild.id}'`
-        )
-        .then((result) => {
-          const guildID = guild.id;
-          const guildPrefix = result[0][0].cmdPrefix;
-          guildCommandPrefix.set(guildID, guildPrefix);
-          StateManager.emit("prefixFetched", guildID, guildPrefix);
-        })
-        .catch((err) => console.log(err));
-      //Creación de los párametros de los Usuarios por Mapas
-      let membersGuild = [];
-      try {
-        this.connection
-          .query(`SELECT * FROM GuildMembers WHERE guildID = '${guild.id}'`)
-          .then((result) => {
-            const member = result[0];
-            member.forEach((memb) => {
-              guildMembers.set(memb.memberID, {
-                memberID: memb.memberID,
-                guildID: memb.guildID,
-                memberLanguage: memb.memberLanguage,
-                adminMember: memb.adminMember,
-                inmortalMember: memb.inmortalMember,
-                moderatorMember: memb.moderatorMember,
-                serverRank: memb.serverRank,
-                memberXP: memb.memberXP,
-                memberLevel: memb.memberLevel,
-                memberBoost: memb.memberBoost,
-                boostMemberTime: memb.boostMemberTime,
-                warnings: memb.warnings,
-              });
-              if (guildMembers.get(memb.memberID).guildID === guild.id) {
-                membersGuild.push(guildMembers.get(memb.memberID));
-              }
-              guilds.set(memb.guildID, {
-                Member: membersGuild,
-              });
-              StateManager.emit(
-                "membersFetched",
-                membersGuild,
-                memb.guildID,
-                memb.memberID,
-                memb.memberLanguage,
-                memb.adminMember,
-                memb.inmortalMember,
-                memb.moderatorMember,
-                memb.serverRank,
-                memb.memberXP,
-                memb.memberLevel,
-                memb.memberBoost,
-                memb.boostMemberTime,
-                memb.warnings
-              );
-            });
-          })
-          .catch((err) => console.log(err));
-      } catch (err) {
-        console.log(err);
-      }
-      //Creación de los párametros de los Usuarios por Mapas
-      let membersRolePlayGuild = [];
-      try {
-        this.connection
-          .query(`SELECT * FROM RolePlayMembers WHERE guildID = '${guild.id}'`)
-          .then((result) => {
-            const member = result[0];
-            member.forEach((memb) => {
-              rolePlayMembers.set(memb.memberID, {
-                memberID: memb.memberID,
-                guildID: memb.guildID,
-                gameRolePlay: memb.gameRolePLay,
-                rolePlayRank: memb.rolePlayRank,
-                memberXP: memb.memberXP,
-                memberLevel: memb.memberLevel,
-                memberAge: memb.memberAge,
-                memberRespect: memb.memberRespect,
-                memberWork: memb.memberWork,
-                memberRelation: memb.memberRelation,
-                memberBiography: memb.memberBiography,
-              });
-              if (rolePlayMembers.get(memb.memberID).guildID === guild.id) {
-                membersRolePlayGuild.push(rolePlayMembers.get(memb.memberID));
-              }
-              guildsRoleplay.set(memb.guildID, {
-                Member: rolePlayMembers,
-              });
-              StateManager.emit(
-                "membersRolePlayFetched",
-                membersRolePlayGuild,
-                memb.guildID,
-                memb.memberID,
-                memb.gameRolePlay,
-                memb.rolePlayRank,
-                memb.memberXP,
-                memb.memberLevel,
-                memb.memberAge,
-                memb.memberRespect,
-                memb.memberWork,
-                memb.memberRelation,
-                memb.memberBiography
-              );
-            });
-          })
-          .catch((err) => console.log(err));
-      } catch (err) {
-        console.log(err);
-      }
-      //Creación de banco de Usuarios por Mapas
-      let membersBank = [];
-      try {
-        this.connection
-          .query(`SELECT * FROM GuildBank WHERE guildID = '${guild.id}'`)
-          .then((result) => {
-            const member = result[0];
-            member.forEach((memb) => {
-              guildMembersBank.set(memb.memberID, {
-                memberID: memb.memberID,
-                guildID: memb.guildID,
-                memberCoins: memb.memberCoins,
-              });
-              if (guildMembersBank.get(memb.memberID).guildID === guild.id) {
-                membersBank.push(guildMembersBank.get(memb.memberID));
-              }
-              bankGuilds.set(memb.guildID, {
-                Member: membersBank,
-              });
-              StateManager.emit(
-                "bankMembersFetched",
-                membersBank,
-                memb.guildID,
-                memb.memberID,
-                memb.memberCoins
-              );
-            });
-          })
-          .catch((err) => console.log(err));
-      } catch (err) {
-        console.log(err);
-      }
-      try {
-        this.connection
-          .query(`SELECT * FROM GuildBans WHERE guildID = '${guild.id}'`)
-          .then((result) => {
-            const member = result[0];
-            member.forEach((mem) => {
-              guildBans.set(mem.memberID, { guildID: mem.guildID });
-              StateManager.emit("guildBansFetched", mem.memberID, mem.guildID);
-            });
-          })
-          .catch((err) => console.log(err));
-      } catch (err) {
-        console.log(err);
-      }
+      });                            
     });
+
     //Status Bot
     let translate = [];
     let statuses = [
-      "Danger Zone",
-      "Radiation",
+      "Danger Zones "+numberOfGuilds,
+      "Radiation "+numberOfMembers*numberOfRoles,
       "Alpha Zone",
       "Gamma Zone",
       "Beta Zone",
       "Radioactive Levels",
       "Mutations",
-      "Rotten Points",
+      "Rotten Points "+numberOfMembers*numberOfRoles/6,
       "Radiation Exposure",
       "Survivor Radar",
       "Transmutate Radiation",

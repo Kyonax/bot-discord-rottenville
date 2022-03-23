@@ -44,22 +44,30 @@ module.exports = class WarnCommand extends BaseCommand {
     let warnChannel = message.guild.channels.cache.find(
       (ch) => ch.name === "💬・mod"
     );
-    let ObjectAutor = null;
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(
-      guilds,
-      ObjectMember,
-      message.guild.id,
-      member.id
-    );
+
+
+    let _jsonString, ObjectMember = null, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectMember = _member           
+      }
+      
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    }); 
+    
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      autor.id
-    );
+    
     let { warnings } = ObjectMember;
     const { moderatorMember } = ObjectAutor;
     //Validación de Variables Permisos - Usuario - Razón - Auto Warn - Permisos Restringidos - Canal para enviar El Embed
@@ -71,8 +79,8 @@ module.exports = class WarnCommand extends BaseCommand {
     if (member.roles.cache.get("623715872506118154"))
       return perm.cantCatchSynks(bor, message);
     warnings++;
-    await updateGuildMemberWarns(message.guild.id, member.id, warnings);
-    StateManager.emit("updateWarnings", message.guild.id, member.id, warnings);
+    //await updateGuildMemberWarns(message.guild.id, member.id, warnings);
+    //StateManager.emit("updateWarnings", message.guild.id, member.id, warnings);
     //Inicialización de Emojis y su Uso respectivo
     let emoji = putEmoji(bot, synchronous.emojiID[0].caution);
     if (message.guild.id != synchronous.guildID) emoji = "⚠";
@@ -135,86 +143,3 @@ module.exports = class WarnCommand extends BaseCommand {
     }
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateModeratorMember",
-  (guildID, memberID, moderatorMember) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.moderatorMember = moderatorMember;
-  }
-);

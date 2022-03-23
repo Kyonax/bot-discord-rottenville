@@ -15,10 +15,6 @@ const Perms = require("../../../database/conectors/perm");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de Miembros
-const guildMembers = new Map();
-const guilds = new Map();
 //Exportación de Comando Poll
 module.exports = class PollCommand extends BaseCommand {
   constructor() {
@@ -41,13 +37,22 @@ module.exports = class PollCommand extends BaseCommand {
     const autor = getMember(message, message.author.id);
     let [cmd, role] = message.content.split(" ");
     let poll = args.slice(1).join(" ");
-    let ObjectAuthor = null;
-    ObjectAuthor = initObjectMember(
-      guilds,
-      ObjectAuthor,
-      message.guild.id,
-      autor.id
-    );
+
+    let _jsonString, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {                   
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    });     
+
     //Permisos de Autor
     const { moderatorMember } = ObjectAuthor;
     //Validaciones - Permisos de Uso - Usuario - Rol - Rol Encontrado
@@ -97,86 +102,3 @@ module.exports = class PollCommand extends BaseCommand {
     encChannel.send(embed);
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateModeratorMember",
-  (guildID, memberID, moderatorMember) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.moderatorMember = moderatorMember;
-  }
-);

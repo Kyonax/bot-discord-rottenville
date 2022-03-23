@@ -2,13 +2,11 @@
 const { MessageEmbed } = require("discord.js");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { readdirSync } = require("fs");
+const fs = require("fs");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
-//Inicialización de Mapas guildCommandPrefix
-const guildCommandPrefix = new Map();
 //Exportación del Comando help
 module.exports = class HelpCommand extends BaseCommand {
   constructor() {
@@ -27,8 +25,20 @@ module.exports = class HelpCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     const error = new Error();
+    let prefix, _jsonString    
     //Inicialización Guild Prefix
-    const prefix = guildCommandPrefix.get(message.guild.id);
+    _jsonString = await fs.readFileSync('./database/misc/GuildConfigurable.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    JSON.parse(_jsonString).forEach(guild => {       
+      if (message.guild.id == guild.guildID) {
+        prefix = guild.cmdPrefix;             
+      }      
+    });
     //Validación de contenido y especificación del comando a Usar.
     if (!args[0]) {
       const categories = readdirSync("./src/command");
@@ -119,11 +129,3 @@ module.exports = class HelpCommand extends BaseCommand {
     }
   }
 };
-
-StateManager.on("prefixFetched", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
-
-StateManager.on("prefixUpdate", (guildID, newPrefix) => {
-  guildCommandPrefix.set(guildID, newPrefix);
-});

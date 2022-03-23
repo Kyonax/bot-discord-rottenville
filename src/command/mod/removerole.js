@@ -47,20 +47,26 @@ module.exports = class RemoveRoleCommand extends BaseCommand {
     if (!member) return err.noUserDigitRRole(bot, message);
     let autor = message.author;
     let role = args[1];
-    let ObjectMember = null;
-    let ObjectAutor = null;
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      autor.id
-    );
-    ObjectMember = initObjectMember(
-      guilds,
-      ObjectMember,
-      message.guild.id,
-      member.id
-    );
+
+    let _jsonString, ObjectMember = null, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectMember = _member           
+      }
+      
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    }); 
+
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     const { moderatorMember, adminMember, inmortalMember } = ObjectAutor;

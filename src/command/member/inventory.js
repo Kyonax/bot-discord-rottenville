@@ -2,8 +2,7 @@
 const {
   getMember,
   delay,
-  putEmoji,
-  initObjectMember,
+  putEmoji,  
   numberWithCommas,
 } = require("../../utils/misc/functions");
 const { circleImage, downloadUser } = require("../../utils/magik/functions");
@@ -16,10 +15,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de Miembros
-const guildMembers = new Map();
-const guilds = new Map();
 //Inicialización de js de Node.js
 PNG = require("pngjs").PNG;
 var fs = require("fs"),
@@ -164,26 +159,32 @@ module.exports = class InventaryCommand extends BaseCommand {
       return err.noCorrectChannel(bot, message, `849365833327181874`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
+    let _jsonString, ObjectMember = null, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectMember = _member           
+      }
+      
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    });        
+    
     //Validación si en el Mensaje se usó un Usuario
     let memberImage = member.user.displayAvatarURL({
       format: "png",
       dynamic: false,
       size: 128,
-    });
-    let ObjectMember = null;
-    let ObjectAutor = null;
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      message.author.id
-    );
-    ObjectMember = initObjectMember(
-      guilds,
-      ObjectMember,
-      message.guild.id,
-      member.id
-    );
+    });    
+    
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     const { memberXP, serverRank, memberLevel, memberBoost, warnings } =
@@ -376,122 +377,3 @@ module.exports = class InventaryCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateBoostMemberTime",
-  (guildID, memberID, memberBoost, boostMemberTime) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.memberBoost = memberBoost;
-    ObjectMember.boostMemberTime = boostMemberTime;
-  }
-);
-
-StateManager.on(
-  "updateMemberBoost",
-  (guildID, memberID, memberBoost, boostMemberTime) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.memberBoost = memberBoost;
-    ObjectMember.boostMemberTime = boostMemberTime;
-  }
-);
-
-StateManager.on(
-  "updateModeratorMember",
-  (guildID, memberID, moderatorMember) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.moderatorMember = moderatorMember;
-  }
-);
-
-StateManager.on("updateWarnings", (guildID, memberID, warnings) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.warnings = warnings;
-});
-
-StateManager.on(
-  "updateMemberLevel",
-  (guildID, memberID, memberLevel, memberXP) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.memberLevel = memberLevel;
-    ObjectMember.memberXP = memberXP;
-  }
-);

@@ -13,12 +13,7 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
-//Mapa de Miembros
-const guildMembersBank = new Map();
-const bankGuilds = new Map();
-const guildMembers = new Map();
-const guilds = new Map();
+const fs = require("fs");
 //Exportación de Comando Bank
 module.exports = class BankCommand extends BaseCommand {
   constructor() {
@@ -41,21 +36,34 @@ module.exports = class BankCommand extends BaseCommand {
     //Inicialización para el Usuario escrito
     let autor = message.author;
     let member = getMember(message, args[0]);
-    //Creación de Objeto Bank Member
-    let ObjectMember = null;
-    let ObjectBankMember = null;
-    ObjectBankMember = initObjectMember(
-      bankGuilds,
-      ObjectBankMember,
-      message.guild.id,
-      member.id
-    );
-    ObjectMember = initObjectMember(
-      guilds,
-      ObjectMember,
-      message.guild.id,
-      message.author.id
-    );
+    let _jsonString, _jsonString_bank, ObjectMember = null, ObjectBankMember = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    _jsonString_bank = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    JSON.parse(_jsonString_bank).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectBankMember = _member           
+      }      
+    });
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (member.id == _member.memberID) {
+        ObjectMember = _member           
+      }      
+    });        
+    
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     const { inmortalMember } = ObjectMember;
@@ -97,144 +105,3 @@ module.exports = class BankCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersUpdate",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on("updateCoins", (guildID, memberID, newCoins) => {
-  let objectBankMember = null;
-  objectBankMember = initObjectMember(
-    bankGuilds,
-    objectBankMember,
-    guildID,
-    memberID
-  );
-  objectBankMember.memberCoins = newCoins;
-});
-
-StateManager.on("updateMemberCoins", (guildID, memberID, memberCoins) => {
-  let ObjectBankMember = null;
-  ObjectBankMember = initObjectMember(
-    bankGuilds,
-    ObjectBankMember,
-    guildID,
-    memberID
-  );
-  ObjectBankMember.memberCoins = memberCoins;
-});
-
-StateManager.on("updateAuthorCoins", (guildID, memberID, memberCoins) => {
-  let ObjectBankMember = null;
-  ObjectBankMember = initObjectMember(
-    bankGuilds,
-    ObjectBankMember,
-    guildID,
-    memberID
-  );
-  ObjectBankMember.memberCoins = memberCoins;
-});
-
-StateManager.on("updateInmortalMember", (guildID, memberID, inmortalMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.inmortalMember = inmortalMember;
-});

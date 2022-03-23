@@ -43,20 +43,28 @@ module.exports = class BanCommand extends BaseCommand {
     const perm = new Perms();
     //Inicialización de Variables - Canal - Usuario - Razón - Longitud - ID de Usuario
     let banChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "💬・mod"
+      (ch) => ch.name === "💬・text-mod"
     );
     let autor = message.author;
     let member = message.guild.member(
       message.mentions.users.first() || message.guild.members.cache.get(args[0])
     );
     let reason = args.join(" ").slice(22);
-    let ObjectAutor = null;
-    ObjectAutor = initObjectMember(
-      guilds,
-      ObjectAutor,
-      message.guild.id,
-      autor.id
-    );
+    let _jsonString, ObjectAutor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {                   
+      if(message.author.id == _member.memberID){
+        ObjectAutor = _member
+      }
+    });         
+    
     const { adminMember } = ObjectAutor;
     //Validación de Variables - Permisos de Comandos - Falta de Usuario - Falta de Razón - Auto Baneo
     // - Usuarios Restringidos - Canal Existente
@@ -101,83 +109,3 @@ module.exports = class BanCommand extends BaseCommand {
     banChannel.send(embed);
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateAdminMember", (guildID, memberID, adminMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.adminMember = adminMember;
-});

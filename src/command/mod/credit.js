@@ -1,3 +1,5 @@
+const guildBankJSON = require("../../../database/misc/GuildBank.json");
+
 const { MessageEmbed } = require("discord.js");
 const BaseCommand = require("../../utils/structure/BaseCommand");
 const {
@@ -13,7 +15,7 @@ const {
 const {
   updateGuildBankCoins,
   updateGuildMemberBoost,
-  updateGuildLevel,
+  updateGuildLevel, updateGuildBankCoinsJSON
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const Error = require("../../../database/conectors/error");
@@ -25,6 +27,7 @@ const bankGuilds = new Map();
 //Mapa de Miembros
 const guildMembers = new Map();
 const guilds = new Map();
+const fs = require("fs");
 
 module.exports = class CreditCommand extends BaseCommand {
   constructor() {
@@ -53,20 +56,34 @@ module.exports = class CreditCommand extends BaseCommand {
       .setFooter("Banco Internacional Mundo Kyonax !")
       .setTimestamp();
 
-    let object_Bank_Member = null;
-    let object_Guild_Member = null;
-    object_Guild_Member = initObjectMember(
-      guilds,
-      object_Guild_Member,
-      _GUILD_ID,
-      _MEMBER_ID
-    );
-    object_Bank_Member = initObjectMember(
-      bankGuilds,
-      object_Bank_Member,
-      _GUILD_ID,
-      _MEMBER_ID
-    );
+    let _jsonString, _jsonString_bank, object_Guild_Member = null, object_Bank_Member = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    _jsonString_bank = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    JSON.parse(_jsonString_bank).forEach(_member => {       
+      if(_MEMBER.id == _member.memberID) {
+        object_Bank_Member = _member           
+      }      
+    });
+
+    JSON.parse(_jsonString).forEach(_member => {       
+      if (_MEMBER.id == _member.memberID) {
+        object_Guild_Member = _member           
+      }      
+    });        
+    
 
     let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
     const _actual_Member_Coins = parseInt(object_Bank_Member.memberCoins);
@@ -79,19 +96,8 @@ module.exports = class CreditCommand extends BaseCommand {
 
     if (object_Guild_Member.moderatorMember === 1) {
       const _MOD_CREDIT_BANK = _actual_Member_Coins + 100000;
-      const UPDATE_MOD_CREDIT = updateGuildBankCoins(
-        _GUILD_ID,
-        _MEMBER_ID,
-        _MOD_CREDIT_BANK
-      );
-      object_Bank_Member.memberCoins = _MOD_CREDIT_BANK;
-
-      StateManager.emit(
-        "updateMemberCoins",
-        _GUILD_ID,
-        _MEMBER_ID,
-        _MOD_CREDIT_BANK
-      );
+      
+      const updateBankJSON = await updateGuildBankCoinsJSON(guildBankJSON, _GUILD_ID, _MEMBER_ID,_MOD_CREDIT_BANK);            
 
       EMBED.setDescription(
         `<@${_MEMBER_ID}> ha pedido una **Inyección de Capital a** <@248204538941538308> la deuda externa aumentó.`
@@ -108,21 +114,11 @@ module.exports = class CreditCommand extends BaseCommand {
       );
     }
     if (object_Guild_Member.inmortalMember === 1) {
+
       const _INMORTAL_CREDIT_BANK = _actual_Member_Coins + 200000;
-      const UPDATE_INMORTAL_CREDIT = updateGuildBankCoins(
-        _GUILD_ID,
-        _MEMBER_ID,
-        _INMORTAL_CREDIT_BANK
-      );
-      object_Bank_Member.memberCoins = _INMORTAL_CREDIT_BANK;
 
-      StateManager.emit(
-        "updateMemberCoins",
-        _GUILD_ID,
-        _MEMBER_ID,
-        _INMORTAL_CREDIT_BANK
-      );
-
+      const updateBankJSON = await updateGuildBankCoinsJSON(guildBankJSON, _GUILD_ID, _MEMBER_ID,_INMORTAL_CREDIT_BANK);            
+    
       EMBED.setDescription(
         `<@${_MEMBER_ID}> ha pedido una **Inyección de Capital a** <@248204538941538308> la deuda externa aumentó.`
       );
@@ -139,19 +135,8 @@ module.exports = class CreditCommand extends BaseCommand {
     }
     if (object_Guild_Member.adminMember === 1) {
       const _ADMIN_CREDIT_BANK = _actual_Member_Coins + 3000000;
-      const UPDATE_ADMIN_CREDIT = updateGuildBankCoins(
-        _GUILD_ID,
-        _MEMBER_ID,
-        _ADMIN_CREDIT_BANK
-      );
-      object_Bank_Member.memberCoins = _ADMIN_CREDIT_BANK;
 
-      StateManager.emit(
-        "updateMemberCoins",
-        _GUILD_ID,
-        _MEMBER_ID,
-        _ADMIN_CREDIT_BANK
-      );
+      const updateBankJSON = await updateGuildBankCoinsJSON(guildBankJSON, _GUILD_ID, _MEMBER_ID,_ADMIN_CREDIT_BANK);                  
 
       EMBED.setDescription(
         `<@${_MEMBER_ID}> ha pedido una **Inyección de Capital a** <@248204538941538308> la deuda externa aumentó.`
@@ -173,122 +158,3 @@ module.exports = class CreditCommand extends BaseCommand {
     );
   }
 };
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersUpdate",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on("updateCoins", (guildID, memberID, newCoins) => {
-  let objectBankMember = null;
-  objectBankMember = initObjectMember(
-    bankGuilds,
-    objectBankMember,
-    guildID,
-    memberID
-  );
-  objectBankMember.memberCoins = newCoins;
-});
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateAdminMember", (guildID, memberID, adminMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.adminMember = adminMember;
-});

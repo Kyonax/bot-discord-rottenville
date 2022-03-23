@@ -4,7 +4,6 @@ const { putEmoji } = require("../../utils/misc/functions.js");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de Usuario
-const { memberExist } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
@@ -27,12 +26,22 @@ module.exports = class ClearCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    //Miembro existente
-    const existMember = (
-      await memberExist(message.guild.id, message.author.id)
-    )[0];
+    let _jsonString, ObjectAuthor = null        
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })        
+
+    JSON.parse(_jsonString).forEach(_member => {                  
+      if(message.author.id == _member.memberID){
+        ObjectAuthor = _member
+      }
+    });        
     //Inicialización de Párametros Member
-    const { moderatorMember } = existMember[0];
+    const { moderatorMember } = ObjectAuthor;
     //Insuficientes Permisos para usar el Comando
     if (moderatorMember != 1) return perm.moderatorPerms(bot, message);
     //Emoji from Map
