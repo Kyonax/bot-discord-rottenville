@@ -18,10 +18,10 @@ const fs = require("fs");
 module.exports = class BankCommand extends BaseCommand {
   constructor() {
     super(
-      "exposure",
-      ["coins", "banco", "monedas", "synkoins"],
-      "Deploy a panel with the exposure information.",
-      "bank`\n**Admin Options:** `<user>`",
+      "rp",
+      ["coins", "bank", "monedas", "rottenpoints","points","monedas"],
+      "Deploy a panel with the Rotten Points.",
+      "rp`\n**Admin Options:** `<user>`",
       "_***Everyone***_",
       "member"
     );
@@ -76,28 +76,24 @@ module.exports = class BankCommand extends BaseCommand {
       if (member.id != autor.id) return perm.inmortalPerms(bot, message);
     }
     //Inicialización de Emojis y su Uso respectivo
-    let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
+    let emoji = putEmoji(bot, "905441645980422214");
     //Creación del Mensaje Embed del Comando
     let embed = new MessageEmbed()
-      .setTitle(`**${member.displayName}'s Level Radiation**`)
+      .setTitle(`**${member.displayName}'s Rotten Points Bank**`)
       .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(
-        `${putEmoji(bot, synchronous.emojiID[0].afirmado)} Checking <@${
+        `${putEmoji(bot, "905441645980422214")} Checking <@${
           member.id
-        }> Alpha Radiation.`
+        }> Rotten Points.`
       )
       .setColor("#b4e634")
       .addField("**User**", `**[${member.displayName}]**`, true)
       .addField(
-        " **Alpha Radiation**",
-        `**${numberWithCommas(memberCoins)} ${emoji} Becquerel.**`,
+        " **Rotten Points**",
+        `**${numberWithCommas(memberCoins)} ${emoji} $RP.**`,
         true
-      )
-      .addFields({ name: "\u200B", value: "\u200B", inline: true })
-      .addField("**Beta Radiation**", `**0 ${emoji} Becquerel.**`, true)
-      .addField("**Gamma Radiation**", `**0 ${emoji} Becquerel.**`, true)
-      .addFields({ name: "\u200B", value: "\u200B", inline: true })
-      .setFooter("RottenBot radiation scanner")
+      )      
+      .setFooter("RottenBot Bank System")
       .setTimestamp();
     //Lectura del Mensaje - Envío al canal Destinado - Mensaje que usa el Comando Eliminado
     message.channel.send(embed).then((msg) => {

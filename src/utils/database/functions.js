@@ -76,7 +76,14 @@ module.exports = {
     let type = _json_file
     let _jsonString
 
-    switch (_json_file[0].memberCoins) {
+    _jsonString = await fs.readFileSync(type, 'utf8', (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err)
+        return
+      }
+    })
+
+    switch (JSON.parse(_jsonString)[0].memberCoins) {
       case undefined:
         type = './database/misc/GuildMembers.json'
         break;
@@ -84,13 +91,7 @@ module.exports = {
         type = './database/misc/GuildBank.json'
         break;
     }
-
-    _jsonString = await fs.readFileSync(type, 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
+    
 
     JSON.parse(_jsonString).forEach(variable => {
       if (_guild == variable.guildID && _variable == variable[_index]) _result = "registered"
@@ -642,6 +643,16 @@ module.exports = {
 
     return _result
 
+  },  
+  updateGuildMemberBoostJSON: function (
+    guildID,
+    memberID,
+    memberBoost,
+    boostMemberTime
+  ) {
+    return StateManager.connection.query(
+      `UPDATE GuildMembers SET memberBoost='${memberBoost}', boostMemberTime='${boostMemberTime}' WHERE guildID='${guildID}' AND memberID='${memberID}'`
+    );
   },
   updateGuildMemberXPJSON: async function (_json_file, _guild, _member, _memberXP, _memberLevel) {
 

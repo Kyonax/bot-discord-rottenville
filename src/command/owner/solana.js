@@ -42,48 +42,52 @@ module.exports = class SolanaCommand extends BaseCommand {
     request.candy_machine_id = walletAdress;
     request.network = "mainnet-beta";
 
-       
-
-    
     let candyMachineId = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E"; // String | The ID of the candy machine
-    
-    console.log("This takes about 45 seconds... Starting the API call...")
-    
-    let result = await apiInstance.solanaGetAllNFTsFromCandyMachine(network, candyMachineId).then((data) => {
-      console.log('API called successfully.');
-      return data;
-    }, (error) => {
-      console.error(error);
-      return null;
-    });
-    
+
+    console.log("This takes about 45 seconds... Starting the API call...");
+
+    let result = await apiInstance
+      .solanaGetAllNFTsFromCandyMachine(network, candyMachineId)
+      .then(
+        (data) => {
+          console.log("API called successfully.");
+          return data;
+        },
+        (error) => {
+          console.error(error);
+          return null;
+        }
+      );
+
     console.log(result);
-    
+
     // String | The ID of the candy machine
     // We don't have to specify whether the candy is v1 or v2 this time. It auto-detects it.
 
-    
-console.log("This takes about 45 seconds... Starting the API call...");
-console.log(
-    "Retrieving all NFTs from a V2 candy machines... This API call can take around 45 seconds..."
-)
+    console.log("This takes about 45 seconds... Starting the API call...");
+    console.log(
+      "Retrieving all NFTs from a V2 candy machines... This API call can take around 45 seconds..."
+    );
 
-let result2 = await apiInstance.solanaGetAllNFTsFromCandyMachine(network, candyMachineId).then((data) => {
-  console.log('API called successfully.');
-  return data;
-}, (error) => {
-  console.error(error);
-  return null;
-});
-
-
+    let result2 = await apiInstance
+      .solanaGetAllNFTsFromCandyMachine(network, candyMachineId)
+      .then(
+        (data) => {
+          console.log("API called successfully.");
+          return data;
+        },
+        (error) => {
+          console.error(error);
+          return null;
+        }
+      );
 
     CandyMachineJSON.dataNFTs["RottenVille"] = {
       result: result,
     };
 
     //CandyMachineJSON2.dataNFTs["RottenVille"] = {
-     // result: result2,
+    // result: result2,
     //};
 
     console.table(result);
@@ -94,6 +98,6 @@ let result2 = await apiInstance.solanaGetAllNFTsFromCandyMachine(network, candyM
       (err) => {
         if (err) console.log(err);
       }
-    );    
+    );
   }
 };

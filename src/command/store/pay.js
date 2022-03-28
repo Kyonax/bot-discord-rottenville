@@ -1,3 +1,5 @@
+const guildMembersJSON = require("../../../database/misc/GuildMembers.json");
+const guildBankJSON = require("../../../database/misc/GuildBank.json");
 //Importación especifica de Metodos - RichEmbed - getMember putEmoji Functions - Errors - kyocolor Colors - synkoin Emoji
 const { MessageEmbed } = require("discord.js");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
@@ -15,6 +17,8 @@ const {
   updateGuildBankCoins,
   updateGuildMemberBoost,
   updateGuildLevel,
+  updateGuildBankCoinsJSON,
+  updateGuildMemberXPJSON,
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { limit } = require("../../utils/logic/logicMember");
@@ -60,27 +64,50 @@ module.exports = class PayCommand extends BaseCommand {
       .setFooter("RottenBot radiation scanner")
       .setTimestamp();
     //Creación de Objeto Bank Member
-    let ObjectBankMember = null;
-    let ObjectBankAuthor = null;
-    let ObjectAuthor = null;
-    ObjectAuthor = initObjectMember(
-      guilds,
-      ObjectAuthor,
-      message.guild.id,
-      autor.id
+    let _jsonString,
+      _jsonString_bank,
+      ObjectAuthor = null,
+      ObjectBankMember = null,
+      ObjectBankAuthor = null;
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
     );
-    ObjectBankAuthor = initObjectMember(
-      bankGuilds,
-      ObjectBankAuthor,
-      message.guild.id,
-      autor.id
+
+    _jsonString_bank = await fs.readFileSync(
+      "./database/misc/GuildBank.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
     );
-    ObjectBankMember = initObjectMember(
-      bankGuilds,
-      ObjectBankMember,
-      message.guild.id,
-      member.id
-    );
+
+    JSON.parse(_jsonString_bank).forEach((_member) => {
+      if (member.id == _member.memberID) {
+        ObjectBankMember = _member;
+      }
+
+      if (autor.id == _member.memberID) {
+        ObjectBankAuthor = _member;
+      }
+    });
+
+    JSON.parse(_jsonString).forEach((_member) => {
+      if (autor.id == _member.memberID) {
+        ObjectAuthor = _member;
+      }
+    });
+
     if (!ObjectBankMember.memberCoins)
       return err.noFindMemberBank(bot, message);
     if (!isNaN(type)) return err.noTypeFoundPay(bot, message, type);
@@ -98,32 +125,21 @@ module.exports = class PayCommand extends BaseCommand {
       if (actualAuthorCoins < args[2])
         return err.dontHaveSynkoins(bot, message, autor.displayName);
       //Transferencia de Monedas - Autor - Usuario
-      const updateMemberCoins = await updateGuildBankCoins(
+
+      const updateBankJSON = await updateGuildBankCoinsJSON(
+        guildBankJSON,
         message.guild.id,
         member.id,
         updateMCoins
       );
-      const updateAuthorCoins = await updateGuildBankCoins(
+
+      const updateAuthorBankJSON = await updateGuildBankCoinsJSON(
+        guildBankJSON,
         message.guild.id,
         autor.id,
         updateACoins
       );
-      //Update Map
-      ObjectBankAuthor.memberCoins = updateACoins;
-      ObjectBankMember.memberCoins = updateMCoins;
-      //Emit Update
-      StateManager.emit(
-        "updateMemberCoins",
-        message.guild.id,
-        member.id,
-        updateMCoins
-      );
-      StateManager.emit(
-        "updateAuthorCoins",
-        message.guild.id,
-        autor.id,
-        updateACoins
-      );
+
       //Inicialización de Emojis y su Uso respectivo
       let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
       //Inicialización de Variable Razón de Transferencia
@@ -143,7 +159,7 @@ module.exports = class PayCommand extends BaseCommand {
         `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
         true
       );
-    } else if (type.toLowerCase() === "boost") {
+    } else if (type.toLowerCase() === "boostd") {
       if (
         !message.member.roles.cache.some(
           (role) => role.name === "🏰 RottenVille Citizen"
@@ -166,7 +182,7 @@ module.exports = class PayCommand extends BaseCommand {
       switch (args[1]) {
         case "base":
           break;
-        case "avanzado":
+        case "advanced":
           break;
         case "premium":
           break;
@@ -179,6 +195,10 @@ module.exports = class PayCommand extends BaseCommand {
         //Validación de Variables - No suficientes Monedas
         if (actualAuthorCoins < boostB)
           return err.dontHaveSynkoins(bot, message, autor.displayName);
+        
+        
+        
+
         const updateMemberBoost = updateGuildMemberBoost(
           message.guild.id,
           autor.id,
@@ -341,7 +361,7 @@ module.exports = class PayCommand extends BaseCommand {
           true
         );
       }
-    } else if (args[0] === "level") {
+    } else if (args[0] === "leveld") {
       if (
         !message.member.roles.cache.some(
           (role) => role.name === "🏰 RottenVille Citizen"
