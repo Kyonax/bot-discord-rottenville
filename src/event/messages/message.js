@@ -37,18 +37,14 @@ module.exports = class MessageEvent extends BaseEvent {
   constructor() {
     super("message");
   }
-  async run(bot, message) {
+  async run(bot, message) {    
     //No DMS no Bot Messages
     if (message.author.bot || message.channel.type === "dm") return;
     //Restricted Servers
     try {
       switch (message.guild.id) {
         case "894634118267146272":
-          break;
-        default:
-          if (message.member.id == "248204538941538308") break;
-          if (message.member.id == "894243194051629156") break;
-          return;
+          break;        
       }
     } catch (error) {
       console.log(
@@ -56,7 +52,7 @@ module.exports = class MessageEvent extends BaseEvent {
           error +
           "]"
       );
-    }
+    }    
     //Reaction specific MessageEmbeds
     // REACTION MESSAGES OUT OF FUNCTION TODO: await reactionEmbeds(bot, message);
     //Attachment Message
@@ -79,7 +75,7 @@ module.exports = class MessageEvent extends BaseEvent {
       userID,
       "memberID",
       guildID
-    );
+    );    
 
     if (isMemberBank != "registered" || isMemberRegistered != "registered") {
       const registerMember = await insertMemberIntoJSON(

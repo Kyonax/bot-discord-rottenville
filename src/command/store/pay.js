@@ -1,5 +1,6 @@
 const guildMembersJSON = require("../../../database/misc/GuildMembers.json");
 const guildBankJSON = require("../../../database/misc/GuildBank.json");
+const fs = require("fs");
 //Importación especifica de Metodos - RichEmbed - getMember putEmoji Functions - Errors - kyocolor Colors - synkoin Emoji
 const { MessageEmbed } = require("discord.js");
 const { roleRewards } = require("../../../database/conectors/roleRewards");

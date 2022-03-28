@@ -174,16 +174,8 @@ module.exports = {
   insertMemberIntoJSON: async function (_json_file, _guild, _member) {
     let _result = "not_registered"
     let _jsonString
-
-     _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    _json_file = JSON.parse(_jsonString)
-
+    
+    
     try {
       _json_file.push({
         memberID: _member,
@@ -216,16 +208,8 @@ module.exports = {
   },
   insertMemberBankIntoJSON: async function (_json_file, _guild, _member) {
     let _result = "not_registered"
-    let _jsonString
-
-    _jsonString = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    _json_file = JSON.parse(_jsonString)
+    let _jsonString  
+    
 
     try {
       _json_file.push({
