@@ -124,7 +124,7 @@ module.exports = class InventaryCommand extends BaseCommand {
             " **Normal Rank:** " +
             _member_rank.serverRank +
             " **Weekly Rank:** " +
-            iterator +
+            parseInt(iterator) +
             1,
           false
         );
