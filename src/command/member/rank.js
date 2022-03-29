@@ -114,18 +114,18 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 0;
+    let iterator = 1;
 
     ranking.forEach((_member_rank) => {
-      if (iterator <= 10) {
+      if (iterator <= 11) {
         embed.addField(
           "**User**",
           `<@${_member_rank.memberID}> ` +
             " **Normal Rank:** " +
             _member_rank.serverRank +
             " **Weekly Rank:** " +
-            parseInt(iterator) +
-            1,
+            parseInt(iterator)
+            ,
           false
         );
       }
