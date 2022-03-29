@@ -119,16 +119,14 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
-          text_phrase = text_phrase + `\n `+`<@${_member_rank.memberID}> ` +
+          text_phrase = text_phrase + `\n `+"`"+parseInt(iterator)+".` "+`<@${_member_rank.memberID}> ` +
           " **Weekly XP:** " +
-          _member_rank.memberXP +
-          " **Weekly Rank:** " +
-          parseInt(iterator)        
+          _member_rank.memberXP + putEmoji(bot, "899083263816122458")        
       }
       iterator++;
     });
 
-    text_phrase = text_phrase.replace("none", "");
+    text_phrase = text_phrase.replace("none", "\n");
 
     embed.addField(
           `**${message.guild.name} Weekly Ranking Event**`, text_phrase ,
