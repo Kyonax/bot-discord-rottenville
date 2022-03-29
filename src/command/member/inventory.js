@@ -155,7 +155,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     const channelLevelUP = message.guild.channels.cache.find(
       (ch) => ch.name === "👽・level-up"
     );
-    if (message.channel.id !== "898994751305576488")
+    if (message.channel.name !== "👽・level-up")
       return err.noCorrectChannel(bot, message, `849365833327181874`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
