@@ -109,30 +109,29 @@ module.exports = class InventaryCommand extends BaseCommand {
     let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
 
     //Mensaje para el Embed de Usuario para este Comando
-    let embed = new MessageEmbed()
-      .setTitle(`**${message.guild.name} Weekly Ranking Event**`)
+    let embed = new MessageEmbed()      
       .setThumbnail("https://i.imgur.com/mylTtoH.png")
 
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 1;
+    let iterator = 1, text_phrase = "none";
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
-        embed.addField(
-          "",
-          `<@${_member_rank.memberID}> ` +
-            " **Weekly XP:** " +
-            _member_rank.memberXP +
-            " **Weekly Rank:** " +
-            parseInt(iterator),
-          false
-        );
+          text_phrase = text_phrase + `/n `+`<@${_member_rank.memberID}> ` +
+          " **Weekly XP:** " +
+          _member_rank.memberXP +
+          " **Weekly Rank:** " +
+          parseInt(iterator)        
       }
       iterator++;
     });
 
+    embed.addField(
+          `**${message.guild.name} Weekly Ranking Event**`, text_phrase ,
+          false
+        );
     message.channel.send(
       `**<@${member.id}> look at the Server Ranking of the Week!! **${putEmoji(
         bot,
