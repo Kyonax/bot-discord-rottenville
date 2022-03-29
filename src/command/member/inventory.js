@@ -188,17 +188,17 @@ module.exports = class InventaryCommand extends BaseCommand {
     );
 
     JSON.parse(_jsonString).forEach((_member) => {
-      if (member.id == _member.memberID) {
+      if (member.id == _member.memberID && _member.guildID == message.guild.id) {
         ObjectMember = _member;
       }
 
-      if (message.author.id == _member.memberID) {
+      if (message.author.id == _member.memberID && _member.guildID == message.guild.id) {
         ObjectAutor = _member;
       }
     });
 
     JSON.parse(_jsonStringWeek).forEach((_member) => {
-      if (member.id == _member.memberID) {
+      if (member.id == _member.memberID && _member.guildID == message.guild.id) {
         ObjectMemberWeek = _member;
       }
     });
