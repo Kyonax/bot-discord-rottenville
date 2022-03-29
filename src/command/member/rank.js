@@ -110,7 +110,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     //Mensaje para el Embed de Usuario para este Comando
     let embed = new MessageEmbed()
-      .setTitle(`**${message.guild.name} Weekly Ranking**`)
+      .setTitle(`**${message.guild.name} Weekly Ranking Event**`)
       .setThumbnail("https://i.imgur.com/mylTtoH.png")
 
       .setColor("#00ED90")
@@ -121,10 +121,10 @@ module.exports = class InventaryCommand extends BaseCommand {
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
         embed.addField(
-          "**User**",
+          "",
           `<@${_member_rank.memberID}> ` +
-            " **Normal Rank:** " +
-            _member_rank.serverRank +
+            " **Weekly XP:** " +
+            _member_rank.memberXP +
             " **Weekly Rank:** " +
             parseInt(iterator),
           false
