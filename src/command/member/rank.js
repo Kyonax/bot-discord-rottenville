@@ -115,7 +115,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 1, text_phrase = "none";
+    let iterator = 1, text_phrase;
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
