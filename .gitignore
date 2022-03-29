@@ -1,1 +1,7 @@
 .env
+./database/misc/Guild
+./database/misc/GuildBank
+./database/misc/GuildBans
+./database/misc/GuildConfigurable
+./database/misc/GuildMembers
+./database/misc/RolePlayMembers
