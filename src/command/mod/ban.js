@@ -23,6 +23,7 @@ const StateManager = require("../../utils/database/StateManager");
 //Mapa de Miembros
 const guildMembers = new Map();
 const guilds = new Map();
+const fs = require("fs");
 //Exportación de Comando Ban
 module.exports = class BanCommand extends BaseCommand {
   constructor() {
