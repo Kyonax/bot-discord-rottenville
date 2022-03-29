@@ -129,7 +129,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     text_phrase = text_phrase.replace("none", "\n ");
 
     embed.addField(
-          `**${ putEmoji(bot, "905441646362120232")  + message.guild.name} Top 10 active members of the Week:**`, text_phrase ,
+        putEmoji(bot, "905441646362120232")+` **${message.guild.name} Top 10 active members of the Week:**`, text_phrase ,
           false
         );
     message.channel.send(
