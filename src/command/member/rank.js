@@ -118,7 +118,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     let iterator = 1, text_phrase = "none";
 
     ranking.forEach((_member_rank) => {
-      if (iterator <= 11) {
+      if (iterator <= 10) {
           text_phrase = text_phrase + `\n `+"`"+parseInt(iterator)+".` "+`<@${_member_rank.memberID}> ` +
           " **Weekly XP:** " +
           _member_rank.memberXP + putEmoji(bot, "899083263816122458")        
@@ -126,10 +126,10 @@ module.exports = class InventaryCommand extends BaseCommand {
       iterator++;
     });
 
-    text_phrase = text_phrase.replace("none", "\n");
+    text_phrase = text_phrase.replace("none", "\n ");
 
     embed.addField(
-          `**${message.guild.name} Weekly Ranking Event**`, text_phrase ,
+          `**${message.guild.name} Top 10 active members of the Week:**`, text_phrase ,
           false
         );
     message.channel.send(
