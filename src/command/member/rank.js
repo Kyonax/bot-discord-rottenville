@@ -80,19 +80,21 @@ module.exports = class InventaryCommand extends BaseCommand {
       if (_member.guildID === message.guild.id) {
         JSON.parse(_jsonStringWeek).forEach((_member_week) => {
           if (_member_week.memberID == _member.memberID) {
-            _member.memberXP = _member.memberXP - _member_week.memberXP;
-            ranking.push(_member);
+            if (_member_week.guildID == message.guild.id) {
+              _member.memberXP = _member.memberXP - _member_week.memberXP;
+              ranking.push(_member);
 
-            ranking.sort(function (a, b) {
-              if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
-                return 1;
-              }
-              if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
-                return -1;
-              }
-              // a must be equal to b
-              return 0;
-            });
+              ranking.sort(function (a, b) {
+                if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
+                  return 1;
+                }
+                if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
+                  return -1;
+                }
+                // a must be equal to b
+                return 0;
+              });
+            }
           }
         });
       }
@@ -124,8 +126,7 @@ module.exports = class InventaryCommand extends BaseCommand {
             " **Normal Rank:** " +
             _member_rank.serverRank +
             " **Weekly Rank:** " +
-            parseInt(iterator)
-            ,
+            parseInt(iterator),
           false
         );
       }
