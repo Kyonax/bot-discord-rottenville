@@ -30,6 +30,7 @@ module.exports = class StoreCommand extends BaseCommand {
     );
   }
   async run(bot, message) {
+    if (message.guild.id != "894634118267146272") return;
     return
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});

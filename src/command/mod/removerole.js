@@ -35,6 +35,7 @@ module.exports = class RemoveRoleCommand extends BaseCommand {
   }
 
   async run(bot, message, args) {
+    if (message.guild.id != "894634118267146272") return;
     addMessageToBin(bot, message);
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});

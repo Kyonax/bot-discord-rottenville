@@ -26,6 +26,7 @@ module.exports = class CitizenCommand extends BaseCommand {
   }
 
   async run(bot, message, args) {
+    if (message.guild.id != "894634118267146272") return;
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
     //Creación de Objetos

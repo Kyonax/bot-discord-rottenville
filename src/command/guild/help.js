@@ -21,6 +21,7 @@ module.exports = class HelpCommand extends BaseCommand {
   }
 
   async run(bot, message, args) {
+    if (message.guild.id != "894634118267146272") return;
     //Eliminación de mensaje que usó el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos

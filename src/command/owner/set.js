@@ -30,6 +30,7 @@ module.exports = class PrefixCommand extends BaseCommand {
     this.connection = StateManager.connection;
   }
   async run(bot, message, args) {
+    if (message.guild.id != "894634118267146272") return;
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
     //Creación de Objetos
