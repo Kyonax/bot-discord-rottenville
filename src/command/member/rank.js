@@ -119,7 +119,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
-          text_phrase = text_phrase + `/n `+`<@${_member_rank.memberID}> ` +
+          text_phrase = text_phrase + `\n `+`<@${_member_rank.memberID}> ` +
           " **Weekly XP:** " +
           _member_rank.memberXP +
           " **Weekly Rank:** " +
