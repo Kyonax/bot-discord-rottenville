@@ -115,7 +115,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 1, text_phrase;
+    let iterator = 1, text_phrase = "none";
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 11) {
@@ -127,6 +127,8 @@ module.exports = class InventaryCommand extends BaseCommand {
       }
       iterator++;
     });
+
+    text_phrase = text_phrase.replace("none", "");
 
     embed.addField(
           `**${message.guild.name} Weekly Ranking Event**`, text_phrase ,
