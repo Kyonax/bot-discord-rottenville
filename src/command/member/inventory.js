@@ -2,7 +2,7 @@
 const {
   getMember,
   delay,
-  putEmoji,  
+  putEmoji,
   numberWithCommas,
 } = require("../../utils/misc/functions");
 const { circleImage, downloadUser } = require("../../utils/magik/functions");
@@ -159,39 +159,84 @@ module.exports = class InventaryCommand extends BaseCommand {
       return err.noCorrectChannel(bot, message, `849365833327181874`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
-    let _jsonString, ObjectMember = null, ObjectAutor = null        
+    let _jsonString,
+      _jsonStringWeek,
+      ObjectMemberWeek = null,
+      ObjectMember = null,
+      ObjectAutor = null;
     //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })        
+    );
 
-    JSON.parse(_jsonString).forEach(_member => {       
+    _jsonStringWeek = await fs.readFileSync(
+      "./database/misc/GuildMembersWeek.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
+
+    JSON.parse(_jsonString).forEach((_member) => {
       if (member.id == _member.memberID) {
-        ObjectMember = _member           
+        ObjectMember = _member;
       }
-      
-      if(message.author.id == _member.memberID){
-        ObjectAutor = _member
+
+      if (message.author.id == _member.memberID) {
+        ObjectAutor = _member;
       }
-    });        
-    
+    });
+
+    JSON.parse(_jsonStringWeek).forEach((_member) => {
+      if (member.id == _member.memberID) {
+        ObjectMemberWeek = _member;
+      }
+    });
+
     //Validación si en el Mensaje se usó un Usuario
     let memberImage = member.user.displayAvatarURL({
       format: "png",
       dynamic: false,
       size: 128,
-    });    
-    
+    });
+
+    if (ObjectMemberWeek === null) {
+      ObjectMemberWeek = {
+        memberID: member.id,
+        guildID: message.guild.id,
+        memberLanguage: "es",
+        adminMember: 0,
+        inmortalMember: 0,
+        moderatorMember: 0,
+        serverRank: 0,
+        memberXP: 0,
+        memberLevel: 1,
+        memberBoost: 1,
+        boostMemberTime: 0,
+        warnings: 0,
+      };
+    }    
+
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
     const { memberXP, serverRank, memberLevel, memberBoost, warnings } =
       ObjectMember;
     const { moderatorMember } = ObjectAutor;
+    const memberXPWeek = ObjectMemberWeek.memberXP;
     //Inicialización de Variables - Experiencia - Nivel - Boost
     let curxp = parseInt(memberXP);
+    let curxp_week = parseInt(memberXPWeek);
+    let actual_week_xp = curxp - curxp_week;
     let currank = parseInt(serverRank);
     let curlevel = parseInt(memberLevel);
     let curbost = parseInt(memberBoost);
@@ -341,6 +386,11 @@ module.exports = class InventaryCommand extends BaseCommand {
         "**Level Boosts**",
         `**${putEmoji(bot, "899083263816122458")} x ${curbost}** ${emojiBoost}`,
         true
+      )
+      .addField(
+        "**Weekly XP | 1 Week = 1 NFT EVENT**",
+        `**${numberWithCommas(actual_week_xp) + putEmoji(bot, "899083263816122458")} in just 1 Week | ${message.guild.name} NFT**`,
+        false
       )
       .attachFiles([
         `./database/multimedia/images/magik/exports/bar${message.author.id}Level.png`,
