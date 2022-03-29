@@ -35,8 +35,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       "member"
     );
   }
-  async run(bot, message, args) {
-    if (message.guild.id != "894634118267146272") return;
+  async run(bot, message, args) {    
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
