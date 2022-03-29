@@ -15,6 +15,7 @@ const Perms = require("../../../database/conectors/perm");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
+const fs = require("fs");
 //Exportación de Comando Poll
 module.exports = class BattlesCommand extends BaseCommand {
   constructor() {

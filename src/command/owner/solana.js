@@ -28,20 +28,22 @@ module.exports = class SolanaCommand extends BaseCommand {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    const err = new Error();
-    let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
-    const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
-    var APIKeyID = defaultClient.authentications["APIKeyID"];
-    APIKeyID.apiKey = "SWXl8DxHmby1AlQ";
+    const err = new Error();    
+    const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";     
 
-    var APISecretKey = defaultClient.authentications["APISecretKey"];
-    APISecretKey.apiKey = "MRiE0FPVZErGVwT";
+    let defaultClient = theblockchainapi.ApiClient.instance;
+
+    // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
+
+    let APIKeyID = defaultClient.authentications["APIKeyID"];
+    APIKeyID.apiKey = "fWJRegVMetQi3i9";
+
+    let APISecretKey = defaultClient.authentications["APISecretKey"];
+    APISecretKey.apiKey = "YK0H2jRh8cgK1Kg";
+
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
 
-    let request = new theblockchainapi.GetMintedNFTsRequest(); // GetMintedNFTsRequest |
-    request.candy_machine_id = walletAdress;
-    request.network = "mainnet-beta";
-
+    let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
     let candyMachineId = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E"; // String | The ID of the candy machine
 
     console.log("This takes about 45 seconds... Starting the API call...");
@@ -61,7 +63,7 @@ module.exports = class SolanaCommand extends BaseCommand {
 
     console.log(result);
 
-    // String | The ID of the candy machine
+    candyMachineId = "BdgRfRzzFEWTa7Ka5bzWEy1QidSc5qVvn8zq7vRBrDL3"; // String | The ID of the candy machine
     // We don't have to specify whether the candy is v1 or v2 this time. It auto-detects it.
 
     console.log("This takes about 45 seconds... Starting the API call...");
@@ -69,7 +71,7 @@ module.exports = class SolanaCommand extends BaseCommand {
       "Retrieving all NFTs from a V2 candy machines... This API call can take around 45 seconds..."
     );
 
-    let result2 = await apiInstance
+    result = await apiInstance
       .solanaGetAllNFTsFromCandyMachine(network, candyMachineId)
       .then(
         (data) => {
@@ -81,6 +83,8 @@ module.exports = class SolanaCommand extends BaseCommand {
           return null;
         }
       );
+
+    console.log(result);
 
     CandyMachineJSON.dataNFTs["RottenVille"] = {
       result: result,

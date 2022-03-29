@@ -13,6 +13,7 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de Usuario
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
+const fs = require("fs");
 //Importación de la Clase Padre y Conexión con la Base de Datos
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
 //Exportación de Comando Poll

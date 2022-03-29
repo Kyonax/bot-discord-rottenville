@@ -16,6 +16,7 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
+const fs = require("fs");
 //Exportación de Comando Addrole
 module.exports = class AddRoleCommand extends BaseCommand {
   constructor() {
