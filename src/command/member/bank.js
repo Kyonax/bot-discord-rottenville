@@ -66,6 +66,8 @@ module.exports = class BankCommand extends BaseCommand {
         ObjectMember = _member           
       }}      
     });        
+
+    console.log(ObjectMember)
     
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
