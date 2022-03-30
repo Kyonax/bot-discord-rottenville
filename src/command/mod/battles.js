@@ -32,12 +32,13 @@ module.exports = class BattlesCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => {});    
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
     const autor = getMember(message, message.author.id);
     let number = args[3];
+    let member = getMember(message, args[0]);
     if (!number) number = 1;
     let [cmd, role] = message.content.split(" ");
     let _competitor_1 = args[1];
@@ -61,6 +62,7 @@ module.exports = class BattlesCommand extends BaseCommand {
     
     //Permisos de Autor
     const { moderatorMember } = ObjectAuthor;
+    
     //Validaciones - Permisos de Uso - Usuario - Rol - Rol Encontrado
     if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
     if (!role.includes("@")) {
@@ -73,9 +75,9 @@ module.exports = class BattlesCommand extends BaseCommand {
       .setTitle(`**Solana RottenVille-Battles | Tournament 🏁**`)
       .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(
-        `**🥊 The competitor with more reactions wins!! (Every Reaction cost 100 AR ${putEmoji(
+        `**🥊 The competitor with more reactions wins!! (Every Reaction cost 100 $RP ${putEmoji(
           bot,
-          "905441646362120232"
+          "905441645980422214"
         )})**
 
 ${putEmoji(bot, "918868797367148604")} **<@&918875434639323136> # VS ${putEmoji(
@@ -83,9 +85,9 @@ ${putEmoji(bot, "918868797367148604")} **<@&918875434639323136> # VS ${putEmoji(
           "918869733783269436"
         )} <@&918875434639323136> #219 **
 
-**You have only 24Hrs,** if you vote for the winner Rotten you can win AR ${putEmoji(
+**You have only 24Hrs,** if you vote for the winner Rotten you can win $RP ${putEmoji(
           bot,
-          "905441646362120232"
+          "905441645980422214"
         )}, **all the radiation voted for the Winner Rotten goes directly to their exposure.**
 
 ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
@@ -105,7 +107,7 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
       .setImage(`attachment://RTSolBattlesTournament${number}.png`)
       .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
-
+/*
     const encChannel = message.guild.channels.cache.find(
       (ch) => ch.name === "🎁・rottenville-battles"
     );
@@ -123,7 +125,7 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
         })
         .catch((err) => console.log(err));
     }
-
+*/
     message.channel.send(
       `**RTSolBattles Tournament ${gRole}!! | ${_competitor_1} VS ${_competitor_2}** ${putEmoji(
         bot,

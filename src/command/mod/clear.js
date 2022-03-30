@@ -28,6 +28,7 @@ module.exports = class ClearCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
+    let member = getMember(message, args[0]);
     let _jsonString, ObjectAuthor = null        
     //Inicialización Guild Prefix
     _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
