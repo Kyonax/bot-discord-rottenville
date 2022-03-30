@@ -102,9 +102,9 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
         true
       )
       .attachFiles([
-        `database/multimedia/images/demo/server/RTSolBattlesTournament${number}.png`,
+        `database/multimedia/images/demo/server/RTSolBattlesTournament${number}.jpeg`,
       ])
-      .setImage(`attachment://RTSolBattlesTournament${number}.png`)
+      .setImage(`attachment://RTSolBattlesTournament${number}.jpeg`)
       .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
 /*
