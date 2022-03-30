@@ -53,16 +53,18 @@ module.exports = class BankCommand extends BaseCommand {
       }
     })
 
-    JSON.parse(_jsonString_bank).forEach(_member => {       
+    JSON.parse(_jsonString_bank).forEach(_member => {    
+      if (_member.guildID == member.guild.id) {   
       if (member.id == _member.memberID) {
         ObjectBankMember = _member           
-      }      
+      }}
     });
 
-    JSON.parse(_jsonString).forEach(_member => {       
+    JSON.parse(_jsonString).forEach(_member => {  
+      if (_member.guildID == member.guild.id) {     
       if (member.id == _member.memberID) {
         ObjectMember = _member           
-      }      
+      }}      
     });        
     
     if (ObjectMember === null)

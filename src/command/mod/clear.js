@@ -37,10 +37,11 @@ module.exports = class ClearCommand extends BaseCommand {
       }
     })        
 
-    JSON.parse(_jsonString).forEach(_member => {                  
+    JSON.parse(_jsonString).forEach(_member => {   
+      if (_member.guildID == member.guild.id) {               
       if(message.author.id == _member.memberID){
         ObjectAuthor = _member
-      }
+      }}
     });        
     //Inicialización de Párametros Member
     const { moderatorMember } = ObjectAuthor;

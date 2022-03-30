@@ -52,10 +52,11 @@ module.exports = class BattlesCommand extends BaseCommand {
       }
     })        
 
-    JSON.parse(_jsonString).forEach(_member => {                  
+    JSON.parse(_jsonString).forEach(_member => {  
+      if (_member.guildID == member.guild.id) {                
       if(message.author.id == _member.memberID){
         ObjectAuthor = _member
-      }
+      }}
     });         
     
     //Permisos de Autor

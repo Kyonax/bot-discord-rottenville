@@ -56,14 +56,15 @@ module.exports = class WarnCommand extends BaseCommand {
       }
     })        
 
-    JSON.parse(_jsonString).forEach(_member => {       
+    JSON.parse(_jsonString).forEach(_member => {     
+      if (_member.guildID == member.guild.id) {  
       if (member.id == _member.memberID) {
         ObjectMember = _member           
       }
       
       if(message.author.id == _member.memberID){
         ObjectAutor = _member
-      }
+      }}
     }); 
     
     if (ObjectMember === null)

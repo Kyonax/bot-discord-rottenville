@@ -73,16 +73,18 @@ module.exports = class CreditCommand extends BaseCommand {
       }
     })
 
-    JSON.parse(_jsonString_bank).forEach(_member => {       
+    JSON.parse(_jsonString_bank).forEach(_member => {  
+      if (_member.guildID == member.guild.id) {     
       if(_MEMBER.id == _member.memberID) {
         object_Bank_Member = _member           
-      }      
+      }      }
     });
 
     JSON.parse(_jsonString).forEach(_member => {       
+      if (_member.guildID == member.guild.id) {
       if (_MEMBER.id == _member.memberID) {
         object_Guild_Member = _member           
-      }      
+      }      }
     });        
     
 

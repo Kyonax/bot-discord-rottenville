@@ -95,19 +95,23 @@ module.exports = class PayCommand extends BaseCommand {
     );
 
     JSON.parse(_jsonString_bank).forEach((_member) => {
+      if (_member.guildID == member.guild.id) {
+        
+      
       if (member.id == _member.memberID) {
         ObjectBankMember = _member;
       }
 
       if (autor.id == _member.memberID) {
         ObjectBankAuthor = _member;
-      }
+      }}
     });
 
     JSON.parse(_jsonString).forEach((_member) => {
+      if (_member.guildID == member.guild.id) {
       if (autor.id == _member.memberID) {
         ObjectAuthor = _member;
-      }
+      }}
     });
 
     if (!ObjectBankMember.memberCoins)

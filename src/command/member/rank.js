@@ -35,7 +35,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       "member"
     );
   }
-  async run(bot, message, args) {    
+  async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
@@ -72,30 +72,32 @@ module.exports = class InventaryCommand extends BaseCommand {
     );
 
     JSON.parse(_jsonString).forEach((_member) => {
-      if (message.author.id == _member.memberID) {
-        ObjectAutor = _member;
-      }
+      if (_member.guildID == member.guild.id) {
+        if (message.author.id == _member.memberID) {
+          ObjectAutor = _member;
+        }
 
-      if (_member.guildID === message.guild.id) {
-        JSON.parse(_jsonStringWeek).forEach((_member_week) => {
-          if (_member_week.memberID == _member.memberID) {
-            if (_member_week.guildID == message.guild.id) {
-              _member.memberXP = _member.memberXP - _member_week.memberXP;
-              ranking.push(_member);
+        if (_member.guildID === message.guild.id) {
+          JSON.parse(_jsonStringWeek).forEach((_member_week) => {
+            if (_member_week.memberID == _member.memberID) {
+              if (_member_week.guildID == message.guild.id) {
+                _member.memberXP = _member.memberXP - _member_week.memberXP;
+                ranking.push(_member);
 
-              ranking.sort(function (a, b) {
-                if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
-                  return 1;
-                }
-                if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
-                  return -1;
-                }
-                // a must be equal to b
-                return 0;
-              });
+                ranking.sort(function (a, b) {
+                  if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
+                    return 1;
+                  }
+                  if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
+                    return -1;
+                  }
+                  // a must be equal to b
+                  return 0;
+                });
+              }
             }
-          }
-        });
+          });
+        }
       }
     });
 
@@ -108,19 +110,27 @@ module.exports = class InventaryCommand extends BaseCommand {
     let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
 
     //Mensaje para el Embed de Usuario para este Comando
-    let embed = new MessageEmbed()      
+    let embed = new MessageEmbed()
       .setThumbnail("https://i.imgur.com/mylTtoH.png")
 
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 1, text_phrase = "none";
+    let iterator = 1,
+      text_phrase = "none";
 
     ranking.forEach((_member_rank) => {
       if (iterator <= 10) {
-          text_phrase = text_phrase + `\n `+"`"+parseInt(iterator)+".` "+`<@${_member_rank.memberID}> ` +
+        text_phrase =
+          text_phrase +
+          `\n ` +
+          "`" +
+          parseInt(iterator) +
+          ".` " +
+          `<@${_member_rank.memberID}> ` +
           " **Weekly XP:** " +
-          _member_rank.memberXP + putEmoji(bot, "899083263816122458")        
+          _member_rank.memberXP +
+          putEmoji(bot, "899083263816122458");
       }
       iterator++;
     });
@@ -128,9 +138,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     text_phrase = text_phrase.replace("none", "\n ");
 
     embed.addField(
-        putEmoji(bot, "905441646362120232")+` **${message.guild.name} Top 10 active members of the Week:**`, text_phrase ,
-          false
-        );
+      putEmoji(bot, "905441646362120232") +
+        ` **${message.guild.name} Top 10 active members of the Week:**`,
+      text_phrase,
+      false
+    );
     message.channel.send(
       `**<@${member.id}> look at the Server Ranking of the Week!! **${putEmoji(
         bot,

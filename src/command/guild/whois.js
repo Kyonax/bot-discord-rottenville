@@ -27,11 +27,27 @@ module.exports = class WhoisCommand extends BaseCommand {
     //Creación de Objetos
     const perm = new Perms();
     //Miembro existente
-    const existMember = (
-      await memberExist(message.guild.id, message.author.id)
-    )[0];
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
+
+    JSON.parse(_jsonString).forEach((_member) => {
+      if (_member.guildID == member.guild.id) {
+        if (message.author.id == _member.memberID) {
+          ObjectAuthor = _member;
+        }
+      }
+    });
     //Inicialización de Párametros Member
-    const { moderatorMember } = existMember[0];
+    const { moderatorMember } = ObjectAuthor;
     //Inicialización de Member
     const member = getMember(message, args.join(" "));
     //Insuficientes Permisos para usar el Comando
