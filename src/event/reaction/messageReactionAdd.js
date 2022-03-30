@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const guildBankJSON = require("../../../database/misc/GuildBank.json");
 const {
   getMember,
   putEmoji,
@@ -12,7 +13,7 @@ const {
 const {
   updateGuildBankCoins,
   updateGuildMemberBoost,
-  updateGuildLevel,
+  updateGuildLevel, updateGuildBankCoinsJSON
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const  RTSolBattles  = require("../../../database/utils/adds/votes.json");
@@ -39,7 +40,7 @@ module.exports = class MessageReactionAdd extends BaseEvent {
   async run(bot, reaction, user) {
     const err = new Error();
     let eventChannel = reaction.message.guild.channels.cache.find(
-      (ch) => ch.name === "🎁・rottenville-battles"
+      (ch) => ch.name === "🎁・events-holders"
     );
 
     if (user.bot) return;
@@ -60,30 +61,54 @@ module.exports = class MessageReactionAdd extends BaseEvent {
             emojiName.toLowerCase() == "p2"
           ) {
             //Creación de Objeto Bank Member
-            let ObjectBankMember = null;
-            let ObjectBankAuthor = null;
+
             let ObjectMember = null;
-
-            ObjectMember = initObjectMember(
-              guilds,
-              ObjectMember,
-              reaction.message.guild.id,
-              member.id
-            );
-
-            ObjectBankMember = initObjectMember(
-              bankGuilds,
-              ObjectBankMember,
-              reaction.message.guild.id,
-              "894243194051629156"
-            );
-
-            ObjectBankAuthor = initObjectMember(
-              bankGuilds,
-              ObjectBankAuthor,
-              reaction.message.guild.id,
-              member.id
-            );
+            let ObjectBankMember = null;
+            let ObjectBankAuthor = null, _jsonString, _jsonString_bank;
+          //Inicialización Guild Prefix
+          _jsonString = await fs.readFileSync(
+            "./database/misc/GuildMembers.json",
+            "utf8",
+            (err, jsonString) => {
+              if (err) {
+                console.log("File read failed:", err);
+                return;
+              }
+            }
+          );
+      
+          _jsonString_bank = await fs.readFileSync(
+            "./database/misc/GuildBank.json",
+            "utf8",
+            (err, jsonString) => {
+              if (err) {
+                console.log("File read failed:", err);
+                return;
+              }
+            }
+          );
+      
+          JSON.parse(_jsonString_bank).forEach((_member) => {
+            if (_member.guildID == reaction.message.guild.id) {
+              
+            
+            if (member.id == _member.memberID) {
+              
+              ObjectBankAuthor = _member;
+            }
+            if ("894243194051629156" == _member.memberID) {
+              ObjectBankMember = _member;  
+            }           
+      
+            }
+          });
+      
+          JSON.parse(_jsonString).forEach((_member) => {
+            if (_member.guildID == reaction.message.guild.id) {
+            if (member.id == _member.memberID) {
+              ObjectMember = _member;
+            }}
+          });           
 
             if (!ObjectMember) {
               for (const reaction of userReactions.values()) {
@@ -204,35 +229,29 @@ ${putEmoji(
                 const updateACoins = actualAuthorCoins - parseInt(ammountPay);
                 //Validación de Variables - No suficientes Monedas
 
-                //Transferencia de Monedas - Autor - Usuario
-                const updateMemberCoins = await updateGuildBankCoins(
-                  reaction.message.guild.id,
-                  "894243194051629156",
-                  updateMCoins
-                );
-                const updateAuthorCoins = await updateGuildBankCoins(
-                  reaction.message.guild.id,
-                  member.id,
-                  updateACoins
-                );
+               
+               
                 //Update Map
                 ObjectBankAuthor.memberCoins = updateACoins;
                 ObjectBankMember.memberCoins = updateMCoins;
                 //Emit Update
-                StateManager.emit(
-                  "updateMemberCoins",
+
+                const updateBankJSON = await updateGuildBankCoinsJSON(
+                  guildBankJSON,
                   reaction.message.guild.id,
                   "894243194051629156",
                   updateMCoins
                 );
-                StateManager.emit(
-                  "updateAuthorCoins",
+          
+                const updateAuthorBankJSON = await updateGuildBankCoinsJSON(
+                  guildBankJSON,
                   reaction.message.guild.id,
                   member.id,
                   updateACoins
                 );
+
                 //Inicialización de Emojis y su Uso respectivo
-                let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
+                let emoji = putEmoji(bot, "905441645980422214");
                 //Inicialización de Variable Razón de Transferencia
                 let reason = "";
                 //Agregación al Embed
@@ -240,17 +259,17 @@ ${putEmoji(
                   `<@${member.id}> has voted in **The RTSolBattlesTournament** ${reason}.`
                 );
                 embed.addField(
-                  "**Amount of Alpha Radiation**",
+                  "**Amount of Rotten Points**",
                   `**${numberWithCommas(
                     ammountPay
-                  )} ${emoji} Alpha Radiation.**`,
+                  )} ${emoji} Rotten Points.**`,
                   true
                 );
                 embed.addField(
-                  `**Alpha Radiation remaining from ${member.displayName}**`,
+                  `**Rotten Points remaining from ${member.displayName}**`,
                   `**${numberWithCommas(
                     updateACoins
-                  )} ${emoji} Alpha Radiation.**`,
+                  )} ${emoji} Rotten Points.**`,
                   true
                 );
 
@@ -304,116 +323,3 @@ ${putEmoji(
     }
   }
 };
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersUpdate",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on("updateCoins", (guildID, memberID, newCoins) => {
-  let objectBankMember = null;
-  objectBankMember = initObjectMember(
-    bankGuilds,
-    objectBankMember,
-    guildID,
-    memberID
-  );
-  objectBankMember.memberCoins = newCoins;
-});
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);

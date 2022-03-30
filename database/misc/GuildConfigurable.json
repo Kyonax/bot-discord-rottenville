@@ -4,7 +4,7 @@
     "guildLanguage": "es",
     "cmdPrefix": "sR!"
   },
-  { "guildID": "894634118267146272", "guildLanguage": "es", "cmdPrefix": "!" },
+  { "guildID": "894634118267146272", "guildLanguage": "es", "cmdPrefix": "p!" },
   { "guildID": "910557269316497459", "guildLanguage": "en", "cmdPrefix": "!" },
   { "guildID": "922962086131286048", "guildLanguage": "en", "cmdPrefix": "r!" }
 ]

@@ -147,22 +147,22 @@ module.exports = class PayCommand extends BaseCommand {
       );
 
       //Inicialización de Emojis y su Uso respectivo
-      let emoji = putEmoji(bot, synchronous.emojiID[0].synkoin);
+      let emoji = putEmoji(bot, "905441645980422214");
       //Inicialización de Variable Razón de Transferencia
       let reason = "";
       if (args[3]) reason = `, ${args.slice(3).join(" ")}`;
       //Agregación al Embed
       embed.setDescription(
-        `<@${autor.id}> has transferred **Alpha Radiation to** <@${member.id}>${reason}.`
+        `<@${autor.id}> has transferred **Rotten Points to** <@${member.id}>${reason}.`
       );
       embed.addField(
-        "**Amount of Alpha Radiation**",
-        `**${numberWithCommas(args[2])} ${emoji} Alpha Radiation.**`,
+        "**Amount of Rotten Points**",
+        `**${numberWithCommas(args[2])} ${emoji} Rotten Points.**`,
         true
       );
       embed.addField(
-        `**Alpha Radiation remaining from ${message.author.username}**`,
-        `**${numberWithCommas(updateACoins)} ${emoji} Alpha Radiation.**`,
+        `**Rotten Points remaining from ${message.author.username}**`,
+        `**${numberWithCommas(updateACoins)} ${emoji} Rotten Points.**`,
         true
       );
     } else if (type.toLowerCase() === "boostd") {
