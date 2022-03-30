@@ -39,7 +39,7 @@ module.exports = class HelpCommand extends BaseCommand {
       if (_member.guildID == member.guild.id) {     
       if (message.guild.id == guild.guildID) {
         prefix = guild.cmdPrefix;             
-      }   }   
+      }}   
     });
     //Validación de contenido y especificación del comando a Usar.
     if (!args[0]) {
