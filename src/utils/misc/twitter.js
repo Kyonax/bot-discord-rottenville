@@ -56,6 +56,7 @@ var rotten_dao_triumph = process.env.ROTTEN_DAO_TRIUMPH
 var rotten_dao_mrwilson = process.env.ROTTEN_DAO_MRWILSON
 var rotten_dao_sanin = process.env.ROTTEN_DAO_SANIN
 var rotten_dao_rysoo = process.env.ROTTEN_DAO_RYSOO
+var rotten_dao_tukyy = process.env.ROTTEN_DAO_TUKYY
 
 
 //Crypto Twitter
@@ -147,7 +148,8 @@ module.exports.twitter = async (bot) => {
       rotten_dao_triumph,
       rotten_dao_mrwilson,
       rotten_dao_sanin,
-      rotten_dao_rysoo
+      rotten_dao_rysoo,
+      rotten_dao_tukyy
     ];
 
     rotten_DAOaccountTwitter.forEach((account) => {      
@@ -165,7 +167,7 @@ module.exports.twitter = async (bot) => {
                 `${putEmoji(
                   bot,
                   emoji_afirmado
-                )} **Alpha Content from a <@&958140020517109781> Member <@&900354883708936202>**\n${url_kyo_tweet}`
+                )} **Alpha Content from a RottenDAO Member <@&900354883708936202>**\n${url_kyo_tweet}`
               );
             })
             .catch((err) => {
