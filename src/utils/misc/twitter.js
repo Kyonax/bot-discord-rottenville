@@ -151,6 +151,7 @@ module.exports.twitter = async (bot) => {
     ];
 
     rotten_DAOaccountTwitter.forEach((account) => {
+      console.log(`${tweet.user.id} equal to ${account}`)
       if (tweet.user.id == account) {
         var url_kyo_tweet =
           "https://twitter.com/" +
