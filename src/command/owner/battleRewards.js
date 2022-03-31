@@ -80,7 +80,7 @@ module.exports = class BattlesCommand extends BaseCommand {
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID == autor.guild.id) {
         if (message.author.id == _member.memberID) {
-          ObjectAutor = _member;
+          ObjectAuthor = _member;
         }
       }
     });
