@@ -63,13 +63,27 @@ module.exports = class BattlesCommand extends BaseCommand {
     let winner = "none";
     let loser = "none";
 
-    let ObjectAuthor = null;
-    ObjectAuthor = initObjectMember(
-      guilds,
-      ObjectAuthor,
-      message.guild.id,
-      autor.id
+    let ObjectAuthor = null,
+      _jsonString;
+    //Inicialización Guild Prefix
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
     );
+
+    JSON.parse(_jsonString).forEach((_member) => {
+      if (_member.guildID == member.guild.id) {
+        if (message.author.id == _member.memberID) {
+          ObjectAutor = _member;
+        }
+      }
+    });
     //Permisos de Autor
     const { moderatorMember } = ObjectAuthor;
     //Validaciones - Permisos de Uso - Usuario - Rol - Rol Encontrado
