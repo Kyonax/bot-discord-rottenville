@@ -36,7 +36,7 @@ module.exports = class HelpCommand extends BaseCommand {
     })
 
     JSON.parse(_jsonString).forEach(guild => {  
-      if (_member.guildID == member.guild.id) {     
+      if (guild.guildID == member.guild.id) {     
       if (message.guild.id == guild.guildID) {
         prefix = guild.cmdPrefix;             
       }}   
