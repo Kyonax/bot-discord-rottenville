@@ -177,13 +177,13 @@ module.exports = class MessageReactionAdd extends BaseEvent {
 ${putEmoji(
   bot,
   "910558104838615090"
-)} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the AR ${putEmoji(
+)} **You can't vote for the 2 competitors, your vote is going to be removed, and you can't recover the RP ${putEmoji(
                   bot,
-                  "905441646362120232"
+                  "905441645980422214"
                 )}, if you want to vote you have to do it again.**
-**No puedes votar por ambos competidores, tu voto va a ser removido, y no podras recuperar el AR ${putEmoji(
+**No puedes votar por ambos competidores, tu voto va a ser removido, y no podras recuperar el RP ${putEmoji(
                   bot,
-                  "905441646362120232"
+                  "905441645980422214"
                 )}, si deseas votar tienes que hacerlo nuevamente.**`);
               } else {
 
@@ -217,10 +217,10 @@ ${putEmoji(
 
                 //Creación de Mensajes Embed para el Comando
                 let embed = new MessageEmbed()
-                  .setTitle(`**${member.displayName}'s Level Radiation**`)
+                  .setTitle(`**${member.displayName}'s Rotten Points**`)
                   .setColor(goldColor)
                   .setThumbnail(bot.user.displayAvatarURL())
-                  .setFooter("RottenBot radiation scanner")
+                  .setFooter("RottenBot $rp scanner")
                   .setTimestamp();
 
                 //Validación de variables - Monedas - Usuario

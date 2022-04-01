@@ -88,7 +88,7 @@ ${putEmoji(bot, "918868797367148604")} **<@&918875434639323136> #39 VS ${putEmoj
 **You have only 24Hrs,** if you vote for the winner Rotten you can win $RP ${putEmoji(
           bot,
           "905441645980422214"
-        )}, **all the radiation voted for the Winner Rotten goes directly to their exposure.**
+        )}, **all the Rotten Points voted for the Winner Rotten goes directly to their exposure.**
 
 ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
 
