@@ -80,6 +80,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         if (_member.guildID === message.guild.id) {
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
             if (_member_week.guildID === message.guild.id) {
+              console.log(_member_week.memberID)
               if (_member_week.memberID === _member.memberID) {
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
