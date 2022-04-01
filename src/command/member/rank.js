@@ -47,7 +47,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       _jsonStringWeek,
       ObjectAutor = null,
       ranking = [],
-      ranking_week = [];
+      ranking_week;
     //Inicialización Guild Prefix
     _jsonString = await fs.readFileSync(
       "./database/misc/GuildMembers.json",
@@ -72,15 +72,15 @@ module.exports = class InventaryCommand extends BaseCommand {
     );
 
     JSON.parse(_jsonString).forEach((_member) => {
-      if (_member.guildID == member.guild.id) {
-        if (message.author.id == _member.memberID) {
+      if (_member.guildID === member.guild.id) {
+        if (message.author.id === _member.memberID) {
           ObjectAutor = _member;
         }
 
         if (_member.guildID === message.guild.id) {
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
             if (_member_week.guildID === message.guild.id) {
-              if (_member_week.memberID == _member.memberID) {
+              if (_member_week.memberID === _member.memberID) {
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
 
@@ -119,20 +119,26 @@ module.exports = class InventaryCommand extends BaseCommand {
     let iterator = 1,
       text_phrase = "none";
 
-    ranking.forEach((_member_rank) => {
-      if (iterator <= 10) {
-        text_phrase =
-          text_phrase +
-          `\n ` +
-          "`" +
-          parseInt(iterator) +
-          ".` " +
-          `<@${_member_rank.memberID}> ` +
-          " **Weekly XP:** " +
-          _member_rank.memberXP +
-          putEmoji(bot, "899083263816122458");
+    ranking_week = ranking.filter((c, index) => {
+      return ranking.indexOf(c) === index;
+    });
+
+    ranking_week.forEach((_member_rank) => {
+      if (_member_rank.guildID === message.guild.id) {
+        if (iterator <= 10) {
+          text_phrase =
+            text_phrase +
+            `\n ` +
+            "`" +
+            parseInt(iterator) +
+            ".` " +
+            `<@${_member_rank.memberID}> ` +
+            " **Weekly XP:** " +
+            _member_rank.memberXP +
+            putEmoji(bot, "899083263816122458");
+        }
+        iterator++;
       }
-      iterator++;
     });
 
     text_phrase = text_phrase.replace("none", "\n ");
