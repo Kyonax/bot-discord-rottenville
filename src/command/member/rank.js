@@ -46,6 +46,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     let _jsonString,
       _jsonStringWeek,
       ObjectAutor = null,
+      ObjectMemberWeek = null,
       ranking = [],
       ranking_week;
     //Inicialización Guild Prefix
@@ -73,6 +74,39 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
+
+        JSON.parse(_jsonStringWeek).forEach((_member_week) => {
+          if (_member_week.memberID === _member.memberID) {
+            ObjectMemberWeek = _member_week;
+            return;
+          } else {
+            ObjectMemberWeek = null;
+          }
+        });
+
+        if (ObjectMemberWeek === null) {
+          ObjectMemberWeek = {
+            memberID: _member.id,
+            guildID: message.guild.id,
+            memberLanguage: "es",
+            adminMember: 0,
+            inmortalMember: 0,
+            moderatorMember: 0,
+            serverRank: 0,
+            memberXP: 0,
+            memberLevel: 1,
+            memberBoost: 1,
+            boostMemberTime: 0,
+            warnings: 0,
+          };
+
+          JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
+        }
+      }
+    });
+
+    JSON.parse(_jsonString).forEach((_member) => {
+      if (_member.guildID === member.guild.id) {
         if (message.author.id === _member.memberID) {
           ObjectAutor = _member;
         }
@@ -80,7 +114,6 @@ module.exports = class InventaryCommand extends BaseCommand {
         if (_member.guildID === message.guild.id) {
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
             if (_member_week.guildID === message.guild.id) {
-              console.log(_member_week.memberID)
               if (_member_week.memberID === _member.memberID) {
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
