@@ -1,5 +1,5 @@
 //Importación especifica de Metodos - findUserID putEmoji Functions
-const { putEmoji } = require("../../utils/misc/functions.js");
+const { putEmoji, getMember } = require("../../utils/misc/functions.js");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
