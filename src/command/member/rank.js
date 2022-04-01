@@ -123,7 +123,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       return ranking.indexOf(c) === index;
     });
 
-    console.table(ranking_week);
+    console.table(ranking);
 
     ranking_week.forEach((_member_rank) => {
       if (_member_rank.guildID === message.guild.id) {
