@@ -6,7 +6,7 @@ const {
   numberWithCommas
 } = require("../../utils/misc/functions");
 const {
-  isVariableOnJSON  
+  isVariableOnWeekJSON  
 } = require("../../utils/database/functions");
 const { circleImage, downloadUser } = require("../../utils/magik/functions");
 const { MessageEmbed } = require("discord.js");
@@ -80,7 +80,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         JSON.parse(_jsonStringWeek).forEach( async (_member_week) => {          
           if (_member_week.memberID === _member.memberID) {
 
-            const isMemberIntoJSON = await isVariableOnJSON(
+            const isMemberIntoJSON = await isVariableOnWeekJSON(
               guildMembersWeekJSON,
               _member.memberID,
               "memberID",

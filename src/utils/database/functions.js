@@ -12,139 +12,181 @@ module.exports = {
     });
   },
   getMember: async function (_json_file, _member, _guild) {
-    let _result = "none"
-    let _jsonString
+    let _result = "none";
+    let _jsonString;
 
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    JSON.parse(_jsonString).forEach(_memberObject => {
-      if (_member === _memberObject.memberID && _guild === _memberObject.guildID) {
-        _result = {
-          "guildID": _memberObject.guildID,
-          "memberID": _memberObject.memberID,
-          "memberLanguage": _memberObject.memberLanguage,
-          "adminMember": _memberObject.adminMember,
-          "inmortalMember": _memberObject.inmortalMember,
-          "moderatorMember": _memberObject.moderatorMember,
-          "serverRank": _memberObject.serverRank,
-          "memberXP": _memberObject.memberXP,
-          "memberLevel": _memberObject.memberLevel,
-          "memberBoost": _memberObject.memberBoost,
-          "boostMemberTime": _memberObject.boostMemberTime,
-          "warnings": _memberObject.warnings
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
         }
+      }
+    );
+
+    JSON.parse(_jsonString).forEach((_memberObject) => {
+      if (
+        _member === _memberObject.memberID &&
+        _guild === _memberObject.guildID
+      ) {
+        _result = {
+          guildID: _memberObject.guildID,
+          memberID: _memberObject.memberID,
+          memberLanguage: _memberObject.memberLanguage,
+          adminMember: _memberObject.adminMember,
+          inmortalMember: _memberObject.inmortalMember,
+          moderatorMember: _memberObject.moderatorMember,
+          serverRank: _memberObject.serverRank,
+          memberXP: _memberObject.memberXP,
+          memberLevel: _memberObject.memberLevel,
+          memberBoost: _memberObject.memberBoost,
+          boostMemberTime: _memberObject.boostMemberTime,
+          warnings: _memberObject.warnings,
+        };
       }
     });
 
-    return _result
-
-
-
+    return _result;
   },
   getMemberBank: async function (_json_file, _member, _guild) {
-    let _result = "none"
-    let _jsonString
+    let _result = "none";
+    let _jsonString;
 
-    _jsonString = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    JSON.parse(_jsonString).forEach(_memberObject => {
-      if (_member === _memberObject.memberID && _guild === _memberObject.guildID) {
-        _result = {
-          "guildID": _memberObject.guildID,
-          "memberID": _memberObject.memberID,
-          "memberCoins": _memberObject.memberCoins
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildBank.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
         }
+      }
+    );
+
+    JSON.parse(_jsonString).forEach((_memberObject) => {
+      if (
+        _member === _memberObject.memberID &&
+        _guild === _memberObject.guildID
+      ) {
+        _result = {
+          guildID: _memberObject.guildID,
+          memberID: _memberObject.memberID,
+          memberCoins: _memberObject.memberCoins,
+        };
       }
     });
 
-    return _result
-
-
+    return _result;
   },
   isVariableOnJSON: async function (_json_file, _variable, _index, _guild) {
-    let _result = "not_registered"
-    let type = _json_file
-    let _jsonString
-
-    
+    let _result = "not_registered";
+    let type = _json_file;
+    let _jsonString;
 
     switch (_json_file[0].memberCoins) {
       case undefined:
-        type = './database/misc/GuildMembers.json'
+        type = "./database/misc/GuildMembers.json";
         break;
       default:
-        type = './database/misc/GuildBank.json'
+        type = "./database/misc/GuildBank.json";
         break;
     }
 
-    _jsonString = await fs.readFileSync(type, 'utf8', (err, jsonString) => {
+    _jsonString = await fs.readFileSync(type, "utf8", (err, jsonString) => {
       if (err) {
-        console.log("File read failed:", err)
-        return
+        console.log("File read failed:", err);
+        return;
       }
-    })
-    
-
-    JSON.parse(_jsonString).forEach(variable => {
-      if (_guild == variable.guildID && _variable == variable[_index]) _result = "registered"
     });
 
-    return _result
+    JSON.parse(_jsonString).forEach((variable) => {
+      if (_guild == variable.guildID && _variable == variable[_index])
+        _result = "registered";
+    });
+
+    return _result;
+  },
+
+  isVariableOnWeekJSON: async function (_json_file, _variable, _index, _guild) {
+    let _result = "not_registered";
+    let type = _json_file;
+    let _jsonString;
+
+    type = "./database/misc/GuildMembersWeek.json";
+
+    _jsonString = await fs.readFileSync(type, "utf8", (err, jsonString) => {
+      if (err) {
+        console.log("File read failed:", err);
+        return;
+      }
+    });
+
+    JSON.parse(_jsonString).forEach((variable) => {
+      if (_guild == variable.guildID && _variable == variable[_index])
+        _result = "registered";
+    });
+
+    return _result;
   },
   isPrefixOnJSON: async function (_json_file, _index, _guild) {
-    let _result = "not_registered"
-    let _jsonString
+    let _result = "not_registered";
+    let _jsonString;
 
-    _jsonString = await fs.readFileSync('./database/misc/GuildConfigurable.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildConfigurable.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })
+    );
 
-    JSON.parse(_jsonString).forEach(variable => {
-      if (_guild == variable.guildID) _result = variable.cmdPrefix.toString()
+    JSON.parse(_jsonString).forEach((variable) => {
+      if (_guild == variable.guildID) _result = variable.cmdPrefix.toString();
     });
 
-    return _result
+    return _result;
   },
   isGuildOnJSON: async function (_json_file, _json_file_configurable, _guild) {
-    let _result = "not_registered", _result_configurable = "not_registered"
-    let _jsonString, _jsonString_configurable
+    let _result = "not_registered",
+      _result_configurable = "not_registered";
+    let _jsonString, _jsonString_configurable;
 
-    _jsonString = await fs.readFileSync('./database/misc/Guild.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/Guild.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })
+    );
 
-    _jsonString_configurable = await fs.readFileSync('./database/misc/GuildConfigurable.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString_configurable = await fs.readFileSync(
+      "./database/misc/GuildConfigurable.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })
+    );
 
-    JSON.parse(_jsonString_configurable).forEach(variable => {
-      if (_guild == variable.guildID) _result_configurable = "registered"
+    JSON.parse(_jsonString_configurable).forEach((variable) => {
+      if (_guild == variable.guildID) _result_configurable = "registered";
     });
 
-    JSON.parse(_jsonString).forEach(configurable => {
-      if (_guild == configurable.guildID) _result = "registered"
+    JSON.parse(_jsonString).forEach((configurable) => {
+      if (_guild == configurable.guildID) _result = "registered";
     });
 
-    return [_result, _result_configurable]
+    return [_result, _result_configurable];
   },
   members: async function (guildID) {
     return StateManager.connection.query(
@@ -172,15 +214,14 @@ module.exports = {
     );
   },
   insertMemberIntoJSON: async function (_json_file, _guild, _member) {
-    let _result = "not_registered"
-    let _jsonString
-    
-    
+    let _result = "not_registered";
+    let _jsonString;
+
     try {
       _json_file.push({
         memberID: _member,
         guildID: _guild,
-        memberLanguage: 'es',
+        memberLanguage: "es",
         adminMember: 0,
         inmortalMember: 0,
         moderatorMember: 0,
@@ -190,7 +231,7 @@ module.exports = {
         memberBoost: 1,
         boostMemberTime: 0,
         warnings: 0,
-      })
+      });
 
       const writeData = await fs.writeFileSync(
         "./database/misc/GuildMembers.json",
@@ -204,19 +245,18 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-    return _result
+    return _result;
   },
   insertMemberBankIntoJSON: async function (_json_file, _guild, _member) {
-    let _result = "not_registered"
-    let _jsonString  
-    
+    let _result = "not_registered";
+    let _jsonString;
 
     try {
       _json_file.push({
         memberID: _member,
         guildID: _guild,
         memberCoins: 0,
-      })
+      });
 
       const writeData = await fs.writeFileSync(
         "./database/misc/GuildBank.json",
@@ -230,23 +270,27 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-    return _result
+    return _result;
   },
-  insertNewGuildIntoJSON: async function (_json_file,_json_file_configurable, _guild, _owner) {
-    let _result = "not_registered"
-        
+  insertNewGuildIntoJSON: async function (
+    _json_file,
+    _json_file_configurable,
+    _guild,
+    _owner
+  ) {
+    let _result = "not_registered";
 
     try {
-      _json_file.push({        
+      _json_file.push({
         guildID: _guild,
         guildOwnerID: _owner,
-      })
+      });
 
       _json_file_configurable.push({
-        guildID: _guild, 
+        guildID: _guild,
         guildLanguage: "en",
-        cmdPrefix: "!"
-      })
+        cmdPrefix: "!",
+      });
 
       const writeData = await fs.writeFileSync(
         "./database/misc/Guild.json",
@@ -268,7 +312,7 @@ module.exports = {
     } catch (error) {
       console.log(error);
     }
-    return _result
+    return _result;
   },
   insertMemberMap: async function (guildID, memberID, guildMembers, guilds) {
     let membersGuild = [];
@@ -599,23 +643,32 @@ module.exports = {
       `UPDATE GuildMembers SET memberBoost='${memberBoost}', boostMemberTime='${boostMemberTime}' WHERE guildID='${guildID}' AND memberID='${memberID}'`
     );
   },
-  updateGuildMemberBoostJSON: async function (_json_file, _guild, _member, _memberBoost, _boostMemberTime) {
+  updateGuildMemberBoostJSON: async function (
+    _json_file,
+    _guild,
+    _member,
+    _memberBoost,
+    _boostMemberTime
+  ) {
+    let _result = "not_registered";
+    let _jsonString;
 
-    let _result = "not_registered"
-    let _jsonString
-
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })
+    );
 
-    JSON.parse(_jsonString).forEach(variable => {
+    JSON.parse(_jsonString).forEach((variable) => {
       if (_guild == variable.guildID && _member == variable.memberID) {
         variable.memberBoost = _memberBoost;
         variable.boostMemberTime = _boostMemberTime;
-        _result = "registered"
+        _result = "registered";
       }
     });
 
@@ -627,10 +680,10 @@ module.exports = {
       }
     );
 
-    return _result
-
-  },  
-  updateGuildMemberBoostJSON: function (guildID,
+    return _result;
+  },
+  updateGuildMemberBoostJSON: function (
+    guildID,
     memberID,
     memberBoost,
     boostMemberTime
@@ -639,25 +692,35 @@ module.exports = {
       `UPDATE GuildMembers SET memberBoost='${memberBoost}', boostMemberTime='${boostMemberTime}' WHERE guildID='${guildID}' AND memberID='${memberID}'`
     );
   },
-  updateGuildMemberXPJSON: async function (_json_file, _guild, _member, _memberXP, _memberLevel) {
+  updateGuildMemberXPJSON: async function (
+    _json_file,
+    _guild,
+    _member,
+    _memberXP,
+    _memberLevel
+  ) {
+    let _result = "not_registered";
+    let _jsonString,
+      i = 0;
 
-    let _result = "not_registered"
-    let _jsonString, i = 0
-
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })    
+    );
 
-    JSON.parse(_jsonString).forEach(variable => {
-      if (_guild == variable.guildID && _member == variable.memberID) {    
+    JSON.parse(_jsonString).forEach((variable) => {
+      if (_guild == variable.guildID && _member == variable.memberID) {
         _json_file[i].memberXP = _memberXP;
-        _json_file[i].memberLevel = _memberLevel;        
-        _result = "registered"
+        _json_file[i].memberLevel = _memberLevel;
+        _result = "registered";
       }
-      i++
+      i++;
     });
 
     const writeData = await fs.writeFileSync(
@@ -667,30 +730,36 @@ module.exports = {
         if (err) console.log(err);
       }
     );
-    
 
-    return _result
-
+    return _result;
   },
-  updateGuildBankCoinsJSON: async function (_json_file, _guild, _member, _memberCoins) {
+  updateGuildBankCoinsJSON: async function (
+    _json_file,
+    _guild,
+    _member,
+    _memberCoins
+  ) {
+    let _result = "not_registered";
+    let _jsonString,
+      i = 0;
 
-
-    let _result = "not_registered"
-    let _jsonString, i = 0
-
-    _jsonString = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildBank.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })
+    );
 
-    JSON.parse(_jsonString).forEach(variable => {
-      if (_guild == variable.guildID && _member == variable.memberID) {        
-        _json_file[i].memberCoins = _memberCoins;        
-        _result = "registered"
+    JSON.parse(_jsonString).forEach((variable) => {
+      if (_guild == variable.guildID && _member == variable.memberID) {
+        _json_file[i].memberCoins = _memberCoins;
+        _result = "registered";
       }
-      i++
+      i++;
     });
 
     const writeData = await fs.writeFileSync(
@@ -701,9 +770,7 @@ module.exports = {
       }
     );
 
-    return _result
-
-
+    return _result;
   },
   updateGuildBankCoins: function (guildID, memberID, memberCoins) {
     return StateManager.connection.query(
