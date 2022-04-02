@@ -3,8 +3,11 @@ const {
   getMember,
   delay,
   putEmoji,
-  numberWithCommas,
+  numberWithCommas
 } = require("../../utils/misc/functions");
+const {
+  isVariableOnJSON  
+} = require("../../utils/database/functions");
 const { circleImage, downloadUser } = require("../../utils/magik/functions");
 const { MessageEmbed } = require("discord.js");
 const { limit } = require("../../utils/logic/logicMember");
@@ -74,34 +77,41 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
-
-        JSON.parse(_jsonStringWeek).forEach((_member_week) => {
+        JSON.parse(_jsonStringWeek).forEach((_member_week) => {          
           if (_member_week.memberID === _member.memberID) {
-            ObjectMemberWeek = _member_week;
-            return;
-          } else {
-            ObjectMemberWeek = null;
-          }
-        });
 
-        if (ObjectMemberWeek === null) {
-          ObjectMemberWeek = {
-            memberID: _member.id,
-            guildID: message.guild.id,
-            memberLanguage: "es",
-            adminMember: 0,
-            inmortalMember: 0,
-            moderatorMember: 0,
-            serverRank: 0,
-            memberXP: 0,
-            memberLevel: 1,
-            memberBoost: 1,
-            boostMemberTime: 0,
-            warnings: 0,
-          };
+            const isMemberIntoJSON = await isVariableOnJSON(
+              guildMembersWeekJSON,
+              _member.memberID,
+              "memberID",
+              member.guild.id
+            );           
+              
+            if (isMemberIntoJSON != "registered") {
+              ObjectMemberWeek = _member_week;
+              return;
+            }else {
 
-          JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
-        }
+              ObjectMemberWeek = {
+                memberID: _member.id,
+                guildID: message.guild.id,
+                memberLanguage: "es",
+                adminMember: 0,
+                inmortalMember: 0,
+                moderatorMember: 0,
+                serverRank: 0,
+                memberXP: 0,
+                memberLevel: 1,
+                memberBoost: 1,
+                boostMemberTime: 0,
+                warnings: 0,
+              };                  
+
+            }       
+            
+            JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
+          } 
+        });        
       }
     });
 
