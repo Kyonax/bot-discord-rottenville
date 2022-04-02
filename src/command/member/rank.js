@@ -90,8 +90,7 @@ module.exports = class InventaryCommand extends BaseCommand {
             console.log(isMemberIntoJSON+` = ${_member.memberID}`)
               
             if (isMemberIntoJSON === "registered") {
-              ObjectMemberWeek = _member_week;
-              return;
+              ObjectMemberWeek = _member_week;              
             }else {
 
               ObjectMemberWeek = {
@@ -107,8 +106,7 @@ module.exports = class InventaryCommand extends BaseCommand {
                 memberBoost: 1,
                 boostMemberTime: 0,
                 warnings: 0,
-              };                  
-
+              };                       
             }      
             
             console.log(`XP: ${ObjectMemberWeek.memberXP} ID: ${_member.guildID}`)            
