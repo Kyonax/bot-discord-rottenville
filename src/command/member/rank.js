@@ -89,7 +89,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
             console.log(isMemberIntoJSON+` = ${_member.memberID}`)
               
-            if (isMemberIntoJSON != "registered") {
+            if (isMemberIntoJSON === "registered") {
               ObjectMemberWeek = _member_week;
               return;
             }else {
@@ -109,8 +109,9 @@ module.exports = class InventaryCommand extends BaseCommand {
                 warnings: 0,
               };                  
 
-            }       
+            }      
             
+            console.log(`XP: ${ObjectMemberWeek.memberXP} ID: ${_member.guildID}`)            
             JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
           } 
         });        
