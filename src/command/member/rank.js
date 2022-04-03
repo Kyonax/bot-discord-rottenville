@@ -83,8 +83,8 @@ module.exports = class InventaryCommand extends BaseCommand {
 
         if (_member.guildID === message.guild.id) {
 
-          JSON.parse(_jsonStringWeek).forEach( async (_member_week) => {
-            const isMemberIntoJSON = await isVariableOnWeekJSON(
+          JSON.parse(_jsonStringWeek).forEach( (_member_week) => {
+            const isMemberIntoJSON = isVariableOnWeekJSON(
               guildMembersWeekJSON,
               _member.memberID,
               "memberID",
