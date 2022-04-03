@@ -84,7 +84,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         if (_member.guildID === message.guild.id) {
 
           JSON.parse(_jsonStringWeek).forEach( (_member_week) => {
-            let register_desition = "not-registered"           
+            let register_desition = "not_registered"           
 
             if ( _member.memberID === _member_week.memberID){
               register_desition = "registered"
