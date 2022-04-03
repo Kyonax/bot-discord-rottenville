@@ -106,10 +106,12 @@ module.exports = class InventaryCommand extends BaseCommand {
                 memberBoost: 1,
                 boostMemberTime: 0,
                 warnings: 0,
-              };                       
+              };   
+              
+              ranking.push(ObjectMemberWeek);
             }      
             
-            console.log(`XP: ${ObjectMemberWeek.memberXP} ID: ${_member.guildID}`)            
+            console.log(`XP: ${ObjectMemberWeek.memberXP} ID: ${_member.memberID}`)            
             JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
           } 
         });        
@@ -123,9 +125,24 @@ module.exports = class InventaryCommand extends BaseCommand {
         }
 
         if (_member.guildID === message.guild.id) {
-          JSON.parse(_jsonStringWeek).forEach((_member_week) => {
+          JSON.parse(_jsonStringWeek).forEach(async (_member_week) => {
+
             if (_member_week.guildID === message.guild.id) {
+
+              const isMemberIntoJSON = await isVariableOnWeekJSON(
+                guildMembersWeekJSON,
+                _member.memberID,
+                "memberID",
+                member.guild.id
+              ); 
+
+              if (isMemberIntoJSON === "not_registered") {                                                
+                ranking.push(_member);
+              } 
+
+
               if (_member_week.memberID === _member.memberID) {
+
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
 
@@ -139,6 +156,8 @@ module.exports = class InventaryCommand extends BaseCommand {
                   // a must be equal to b
                   return 0;
                 });
+
+
               }
             }
           });
