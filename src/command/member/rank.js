@@ -6,7 +6,7 @@ const {
   numberWithCommas
 } = require("../../utils/misc/functions");
 const {
-  isVariableOnWeekJSON  
+  isVariableOnWeekJSON
 } = require("../../utils/database/functions");
 const { circleImage, downloadUser } = require("../../utils/magik/functions");
 const { MessageEmbed } = require("discord.js");
@@ -40,7 +40,7 @@ module.exports = class InventaryCommand extends BaseCommand {
   }
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
@@ -73,7 +73,7 @@ module.exports = class InventaryCommand extends BaseCommand {
           return;
         }
       }
-    );    
+    );
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
@@ -82,24 +82,15 @@ module.exports = class InventaryCommand extends BaseCommand {
         }
 
         if (_member.guildID === message.guild.id) {
-          JSON.parse(_jsonStringWeek).forEach(async (_member_week) => {
+          JSON.parse(_jsonStringWeek).forEach((_member_week) => {
 
             if (_member_week.guildID === message.guild.id) {
 
-              const isMemberIntoJSON = await isVariableOnWeekJSON(
-                guildMembersWeekJSON,
-                _member.memberID,
-                "memberID",
-                member.guild.id
-              ); 
-
-              if (isMemberIntoJSON === "not_registered") {                                                
+              if (!_member_week.memberID) {
                 ranking.push(_member);
                 console.table(ranking)
                 return;
-              } 
-
-              
+              }
 
               if (_member_week.memberID === _member.memberID) {
 
@@ -171,7 +162,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     embed.addField(
       putEmoji(bot, "905441646362120232") +
-        ` **${message.guild.name} Top 10 active members of the Week:**`,
+      ` **${message.guild.name} Top 10 active members of the Week:**`,
       text_phrase,
       false
     );
