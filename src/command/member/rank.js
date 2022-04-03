@@ -74,7 +74,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         }
       }
     );
-
+    let index = 1
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
         if (message.author.id === _member.memberID) {
@@ -83,7 +83,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
         if (_member.guildID === message.guild.id) {
 
-          let index = 1
+          
 
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
             let register_desition = "not_registered"
@@ -93,13 +93,13 @@ module.exports = class InventaryCommand extends BaseCommand {
               register_desition = "registered"
             }
 
-            if (register_desition === "not_registered") {
+            if (register_desition === "not_registered") {              
               if (_member.memberRank === index && index <= 20) {
                 ranking.push(_member);
-                console.table(ranking);                
+                console.table(ranking); 
+                return;               
               }
-            }
-            index++
+            }            
           });
 
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
@@ -129,6 +129,7 @@ module.exports = class InventaryCommand extends BaseCommand {
           });
         }
       }
+      index++
     });
 
     const moderatorMember = ObjectAutor.moderatorMember;
