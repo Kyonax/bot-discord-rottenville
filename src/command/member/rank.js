@@ -93,7 +93,8 @@ module.exports = class InventaryCommand extends BaseCommand {
               register_desition = "registered"
             }
 
-            if (register_desition === "not_registered") {              
+            if (register_desition === "not_registered") {   
+              console.log(`Rank: ${_member.memberRank} Index: ${index}`)           
               if (_member.memberRank === index && index <= 20) {
                 ranking.push(_member);
                 console.table(ranking); 
