@@ -86,6 +86,8 @@ module.exports = class InventaryCommand extends BaseCommand {
 
             if (_member_week.guildID === message.guild.id) {
 
+              console.log(_member_week.memberID)
+              
               if (!_member_week.memberID) {
                 ranking.push(_member);
                 console.table(ranking)
