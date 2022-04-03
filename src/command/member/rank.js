@@ -73,50 +73,7 @@ module.exports = class InventaryCommand extends BaseCommand {
           return;
         }
       }
-    );
-
-    JSON.parse(_jsonString).forEach((_member) => {
-      if (_member.guildID === member.guild.id) {
-        JSON.parse(_jsonStringWeek).forEach( async (_member_week) => {          
-          if (_member_week.memberID === _member.memberID) {
-
-            const isMemberIntoJSON = await isVariableOnWeekJSON(
-              guildMembersWeekJSON,
-              _member.memberID,
-              "memberID",
-              member.guild.id
-            );           
-
-            console.log(isMemberIntoJSON+` = ${_member.memberID}`)
-              
-            if (isMemberIntoJSON === "registered") {
-              ObjectMemberWeek = _member_week;              
-            }else {
-
-              ObjectMemberWeek = {
-                memberID: _member.id,
-                guildID: message.guild.id,
-                memberLanguage: "es",
-                adminMember: 0,
-                inmortalMember: 0,
-                moderatorMember: 0,
-                serverRank: 0,
-                memberXP: 0,
-                memberLevel: 1,
-                memberBoost: 1,
-                boostMemberTime: 0,
-                warnings: 0,
-              };   
-              
-              ranking.push(ObjectMemberWeek);
-            }      
-            
-            console.log(`XP: ${ObjectMemberWeek.memberXP} ID: ${_member.memberID}`)            
-            JSON.parse(_jsonStringWeek).push(ObjectMemberWeek);
-          } 
-        });        
-      }
-    });
+    );    
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
