@@ -134,7 +134,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     });
 
     const moderatorMember = ObjectAutor.moderatorMember;
-console.table(ranking)
+
     //Inicialización de Variables - Experiencia - Nivel - Boost
 
     //Emoji
@@ -183,6 +183,7 @@ console.table(ranking)
       text_phrase,
       false
     );
+    console.table(ranking)
     message.channel.send(
       `**<@${member.id}> look at the Server Ranking of the Week!! **${putEmoji(
         bot,
