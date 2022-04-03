@@ -96,9 +96,10 @@ module.exports = class InventaryCommand extends BaseCommand {
               if (isMemberIntoJSON === "not_registered") {                                                
                 ranking.push(_member);
                 console.table(ranking)
+                return;
               } 
 
-              console.table(ranking)
+              
 
               if (_member_week.memberID === _member.memberID) {
 
