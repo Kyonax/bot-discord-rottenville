@@ -84,14 +84,13 @@ module.exports = class InventaryCommand extends BaseCommand {
         if (_member.guildID === message.guild.id) {
 
           JSON.parse(_jsonStringWeek).forEach( (_member_week) => {
-            const isMemberIntoJSON = isVariableOnWeekJSON(
-              guildMembersWeekJSON,
-              _member.memberID,
-              "memberID",
-              member.guild.id
-            ); 
+            let register_desition = "not-registered"           
 
-            if (isMemberIntoJSON === "not_registered") {                                                
+            if ( _member.memberID === _member_week.memberID){
+              register_desition = "registered"
+            }
+
+            if (register_desition === "not_registered") {                                                
               ranking.push(_member);
               console.table(ranking)
               return;
