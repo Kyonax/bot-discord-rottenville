@@ -185,7 +185,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       text_phrase,
       false
     );
-    console.table(ranking)
+    
     message.channel.send(
       `**<@${member.id}> look at the Server Ranking of the Week!! **${putEmoji(
         bot,
