@@ -134,7 +134,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     });
 
     const moderatorMember = ObjectAutor.moderatorMember;
-
+console.table(ranking)
     //Inicialización de Variables - Experiencia - Nivel - Boost
 
     //Emoji
@@ -155,7 +155,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       return ranking.indexOf(c) === index;
     });
 
-    console.table(ranking);
+    
 
     ranking_week.forEach((_member_rank) => {
       if (_member_rank.guildID === message.guild.id) {
