@@ -113,16 +113,7 @@ module.exports = class InventaryCommand extends BaseCommand {
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
 
-                ranking.sort(function (a, b) {
-                  if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
-                    return 1;
-                  }
-                  if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
-                    return -1;
-                  }
-                  // a must be equal to b
-                  return 0;
-                });
+                
 
 
               }
@@ -131,6 +122,17 @@ module.exports = class InventaryCommand extends BaseCommand {
         }
       }
       
+    });
+
+    ranking.sort(function (a, b) {
+      if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
+        return 1;
+      }
+      if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
     });
 
     const moderatorMember = ObjectAutor.moderatorMember;
