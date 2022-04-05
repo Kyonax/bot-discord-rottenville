@@ -119,7 +119,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 ┊ **Member Verify <#960905065906991144> **
 ┊ you will get ** <@&895850023311540225> **
 ┊
-┊ _If you have any question <#898983573607030834> or_
+┊ _If you have any question <#898998539814846474> or_
 ┊ **__ask for help on <#899003268473180230>__**
 ╰
     `
