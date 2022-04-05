@@ -78,17 +78,17 @@ module.exports.welcomeMessage = async (member, bot) => {
     ch.name.includes("💬・general-chat")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("📯・new-member")
+    ch.name.includes("📑・new-member")
   );
 
 
-  downloadUser(memberImage, member.user.username).then(() => {
+  downloadUser(memberImage, member.user.id).then(() => {
     delay(300).then(async function () {
       edit(
-        `/../../../database/multimedia/images/users/avatar/${member.user.username}.png`,
-        `database/multimedia/images/users/circleAvatar/${member.user.username}CircleImageR.png`,
+        `/../../../database/multimedia/images/users/avatar/${member.user.id}.png`,
+        `database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
         member.user.tag,
-        member.user.username,
+        member.user.id,
         memberCount
       );
     });
@@ -112,11 +112,11 @@ module.exports.welcomeMessage = async (member, bot) => {
           `
 ┊
 ┊ **Verify as a Holder** to get full acces
-┊ _"protocol under develop"_・` +
+┊ _"<#958311149659631637>"_・` +
           "`👹`" +
           `
 ┊
-┊ **Member Verify <#950907434988367933> **
+┊ **Member Verify <#960905065906991144> **
 ┊ you will get ** <@&895850023311540225> **
 ┊
 ┊ _If you have any question <#898983573607030834> or_
@@ -124,9 +124,9 @@ module.exports.welcomeMessage = async (member, bot) => {
 ╰
     `
         ).attachFiles([
-          `database/multimedia/images/magik/exports/${member.user.username}.png`,
+          `database/multimedia/images/magik/exports/${member.user.id}.png`,
         ])
-        .setImage(`attachment://${member.user.username}.png`);
+        .setImage(`attachment://${member.user.id}.png`);
 
 
       try {
