@@ -8,6 +8,7 @@ const Perms = require("../../../database/conectors/perm");
 const { memberExist } = require("../../utils/database/functions");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
+const fs = require("fs");
 //Exportación del Comando Whois
 module.exports = class WhoisCommand extends BaseCommand {
   constructor() {
@@ -26,6 +27,11 @@ module.exports = class WhoisCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     const perm = new Perms();
+    const member = getMember(message, args.join(" "));
+    let _jsonString, ObjectAuthor     
+     //Inicialización de Member
+     
+    
     //Miembro existente
     //Inicialización Guild Prefix
     _jsonString = await fs.readFileSync(
@@ -48,8 +54,7 @@ module.exports = class WhoisCommand extends BaseCommand {
     });
     //Inicialización de Párametros Member
     const { moderatorMember } = ObjectAuthor;
-    //Inicialización de Member
-    const member = getMember(message, args.join(" "));
+   
     //Insuficientes Permisos para usar el Comando
     if (moderatorMember === 0) {
       if (member.roles.cache.get("623715872506118154")) {
