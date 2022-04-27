@@ -13,5 +13,10 @@
         "tittle": "What the f*ck is Rotten Ville project?",
         "description": "./database/conectors/faq/RVProject.txt",
         "updated": "27/APR/2022 - Kyonax"
+    },
+    "alphafreemint": {
+        "tittle": "What will happen with the Alpha Collection in the next FREE MINT?",
+        "description": "./database/conectors/faq/AlphaAndFreeMint.txt",
+        "updated": "27/APR/2022 - Kyonax"
     }
 }
