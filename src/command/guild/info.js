@@ -44,7 +44,10 @@ module.exports = class InfoCommand extends BaseCommand {
     let textResponse = putEmoji(bot, cancelado) + " **Information not found.**";
 
     let embed = new MessageEmbed()
+      .setColor("#FFFFF")
+      .setThumbnail(message.guil.iconURL())
       .setTitle(FAQ[contentArgs].tittle)
+      .setFooter("Last Updated・"+FAQ[contentArgs].updated)
       .setDescription(readTextFile(FAQ[contentArgs].description));
     message.channel.send(embed);
   }
