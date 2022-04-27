@@ -1,7 +1,7 @@
 {
     "alpha":{
         "tittle": "What the f*ck is the Alpha Phase",
-        "description": "/database/conectors/faq/AlphaPhase.txt",
+        "description": "./database/conectors/faq/AlphaPhase.txt",
         "updated": "26/APR/2022 - Kyonax"
     }
 }

@@ -9,10 +9,10 @@ const fs = require("fs");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const BaseCommand = require("../../utils/structure/BaseCommand");
 
-function readTextFile(file)
+async function readTextFile(file)
 {
   try {
-    const data = fs.readFileSync(file, 'utf8');
+    const data = await fs.readFileSync(file, 'utf8');
     console.log(data.description);
     return data.description
   } catch (err) {
