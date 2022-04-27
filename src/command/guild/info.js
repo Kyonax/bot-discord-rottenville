@@ -5,6 +5,8 @@ const FAQ = require ("../../../database/conectors/faq.json")
 const { putEmoji, getMember } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
+const fs = require("fs");
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const BaseCommand = require("../../utils/structure/BaseCommand");
 
 function readTextFile(file)
