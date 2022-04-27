@@ -14,10 +14,10 @@ function readTextFile(file)
   try {
     const data = fs.readFileSync(file, 'utf8');
     console.log(data.description);
+    return data.description
   } catch (err) {
     console.error(err);
-  }
-  return data.description
+  }  
 }
 
 //Exportación del Comando news
