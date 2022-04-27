@@ -45,7 +45,7 @@ module.exports = class InfoCommand extends BaseCommand {
 
     let embed = new MessageEmbed()
       .setColor("#FFFFF")
-      .setThumbnail(message.guil.iconURL())
+      .setThumbnail(message.guild.iconURL())
       .setTitle(FAQ[contentArgs].tittle)
       .setFooter("Last Updated・"+FAQ[contentArgs].updated)
       .setDescription(readTextFile(FAQ[contentArgs].description));
