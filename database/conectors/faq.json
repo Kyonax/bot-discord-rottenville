@@ -18,5 +18,10 @@
         "tittle": "What will happen with the Alpha Collection in the next FREE MINT?",
         "description": "./database/conectors/faq/AlphaAndFreeMint.txt",
         "updated": "27/APR/2022 - Kyonax"
+    },
+    "busts":{
+        "tittle": "What the f*ck is the Bust Sculptures Collection?",
+        "description": "./database/conectors/faq/BustSculptures.txt",
+        "updated":"27/APR/2022 - Kyonax"
     }
 }
