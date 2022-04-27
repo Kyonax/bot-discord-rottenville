@@ -44,7 +44,7 @@ module.exports = class InfoCommand extends BaseCommand {
     let afirmado = synchronous.emojiID[0].afirmado;
     let textResponse = putEmoji(bot, cancelado) + " **Information not found.**";
     if (contentArgs == "alpha") {
-      let embed = new MessageEmbed().setTitle(FAQ["alpha"].tittle).setDescription(readTextFile(FAQ["alpha"].description))
+      let embed = new MessageEmbed().setTitle(FAQ["alpha"].tittle).setDescription(readTextFile(FAQ))
       message.channel.send(embed)
     } else {
     }
