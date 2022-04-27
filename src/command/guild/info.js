@@ -13,8 +13,8 @@ async function readTextFile(file)
 {
   try {
     const data = await fs.readFileSync(file, 'utf8');
-    console.log(data.description);
-    return data.description
+    console.log(data);
+    return data
   } catch (err) {
     console.error(err);
   }  
@@ -44,7 +44,7 @@ module.exports = class InfoCommand extends BaseCommand {
     let afirmado = synchronous.emojiID[0].afirmado;
     let textResponse = putEmoji(bot, cancelado) + " **Information not found.**";
     if (contentArgs == "alpha") {
-      let embed = new MessageEmbed().setTitle(FAQ["alpha"].tittle).setDescription(readTextFile(FAQ))
+      let embed = new MessageEmbed().setTitle(FAQ["alpha"].tittle).setDescription(readTextFile(FAQ["alpha"].description))
       message.channel.send(embed)
     } else {
     }
