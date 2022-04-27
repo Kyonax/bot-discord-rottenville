@@ -47,7 +47,7 @@ module.exports = class InfoCommand extends BaseCommand {
       let embed = new MessageEmbed().setTitle(FAQ["alpha"].tittle).setDescription(readTextFile(FAQ["alpha"].description))
       message.channel.send(embed)
     } else {
-    }
-    message.channel.send(textResponse);
+      message.channel.send(textResponse);
+    }    
   }
 };
