@@ -23,5 +23,20 @@
         "tittle": "What the f*ck is the Bust Sculptures Collection?",
         "description": "./database/conectors/faq/BustSculptures.txt",
         "updated":"27/APR/2022 - Kyonax"
+    },
+    "alphamarket":{
+        "tittle": "Where do I buy an Alpha Rotten?",
+        "description": "./database/conectors/faq/AlphaMarketplaces.txt",
+        "updated": "28/APR/2022 - Kyonax"
+    },
+    "reasonstobuy":{
+        "tittle": "Why should I have an NFT from Rotten Ville?",
+        "description": "./database/conectors/faq/ReasonsToBuy.txt",
+        "updated": "28/APR/2022 - Kyonax"
+    },
+    "whattobuy": {
+        "tittle": "How do I know which Rottens to buy?",
+        "description": "./database/conectors/faq/WhatToBuy.txt",
+        "updated":"28/APR/2022 - Kyonax"
     }
 }
