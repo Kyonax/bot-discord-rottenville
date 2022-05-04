@@ -89,20 +89,7 @@ module.exports.twitter = async (bot) => {
       boogle,
       dizan,
       rotten_dao,
-      rotten_dao_kyonax,
-      rotten_dao_sam,
-      rotten_dao_rec,
-      rotten_dao_bstingo,
-      rotten_dao_rojo,
-      rotten_dao_brito,
-      rotten_dao_sandy,
-      rotten_dao_caracolero,
-      rotten_dao_baiden,
-      rotten_dao_nyciiraf,
-      rotten_dao_triumph,
-      rotten_dao_mrwilson,
-      rotten_dao_sanin,
-      rotten_dao_rysoo
+      rotten_dao_kyonax
     ],
   });
 
@@ -134,7 +121,8 @@ module.exports.twitter = async (bot) => {
     ];
 
     let rotten_DAOaccountTwitter = [      
-      rotten_dao      
+      rotten_dao,
+      rotten_dao_kyonax
     ];
 
     rotten_DAOaccountTwitter.forEach((account) => {      
