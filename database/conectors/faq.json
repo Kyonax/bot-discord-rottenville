@@ -38,5 +38,10 @@
         "tittle": "How do I know which Rottens to buy?",
         "description": "./database/conectors/faq/WhatToBuy.txt",
         "updated":"28/APR/2022 - Kyonax"
+    },
+    "solanafees": {
+        "tittle": "Do I need Solana to MINT one NFT from the FREE MINT?",
+        "description": "./database/conectors/faq/SolanaFees.txt",
+        "updated":"05/MAY/2022 - Kyonax"
     }
 }
