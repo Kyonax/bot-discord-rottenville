@@ -278,7 +278,12 @@ ${putEmoji(
                     member +
                     "> you are now a Cool <@&918907276981583932>**",
                   embed
-                );
+                ).then((msg) => {
+                  msg.delete({
+                    timeout: 20000,
+                    reason: "It had to be done.",
+                  });
+                });
                 reaction.message.channel
                   .send(
                     putEmoji(bot, "910545619238678538") +
