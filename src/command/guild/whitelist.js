@@ -28,7 +28,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
   }
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
-        
+
     if (message.channel.name !== "🔱・check-whitelist")
       return err.noCorrectChannel(bot, message, `973604972614811729`);
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
@@ -78,14 +78,16 @@ module.exports = class WhitelistCommand extends BaseCommand {
           embed.addField(
             "**VERIFY ERROR:**",
             `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
-          );          
+          );      
+          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [UPVOTE IN ME]`,embed);    
         }
 
         if (whitelist === false) {
           embed.addField(
             "**VERIFY ERROR:**",
             `You need to be whitelisted first to use this command.`
-          );                              
+          );         
+          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [GET THE WL ROLE]`,embed);                     
         }
 
         if (upvote === true && whitelist === true) {
@@ -98,12 +100,14 @@ module.exports = class WhitelistCommand extends BaseCommand {
             **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
             `
           );  
+
+          message.channel.send(
+            `<@${message.author.id}> YOU ARE WHITELISTED!!! CONGRATS.`,
+            embed
+          );
         }
 
-        message.channel.send(
-          `<@${message.author.id}> Verifying your whitelist spot & Wallet.`,
-          embed
-        );
+        
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
@@ -139,7 +143,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
           "**VERIFY ERROR:**",
           `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
         );
-        message.channel.send(embed);
+        message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS.`,embed);
 
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
