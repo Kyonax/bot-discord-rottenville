@@ -4,8 +4,7 @@ const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const {
-    getMember,
-    putEmoji,
+    getMember,    
     initObjectMember,
     numberWithCommas,
   } = require("../../utils/misc/functions");
