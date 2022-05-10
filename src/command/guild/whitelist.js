@@ -136,7 +136,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
 
         WhitelistJSON.Whitelist.push({
           id: message.author.id,
-          wallet: wallet,
+          wallet: wallet_u,
           alpha: statusHolder,
           whitelist: statusWhitelist,
           upvote: false,
