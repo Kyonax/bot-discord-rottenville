@@ -59,6 +59,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
           console.log("Holder")
         }
         
+        console.log(message.author.user.roles.cache.has("958140020517109781"))
+        console.log(message.author.roles.cache.has("958140020517109781"))
+
         if (message.author.user.roles.cache.has("958140020517109781")){
           console.log("DAO")
         }
