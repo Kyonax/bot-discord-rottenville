@@ -59,7 +59,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (message.author.id === spot.id) {
-        let { alpha, whitelist, upvote } = spot;
+        let { alpha, whitelist, upvote, wallet } = spot;
 
         if (upvote === false) {
           embed.addField(
@@ -73,6 +73,18 @@ module.exports = class WhitelistCommand extends BaseCommand {
             "**VERIFY ERROR:**",
             `You need to be whitelisted first to use this command.`
           );                              
+        }
+
+        if (upvote === true && whitelist === true) {
+          embed.addField(
+            "**VERIFY SUCCES:**",
+            `You are now **Whitelisted with the wallet: __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures.\n\n**Important Links:**\n
+            **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**\n
+            **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**\n
+            **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n\n
+            **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
+            `
+          );  
         }
 
         message.channel.send(

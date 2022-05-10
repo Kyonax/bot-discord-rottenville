@@ -9,8 +9,9 @@
     },
     {
       "id": "248204538941538308",
+      "wallet": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
       "alpha": true,
-      "whitelist": false,
+      "whitelist": true,
       "upvote": true
     }
   ]
