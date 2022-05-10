@@ -78,10 +78,10 @@ module.exports = class WhitelistCommand extends BaseCommand {
         if (upvote === true && whitelist === true) {
           embed.addField(
             "**VERIFY SUCCES:**",
-            `You are now **Whitelisted with the wallet: __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures.\n\n**Important Links:**\n
-            **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**\n
-            **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**\n
-            **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n\n
+            `You are now **Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures.\n\n**Important Links:**\n
+            **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
+            **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
+            **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n
             **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
             `
           );  
