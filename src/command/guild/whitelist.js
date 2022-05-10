@@ -53,7 +53,6 @@ module.exports = class WhitelistCommand extends BaseCommand {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
         console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
-      } else if (JSON.parse(_jsonString).Whitelist.length === i && message.author.id !== spot.id) {
 
         if (message.author.user.roles.cache.has("900152631828299826")){
           console.log("Holder")
@@ -65,6 +64,8 @@ module.exports = class WhitelistCommand extends BaseCommand {
         if (message.author.user.roles.cache.has("958140020517109781")){
           console.log("DAO")
         }
+
+      } else if (JSON.parse(_jsonString).Whitelist.length === i && message.author.id !== spot.id) {                
 
         WhitelistJSON.Whitelist.push({
           "id": message.author.id, 
