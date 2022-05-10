@@ -52,13 +52,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
-        console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
-
-        if (message.author.user.roles.cache.has("900152631828299826")){
-          console.log("Holder")
-        }
+        console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);        
         
-        console.log(message.author.user.roles.cache.has("958140020517109781"))
+        
         console.log(message.author.roles.cache.has("958140020517109781"))
 
         if (message.author.user.roles.cache.has("958140020517109781")){
