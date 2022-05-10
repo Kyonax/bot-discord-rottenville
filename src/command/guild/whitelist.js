@@ -48,10 +48,10 @@ module.exports = class WhitelistCommand extends BaseCommand {
     );
     //Solicitando Json
 
-    console.table(JSON.parse(_jsonString))
+    
 
-    JSON.parse(_jsonString).forEach(spot => {
-        
+    JSON.parse(_jsonString).Whitelist.forEach(spot => {
+      console.table(spot);        
     });
 
   }
