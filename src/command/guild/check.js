@@ -82,7 +82,7 @@ module.exports = class CheckCommand extends BaseCommand {
             "**VERIFY ERROR:**",
             `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
           );      
-          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS.`,embed).then((msg) => {
+          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [UPVOTE IN ME]`,embed).then((msg) => {
               msg.delete({ timeout: 30000, reason: "It had to be done." });
             });  
       }
