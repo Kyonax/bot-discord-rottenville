@@ -43,7 +43,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
     let _jsonString;
     //Emoji from Map
     let msg = null;
-    let wallet = args[0],
+    let wallet_u = args[0],
       i = 1;
     if (!wallet)
       return err.noWalletAddress(bot, message);
@@ -65,7 +65,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote, wallet } = spot;
 
-        WhitelistJSON.Whitelist[i-1].wallet = wallet;
+        WhitelistJSON.Whitelist[i-1].wallet = wallet_u;
 
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
