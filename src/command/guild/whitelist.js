@@ -31,9 +31,10 @@ module.exports = class WhitelistCommand extends BaseCommand {
     let _jsonString;
     //Emoji from Map
     let msg = null;
-    let wallet = args[0]
-    const emoji = synchronous.emojiID[0].afirmado;            
-    
+    let wallet = args[0],
+      i = 1;
+    const emoji = synchronous.emojiID[0].afirmado;
+
     //Creación de Objetos
     const err = new Error();
     _jsonString = await fs.readFileSync(
@@ -47,12 +48,14 @@ module.exports = class WhitelistCommand extends BaseCommand {
       }
     );
     //Solicitando Json
-
-    
-
-    JSON.parse(_jsonString).Whitelist.forEach(spot => {
-      console.table(spot);        
+    JSON.parse(_jsonString).Whitelist.forEach((spot) => {
+      if (message.author.id === spot.id) {
+        let { alpha, whitelist, upvote } = spot;
+        console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
+      } else if (JSON.parse(_jsonString).Whitelist.length === i) {
+        console.log("Whitelisted")
+      }
+      i++;
     });
-
   }
 };
