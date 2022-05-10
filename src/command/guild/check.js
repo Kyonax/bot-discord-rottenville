@@ -65,7 +65,7 @@ module.exports = class CheckCommand extends BaseCommand {
 
         embed.addField(
           "**Data from User**",
-          `**User:** <@${member.id}> **Whitelist Data:** **Wallet Holder = __${_jsonString.Whitelist[i-1].wallet}__**\n**Alpha Holder = __${_jsonString.Whitelist[i-1].alpha}__** - **Is Whitelisted = __${_jsonString.Whitelist[i-1].whitelist}__**\n**The user Upvote in ME = __${_jsonString.Whitelist[i-1].upvote}__**`
+          `**User:** <@${member.id}> **Whitelist Data:** **Wallet Holder = __${WhitelistJSON.Whitelist[i-1].wallet}__**\n**Alpha Holder = __${WhitelistJSON.Whitelist[i-1].alpha}__** - **Is Whitelisted = __${WhitelistJSON.Whitelist[i-1].whitelist}__**\n**The user Upvote in ME = __${WhitelistJSON.Whitelist[i-1].upvote}__**`
         );
         message.channel.send(embed).then((msg) => {
             msg.delete({ timeout: 30000, reason: "It had to be done." });
