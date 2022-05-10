@@ -67,10 +67,20 @@ module.exports = class CheckCommand extends BaseCommand {
                 "**Data from User**",
                 `**User:** <@${member.id}> **Alpha Holder = __${JSON.parse(_jsonString).Whitelist[i-1].alpha}__** - **Is Whitelisted = __${JSON.parse(_jsonString).Whitelist[i-1].whitelist}__**\n **Wallet Holder = __${JSON.parse(_jsonString).Whitelist[i-1].wallet}__**\n**Upvote in ME = __${JSON.parse(_jsonString).Whitelist[i-1].upvote}__**\n\n True means **YES** - **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**`
               );
+              embed.addField(
+                "**VERIFY SUCCES:**",
+                `**Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n\n**Important Links:**
+                **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
+                **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
+                **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n
+                **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
+                `
+              );  
+    
               message.channel.send(
-                `<@${message.author.id}> YOU ARE WHITELISTED!!! CONGRATS.`,embed).then((msg) => {
-                  msg.delete({ timeout: 30000, reason: "It had to be done." });
-                });        
+                `<@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
+                embed
+              );       
       
               return;
         }
@@ -80,10 +90,10 @@ module.exports = class CheckCommand extends BaseCommand {
       ) {
         embed.addField(
             "**YOU NEED TO UPVOTE IN MAGIC EDEN/DEBES VOTAR EN MAGIC EDEN:**",
-            `You need to **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, take a screenshot of the error, and post it in <#901155551239614485>, tag <@248204538941538308>.\n\n then go to <#973604972614811729> and use the command `+"`!whitelist <wallet_address>. to get Whitelisted.`\n\n\n"+`
-            Debes **__[Votar en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__ primero**.\nSi no puedes votar, toma una captura de pantalla al error que no te permite votar y publícalo en <#901155551239614485>, etiqueta a <@248204538941538308>.\n\n luego dírigete a <#973604972614811729> y usa el comando `+"`!whitelist <wallet_address>. para entrar a la Whitelist.`"
-          );      
-          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.`,embed);    
+            `You need to **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, take a screenshot of the error, and post it in <#901155551239614485>, tag <@248204538941538308>.\n\n then go to <#973604972614811729> and use the command `+"`!whitelist <wallet_address>` to get Whitelisted.\n\nESPAÑOL:\n"+`
+            Debes **__[Votar en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__ primero**.\nSi no puedes votar, toma una captura de pantalla al error que no te permite votar y publícalo en <#901155551239614485>, etiqueta a <@248204538941538308>.\n\n luego dírigete a <#973604972614811729> y usa el comando `+"`!whitelist <wallet_address>` para entrar a la Whitelist."
+          );          
+          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.**`,embed);                     
       }
       i++;
     });
