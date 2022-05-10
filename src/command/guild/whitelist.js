@@ -27,14 +27,15 @@ module.exports = class WhitelistCommand extends BaseCommand {
     );
   }
   async run(bot, message, args) {
+    const err = new Error();
+    const perm = new Perms();
     if (message.guild.id != "894634118267146272") return;
 
     if (message.channel.name !== "🔱・check-whitelist")
       return err.noCorrectChannel(bot, message, `973604972614811729`);
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
+    
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
