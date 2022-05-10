@@ -24,8 +24,8 @@ module.exports = class VerifyingCommand extends BaseCommand {
   constructor() {
     super(
       "verifying",
-      ["vr", "check"],
-      "Verifying a user for Whitelist.\nUso: !vr (alpha,whitelist,upvote)",
+      ["veri", "check"],
+      "Verifying a user for Whitelist.\nUso: !veri (alpha,whitelist,upvote)",
       "verifying`",
       "_***Everyone***_",
       "guild"
@@ -64,11 +64,11 @@ module.exports = class VerifyingCommand extends BaseCommand {
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (member.id !== spot.id) {
-        WhitelistJSON.Whitelist[wallet] = true;
+        WhitelistJSON.Whitelist[i-1][wallet] = true;
 
         embed.addField(
           "**Updating User Whitelist:**",
-          `User: <@${member.id}> update Whitelist info: ${wallet} = ${WhitelistJSON.Whitelist[wallet]} by **__[Kyonax](https://twitter.com/kyonax_on_nft)__**`
+          `User: <@${member.id}> update Whitelist info: ${wallet} = ${WhitelistJSON.Whitelist[i-1][wallet]} by **__[Kyonax](https://twitter.com/kyonax_on_nft)__**`
         );
         message.channel.send(embed);
 
