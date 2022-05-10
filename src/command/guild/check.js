@@ -78,7 +78,7 @@ module.exports = class CheckCommand extends BaseCommand {
               );  
     
               message.channel.send(
-                `<@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
+                `${putEmoji(bot, "910545619238678538")} <@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
                 embed
               );       
       
