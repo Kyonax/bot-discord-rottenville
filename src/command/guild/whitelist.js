@@ -78,7 +78,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
         if (upvote === false) {
           embed.addField(
             "**VERIFY ERROR:**",
-            `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
+            `You need to **__[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
           );      
           message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [UPVOTE IN ME]`,embed);    
         }
