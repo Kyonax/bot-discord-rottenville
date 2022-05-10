@@ -29,6 +29,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
+    embed.setTitle(
+      `${putEmoji(bot, "905441646362107924")} Whitelist Support`
+    );
     let _jsonString;
     //Emoji from Map
     let msg = null;
@@ -52,24 +55,32 @@ module.exports = class WhitelistCommand extends BaseCommand {
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
-        console.log(
-          `Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`
-        );
-        
+
+        if (upvote === false) {          
+          embed.addField(
+            "**VERIFY ERROR:**",
+            `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
+          );
+          message.channel.send(embed);
+        }
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
       ) {
-
-        let members_array = message.guild.members.cache, statusHolder = false, statusWhitelist = false;
+        let members_array = message.guild.members.cache,
+          statusHolder = false,
+          statusWhitelist = false;
 
         members_array.forEach((member) => {
           if (member.id === message.author.id) {
-            if (member.roles.cache.has("900152631828299826") || member.roles.cache.has("958140020517109781")){
+            if (
+              member.roles.cache.has("900152631828299826") ||
+              member.roles.cache.has("958140020517109781")
+            ) {
               statusHolder = member.roles.cache.has("900152631828299826");
             }
 
-            if (member.roles.cache.has("968906978904649748")){
+            if (member.roles.cache.has("968906978904649748")) {
               statusWhitelist = member.roles.cache.has("968906978904649748");
             }
           }
@@ -82,9 +93,11 @@ module.exports = class WhitelistCommand extends BaseCommand {
           whitelist: statusWhitelist,
           upvote: false,
         });
-
-        embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
-        embed.addField("**VERIFY ERROR:**", `You need to **Upvote in __Magic Eden__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`);    
+        
+        embed.addField(
+          "**VERIFY ERROR:**",
+          `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
+        );
         message.channel.send(embed);
 
         const writeData = await fs.writeFileSync(
@@ -94,7 +107,6 @@ module.exports = class WhitelistCommand extends BaseCommand {
             if (err) console.log(err);
           }
         );
-
 
         return;
       }

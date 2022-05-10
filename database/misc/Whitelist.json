@@ -1,1 +1,11 @@
-{"Whitelist":[{"id":"2482045389415383082","wallet":"5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn","alpha":false,"whitelist":false,"upvote":false},{"id":"248204538941538308","wallet":"5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn","alpha":true,"whitelist":false,"upvote":false}]}
+{
+  "Whitelist": [    
+    {
+      "id": "2482045389415383082",
+      "wallet": "5bCMVkSiaBXnG9zgEA5y2ER867iD38f8FQVQXLK1wMjn",
+      "alpha": true,
+      "whitelist": false,
+      "upvote": false
+    }
+  ]
+}
