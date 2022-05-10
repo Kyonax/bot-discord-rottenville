@@ -55,26 +55,37 @@ module.exports = class WhitelistCommand extends BaseCommand {
         console.log(
           `Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`
         );
-
-        let members_array = message.guild.members.cache;
-        members_array.forEach((member) => {
-          if (member.id === message.author.id) {
-            if (member.roles.cache.has("900152631828299826")){
-              console.log(member.roles.cache.has("900152631828299826"))
-            }
-          }
-        });
+        
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
       ) {
+
+        let members_array = message.guild.members.cache, statusHolder = false, statusWhitelist = false;
+
+        members_array.forEach((member) => {
+          if (member.id === message.author.id) {
+            if (member.roles.cache.has("900152631828299826") || member.roles.cache.has("958140020517109781")){
+              statusHolder = member.roles.cache.has("900152631828299826");
+            }
+
+            if (member.roles.cache.has("968906978904649748")){
+              statusWhitelist = member.roles.cache.has("968906978904649748");
+            }
+          }
+        });
+
         WhitelistJSON.Whitelist.push({
           id: message.author.id,
           wallet: wallet,
-          alpha: false,
-          whitelist: false,
+          alpha: statusHolder,
+          whitelist: statusWhitelist,
           upvote: false,
         });
+
+        embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
+        embed.addField("**VERIFY ERROR:**", `You need to **Upvote in __Magic Eden__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`);    
+        message.channel.send(embed);
 
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
@@ -83,6 +94,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
             if (err) console.log(err);
           }
         );
+
+
+        return;
       }
       i++;
     });
