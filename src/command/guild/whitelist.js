@@ -63,6 +63,8 @@ module.exports = class WhitelistCommand extends BaseCommand {
           );
           message.channel.send(embed);
         }
+
+        
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
