@@ -55,6 +55,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
       } else if (JSON.parse(_jsonString).Whitelist.length === i) {
         console.log("Whitelisted")
       }
+      
       console.log(`Lenght: ${JSON.parse(_jsonString).Whitelist.length} - Iterator: ${i}`)
       i++;
     });
