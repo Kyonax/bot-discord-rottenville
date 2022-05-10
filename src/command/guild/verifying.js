@@ -3,6 +3,12 @@ const { MessageEmbed } = require("discord.js");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
+const {
+    getMember,
+    putEmoji,
+    initObjectMember,
+    numberWithCommas,
+  } = require("../../utils/misc/functions");
 const WhitelistJSON = require("../../../database/misc/Whitelist.json");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
