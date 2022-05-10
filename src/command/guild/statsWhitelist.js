@@ -33,6 +33,7 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
   }
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
+    if (message.author.id != "248204538941538308") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     //Creación de Objetos
     const err = new Error();
@@ -40,8 +41,9 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
+    let gRole = message.guild.roles.cache.find((rol) => "968906978904649748" === role);
     embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
-    let _jsonString, i = 1;
+    let _jsonString, i = 0, iv = 0, ih = 0;
     let member = getMember(message, args[0]);
     //Emoji from Map
     let msg = null;    
@@ -60,33 +62,25 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
     );
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
-        let { alpha, whitelist, upvote, wallet } = spot;
-      if (member.id === spot.id) {       
-        if (upvote === true && whitelist === true) {
-            embed.addField(
-                "**Data from User**",
-                `**User:** <@${member.id}> **Alpha Holder = __${JSON.parse(_jsonString).Whitelist[i-1].alpha}__** - **Is Whitelisted = __${JSON.parse(_jsonString).Whitelist[i-1].whitelist}__**\n **Wallet Holder = __${JSON.parse(_jsonString).Whitelist[i-1].wallet}__**\n**Upvote in ME = __${JSON.parse(_jsonString).Whitelist[i-1].upvote}__**\n\n True means **YES** - **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**`
-              );
-              message.channel.send(
-                `<@${message.author.id}> YOU ARE WHITELISTED!!! CONGRATS.`,embed).then((msg) => {
-                  msg.delete({ timeout: 30000, reason: "It had to be done." });
-                });        
-      
-              return;
-        }
-      }else if (
-        JSON.parse(_jsonString).Whitelist.length === i &&
-        message.author.id !== spot.id
-      ) {
-        embed.addField(
-            "**VERIFY ERROR:**",
-            `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
-          );      
-          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [UPVOTE IN ME]`,embed).then((msg) => {
-              msg.delete({ timeout: 30000, reason: "It had to be done." });
-            });  
+      let { alpha, whitelist, upvote, wallet } = spot;
+      if (upvote === true && whitelist === true) {          
+          iv++          
+      }
+
+      if (alpha === true) {
+          ih++
       }
       i++;
     });
+
+
+    embed.addField(
+        "**WHITELIST DATA:**",
+        `**Total Users** = ${i} - **Whitelisted Users** = ${iv} - **Holders Whitelisted Users** = ${ih} - **People whit Whitelist Roles** = ${gRole.members.size}`
+      );
+      message.channel.send(
+        `<@${message.author.id}> YOU ARE WHITELISTED!!! CONGRATS.`,embed).then((msg) => {
+          msg.delete({ timeout: 30000, reason: "It had to be done." });
+        });     
   }
 };
