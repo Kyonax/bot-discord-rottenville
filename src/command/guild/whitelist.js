@@ -49,7 +49,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
       }
     );
     //Solicitando Json
-    JSON.parse(_jsonString).Whitelist.forEach((spot) => {
+    JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
         console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
