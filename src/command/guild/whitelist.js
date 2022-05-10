@@ -3,7 +3,6 @@ const { MessageEmbed } = require("discord.js");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
-const Whitelist = require("../../../database/misc/Whitelist.json")
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 //Exportación del Comando Whitelist
@@ -24,6 +23,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
+    let _jsonString;
     //Emoji from Map
     let msg = null;
     let wallet = args[0]
@@ -31,9 +31,19 @@ module.exports = class WhitelistCommand extends BaseCommand {
     
     //Creación de Objetos
     const err = new Error();
+    _jsonString = await fs.readFileSync(
+      "./database/misc/Whitelist.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
     //Solicitando Json
-    
-    Whitelist.forEach(spot => {
+
+    _jsonString.forEach(spot => {
         console.table(spot)
     });
 
