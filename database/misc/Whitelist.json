@@ -6,6 +6,48 @@
       "alpha": true,
       "whitelist": false,
       "upvote": false
+    },
+    {
+      "id": "816223642806648842",
+      "wallet": "",
+      "alpha": true,
+      "whitelist": true,
+      "upvote": true
+    },
+    {
+      "id": "395103035061305345",
+      "wallet": "",
+      "alpha": false,
+      "whitelist": true,
+      "upvote": true
+    },
+    {
+      "id": "482787247922479105",
+      "wallet": "",
+      "alpha": false,
+      "whitelist": true,
+      "upvote": true
+    },
+    {
+      "id": "495597757793566728",
+      "wallet": "",
+      "alpha": false,
+      "whitelist": true,
+      "upvote": true
+    },
+    {
+      "id": "272098110749147139",
+      "wallet": "",
+      "alpha": false,
+      "whitelist": true,
+      "upvote": true
+    },
+    {
+      "id": "903962899083571251",
+      "wallet": "",
+      "alpha": false,
+      "whitelist": true,
+      "upvote": true
     }
   ]
 }

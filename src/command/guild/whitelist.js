@@ -61,6 +61,16 @@ module.exports = class WhitelistCommand extends BaseCommand {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote, wallet } = spot;
 
+        WhitelistJSON.Whitelist[i-1].wallet = wallet;
+
+        const writeData = await fs.writeFileSync(
+          "./database/misc/Whitelist.json",
+          JSON.stringify(WhitelistJSON),
+          (err) => {
+            if (err) console.log(err);
+          }
+        );
+
         if (upvote === false) {
           embed.addField(
             "**VERIFY ERROR:**",
