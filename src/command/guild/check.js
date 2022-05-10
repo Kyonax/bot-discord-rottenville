@@ -79,12 +79,11 @@ module.exports = class CheckCommand extends BaseCommand {
         message.author.id !== spot.id
       ) {
         embed.addField(
-            "**VERIFY ERROR:**",
-            `You need to **__[Upvote in Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
+            "**YOU NEED TO UPVOTE IN MAGIC EDEN/DEBES VOTAR EN MAGIC EDEN:**",
+            `You need to **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, take a screenshot of the error, and post it in <#901155551239614485>, tag <@248204538941538308>.\n\n then go to <#973604972614811729> and use the command `+"`!whitelist <wallet_address>. to get Whitelisted.`\n\n\n"+`
+            Debes **__[Votar en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__ primero**.\nSi no puedes votar, toma una captura de pantalla al error que no te permite votar y publícalo en <#901155551239614485>, etiqueta a <@248204538941538308>.\n\n luego dírigete a <#973604972614811729> y usa el comando `+"`!whitelist <wallet_address>. para entrar a la Whitelist.`"
           );      
-          message.channel.send(`<@${message.author.id}> YOU ARE NOT WL YET, FOLLOW THE NEXT STEPS. [UPVOTE IN ME]`,embed).then((msg) => {
-              msg.delete({ timeout: 30000, reason: "It had to be done." });
-            });  
+          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.`,embed);    
       }
       i++;
     });
