@@ -5,6 +5,11 @@ const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
+var fs = require("fs"),
+  gm = require("gm"),
+  imageMagick = gm.subClass({
+    imageMagick: true,
+  });
 //Exportación del Comando Whitelist
 module.exports = class WhitelistCommand extends BaseCommand {
   constructor() {
