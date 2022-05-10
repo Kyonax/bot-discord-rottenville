@@ -142,6 +142,45 @@ module.exports = class ErrorConector extends BaseConector {
     });
   }
 
+
+  //Error noWalletAddress Detectado - Prefix Error
+  async noWalletAddress(bot, message) {
+    //Eliminación del Mensaje Enviado
+    message.delete().catch((O_o) => {});
+    //Inicialización de Variables prefix - emojiObject Map - Embed
+    const prefix = guildCommandPrefix.get(message.guild.id);
+    const emoji = synchronous.emojiID[0].cancelado;
+    let embed = new MessageEmbed().setColor(kyoColor);
+    //Validación Emojis de Guild
+    
+      embed.addField(
+        `**Command Error** ${putEmoji(bot, emoji)} `,
+        `Please put your wallet address after the command.\n` +
+          "**Use:** `" +
+          prefix +
+          "whitelist <address>`.",
+        false
+      );
+    
+    //Agregación de Tipo de Conector y Nombre de Error
+    embed.addFields(
+      {
+        name: "CONECTOR",
+        value: `[${this.name.toUpperCase()}]`,
+        inline: true,
+      },
+      {
+        name: "ERROR NAME",
+        value: "`noWalletAddress(bot,message)`",
+        inline: true,
+      }
+    );
+    //Envío del Mensaje Embed y su autoeliminación en 20seg
+    message.channel.send(embed).then((msg) => {
+      msg.delete({ timeout: 20000, reason: "It had to be done." });
+    });
+  }
+
   //Error noCommandOrder Detectado - Prefix Error
   async noNewPrefix(bot, message) {
     //Eliminación del Mensaje Enviado

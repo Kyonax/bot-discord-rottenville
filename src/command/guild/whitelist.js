@@ -4,6 +4,9 @@ const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const WhitelistJSON = require("../../../database/misc/Whitelist.json");
+//Importación Clase de Objetos - Conector Error
+const Error = require("../../../database/conectors/error");
+const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 var fs = require("fs"),
@@ -26,21 +29,23 @@ module.exports = class WhitelistCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
+    //Creación de Objetos
+    const err = new Error();
+    const perm = new Perms();
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
-    embed.setTitle(
-      `${putEmoji(bot, "905441646362107924")} Whitelist Support`
-    );
+    embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
     let _jsonString;
     //Emoji from Map
     let msg = null;
     let wallet = args[0],
       i = 1;
-    const emoji = synchronous.emojiID[0].afirmado;
+    if (!wallet)
+      return err.noWalletAddress(bot, message);
 
-    //Creación de Objetos
-    const err = new Error();
+    const emoji = synchronous.emojiID[0].afirmado;
+    //Creación de Objetos    
     _jsonString = await fs.readFileSync(
       "./database/misc/Whitelist.json",
       "utf8",
@@ -56,15 +61,16 @@ module.exports = class WhitelistCommand extends BaseCommand {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
 
-        if (upvote === false) {          
+        if (upvote === false) {
           embed.addField(
             "**VERIFY ERROR:**",
             `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
           );
-          message.channel.send(embed);
+          message.channel.send(
+            `<@${message.author.id}> Verifying your whitelist spot & Wallet.`,
+            embed
+          );
         }
-
-        
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
@@ -95,7 +101,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
           whitelist: statusWhitelist,
           upvote: false,
         });
-        
+
         embed.addField(
           "**VERIFY ERROR:**",
           `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
