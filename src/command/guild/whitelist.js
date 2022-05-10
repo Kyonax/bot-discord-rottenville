@@ -3,6 +3,7 @@ const { MessageEmbed } = require("discord.js");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
+const WhitelistJSON = require("../../../database/misc/Whitelist.json");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 var fs = require("fs"),
@@ -52,11 +53,23 @@ module.exports = class WhitelistCommand extends BaseCommand {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
         console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
-      } else if (JSON.parse(_jsonString).Whitelist.length === i) {
-        console.log("Whitelisted")
-      }
-      
-      console.log(`Lenght: ${JSON.parse(_jsonString).Whitelist.length} - Iterator: ${i}`)
+      } else if (JSON.parse(_jsonString).Whitelist.length === i && message.author.id !== spot.id) {
+
+        WhitelistJSON.Whitelist.push({
+          "id": message.author.id, 
+          "alpha": false,
+          "whitelist": false,
+          "upvote": false
+        })
+        
+        const writeData = await fs.writeFileSync(
+          "./database/misc/Whitelist.json",
+          JSON.stringify(WhitelistJSON),
+          (err) => {
+            if (err) console.log(err);
+          }
+        );
+      }            
       i++;
     });
   }
