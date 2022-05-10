@@ -1,10 +1,1 @@
-{
-    "Whitelist":[     
-        {
-            "id": "2482045389415383082",
-            "alpha": true,
-            "whitelist": true,
-            "upvote": true
-        }   
-    ]
-}
+{"Whitelist":[{"id":"2482045389415383082","alpha":true,"whitelist":true,"upvote":true},{"id":"248204538941538308","alpha":false,"whitelist":false,"upvote":false}]}
