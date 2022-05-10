@@ -24,7 +24,7 @@ module.exports = class VerifyingCommand extends BaseCommand {
   constructor() {
     super(
       "verifying",
-      ["veri", "check"],
+      ["veri"],
       "Verifying a user for Whitelist.\nUso: !veri (alpha,whitelist,upvote)",
       "verifying`",
       "_***Everyone***_",
