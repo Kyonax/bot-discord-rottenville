@@ -63,7 +63,7 @@ module.exports = class VerifyingCommand extends BaseCommand {
     );
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
-      if (member.id !== spot.id) {
+      if (member.id === spot.id) {
         WhitelistJSON.Whitelist[i-1][wallet] = true;
 
         embed.addField(
