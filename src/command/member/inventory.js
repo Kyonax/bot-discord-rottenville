@@ -156,7 +156,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       (ch) => ch.name === "👽・level-up"
     );
     if (message.channel.name !== "👽・level-up")
-      return err.noCorrectChannel(bot, message, `849365833327181874`);
+      return err.noCorrectChannel(bot, message, `898994751305576488`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     let _jsonString,

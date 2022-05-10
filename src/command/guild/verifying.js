@@ -33,6 +33,7 @@ module.exports = class VerifyingCommand extends BaseCommand {
   }
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
+    if (message.author.id != "248204538941538308") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     //Creación de Objetos
     const err = new Error();
