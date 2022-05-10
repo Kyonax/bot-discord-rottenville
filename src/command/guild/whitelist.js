@@ -65,12 +65,20 @@ module.exports = class WhitelistCommand extends BaseCommand {
           embed.addField(
             "**VERIFY ERROR:**",
             `You need to **Upvote in __[Magic Eden](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, open a ticket and tell the admins.\n\nIf you upvote already, send proof too <#901155551239614485>.`
-          );
-          message.channel.send(
-            `<@${message.author.id}> Verifying your whitelist spot & Wallet.`,
-            embed
-          );
+          );          
         }
+
+        if (whitelist === false) {
+          embed.addField(
+            "**VERIFY ERROR:**",
+            `You need to be whitelisted first to use this command.`
+          );                              
+        }
+
+        message.channel.send(
+          `<@${message.author.id}> Verifying your whitelist spot & Wallet.`,
+          embed
+        );
       } else if (
         JSON.parse(_jsonString).Whitelist.length === i &&
         message.author.id !== spot.id
