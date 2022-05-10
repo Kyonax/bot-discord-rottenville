@@ -43,7 +43,7 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
     let embed = new MessageEmbed().setColor(noneColor);
     let gRole = message.guild.roles.cache.find((rol) => rol.id === "968906978904649748");
     embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
-    let _jsonString, i = 0, iv = 0, ih = 0;
+    let _jsonString, i = 0, iv = 0, ih = 0, usersNW= [];
     let member = getMember(message, args[0]);
     //Emoji from Map
     let msg = null;    
@@ -65,18 +65,20 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
       let { alpha, whitelist, upvote, wallet } = spot;
       if (upvote === true && whitelist === true) {          
           iv++          
+      }else if (alpha === true) {
+          ih++
+      } else {
+        usersNW.push(`<@${spot.id}>`)
       }
 
-      if (alpha === true) {
-          ih++
-      }
       i++;
     });
 
 
     embed.addField(
         "**WHITELIST DATA:**",
-        `**Total Users** = ${i} - **Whitelisted Users** = ${iv} - **Holders Whitelisted Users** = ${ih} - **People whit Whitelist Roles** = ${gRole.members.size}`
+        `**Total Users** = ${i} - **Whitelisted Users** = ${iv} - **Holders Whitelisted Users** = ${ih} - **People whit Whitelist Roles** = ${gRole.members.size}\n\n**Users No Whitelists:**
+        ${usersNW}`
       );
       message.channel.send(
         `<@${message.author.id}> YOU ARE WHITELISTED!!! CONGRATS.`,embed).then((msg) => {
