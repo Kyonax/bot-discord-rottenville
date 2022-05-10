@@ -41,7 +41,7 @@ module.exports = class CheckCommand extends BaseCommand {
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
     embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
-    let _jsonString;
+    let _jsonString, i = 1;
     let member = getMember(message, args[0]);
     //Emoji from Map
     let msg = null;    
