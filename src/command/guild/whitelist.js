@@ -55,8 +55,17 @@ module.exports = class WhitelistCommand extends BaseCommand {
         console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);
       } else if (JSON.parse(_jsonString).Whitelist.length === i && message.author.id !== spot.id) {
 
+        if (message.author.user.roles.cache.has("900152631828299826")){
+          console.log("Holder")
+        }
+        
+        if (message.author.user.roles.cache.has("958140020517109781")){
+          console.log("DAO")
+        }
+
         WhitelistJSON.Whitelist.push({
           "id": message.author.id, 
+          "wallet": wallet,
           "alpha": false,
           "whitelist": false,
           "upvote": false
