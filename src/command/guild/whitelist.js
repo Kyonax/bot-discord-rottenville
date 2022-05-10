@@ -27,20 +27,15 @@ module.exports = class WhitelistCommand extends BaseCommand {
     //Emoji from Map
     let msg = null;
     let wallet = args[0]
-    const emoji = synchronous.emojiID[0].afirmado;
-    console.log(wallet)
+    const emoji = synchronous.emojiID[0].afirmado;            
     
-
-    
-    let bodyNet = null;
-    let url = null;
-    let mint = null;
-    let holder = null;
     //Creación de Objetos
     const err = new Error();
     //Solicitando Json
     
-
+    Whitelist.forEach(spot => {
+        console.table(spot)
+    });
 
   }
 };

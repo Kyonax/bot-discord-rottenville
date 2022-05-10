@@ -1,4 +1,10 @@
 {
-    "Whitelist":[        
+    "Whitelist":[     
+        {
+            "id": "248204538941538308",
+            "alpha": true,
+            "whitelist": true,
+            "upvote": true
+        }   
     ]
 }
