@@ -68,9 +68,11 @@ module.exports = class VerifyingCommand extends BaseCommand {
 
         embed.addField(
           "**Updating User Whitelist:**",
-          `User: <@${member.id}> update Whitelist info: ${wallet} = ${WhitelistJSON.Whitelist[i-1][wallet]} by **__[Kyonax](https://twitter.com/kyonax_on_nft)__**`
+          `**User:** <@${member.id}> update **Whitelist info:** **${wallet} = __${WhitelistJSON.Whitelist[i-1][wallet]}__** by **__[Kyonax](https://twitter.com/kyonax_on_nft)__**`
         );
-        message.channel.send(embed);
+        message.channel.send(embed).then((msg) => {
+            msg.delete({ timeout: 20000, reason: "It had to be done." });
+          });
 
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
