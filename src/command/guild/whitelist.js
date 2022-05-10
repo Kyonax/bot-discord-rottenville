@@ -52,25 +52,30 @@ module.exports = class WhitelistCommand extends BaseCommand {
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
       if (message.author.id === spot.id) {
         let { alpha, whitelist, upvote } = spot;
-        console.log(`Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`);        
-        
-        
-        console.log(message.author.roles.cache.has("958140020517109781"))
+        console.log(
+          `Alpha point: ${alpha} - Whitelisted: ${whitelist} - Upvote ME: ${upvote}`
+        );
 
-        if (message.author.user.roles.cache.has("958140020517109781")){
-          console.log("DAO")
-        }
-
-      } else if (JSON.parse(_jsonString).Whitelist.length === i && message.author.id !== spot.id) {                
-
+        let members_array = message.guild.members.cache;
+        members_array.forEach((member) => {
+          if (member.id === message.author.id) {
+            if (member.roles.cache.has("900152631828299826")){
+              console.log(member.roles.cache.has("900152631828299826"))
+            }
+          }
+        });
+      } else if (
+        JSON.parse(_jsonString).Whitelist.length === i &&
+        message.author.id !== spot.id
+      ) {
         WhitelistJSON.Whitelist.push({
-          "id": message.author.id, 
-          "wallet": wallet,
-          "alpha": false,
-          "whitelist": false,
-          "upvote": false
-        })
-        
+          id: message.author.id,
+          wallet: wallet,
+          alpha: false,
+          whitelist: false,
+          upvote: false,
+        });
+
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
           JSON.stringify(WhitelistJSON),
@@ -78,7 +83,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
             if (err) console.log(err);
           }
         );
-      }            
+      }
       i++;
     });
   }
