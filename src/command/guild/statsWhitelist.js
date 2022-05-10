@@ -41,7 +41,7 @@ module.exports = class StatsWhitelistCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed
     let embed = new MessageEmbed().setColor(noneColor);
-    let gRole = message.guild.roles.cache.find((rol) => "968906978904649748" === role);
+    let gRole = message.guild.roles.cache.find((rol) => rol.id === "968906978904649748");
     embed.setTitle(`${putEmoji(bot, "905441646362107924")} Whitelist Support`);
     let _jsonString, i = 0, iv = 0, ih = 0;
     let member = getMember(message, args[0]);
