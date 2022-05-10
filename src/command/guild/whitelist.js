@@ -48,7 +48,7 @@ module.exports = class WhitelistCommand extends BaseCommand {
     );
     //Solicitando Json
 
-    _jsonString.forEach(spot => {
+    JSON.parse(_jsonString).forEach(spot => {
         console.table(spot)
     });
 
