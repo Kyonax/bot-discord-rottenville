@@ -101,16 +101,11 @@ module.exports = class WhitelistCommand extends BaseCommand {
         if (upvote === true && whitelist === true) {
           embed.addField(
             "**VERIFY SUCCES:**",
-            `**Whitelisted __${wallet_u}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n\n**Important Links:**
-            **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
-            **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
-            **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n
-            **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n\n
-          
-            Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n\nESPAÑOL:\n"+`
-            Ayuda al proyecto con un **__[Voto a favor en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nEste voto a favor ayudará a que la Colección llegue a los ojos de todos en el ecosistema!!\n\n verifica tu billetera en <#973604972614811729> usando el comando `+"`!check` - muestra un panel con el estado de su billetera."+`
+            `**Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n
+      
+            Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n"+`                
             
-            \n\n**Important Links:**
+            **Important Links:**
             **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
             **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
             **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n            
@@ -167,18 +162,16 @@ module.exports = class WhitelistCommand extends BaseCommand {
 
         embed.addField(
           "**VERIFY SUCCES:**",
-          `**Whitelisted __${wallet_u}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n\n
+          `**Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n
+    
+          Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n"+`                
           
-          Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n\nESPAÑOL:\n"+`
-          Ayuda al proyecto con un **__[Voto a favor en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nEste voto a favor ayudará a que la Colección llegue a los ojos de todos en el ecosistema!!\n\n verifica tu billetera en <#973604972614811729> usando el comando `+"`!check` - muestra un panel con el estado de su billetera."+`
-          
-          \n\n**Important Links:**
+          **Important Links:**
           **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
           **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
-          **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n
-          **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
+          **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n            
           `
-        );  
+        );   
 
         message.channel.send(
           `${putEmoji(bot, "910545619238678538")} <@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
