@@ -35,7 +35,7 @@ module.exports = class HashCommand extends BaseCommand {
     let url = null;
     let mint = null;
     let holder = null,
-      iw = 0;
+      iw = 143;
     //Creación de Objetos
     const err = new Error();
     //Solicitando Json
@@ -82,7 +82,7 @@ module.exports = class HashCommand extends BaseCommand {
               console.log("View the NFT: " + view_nft_url);
               
               let nft_owner = null;
-              
+
               try {
                 const result = await apiInstance
                   .solanaGetNFTOwner(network, mintAddress)
