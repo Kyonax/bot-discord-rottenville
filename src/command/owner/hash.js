@@ -100,6 +100,8 @@ module.exports = class HashCommand extends BaseCommand {
                 nft_owner = result["nft_owner"];
               } catch (error) {
                   console.log("No Holder Fetch")
+                  iw++
+                  fetchingHash();
               }
 
               url = _body.data.uri;
@@ -131,7 +133,7 @@ module.exports = class HashCommand extends BaseCommand {
           } else {
             console.log(`[] Fetching finish`);
           }
-        }, 1000);
+        }, 500);
       }
 
       fetchingHash();
