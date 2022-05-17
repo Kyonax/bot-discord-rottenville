@@ -33,8 +33,8 @@ module.exports = class MentionCommand extends BaseCommand {
   constructor() {
     super(
       "mention",
-      ["prestamo", "moneditas", "donation", "donacion"],
-      "Add liquidity to an Account.",
+      ["ment"],
+      "Mention amount of times a role.",
       "mention`",
       "_***Everyone***_",
       "mention"
@@ -50,7 +50,7 @@ module.exports = class MentionCommand extends BaseCommand {
     
         
 
-    let _jsonString, object_Guild_Member = null, _times = 15
+    let _jsonString, object_Guild_Member = null, _times = args[1]
     let [cmd, role] = message.content.split(" ");
     //Inicialización Guild Prefix
     _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
