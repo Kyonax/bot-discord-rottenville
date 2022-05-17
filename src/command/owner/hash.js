@@ -18,7 +18,7 @@ module.exports = class HashCommand extends BaseCommand {
   constructor() {
     super(
       "hash",
-      ["hash"],
+      ["fetchhash"],
       "Fetch all the RottenVille Holders",
       "hash`",
       "_***Owner***_",
