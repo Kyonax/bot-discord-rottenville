@@ -65,13 +65,13 @@ module.exports = class CheckCommand extends BaseCommand {
         if (upvote === true && whitelist === true) {
             embed.addField(
                 "**Data from User**",
-                `**User:** <@${member.id}> **Alpha Holder = __${JSON.parse(_jsonString).Whitelist[i-1].alpha}__** - **Is Whitelisted = __${JSON.parse(_jsonString).Whitelist[i-1].whitelist}__**\n **Wallet Holder = __${JSON.parse(_jsonString).Whitelist[i-1].wallet}__**\n**Upvote in ME = __${JSON.parse(_jsonString).Whitelist[i-1].upvote}__**\n**`
+                `**User:** <@${member.id}> **Alpha Holder = __${JSON.parse(_jsonString).Whitelist[i-1].alpha}__** - **Is Whitelisted = __${JSON.parse(_jsonString).Whitelist[i-1].whitelist}__**\n **Wallet Holder = __${JSON.parse(_jsonString).Whitelist[i-1].wallet}__**\n**Upvote in ME = __${JSON.parse(_jsonString).Whitelist[i-1].upvote}__**\n`
               );
               embed.addField(
                 "**VERIFY SUCCES:**",
-                `**Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n\n
+                `**Whitelisted __${wallet}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n
           
-                Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n\n"+`                
+                Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n"+`                
                 
                 **Important Links:**
                 **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
@@ -84,7 +84,7 @@ module.exports = class CheckCommand extends BaseCommand {
                 `${putEmoji(bot, "910545619238678538")} <@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
                 embed
               ).then((msg) => {
-                msg.delete({ timeout: 30000, reason: "It had to be done." });
+                msg.delete({ timeout: 10000, reason: "It had to be done." });
               });       
       
               return;
