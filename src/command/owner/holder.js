@@ -30,7 +30,7 @@ module.exports = class HolderCommand extends BaseCommand {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
-    const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;
+    const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;    
     let bodyNet = null;
     let url = null;
     let mint = null;
