@@ -53,6 +53,7 @@ module.exports = class CsvCommand extends BaseCommand {
     );
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
+      console.log(`Fetching Data Whitelist - ID MEMBER: ${spot.id} WALLET: ${spot.wallet}`);
       let _member = getMember(message, spot.id);
       let _member_structure = `${_member.user.username}#${_member.user.discriminator}`;
 
@@ -61,14 +62,16 @@ module.exports = class CsvCommand extends BaseCommand {
         "Discord ID": `${spot.id}`,
         "Solana Wallet": `${spot.wallet}`,
       };
-    });
 
-    const writeData = await fs.writeFileSync(
+      const writeData = await fs.writeFileSync(
         "./database/misc/ToCSV.json",
         JSON.stringify(ToCSV),
         (err) => {
           if (err) console.log(err);
         }
       );
+    });
+
+    
   }
 };
