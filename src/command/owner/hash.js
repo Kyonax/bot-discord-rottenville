@@ -1,8 +1,8 @@
 //Importación especifica de Metodos - RichEmbed - Colors - Errors
 const { MessageEmbed } = require("discord.js");
-const { lightbluecolor } = require("../../../database/utils/color/color.json");
 const CandyMachineJSON = require("../../../database/utils/adds/CandyMachine_Data.json");
 const CandyRottenVille = require("../../../database/utils/adds/CandyMachineRottenVille.json");
+const AlphaNFTs = require("../../../database/utils/adds/AlphaNFTs.json")
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 const { delay } = require("../../utils/misc/functions");
@@ -12,15 +12,15 @@ const fetch = require("node-fetch");
 const BaseCommand = require("../../utils/structure/BaseCommand.js");
 const fs = require("fs");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const theblockchainapi = require('theblockchainapi');
 
-//Exportación del Comando Alpaca
-module.exports = class HolderCommand extends BaseCommand {
+module.exports = class HashCommand extends BaseCommand {
   constructor() {
     super(
-      "holder",
-      ["walletHolder", "dueño"],
+      "hash",
+      ["fetchhash"],
       "Fetch all the RottenVille Holders",
-      "holder`",
+      "hash`",
       "_***Owner***_",
       "miscellaneous"
     );
@@ -29,8 +29,8 @@ module.exports = class HolderCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
-    const CandyData = CandyMachineJSON.dataNFTs.RottenVille.result;    
+    message.delete().catch((O_o) => { });
+    const CandyData = CandyRottenVille.alpha_rottens
     let bodyNet = null;
     let url = null;
     let mint = null;
@@ -40,8 +40,38 @@ module.exports = class HolderCommand extends BaseCommand {
     //Solicitando Json
     for (let i = 0, len = CandyData.length; i < len; i++) {
       CandyData.forEach((data) => {
-        if (data.nft_metadata.data.name == "Rotten Ville #" + i) {
-          url = data.nft_metadata.data.uri;
+        if (data.name == "Rotten Ville #" + i) {
+
+
+
+          let defaultClient = theblockchainapi.ApiClient.instance;
+
+          // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
+
+          let APIKeyID = defaultClient.authentications['APIKeyID'];
+          APIKeyID.apiKey = 'Jg7gGpZ7E0qjtJ2';
+
+          let APISecretKey = defaultClient.authentications['APISecretKey'];
+          APISecretKey.apiKey = 'Pr9iSo0eIoProXA';
+
+          let apiInstance = new theblockchainapi.SolanaNFTApi();
+
+          let network = 'mainnet-beta'; // String | The network ID (devnet, mainnet-beta)
+          let mintAddress = data.token; // String | The mint address of the NFT
+
+          const _body = await apiInstance.solanaGetNFT(network, mintAddress).then((data) => {
+            console.log('API called successfully.');
+            return data;
+          }, (error) => {
+            console.error(error);
+            return null;
+          });
+
+          console.table(_body)
+
+
+
+          url = data.uri;
           mint = data.nft_metadata.mint;
 
           //Solicitando Json
@@ -82,7 +112,7 @@ module.exports = class HolderCommand extends BaseCommand {
               bodyNet = body;
 
               CandyRottenVille.push({
-                name: data.nft_metadata.data.name,                
+                name: data.nft_metadata.data.name,
                 holder: holder,
                 symbol: data.nft_metadata.data.symbol,
                 uri: data.nft_metadata.data.uri,
