@@ -45,8 +45,8 @@ module.exports = class HashCommand extends BaseCommand {
         setTimeout(async function () {
           if (iw < CandyData.length) {
               let data = CandyData[iw];
-                          
-            if (data.name == "Rotten Ville #" + i) {
+
+            if (data.name == "Rotten Ville #" + iw) {
                 let defaultClient = theblockchainapi.ApiClient.instance;
 
                 // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
