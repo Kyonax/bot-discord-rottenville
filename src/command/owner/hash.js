@@ -101,7 +101,7 @@ module.exports = class HashCommand extends BaseCommand {
 
           fetch(url)
             .then((res) => res.json())
-            .then((body) => {
+            .then(async (body) => {
               if (!body) return err.fetchCrash(bot, message);
               bodyNet = body;
 
@@ -118,7 +118,7 @@ module.exports = class HashCommand extends BaseCommand {
                 properties: body.properties,
               });
 
-              fs.writeFile(
+              await fs.writeFileSync(
                 "./database/utils/adds/AlphaNFTs.json",
                 JSON.stringify(AlphaNFTs),
                 (err) => {
