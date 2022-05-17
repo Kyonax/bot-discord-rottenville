@@ -82,8 +82,7 @@ module.exports = class HolderCommand extends BaseCommand {
               bodyNet = body;
 
               CandyRottenVille.CandyMachine.RottenVille.NFT[i] = {
-                name: data.nft_metadata.data.name,
-                mintAddress: mint,
+                name: data.nft_metadata.data.name,                
                 holder: holder,
                 symbol: data.nft_metadata.data.symbol,
                 uri: data.nft_metadata.data.uri,
