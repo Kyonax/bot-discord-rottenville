@@ -38,6 +38,7 @@ module.exports = class CsvCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
+    let _jsonString;
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     _jsonString = await fs.readFileSync(
