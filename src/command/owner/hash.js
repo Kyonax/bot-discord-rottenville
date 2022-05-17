@@ -39,7 +39,7 @@ module.exports = class HashCommand extends BaseCommand {
     const err = new Error();
     //Solicitando Json
     for (let i = 0, len = CandyData.length; i < len; i++) {
-      CandyData.forEach((data) => {
+      CandyData.forEach(async (data) => {
         if (data.name == "Rotten Ville #" + i) {
 
 
