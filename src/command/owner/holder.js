@@ -81,7 +81,7 @@ module.exports = class HolderCommand extends BaseCommand {
               if (!body) return err.fetchCrash(bot, message);
               bodyNet = body;
 
-              CandyRottenVille.CandyMachine.RottenVille.NFT[i] = {
+              CandyRottenVille.CandyMachine.RottenVille.minted_nfts.push({
                 name: data.nft_metadata.data.name,                
                 holder: holder,
                 symbol: data.nft_metadata.data.symbol,
@@ -92,7 +92,7 @@ module.exports = class HolderCommand extends BaseCommand {
                 edition: body.edition,
                 attributes: body.attributes,
                 properties: body.properties,
-              };
+              });
 
               fs.writeFile(
                 "./database/utils/adds/CandyMachineRottenVille.json",
