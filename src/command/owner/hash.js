@@ -34,90 +34,95 @@ module.exports = class HashCommand extends BaseCommand {
     let bodyNet = null;
     let url = null;
     let mint = null;
-    let holder = null, iw = 0;
+    let holder = null,
+      iw = 0;
     //Creación de Objetos
     const err = new Error();
     //Solicitando Json
     try {
-      
-
       function fetchingHash() {
         setTimeout(async function () {
           if (iw < CandyData.length) {
-              let data = CandyData[iw];
+            let data = CandyData[iw];
 
             if (data.name == "Rotten Ville #" + iw) {
-                let defaultClient = theblockchainapi.ApiClient.instance;
+              let defaultClient = theblockchainapi.ApiClient.instance;
 
-                // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
+              // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
 
-                let APIKeyID = defaultClient.authentications["APIKeyID"];
-                APIKeyID.apiKey = "Jg7gGpZ7E0qjtJ2";
+              let APIKeyID = defaultClient.authentications["APIKeyID"];
+              APIKeyID.apiKey = "Jg7gGpZ7E0qjtJ2";
 
-                let APISecretKey = defaultClient.authentications["APISecretKey"];
-                APISecretKey.apiKey = "Pr9iSo0eIoProXA";
+              let APISecretKey = defaultClient.authentications["APISecretKey"];
+              APISecretKey.apiKey = "Pr9iSo0eIoProXA";
 
-                let apiInstance = new theblockchainapi.SolanaNFTApi();
+              let apiInstance = new theblockchainapi.SolanaNFTApi();
 
-                let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
-                let mintAddress = data.token; // String | The mint address of the NFT
+              let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
+              let mintAddress = data.token; // String | The mint address of the NFT
 
-                const _body = await apiInstance
-                    .solanaGetNFT(network, mintAddress)
-                    .then(
-                        (data) => {
-                            console.log("API called successfully.");
-                            return data;
-                        },
-                        (error) => {
-                            console.error(error);
-                            return null;
-                        }
-                    );
+              const _body = await apiInstance
+                .solanaGetNFT(network, mintAddress)
+                .then(
+                  (data) => {
+                    console.log("API called successfully.");
+                    return data;
+                  },
+                  (error) => {
+                    console.error(error);
+                    return null;
+                  }
+                );
 
-                let view_nft_url =
-                    "https://explorer.solana.com/address/" +
-                    mintAddress +
-                    "?cluster=" +
-                    network;
-                console.log("View the NFT: " + view_nft_url);
-
+              let view_nft_url =
+                "https://explorer.solana.com/address/" +
+                mintAddress +
+                "?cluster=" +
+                network;
+              console.log("View the NFT: " + view_nft_url);
+              
+              let nft_owner = null;
+              
+              try {
                 const result = await apiInstance
-                    .solanaGetNFTOwner(network, mintAddress)
-                    .then(
-                        (data) => {
-                            console.log("API called successfully.");
-                            return data;
-                        },
-                        (error) => {
-                            console.error(error);
-                            return null;
-                        }
-                    );
-
-                let nft_owner = result["nft_owner"];
-                url = _body.data.uri;
-                mint = data.token;
-
-                AlphaNFTs.alpha_rottens.push({
-                    "name": data.name,
-                    "symbol": data.symbol,
-                    "uri": url,
-                    "token": data.token,
-                    "holder": nft_owner,
-                    "explorer_url": _body.explorer_url,
-                    "edition": data.edition                                                
-                })
-
-                await fs.writeFileSync(
-                    "./database/utils/adds/AlphaNFTs.json",
-                    JSON.stringify(AlphaNFTs),
-                    (err) => {
-                      if (err) console.log(err);
+                  .solanaGetNFTOwner(network, mintAddress)
+                  .then(
+                    (data) => {
+                      console.log("API called successfully.");
+                      return data;
+                    },
+                    (error) => {
+                      console.error(error);
+                      return null;
                     }
                   );
-            }
 
+                nft_owner = result["nft_owner"];
+              } catch (error) {
+                  console.log("No Holder Fetch")
+              }
+
+              url = _body.data.uri;
+              mint = data.token;
+
+              AlphaNFTs.alpha_rottens.push({
+                name: data.name,
+                symbol: data.symbol,
+                uri: url,
+                token: data.token,
+                holder: nft_owner,
+                explorer_url: _body.explorer_url,
+                edition: data.edition,
+              });
+
+              await fs.writeFileSync(
+                "./database/utils/adds/AlphaNFTs.json",
+                JSON.stringify(AlphaNFTs),
+                (err) => {
+                  if (err) console.log(err);
+                }
+              );
+            }
           }
 
           iw++;
