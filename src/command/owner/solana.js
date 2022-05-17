@@ -32,61 +32,39 @@ module.exports = class SolanaCommand extends BaseCommand {
     const err = new Error();
     const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
 
+    
+
     let defaultClient = theblockchainapi.ApiClient.instance;
 
     // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
 
     let APIKeyID = defaultClient.authentications["APIKeyID"];
-    APIKeyID.apiKey = "SIchJmKxlRxhTxt";
+    APIKeyID.apiKey = "Jg7gGpZ7E0qjtJ2";
 
     let APISecretKey = defaultClient.authentications["APISecretKey"];
-    APISecretKey.apiKey = "MKCGxQMADMW2kSO";
+    APISecretKey.apiKey = "Pr9iSo0eIoProXA";
 
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
-    let request = new theblockchainapi.GetCandyMetadataRequest(); // GetCandyMetadataRequest |
 
-    // V1 candy machine
-    request.candy_machine_id = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
-    request.network = "mainnet-beta";
+    let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
+    let candyMachineId = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E"; // String | The ID of the candy machine
 
-    let opts = {
-      getCandyMetadataRequest: request,
-    };
+    console.log("This takes about 45 seconds... Starting the API call...");
 
-    let result = await apiInstance.solanaGetCandyMachineMetadata(opts).then(
-      (data) => {
-        console.log("API called successfully.");
-        return data;
-      },
-      (error) => {
-        console.error(error);
-        return null;
-      }
-    );
+    let result = await apiInstance
+      .solanaGetAllNFTsFromCandyMachine(network, candyMachineId)
+      .then(
+        (data) => {
+          console.log("API called successfully.");
+          return data;
+        },
+        (error) => {
+          console.error(error);
+          return null;
+        }
+      );
 
-    console.log("V1 CANDY MACHINE", result);
-
-    // V2 candy machine
-    request.candy_machine_id = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
-    request.network = "mainnet-beta";
-    request.candy_machine_contract_version = "v2"; // You have to specify the version. You can find the version here: https://docs.theblockchainapi.com/#operation/solanaGetAccountIsCandyMachine
-
-    opts = {
-      getCandyMetadataRequest: request,
-    };
-
-    result = await apiInstance.solanaGetCandyMachineMetadata(opts).then(
-      (data) => {
-        console.log("API called successfully.");
-        return data;
-      },
-      (error) => {
-        console.error(error);
-        return null;
-      }
-    );
-
-    console.log("V2 CANDY MACHINE", result);
+    console.log(result);    
 
     CandyMachineJSON.dataNFTs["RottenVille"] = {
       result: result,
