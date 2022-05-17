@@ -4,6 +4,7 @@ const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const WhitelistJSON = require("../../../database/misc/Whitelist.json");
+const NEWWhitelistJSON = require("../../../database/misc/NewWhitelist.json");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
@@ -81,7 +82,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
             `You need to **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, take a screenshot of the error, and post it in <#901155551239614485>, tag <@248204538941538308>.\n\n then go to <#973604972614811729> and use the command `+"`!whitelist <wallet_address>` to get Whitelisted.\n\nESPAÑOL:\n"+`
             Debes **__[Votar en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__ primero**.\nSi no puedes votar, toma una captura de pantalla al error que no te permite votar y publícalo en <#901155551239614485>, etiqueta a <@248204538941538308>.\n\n luego dírigete a <#973604972614811729> y usa el comando `+"`!whitelist <wallet_address>` para entrar a la Whitelist."
           );          
-          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.**`,embed);                     
+          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.**`,embed).then((msg) => {
+            msg.delete({ timeout: 30000, reason: "It had to be done." });
+          });
         }
 
         if (whitelist === false) {
@@ -90,7 +93,9 @@ module.exports = class WhitelistCommand extends BaseCommand {
             `You need to **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__ first**.\nIf you can't upvote, take a screenshot of the error, and post it in <#901155551239614485>, tag <@248204538941538308>.\n\n then go to <#973604972614811729> and use the command `+"`!whitelist <wallet_address>` to get Whitelisted.\n\nESPAÑOL:\n"+`
             Debes **__[Votar en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__ primero**.\nSi no puedes votar, toma una captura de pantalla al error que no te permite votar y publícalo en <#901155551239614485>, etiqueta a <@248204538941538308>.\n\n luego dírigete a <#973604972614811729> y usa el comando `+"`!whitelist <wallet_address>` para entrar a la Whitelist."
           );          
-          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.**`,embed);                     
+          message.channel.send(`${putEmoji(bot, "910558105228677211")} <@${message.author.id}> **Please read the information below, you are not whitelisted yet.**\n**Porfavor lee la información a continuación, aún no estás en la whitelist.**`,embed).then((msg) => {
+            msg.delete({ timeout: 30000, reason: "It had to be done." });
+          });                    
         }
 
         if (upvote === true && whitelist === true) {
@@ -100,14 +105,24 @@ module.exports = class WhitelistCommand extends BaseCommand {
             **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
             **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
             **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n
-            **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n            
+            **__[Bot Developer](https://twitter.com/kyonax_on_nft)__**\n\n
+          
+            Help the project with an **__[Upvote in Magic Eden - Click here -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nThis upvote will help the Collection get to the eyes of everyone in the ecosystem!!\n\n check your wallet on <#973604972614811729> using the command `+"`!check` - deploy a Wallet status.\n\nESPAÑOL:\n"+`
+            Ayuda al proyecto con un **__[Voto a favor en Magic Eden - Haga clic aquí -](https://magiceden.io/drops/rotten_ville_sculptures)__**.\nEste voto a favor ayudará a que la Colección llegue a los ojos de todos en el ecosistema!!\n\n verifica tu billetera en <#973604972614811729> usando el comando `+"`!check` - muestra un panel con el estado de su billetera."+`
+            
+            \n\n**Important Links:**
+            **__[Rotten Ville Bust Sculptures](https://twitter.com/rotten_ville/status/1519365371710615553)__**
+            **__[Rotten Ville Project](https://twitter.com/rotten_ville/status/1518978216706420738)__**
+            **__[Development Team](https://twitter.com/rotten_ville/status/1517512268975677440)__**\n            
             `
           );  
 
           message.channel.send(
             `${putEmoji(bot, "910545619238678538")} <@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
             embed
-          );
+          ).then((msg) => {
+            msg.delete({ timeout: 30000, reason: "It had to be done." });
+          });
         }
 
         
@@ -142,6 +157,14 @@ module.exports = class WhitelistCommand extends BaseCommand {
           upvote: true,
         });
 
+        NEWWhitelistJSON.Whitelist.push({
+          id: message.author.id,
+          wallet: wallet_u,
+          alpha: statusHolder,
+          whitelist: statusWhitelist,
+          upvote: true,
+        });
+
         embed.addField(
           "**VERIFY SUCCES:**",
           `**Whitelisted __${wallet_u}__**, you'll recieve a Whitelist Token that will help you MINT the Rotten Bust Sculptures. Be pretty alert to the Announcements on Twitter & Discord, let's build the RottenVerse together!\n\n
@@ -160,11 +183,21 @@ module.exports = class WhitelistCommand extends BaseCommand {
         message.channel.send(
           `${putEmoji(bot, "910545619238678538")} <@${message.author.id}> **Congrats!!! You are now Whitelisted - Felicidades! Ahora estás dentro de la Whitelist.**`,
           embed
-        );        
+        ).then((msg) => {
+          msg.delete({ timeout: 30000, reason: "It had to be done." });
+        });        
 
         const writeData = await fs.writeFileSync(
           "./database/misc/Whitelist.json",
           JSON.stringify(WhitelistJSON),
+          (err) => {
+            if (err) console.log(err);
+          }
+        );
+
+        const writeDataNew = await fs.writeFileSync(
+          "./database/misc/NewWhitelist.json",
+          JSON.stringify(NEWWhitelistJSON),
           (err) => {
             if (err) console.log(err);
           }
