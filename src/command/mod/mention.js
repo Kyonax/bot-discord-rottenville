@@ -15,7 +15,8 @@ const {
 const {
   updateGuildBankCoins,
   updateGuildMemberBoost,
-  updateGuildLevel, updateGuildBankCoinsJSON
+  updateGuildLevel,
+  updateGuildBankCoinsJSON,
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const Error = require("../../../database/conectors/error");
@@ -47,36 +48,38 @@ module.exports = class MentionCommand extends BaseCommand {
     const ERR = new Error();
     const PERM = new Perms();
     const _MEMBER = getMember(message, message.author.id);
-    
-        
 
-    let _jsonString, object_Guild_Member = null, _times = args[1]
+    let _jsonString,
+      object_Guild_Member = null,
+      _times = args[1];
     let [cmd, role] = message.content.split(" ");
     //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
+    _jsonString = await fs.readFileSync(
+      "./database/misc/GuildMembers.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
       }
-    })       
+    );
 
-    JSON.parse(_jsonString).forEach(_member => {       
-      if (_member.guildID == member.guild.id) {
-      if (_MEMBER.id == _member.memberID) {
-        object_Guild_Member = _member           
-      }      }
-    });                
-    
+    JSON.parse(_jsonString).forEach((_member) => {
+      if (_member.guildID == _MEMBER.guild.id) {
+        if (_MEMBER.id == _member.memberID) {
+          object_Guild_Member = _member;
+        }
+      }
+    });
 
     if (object_Guild_Member.moderatorMember !== 1)
       return PERM.moderatorPerms(bot, message);
 
-    
     for (let index = 0; index < _times; index++) {
-        message.channel.send(role).then((msg) => {
-            msg.delete({ timeout: 5000, reason: "It had to be done." });
-          });        
+      message.channel.send(role).then((msg) => {
+        msg.delete({ timeout: 5000, reason: "It had to be done." });
+      });
     }
-    
   }
 };
