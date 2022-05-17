@@ -36,10 +36,10 @@ module.exports = class SolanaCommand extends BaseCommand {
 
     // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
 
-    let APIKeyID = defaultClient.authentications["Jg7gGpZ7E0qjtJ2"];
+    let APIKeyID = defaultClient.authentications["APIKeyID"];
     APIKeyID.apiKey = "Jg7gGpZ7E0qjtJ2";
 
-    let APISecretKey = defaultClient.authentications["Pr9iSo0eIoProXA"];
+    let APISecretKey = defaultClient.authentications["APISecretKey"];
     APISecretKey.apiKey = "Pr9iSo0eIoProXA";
 
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
