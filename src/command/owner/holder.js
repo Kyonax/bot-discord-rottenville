@@ -81,7 +81,7 @@ module.exports = class HolderCommand extends BaseCommand {
               if (!body) return err.fetchCrash(bot, message);
               bodyNet = body;
 
-              CandyRottenVille.CandyMachine.RottenVille.minted_nfts.push({
+              CandyRottenVille.push({
                 name: data.nft_metadata.data.name,                
                 holder: holder,
                 symbol: data.nft_metadata.data.symbol,
