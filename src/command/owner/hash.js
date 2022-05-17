@@ -42,8 +42,6 @@ module.exports = class HashCommand extends BaseCommand {
       CandyData.forEach(async (data) => {
         if (data.name == "Rotten Ville #" + i) {
 
-
-
           let defaultClient = theblockchainapi.ApiClient.instance;
 
           // Get a free API Key Pair here: https://dashboard.blockchainapi.com/api-keys
@@ -65,14 +63,10 @@ module.exports = class HashCommand extends BaseCommand {
           }, (error) => {
             console.error(error);
             return null;
-          });
+          });          
 
-          console.table(_body)
-
-
-
-          url = data.uri;
-          mint = data.nft_metadata.mint;
+          url = _body.data.uri;
+          mint = data.token;
 
           //Solicitando Json
           var url_2 = `https://public-api.solscan.io/token/holders?tokenAddress=${mint}`;
@@ -111,12 +105,12 @@ module.exports = class HashCommand extends BaseCommand {
               if (!body) return err.fetchCrash(bot, message);
               bodyNet = body;
 
-              CandyRottenVille.push({
-                name: data.nft_metadata.data.name,
+              AlphaNFTs.alpha_rottens.push({
+                name: data.name,
                 holder: holder,
-                symbol: data.nft_metadata.data.symbol,
-                uri: data.nft_metadata.data.uri,
-                token: data.nft_metadata.mint,
+                symbol: data.symbol,
+                uri: url,
+                token: data.token,
                 image: body.image,
                 external_url: body.external_url,
                 edition: body.edition,
@@ -125,8 +119,8 @@ module.exports = class HashCommand extends BaseCommand {
               });
 
               fs.writeFile(
-                "./database/utils/adds/CandyMachineRottenVille.json",
-                JSON.stringify(CandyRottenVille),
+                "./database/utils/adds/AlphaNFTs.json",
+                JSON.stringify(AlphaNFTs),
                 (err) => {
                   if (err) console.log(err);
                 }
