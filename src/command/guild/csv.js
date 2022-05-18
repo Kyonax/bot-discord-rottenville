@@ -38,7 +38,7 @@ module.exports = class CsvCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    let _jsonString;
+    let _jsonString,_jsonStringCSV, _keyCSV = false;
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     _jsonString = await fs.readFileSync(
@@ -51,15 +51,33 @@ module.exports = class CsvCommand extends BaseCommand {
         }
       }
     );
+
+    _jsonStringCSV = await fs.readFileSync(
+      "./database/misc/ToCSV.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
     //Solicitando Json
     JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
+     JSON.parse(_jsonStringCSV).Structure.forEach(csv => {
+       if (spot.id === csv.id) {
+        return _keyCSV = true;         
+       }       
+     });
+
+     if (_keyCSV !== true) {
       console.log(
         `Fetching Data Whitelist - ID MEMBER: ${spot.id} WALLET: ${spot.wallet}`
       );
       let _member = getMember(message, spot.id);
       let _member_structure = `${_member.user.username}#${_member.user.discriminator}`;
 
-      ToCSV.Structure.push({
+      ToCSV.Structure_2.push({
         "Discord Tag": `${_member_structure}`,
         "Discord ID": `${spot.id}`,
         "Solana Wallet": `${spot.wallet}`,
@@ -71,7 +89,8 @@ module.exports = class CsvCommand extends BaseCommand {
         (err) => {
           if (err) console.log(err);
         }
-      );
+      );       
+     }
     });
   }
 };
