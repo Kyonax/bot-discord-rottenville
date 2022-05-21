@@ -1,7 +1,7 @@
 //Importación especifica de Metodos - RichEmbed - Colors - Errors
 const { MessageEmbed } = require("discord.js");
 const { lightbluecolor } = require("../../../database/utils/color/color.json");
-const CandyMachineJSON = require("../../../database/utils/adds/CandyMachine_Data.json");
+const CandyMachineJSON = require("../../../database/utils/adds/BustJSON.json");
 //const CandyMachineJSON2 = require("../../../database/utils/adds/CandyMachine_Data2.json");
 var theblockchainapi = require("theblockchainapi");
 let defaultClient = theblockchainapi.ApiClient.instance; //Importación Clase de Objetos - Conector Error
@@ -30,7 +30,7 @@ module.exports = class SolanaCommand extends BaseCommand {
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     const err = new Error();
-    const walletAdress = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E";
+    const walletAdress = "12hr7uZfayc5c6ny2BgwrpPD54Q4Hm8g61xL16vS4Mfd";
 
     
 
@@ -47,7 +47,7 @@ module.exports = class SolanaCommand extends BaseCommand {
     let apiInstance = new theblockchainapi.SolanaCandyMachineApi();
 
     let network = "mainnet-beta"; // String | The network ID (devnet, mainnet-beta)
-    let candyMachineId = "AaDok1ZGwDTgAdeXZxuyprCdbRvAK1VzM2EvuBmTAw3E"; // String | The ID of the candy machine
+    let candyMachineId = "12hr7uZfayc5c6ny2BgwrpPD54Q4Hm8g61xL16vS4Mfd"; // String | The ID of the candy machine
 
     console.log("This takes about 45 seconds... Starting the API call...");
 
@@ -77,7 +77,7 @@ module.exports = class SolanaCommand extends BaseCommand {
     console.table(result);
 
     fs.writeFile(
-      "./database/utils/adds/CandyMachine_Data.json",
+      "./database/utils/adds/BustJSON.json",
       JSON.stringify(CandyMachineJSON),
       (err) => {
         if (err) console.log(err);
