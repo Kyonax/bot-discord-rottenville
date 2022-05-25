@@ -68,12 +68,15 @@ module.exports.welcomeMessage = async (member, bot) => {
     )}**`,
     `What? A new Survivor? **Welcome ${_MEMBER} to the RottenVille Gang, enjoy your stay!!!**`,
     `**Gang gang, We have a new member in our Gang, congrats ${_MEMBER}** and Welcome to RottenVille!`,
-    `**The RottenVerse welcomes you ${_MEMBER}** with open arms, be the best version of you, be a Rotten.`,
+    `**The RottenVerse welcomes you ${_MEMBER}** with open arms, be the best version of you, be a Rotten`,
     `Yo!!! ${_MEMBER} I thought you were not coming, I'm very happy to have you right here, ready to become a Rotten?`,
     `**Are you ${_MEMBER} right? Welcome to RottenVille!!** The Rottens DAO was waiting for your arrive!!`,
-    `**The Metaverse is very huge ${_MEMBER},** We are very happy that you made the decision to be part of the RottenVerse.`
+    `**The Metaverse is very huge ${_MEMBER},** We are very happy that you made the decision to be part of the RottenVerse`,
+    `Let's build the RottenVerse together ${_MEMBER}, enjoy the Community`,
+    `Diamond hand entry the chat ${_MEMBER}`,
+    ``
   ];
-  const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)];
+  const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)] + ` | **Verify as a Member on <#960905065906991144> & if you are a Holder go to <#958311149659631637> - Stay up-to-date on <#898963695336583169>`;
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
     ch.name.includes("📑・new-member")
   );
