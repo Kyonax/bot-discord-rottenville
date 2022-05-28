@@ -76,7 +76,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     `Diamond hand entry the chat ${_MEMBER}`,
     ``
   ];
-  const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)] + ` | **Verify as a Member on <#960905065906991144> & if you are a Holder go to <#958311149659631637> - Stay up-to-date on <#898963695336583169>`;
+  const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)] + ` | **Verify as a Member on <#960905065906991144> & if you are a Holder go to <#958311149659631637> - Stay up-to-date on <#898963695336583169>**`;
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
     ch.name.includes("📑・new-member")
   );
