@@ -47,11 +47,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     const member = getMember(message, args.join(" "));
     //Inicialización de Variable de Usuario
     let _jsonString,
-      _jsonStringWeek,
+      _jsonStringWeek, _jsonStringMonth,
       ObjectAutor = null,
       ObjectMemberWeek = null,
-      ranking = [],
-      ranking_week;
+      ranking = [], rankingMonth = [],
+      ranking_week, ranking_month;
     //Inicialización Guild Prefix
     _jsonString = await fs.readFileSync(
       "./database/misc/GuildMembers.json",
@@ -74,7 +74,18 @@ module.exports = class InventaryCommand extends BaseCommand {
         }
       }
     );
-    
+
+    _jsonStringMonth = await fs.readFileSync(
+      "./database/misc/GuildMembersMonth.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
+
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID === member.guild.id) {
         if (message.author.id === _member.memberID) {
@@ -83,7 +94,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
         if (_member.guildID === message.guild.id) {
 
-          let index = 1
+          let index = 1, index_month = 1
 
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
             let register_desition = "not_registered"
@@ -93,14 +104,14 @@ module.exports = class InventaryCommand extends BaseCommand {
               register_desition = "registered"
             }
 
-            if (register_desition === "not_registered") {                 
-                 
+            if (register_desition === "not_registered") {
+
               if (_member.serverRank === index && index <= 20) {
-                ranking.push(_member);                
-                return;               
+                ranking.push(_member);
+                return;
               }
-            }  
-            index++          
+            }
+            index++
           });
 
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
@@ -113,18 +124,61 @@ module.exports = class InventaryCommand extends BaseCommand {
                 _member.memberXP = _member.memberXP - _member_week.memberXP;
                 ranking.push(_member);
 
-                
+              }
+            }
+          });
 
+
+          JSON.parse(_jsonStringMonth).forEach((_member_month) => {
+            let register_desition = "not_registered"
+
+
+            if (_member.memberID === _member_month.memberID) {
+              register_desition = "registered"
+            }
+
+            if (register_desition === "not_registered") {
+
+              if (_member.serverRank === index && index <= 20) {
+                rankingMonth.push(_member);
+                return;
+              }
+            }
+            index_month++
+          });
+
+          JSON.parse(_jsonStringMonth).forEach((_member_month) => {
+
+            if (_member_month.guildID === message.guild.id) {
+
+
+              if (_member_month.memberID === _member.memberID) {
+
+                _member.memberXP = _member.memberXP - _member_month.memberXP;
+                rankingMonth.push(_member);
 
               }
             }
           });
         }
+
+
       }
-      
+
     });
 
     ranking.sort(function (a, b) {
+      if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
+        return 1;
+      }
+      if (parseInt(a.memberXP) > parseInt(b.memberXP)) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    });
+
+    rankingMonth.sort(function (a, b) {
       if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
         return 1;
       }
@@ -150,14 +204,17 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setColor("#00ED90")
       .setFooter("RottenVille Level System")
       .setTimestamp();
-    let iterator = 1,
-      text_phrase = "none";
+    let iterator = 1, iterator_month = 1,
+      text_phrase = "none", text_phrase_month = "none";
 
     ranking_week = ranking.filter((c, index) => {
       return ranking.indexOf(c) === index;
     });
 
-    
+    ranking_month = rankingMonth.filter((c, index) => {
+      return rankingMonth.indexOf(c) === index;
+    });
+
 
     ranking_week.forEach((_member_rank) => {
       if (_member_rank.guildID === message.guild.id) {
@@ -177,7 +234,26 @@ module.exports = class InventaryCommand extends BaseCommand {
       }
     });
 
+    ranking_month.forEach((_member_rank) => {
+      if (_member_rank.guildID === message.guild.id) {
+        if (iterator_month <= 10) {
+          text_phrase_month =
+            text_phrase_month +
+            `\n ` +
+            "`" +
+            parseInt(iterator_month) +
+            ".` " +
+            `<@${_member_rank.memberID}> ` +
+            " **Weekly XP:** " +
+            _member_rank.memberXP +
+            putEmoji(bot, "899083263816122458");
+        }
+        iterator_month++;
+      }
+    });
+
     text_phrase = text_phrase.replace("none", "\n ");
+    text_phrase_month = text_phrase_month.replace("none", "\n ");
 
     embed.addField(
       putEmoji(bot, "905441646362120232") +
@@ -185,9 +261,16 @@ module.exports = class InventaryCommand extends BaseCommand {
       text_phrase,
       false
     );
-    
+
+    embed.addField(
+      putEmoji(bot, "905441646362120232") +
+      ` **${message.guild.name} Top 10 active members of the Month:**`,
+      text_phrase,
+      false
+    );
+
     message.channel.send(
-      `**<@${member.id}> look at the Server Ranking of the Week!! **${putEmoji(
+      `**<@${member.id}> look at the Server Ranking of the Week & Month!! **${putEmoji(
         bot,
         "910545619238678538"
       )}`,
