@@ -265,7 +265,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     embed.addField(
       putEmoji(bot, "905441646362120232") +
       ` **${message.guild.name} Top 10 active members of the Month:**`,
-      text_phrase,
+      text_phrase_month,
       false
     );
 
