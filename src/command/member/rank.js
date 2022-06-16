@@ -115,6 +115,8 @@ module.exports = class InventaryCommand extends BaseCommand {
           });
 
           JSON.parse(_jsonStringWeek).forEach((_member_week) => {
+            console.log("MEMBER WEEK:")
+            console.table(_member_week)
 
             if (_member_week.guildID === message.guild.id) {
 
@@ -148,6 +150,8 @@ module.exports = class InventaryCommand extends BaseCommand {
           });
 
           JSON.parse(_jsonStringMonth).forEach((_member_month) => {
+            console.log("MEMBER MONTH:")
+            console.table(_member_month)
 
             if (_member_month.guildID === message.guild.id) {
 
@@ -244,7 +248,7 @@ module.exports = class InventaryCommand extends BaseCommand {
             parseInt(iterator_month) +
             ".` " +
             `<@${_member_rank.memberID}> ` +
-            " **Weekly XP:** " +
+            " **Monthly XP:** " +
             _member_rank.memberXP +
             putEmoji(bot, "899083263816122458");
         }
