@@ -13,6 +13,7 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
+const Api = require("../../utils/misc/api_discord_functions")
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 //Inicialización de js de Node.js
@@ -147,7 +148,7 @@ module.exports = class InventaryCommand extends BaseCommand {
   }
   async run(bot, message, args) {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
@@ -159,6 +160,12 @@ module.exports = class InventaryCommand extends BaseCommand {
       return err.noCorrectChannel(bot, message, `898994751305576488`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
+    const member_id = member.author.id;
+    const guild_id = member.guild.id;
+
+    const api_member = await Api.getMember(guild_id, member_id);
+    console.table(api_member);
+
     let _jsonString,
       _jsonStringWeek,
       ObjectMemberWeek = null,
@@ -189,20 +196,22 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID == member.guild.id) {
-      if (member.id == _member.memberID && _member.guildID == message.guild.id) {
-        ObjectMember = _member;
-      }
+        if (member.id == _member.memberID && _member.guildID == message.guild.id) {
+          ObjectMember = _member;
+        }
 
-      if (message.author.id == _member.memberID && _member.guildID == message.guild.id) {
-        ObjectAutor = _member;
-      }}
+        if (message.author.id == _member.memberID && _member.guildID == message.guild.id) {
+          ObjectAutor = _member;
+        }
+      }
     });
 
     JSON.parse(_jsonStringWeek).forEach((_member) => {
       if (_member.guildID == member.guild.id) {
-      if (member.id == _member.memberID && _member.guildID == message.guild.id) {
-        ObjectMemberWeek = _member;
-      }}
+        if (member.id == _member.memberID && _member.guildID == message.guild.id) {
+          ObjectMemberWeek = _member;
+        }
+      }
     });
 
     //Validación si en el Mensaje se usó un Usuario
@@ -227,7 +236,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         boostMemberTime: 0,
         warnings: 0,
       };
-    }    
+    }
 
     if (ObjectMember === null)
       return err.noFindMember(bot, message, member.displayName);
