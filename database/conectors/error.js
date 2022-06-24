@@ -18,7 +18,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCommandOrder Detectado - Prefix Error
   async noCmdOrder(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -28,18 +28,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)}`,
         `No se ha **digitado** una instrucción para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "prefix <command>`.\n**Comandos:** `<show>`,`<set>`.",
+        "**Uso:** `" +
+        prefix +
+        "prefix <command>`.\n**Comandos:** `<show>`,`<set>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se ha **digitado** una instrucción para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "prefix <command>`.\n**Comandos:** `<show>`,`<set>`.",
+        "**Uso:** `" +
+        prefix +
+        "prefix <command>`.\n**Comandos:** `<show>`,`<set>`.",
         false
       );
     }
@@ -63,7 +63,7 @@ module.exports = class ErrorConector extends BaseConector {
   }
   async noCorrectChannel(bot, message, channel) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -72,9 +72,9 @@ module.exports = class ErrorConector extends BaseConector {
     embed.addField(
       `**Error de Comando** ${putEmoji(bot, emoji)}`,
       `**Has ejecutado un comando en un canal incorrecto** si deseas poder usar el comando, dirígete al canal <#${channel}> y usa\n` +
-        "**Uso:** `" +
-        prefix +
-        "level`.\n**Opciones Admin:** `<user>`.",
+      "**Uso:** `" +
+      prefix +
+      "level`.\n**Opciones Admin:** `<user>`.",
       false
     );
     //Agregación de Tipo de Conector y Nombre de Error
@@ -98,7 +98,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCommandOrder Detectado - Prefix Error
   async noCmdOrderS(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -108,18 +108,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)}`,
         `No se ha **digitado** una instrucción para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "set <command>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\n**Values:** `<true>`,`<false>`.",
+        "**Uso:** `" +
+        prefix +
+        "set <command>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\n**Values:** `<true>`,`<false>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se ha **digitado** una instrucción para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "set <command>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\n**Values**: `<true>`,`<false>`.",
+        "**Uso:** `" +
+        prefix +
+        "set <command>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\n**Values**: `<true>`,`<false>`.",
         false
       );
     }
@@ -146,22 +146,22 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noWalletAddress Detectado - Prefix Error
   async noWalletAddress(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
     //Validación Emojis de Guild
-    
-      embed.addField(
-        `**Command Error** ${putEmoji(bot, emoji)} `,
-        `Please put your wallet address after the command.\n` +
-          "**Use:** `" +
-          prefix +
-          "whitelist <address>`.",
-        false
-      );
-    
+
+    embed.addField(
+      `**Command Error** ${putEmoji(bot, emoji)} `,
+      `Please put your wallet address after the command.\n` +
+      "**Use:** `" +
+      prefix +
+      "whitelist <address>`.",
+      false
+    );
+
     //Agregación de Tipo de Conector y Nombre de Error
     embed.addFields(
       {
@@ -184,7 +184,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCommandOrder Detectado - Prefix Error
   async noNewPrefix(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -194,18 +194,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No se ha **digitado** un nuevo prefix para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "prefix <set> <new_prefix>`.",
+        "**Uso:** `" +
+        prefix +
+        "prefix <set> <new_prefix>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se ha **digitado** un nuevo prefix para el comando.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "prefix <set> <new_prefix>`.",
+        "**Uso:** `" +
+        prefix +
+        "prefix <set> <new_prefix>`.",
         false
       );
     }
@@ -230,7 +230,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCorrectArguments
   async noCorrectArguments(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -240,18 +240,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Sólo se **Permite** ingresar números como **párametros**.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "clear <number>`.",
+        "**Uso:** `" +
+        prefix +
+        "clear <number>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Sólo se **Permite** ingresar números como **párametros**.\nUsa ` +
-          "`" +
-          prefix +
-          "clear <number>`.",
+        "`" +
+        prefix +
+        "clear <number>`.",
         false
       );
     }
@@ -277,7 +277,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCorrectArgumentsAge
   async noCorrectArgumentsAge(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -287,18 +287,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Sólo se **Permite** ingresar números como **párametros**.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "age <number>`.",
+        "**Uso:** `" +
+        prefix +
+        "age <number>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Sólo se **Permite** ingresar números como **párametros**.\nUsa ` +
-          "`" +
-          prefix +
-          "age <number>`.",
+        "`" +
+        prefix +
+        "age <number>`.",
         false
       );
     }
@@ -324,7 +324,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCorrectArgumentsBio
   async noCorrectArgumentsBio(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -334,18 +334,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No se **Permite** ingresar a un miembro en tu **Biografía**.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "biography <text>`.",
+        "**Uso:** `" +
+        prefix +
+        "biography <text>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Sólo se **Permite** ingresar números como **párametros**.\nUsa ` +
-          "`" +
-          prefix +
-          "age <number>`.",
+        "`" +
+        prefix +
+        "age <number>`.",
         false
       );
     }
@@ -371,7 +371,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noCorrectArgumentsWork
   async noCorrectArgumentsWork(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -381,18 +381,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No se **Permite** ingresar a un miembro en tu **Trabajo**.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "work <nameWork>`.",
+        "**Uso:** `" +
+        prefix +
+        "work <nameWork>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se **Permite** ingresar a un miembro en tu **Trabajo**.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "work <nameWork>`.",
+        "**Uso:** `" +
+        prefix +
+        "work <nameWork>`.",
         false
       );
     }
@@ -415,10 +415,43 @@ module.exports = class ErrorConector extends BaseConector {
     });
   }
 
+  async commandNotWorking(bot, message, reason) {
+    //Eliminación del Mensaje Enviado
+    message.delete().catch((O_o) => { });
+    //Inicialización de Variables prefix - emojiObject Map - Embed    
+    const emoji = synchronous.emojiID[0].cancelado;
+    let embed = new MessageEmbed().setColor(kyoColor);
+    //Validación Emojis de Guild
+
+    embed.addField(
+      `**Command Error** ${putEmoji(bot, emoji)}`,
+      `This Command is not working right now. [COMMAND-${reason}]`,
+      false
+    );
+
+    //Agregación de Tipo de Conector y Nombre de Error
+    embed.addFields(
+      {
+        name: "CONNECTION",
+        value: `[${this.name.toUpperCase()}]`,
+        inline: true,
+      },
+      {
+        name: "ERROR NAME",
+        value: "`noCmdOrder(bot,message)`",
+        inline: true,
+      }
+    );
+    //Envío del Mensaje Embed y su autoeliminación en 20seg
+    message.channel.send(embed).then((msg) => {
+      msg.delete({ timeout: 20000, reason: "It had to be done." });
+    });
+  }
+
   //Error masoUserNotFound
   async masoUserNotFound(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -428,18 +461,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No se ha **digitado** un usuario para poder **Ejecutar el Comando**\n` +
-          "Digite correctamente el **comando**:`" +
-          prefix +
-          "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
+        "Digite correctamente el **comando**:`" +
+        prefix +
+        "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se ha **digitado** un usuario para poder **Ejecutar el Comando**\n` +
-          "Digite correctamente el **comando**:`" +
-          prefix +
-          "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
+        "Digite correctamente el **comando**:`" +
+        prefix +
+        "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
         false
       );
     }
@@ -464,7 +497,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error genreNotDigit
   async genreNotDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -474,18 +507,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No se ha **digitado** un género de dominación para **Ejecutar el Comando**\n` +
-          "Digite correctamente el **comando**:`" +
-          prefix +
-          "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
+        "Digite correctamente el **comando**:`" +
+        prefix +
+        "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No se ha **digitado** un género de dominación para **Ejecutar el Comando**\n` +
-          "Digite correctamente el **comando**:`" +
-          prefix +
-          "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
+        "Digite correctamente el **comando**:`" +
+        prefix +
+        "shhh <genre> <user>`\n**Género:** `<female>`,`<male>`\n**Opciones:** `<first_user>` `<second_user>`",
         false
       );
     }
@@ -573,7 +606,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noAmountDigit
   async noAmountDigit(bot, message, username) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -583,18 +616,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Cantidad de Synkoins** para poder hacer la transferencia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay user <user> <amount>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay user <user> <amount>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Cantidad de Synkoins** para poder hacer la transferencia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay user <user> <amount>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay user <user> <amount>`.",
         false
       );
     }
@@ -619,7 +652,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error shortQuestion
   async shortQuestion(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -629,18 +662,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debes **realizar** una pregunta más larga.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "8ball <question>`.",
+        "**Uso:** `" +
+        prefix +
+        "8ball <question>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debes **realizar** una pregunta más larga.\nUsa ` +
-          "**Uso:** `" +
-          prefix +
-          "8ball <question>`.",
+        "**Uso:** `" +
+        prefix +
+        "8ball <question>`.",
         false
       );
     }
@@ -665,7 +698,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error fetchCrash
   async fetchCrash(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
@@ -705,7 +738,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error dmCrash
   async dmCrash(bot, message, user) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
@@ -776,7 +809,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserFound
   async noUserFound(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables - emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
@@ -816,7 +849,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noBoostFound
   async noBoostFound(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables - emojiObject Map - Embed
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
@@ -856,7 +889,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigit
   async noUserDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -866,18 +899,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     }
@@ -903,7 +936,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitRep
   async noUserDigitRep(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -913,18 +946,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para otorgar Respetos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "rep <user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "rep <user>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para otorgar Respetos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "rep <user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "rep <user>`",
         false
       );
     }
@@ -950,7 +983,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitKick
   async noUserDigitKick(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -960,18 +993,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para kickear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para kickear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`",
         false
       );
     }
@@ -997,7 +1030,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitBondage
   async noUserDigitBondage(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1007,18 +1040,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para mutear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para mutear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     }
@@ -1044,7 +1077,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitBan
   async noUserDigitBan(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1054,18 +1087,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para poder banear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para poder banear.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`",
         false
       );
     }
@@ -1091,7 +1124,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitWarn
   async noUserDigitWarn(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1101,18 +1134,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para poder darle warn.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para poder darle warn.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`",
         false
       );
     }
@@ -1138,7 +1171,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitARole
   async noUserDigitARole(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1148,18 +1181,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para agregar el rol.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "addrole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "addrole <user> <@rol>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para agregar el rol.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "addrole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "addrole <user> <@rol>`",
         false
       );
     }
@@ -1185,7 +1218,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitRRole
   async noUserDigitRRole(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1195,18 +1228,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para quitar el rol.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "removerole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "removerole <user> <@rol>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para quitar el rol.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "removerole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "removerole <user> <@rol>`",
         false
       );
     }
@@ -1232,7 +1265,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noARoleDigit
   async noARoleDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1242,18 +1275,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Rol** para poder otorgarlo al Usuario.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "addrole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "addrole <user> <@rol>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Rol** para poder otorgarlo al Usuario.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "addrole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "addrole <user> <@rol>`",
         false
       );
     }
@@ -1279,7 +1312,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noRRoleDigit
   async noRRoleDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1289,18 +1322,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Rol** para poder delegarlo al Usuario.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "removerole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "removerole <user> <@rol>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Rol** para poder delegarlo al Usuario.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "removerole <user> <@rol>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "removerole <user> <@rol>`",
         false
       );
     }
@@ -1326,7 +1359,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noRoleFound
   async noRoleFound(bot, message, rolName) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1367,7 +1400,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error roleUnavaible
   async roleUnavaible(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1408,7 +1441,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigitSet
   async noUserDigitSet(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1418,18 +1451,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para actualizar en la base de datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para actualizar en la base de datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     }
@@ -1455,7 +1488,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValueDigit
   async noValueDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1465,18 +1498,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Value** para actualizar en la base de datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Value** para actualizar en la base de datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     }
@@ -1502,7 +1535,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTarget
   async noValidTarget(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1512,18 +1545,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes **Actualizar tus valores** en la base de Datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes **Actualizar tus valores** en la base de Datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "set <command> <value>`.\n**Comandos:** `<admin>`,`<inmortal>`,`<mod>`.\nValues: `<true>`,`<false>`.",
         false
       );
     }
@@ -1549,7 +1582,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetRep
   async noValidTargetRep(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1559,18 +1592,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No te puedes **Dar Respetos** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "rep <user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "rep <user>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No te puedes **Dar Respetos** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "rep <user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "rep <user>`",
         false
       );
     }
@@ -1596,7 +1629,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidChannel
   async noValidChannel(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1637,7 +1670,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetBondage
   async noValidTargetBondage(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1647,18 +1680,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes **Mutearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes **Mutearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     }
@@ -1684,7 +1717,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetBan
   async noValidTargetBan(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1694,18 +1727,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes **Banearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes **Banearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`.",
         false
       );
     }
@@ -1731,7 +1764,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetWarn
   async noValidTargetWarn(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1741,18 +1774,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes darte **Warn** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes darte **Warn** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`.",
         false
       );
     }
@@ -1778,7 +1811,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetKick
   async noValidTargetKick(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1788,18 +1821,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes **Kickearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes **Kickearte** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`.",
         false
       );
     }
@@ -1825,7 +1858,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTargetLove
   async noValidTargetLove(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1835,18 +1868,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No te puedes **Cuestionar amor** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "love <user>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "love <user>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No te puedes **Cuestionar amor** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "love <user>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "love <user>`.",
         false
       );
     }
@@ -1872,7 +1905,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noValidTarget
   async noValidTargetPay(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1882,18 +1915,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `No puedes **Transferirte Synkoins** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay user <user> <amount>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay user <user> <amount>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `No puedes **Transferirte Synkoins** a ti mismo.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay user <user> <amount>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay user <user> <amount>`.",
         false
       );
     }
@@ -1919,7 +1952,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigit
   async noUserDigitS(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1929,18 +1962,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "steam <idurl_steam>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "steam <idurl_steam>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "steam <idurl_steam>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "steam <idurl_steam>`.",
         false
       );
     }
@@ -1966,7 +1999,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noUserDigit
   async noUserDigitF(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -1976,18 +2009,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "fortnite <username_fortnite>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "fortnite <username_fortnite>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Usuario** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "fortnite <username_fortnite>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "fortnite <username_fortnite>`.",
         false
       );
     }
@@ -2013,7 +2046,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noReasonDigit
   async noReasonDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2023,18 +2056,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Razón** para poder realizar el Ban.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Razón** para poder realizar el Ban.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "ban <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "ban <user> <reason>`",
         false
       );
     }
@@ -2059,7 +2092,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTypeDigit
   async noTypeDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2069,18 +2102,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Tipo** de sugerencia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Tipo** de sugerencia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
         false
       );
     }
@@ -2105,7 +2138,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTypeDigit
   async noTypeDigitNews(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2115,18 +2148,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Tipo** de noticia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "news <type> <text>`\n**Tipo:** `<server_discord>`, `<server_mta>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "news <type> <text>`\n**Tipo:** `<server_discord>`, `<server_mta>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Tipo** de noticia.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "news <type> <text>`\n**Tipo:** `<server_discord>`, `<server_mta>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "news <type> <text>`\n**Tipo:** `<server_discord>`, `<server_mta>`",
         false
       );
     }
@@ -2151,7 +2184,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noSuggestionDigit
   async noSuggestionDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2161,18 +2194,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Sugerencia** para enviarla al staff.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Sugerencia** para enviarla al staff.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "suggestion <type> <text>`\n**Tipo:** `<mta>`, `<server>`",
         false
       );
     }
@@ -2197,7 +2230,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noBoostDigit
   async noBoostDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2207,18 +2240,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Boost** para proceder con el pago.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay boost <boost>`\n**Bossts:** `<base>`, `<avanzado>`, `<premium>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay boost <boost>`\n**Bossts:** `<base>`, `<avanzado>`, `<premium>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Boost** para proceder con el pago.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "pay boost <boost>`\n**Bossts:** `<base>`, `<avanzado>`, `<premium>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "pay boost <boost>`\n**Bossts:** `<base>`, `<avanzado>`, `<premium>`",
         false
       );
     }
@@ -2243,7 +2276,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noContentDigit
   async noContentDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2253,18 +2286,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar un **Contenido** para poder realizar el Intento.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "try <text>`\n**Opciones:** `<user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "try <text>`\n**Opciones:** `<user>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar un **Contenido** para poder realizar el Intento.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "try <text>`\n**Opciones:** `<user>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "try <text>`\n**Opciones:** `<user>`",
         false
       );
     }
@@ -2290,21 +2323,21 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noRottenDigit
   async noRottenDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
     let embed = new MessageEmbed().setColor(kyoColor);
     //Validación Emojis de Guild    
-      embed.addField(
-        `**Error** ${putEmoji(bot, emoji)} `,
-        `You must enter an **Age** to be able to make the change in the Database.\n` +
-          "Use **the command again**: `" +
-          prefix +
-          "rotten <number>`",
-        false
-      );
-    
+    embed.addField(
+      `**Error** ${putEmoji(bot, emoji)} `,
+      `You must enter an **Age** to be able to make the change in the Database.\n` +
+      "Use **the command again**: `" +
+      prefix +
+      "rotten <number>`",
+      false
+    );
+
     //Agregación de Tipo de Conector y Nombre de Error
     embed.addFields(
       {
@@ -2327,7 +2360,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noAgeDigit
   async noAgeDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2337,18 +2370,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Edad** para poder realizar el cambio en la Base de Datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "age <number>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "age <number>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Edad** para poder realizar el cambio en la Base de Datos.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "age <number>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "age <number>`",
         false
       );
     }
@@ -2373,7 +2406,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noReasonDigitWarn
   async noReasonDigitWarn(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2383,18 +2416,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Razón** para poder realizar el Warn.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Razón** para poder realizar el Warn.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "warn <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "warn <user> <reason>`",
         false
       );
     }
@@ -2419,7 +2452,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noReasonDigitKick
   async noReasonDigitKick(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2429,18 +2462,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Razón** para poder realizar el Kick.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Razón** para poder realizar el Kick.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "kick <user> <reason>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "kick <user> <reason>`",
         false
       );
     }
@@ -2466,7 +2499,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTimeDigit
   async noTimeDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2476,18 +2509,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar el **Tiempo** que durará el Usuario Muteado.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar el **Tiempo** que durará el Usuario Muteado.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "bondage <user> <time>`",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "bondage <user> <time>`",
         false
       );
     }
@@ -2513,7 +2546,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noChannelFound
   async noChannelFound(bot, message, channel) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2554,7 +2587,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTypeFound
   async noTypeFound(bot, message, type) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2595,7 +2628,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTypeFoundPay
   async noTypeFoundPay(bot, message, type) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2636,7 +2669,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noTypeFound
   async noTypeFoundNews(bot, message, type) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2676,7 +2709,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error noPlatformDigit
   async noPlatformDigit(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2686,18 +2719,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `Debe digitar una **Plataforma** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `Debe digitar una **Plataforma** para realizar la busqueda.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     }
@@ -2723,7 +2756,7 @@ module.exports = class ErrorConector extends BaseConector {
   //Error wrongPlatform
   async wrongPlatform(bot, message) {
     //Eliminación del Mensaje Enviado
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Inicialización de Variables prefix - emojiObject Map - Embed
     const prefix = guildCommandPrefix.get(message.guild.id);
     const emoji = synchronous.emojiID[0].cancelado;
@@ -2733,18 +2766,18 @@ module.exports = class ErrorConector extends BaseConector {
       embed.addField(
         `**Error de Comando** ${putEmoji(bot, emoji)} `,
         `**Plataforma Incorrecta**, digite una plataforma Válida para **efectuar la busqueda**.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     } else {
       embed.addField(
         `**Error de Comando** ❌`,
         `**Plataforma Incorrecta**, digite una plataforma Válida para **efectuar la busqueda**.\n` +
-          "Digite correctamente el **comando**: `" +
-          prefix +
-          "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
+        "Digite correctamente el **comando**: `" +
+        prefix +
+        "apex <platform> <username_apex>`.\n**Plataformas:** `<pc>`,`<xbox>`,`<psn>`.",
         false
       );
     }

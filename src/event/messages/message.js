@@ -28,17 +28,18 @@ const { thrizzColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de cuerpo de Eventos e importación de Conexión Base de Datos
 const BaseEvent = require("../../utils/structure/BaseEvent");
+const Api = require("../../utils/misc/api_discord_functions");
 //Inicialización de Variables Cooldown
 let cooldown = new Set();
 let cdseconds = 3;
 //Exportación de Evento message
-module.exports = class MessageEvent extends BaseEvent {  
+module.exports = class MessageEvent extends BaseEvent {
   //Constructor del Objeto
   constructor() {
     super("message");
   }
-  async run(bot, message) {    
-    const reactionEmbedsA = await reactionEmbeds(bot,message)
+  async run(bot, message) {
+    const reactionEmbedsA = await reactionEmbeds(bot, message)
     //No DMS no Bot Messages
     if (message.channel.id == "956120543688548362") return;
     if (message.author.bot || message.channel.type === "dm") return;
@@ -46,15 +47,15 @@ module.exports = class MessageEvent extends BaseEvent {
     try {
       switch (message.guild.id) {
         case "894634118267146272":
-          break;        
+          break;
       }
     } catch (error) {
       console.log(
         "Se ha registrado una interacción fuera de una Guild habilitada. [" +
-          error +
-          "]"
+        error +
+        "]"
       );
-    }    
+    }
     //Reaction specific MessageEmbeds
     // REACTION MESSAGES OUT OF FUNCTION TODO: await reactionEmbeds(bot, message);
     //Attachment Message
@@ -65,6 +66,13 @@ module.exports = class MessageEvent extends BaseEvent {
     //Inicialización de Variables guildID - memeberID
     const guildID = message.guild.id;
     const userID = message.author.id;
+    const ObjMember = await Api.getMember(guildID, userID);
+    const ObjGuild = await Api.getGuild(guildID);
+
+    if (ObjMember.id === undefined) return await Api.postMember(userID, guildID, ObjGuild.language);
+
+
+
     //Exist data?
     const isMemberBank = await isVariableOnJSON(
       guildBankJSON,
@@ -77,7 +85,7 @@ module.exports = class MessageEvent extends BaseEvent {
       userID,
       "memberID",
       guildID
-    );    
+    );
 
     if (isMemberBank != "registered" || isMemberRegistered != "registered") {
       const registerMember = await insertMemberIntoJSON(
@@ -190,14 +198,14 @@ module.exports = class MessageEvent extends BaseEvent {
               .addField(
                 "**Boosts de Experiencia**",
                 `Si deseas **comprar** otro usa ` +
-                  "`" +
-                  prefix +
-                  "payboost <base> `" +
-                  `${emojiBoostB}` +
-                  " Ó `<avanzado> `" +
-                  `${emojiBoostA}` +
-                  " Ó `<premium>`" +
-                  `${emojiBoostP}`
+                "`" +
+                prefix +
+                "payboost <base> `" +
+                `${emojiBoostB}` +
+                " Ó `<avanzado> `" +
+                `${emojiBoostA}` +
+                " Ó `<premium>`" +
+                `${emojiBoostP}`
               );
             message.channel.send(timeOutEmbed);
           }

@@ -3,18 +3,14 @@ const { MessageEmbed } = require("discord.js");
 const {
   getMember,
   putEmoji,
-  initObjectMember,
   numberWithCommas,
 } = require("../../utils/misc/functions");
-const { goldColor } = require("../../../database/utils/color/color.json");
-const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 const Api = require("../../utils/misc/api_discord_functions");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const fs = require("fs");
 //Exportación de Comando Bank
 module.exports = class BankCommand extends BaseCommand {
   constructor() {
