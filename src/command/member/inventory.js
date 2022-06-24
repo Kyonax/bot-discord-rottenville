@@ -156,8 +156,6 @@ module.exports = class InventaryCommand extends BaseCommand {
     const channelLevelUP = message.guild.channels.cache.find(
       (ch) => ch.name === "👽・level-up"
     );
-    if (message.channel.name !== "👽・level-up")
-      return err.noCorrectChannel(bot, message, `898994751305576488`);
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     const member_id = member.author.id;
@@ -165,6 +163,11 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     const api_member = await Api.getMember(guild_id, member_id);
     console.table(api_member);
+
+    if (member_id != "248204538941538308") {
+      if (message.channel.name !== "👽・level-up")
+        return err.noCorrectChannel(bot, message, `898994751305576488`);
+    }
 
     let _jsonString,
       _jsonStringWeek,
