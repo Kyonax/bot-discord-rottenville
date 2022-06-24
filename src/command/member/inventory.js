@@ -167,10 +167,16 @@ module.exports = class InventaryCommand extends BaseCommand {
     const { id, language, rank, warnings, status, perms } = ObjMember;
     let next_level = limit(status.xp, status.level);
 
+    let img_member = member.user.displayAvatarURL({
+      format: "png",
+      dynamic: false,
+      size: 128,
+    });
+
     if (id === undefined) return err.noFindMember(bot, message, member.displayName);
     if (message.author.id != member.id) {
       if (perms.moderator != 1) return perm.moderatorPerms(bot, message);
-    }                 
+    }
 
     //BarLevel
     let addBar = "none";
@@ -328,7 +334,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setFooter("RottenVille Level System")
       .setTimestamp();
     //Método de Descarga de Imágen
-    downloadUser(memberImage, message.author.id).then(() => {
+    downloadUser(img_member, message.author.id).then(() => {
       delay(100).then(async function () {
         const resultImageMagik = await edit(
           `/../../../database/multimedia/images/users/avatar/${message.author.id}.png`,
