@@ -37,8 +37,7 @@ module.exports = {
     getMember: async function (guild, id) {
         let data = null, url = process.env.API_DISCORD + `/guild/${guild}/member/${id}`;
         await axios.get(url).then((api_data_) => {
-            data = api_data_.data;
-            console.table(data);
+            data = api_data_.data;            
         })
 
         return data
