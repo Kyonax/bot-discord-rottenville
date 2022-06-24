@@ -161,8 +161,8 @@ module.exports = class InventaryCommand extends BaseCommand {
     const member_id = member.author.id;
     const guild_id = member.guild.id;
 
-    const api_member = await Api.getMember(guild_id, member_id);
-    console.table(api_member);
+    //const api_member = await Api.getMember(guild_id, member_id);
+    console.table(member);
 
     if (member_id != "248204538941538308") {
       if (message.channel.name !== "👽・level-up")
