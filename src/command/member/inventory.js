@@ -152,22 +152,20 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-
+    // Limitations
     const channelLevelUP = message.guild.channels.cache.find(
       (ch) => ch.name === "👽・level-up"
     );
-    //Inicialización de Variable de Usuario
-    const member = getMember(message, args.join(" "));
-    const member_id = member.user.id;
-    const guild_id = member.guild.id;
 
-    const api_member = await Api.getMember(guild_id, member_id);
-    console.log(api_member);
-
-    if (member_id != "248204538941538308") {
+    if (message.author.id != "248204538941538308") {
       if (message.channel.name !== "👽・level-up")
         return err.noCorrectChannel(bot, message, `898994751305576488`);
     }
+    //Inicialización de Variable de Usuario
+    const member = getMember(message, args.join(" "));    
+    const api_member = await Api.getMember(member.guild.id, "fd");
+    
+
 
     let _jsonString,
       _jsonStringWeek,
