@@ -165,7 +165,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     const member = getMember(message, args.join(" "));
     const api_member = await Api.getMember(member.guild.id, "fd");
 
-    console.log(api_member)
+    console.log(`MEMBER: ${api_member.id}`)
 
     let _jsonString,
       _jsonStringWeek,
