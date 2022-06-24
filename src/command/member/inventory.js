@@ -309,7 +309,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         `**#${rank + " " + putEmoji(bot, "899084173455814676")}**`,
         true
       )
-      .addField("**Warnings**", `**${member_warnings}** ${emojiWarning}`, true)
+      .addField("**Warnings**", `**${warnings}** ${emojiWarning}`, true)
       .addField(
         "**Level Boosts**",
         `**${putEmoji(bot, "899083263816122458")} x ${status.boost}** ${emojiBoost}`,
