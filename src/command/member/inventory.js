@@ -13,7 +13,7 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
-const Api = require("../../utils/misc/api_discord_functions")
+const Api = require("../../utils/misc/api_discord_functions");
 const Discord = require('../../utils/misc/discord_functions');
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");

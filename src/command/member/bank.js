@@ -11,6 +11,7 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
+const Api = require("../../utils/misc/api_discord_functions");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 const fs = require("fs");
@@ -19,7 +20,7 @@ module.exports = class BankCommand extends BaseCommand {
   constructor() {
     super(
       "rp",
-      ["coins", "bank", "monedas", "rottenpoints","points","monedas"],
+      ["coins", "bank", "monedas", "rottenpoints", "points", "monedas"],
       "Deploy a panel with the Rotten Points.",
       "rp`\n**Admin Options:** `<user>`",
       "_***Everyone***_",
@@ -30,55 +31,20 @@ module.exports = class BankCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
     //Inicialización para el Usuario escrito
     let autor = message.author;
     let member = getMember(message, args[0]);
-    let _jsonString, _jsonString_bank, ObjectMember = null, ObjectBankMember = null        
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
+    const ObjMember = await Api.getMember(member.guild.id, member.user.id);
+    const ObjAuthorMember = await Api.getMember(member.guild.id, message.author.id);
+    const { id, bank } = ObjMember, { perms } = ObjAuthorMember;
 
-    _jsonString_bank = await fs.readFileSync('./database/misc/GuildBank.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    JSON.parse(_jsonString_bank).forEach(_member => {    
-      if (_member.guildID == member.guild.id) {   
-      if (member.id == _member.memberID) {
-        ObjectBankMember = _member           
-      }}
-    });
-
-    JSON.parse(_jsonString).forEach(_member => {  
-      if (_member.guildID == member.guild.id) {     
-      if (message.author.id == _member.memberID) {
-        ObjectMember = _member           
-      }}      
-    });        
-
-    console.log(ObjectMember)
-    
-    if (ObjectMember === null)
-      return err.noFindMember(bot, message, member.displayName);
-    const { inmortalMember } = ObjectMember;
-    const { memberCoins } = ObjectBankMember;
-    if (!memberCoins) {
-      return err.noFindMember(bot, message, member.displayName);
-    }
-    //Validación de Permisos Synks
-    if (parseInt(inmortalMember) === 0) {
-      if (member.id != autor.id) return perm.inmortalPerms(bot, message);
+    if (id === undefined) return err.noFindMember(bot, message, member.displayName);
+    if (message.author.id != member.id) {
+      if (perms.inmortal != 1) return perm.inmortalPerms(bot, message);
     }
     //Inicialización de Emojis y su Uso respectivo
     let emoji = putEmoji(bot, "905441645980422214");
@@ -87,17 +53,16 @@ module.exports = class BankCommand extends BaseCommand {
       .setTitle(`**${member.displayName}'s Rotten Points Bank**`)
       .setThumbnail(bot.user.displayAvatarURL())
       .setDescription(
-        `${putEmoji(bot, "905441645980422214")} Checking <@${
-          member.id
+        `${putEmoji(bot, "905441645980422214")} Checking <@${member.id
         }> Rotten Points.`
       )
       .setColor("#b4e634")
       .addField("**User**", `**[${member.displayName}]**`, true)
       .addField(
         " **Rotten Points**",
-        `**${numberWithCommas(memberCoins)} ${emoji} $RP.**`,
+        `**${numberWithCommas(bank.coins)} ${emoji} $RP.**`,
         true
-      )      
+      )
       .setFooter("RottenBot Bank System")
       .setTimestamp();
     //Lectura del Mensaje - Envío al canal Destinado - Mensaje que usa el Comando Eliminado
