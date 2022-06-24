@@ -44,7 +44,9 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    err.commandNotWorking(bot,message,"BEING UPDATED")
+    if (message.author.id != "248204538941538308") {
+      err.commandNotWorking(bot, message, "BEING UPDATED")
+    }
     const member = getMember(message, args.join(" "));
     //Inicialización de Variable de Usuario
     let _jsonString,
