@@ -164,103 +164,14 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     const ObjMember = await Api.getMember(member.guild.id, member.user.id);
-    const { id, language, rank, status } = ObjMember, member_warnings = ObjMember.warnings;
+    const { id, language, rank, warnings, status, perms } = ObjMember;
+    let next_level = limit(status.xp, status.level);
+
     if (id === undefined) return err.noFindMember(bot, message, member.displayName);
-
-
-
-
-    let _jsonString,
-      _jsonStringWeek,
-      ObjectMemberWeek = null,
-      ObjectMember = null,
-      ObjectAutor = null;
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync(
-      "./database/misc/GuildMembers.json",
-      "utf8",
-      (err, jsonString) => {
-        if (err) {
-          console.log("File read failed:", err);
-          return;
-        }
-      }
-    );
-
-    _jsonStringWeek = await fs.readFileSync(
-      "./database/misc/GuildMembersWeek.json",
-      "utf8",
-      (err, jsonString) => {
-        if (err) {
-          console.log("File read failed:", err);
-          return;
-        }
-      }
-    );
-
-    JSON.parse(_jsonString).forEach((_member) => {
-      if (_member.guildID == member.guild.id) {
-        if (member.id == _member.memberID && _member.guildID == message.guild.id) {
-          ObjectMember = _member;
-        }
-
-        if (message.author.id == _member.memberID && _member.guildID == message.guild.id) {
-          ObjectAutor = _member;
-        }
-      }
-    });
-
-    JSON.parse(_jsonStringWeek).forEach((_member) => {
-      if (_member.guildID == member.guild.id) {
-        if (member.id == _member.memberID && _member.guildID == message.guild.id) {
-          ObjectMemberWeek = _member;
-        }
-      }
-    });
-
-    //Validación si en el Mensaje se usó un Usuario
-    let memberImage = member.user.displayAvatarURL({
-      format: "png",
-      dynamic: false,
-      size: 128,
-    });
-
-    if (ObjectMemberWeek === null) {
-      ObjectMemberWeek = {
-        memberID: member.id,
-        guildID: message.guild.id,
-        memberLanguage: "es",
-        adminMember: 0,
-        inmortalMember: 0,
-        moderatorMember: 0,
-        serverRank: 0,
-        memberXP: 0,
-        memberLevel: 1,
-        memberBoost: 1,
-        boostMemberTime: 0,
-        warnings: 0,
-      };
-    }
-
-    if (ObjectMember === null)
-      return err.noFindMember(bot, message, member.displayName);
-    const { memberXP, serverRank, memberLevel, memberBoost, warnings } =
-      ObjectMember;
-    const { moderatorMember } = ObjectAutor;
-    const memberXPWeek = ObjectMemberWeek.memberXP;
-    //Inicialización de Variables - Experiencia - Nivel - Boost
-    let curxp = parseInt(status.xp);
-    let curxp_week = parseInt(memberXPWeek);
-    let actual_week_xp = curxp - curxp_week;
-    let currank = parseInt(rank);
-    let curlevel = parseInt(status.level);
-    let curbost = parseInt(memberBoost);
-    let curwarnings = parseInt(warnings);
-    let nxtLevel = limit(curxp, curlevel);
-    //Validación de Permisos
     if (message.author.id != member.id) {
-      if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
-    }
+      if (perms.moderator != 1) return perm.moderatorPerms(bot, message);
+    }                 
+
     //BarLevel
     let addBar = "none";
     switch (true) {
@@ -315,47 +226,47 @@ module.exports = class InventaryCommand extends BaseCommand {
     }
 
     switch (true) {
-      case curxp <= nxtLevel * 0.05:
+      case status.xp <= next_level * 0.05:
         barPercnt = `Bar0${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.1 && curxp > nxtLevel * 0.05:
+      case status.xp <= next_level * 0.1 && status.xp > next_level * 0.05:
         barPercnt = `Bar10${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.2 && curxp > nxtLevel * 0.1:
+      case status.xp <= next_level * 0.2 && status.xp > next_level * 0.1:
         barPercnt = `Bar20${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.3 && curxp > nxtLevel * 0.2:
+      case status.xp <= next_level * 0.3 && status.xp > next_level * 0.2:
         barPercnt = `Bar30${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.4 && curxp > nxtLevel * 0.3:
+      case status.xp <= next_level * 0.4 && status.xp > next_level * 0.3:
         barPercnt = `Bar40${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.5 && curxp > nxtLevel * 0.4:
+      case status.xp <= next_level * 0.5 && status.xp > next_level * 0.4:
         barPercnt = `Bar50${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.6 && curxp > nxtLevel * 0.5:
+      case status.xp <= next_level * 0.6 && status.xp > next_level * 0.5:
         barPercnt = `Bar60${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.7 && curxp > nxtLevel * 0.6:
+      case status.xp <= next_level * 0.7 && status.xp > next_level * 0.6:
         barPercnt = `Bar70${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.8 && curxp > nxtLevel * 0.7:
+      case status.xp <= next_level * 0.8 && status.xp > next_level * 0.7:
         barPercnt = `Bar80${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp <= nxtLevel * 0.9 && curxp > nxtLevel * 0.8:
+      case status.xp <= next_level * 0.9 && status.xp > next_level * 0.8:
         barPercnt = `Bar90${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
-      case curxp > nxtLevel * 0.9:
+      case status.xp > next_level * 0.9:
         barPercnt = `Bar100${addBar}.png`;
         background = `database/multimedia/images/barLevel/${barPercnt}`;
         break;
@@ -366,18 +277,20 @@ module.exports = class InventaryCommand extends BaseCommand {
     let emojiLevelUp = putEmoji(bot, synchronous.emojiID[0].levelup);
     let emojiWarning = putEmoji(bot, "899085106428411964");
     let emojiBoost = null;
-    const boostTime = parseInt(ObjectMember.memberBoost);
-    if (boostTime === 1) {
-      emojiBoost = "";
-    }
-    if (boostTime === 10) {
-      emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostb);
-    }
-    if (boostTime === 50) {
-      emojiBoost = putEmoji(bot, synchronous.emojiID[0].boosta);
-    }
-    if (boostTime === 100) {
-      emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostp);
+
+    switch (status.boost) {
+      case 1:
+        emojiBoost = "";
+        break;
+      case 10:
+        emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostb);
+        break;
+      case 50:
+        emojiBoost = putEmoji(bot, synchronous.emojiID[0].boosta);
+        break;
+      case 100:
+        emojiBoost = putEmoji(bot, synchronous.emojiID[0].boostp);
+        break;
     }
 
     //Mensaje para el Embed de Usuario para este Comando
@@ -420,9 +333,9 @@ module.exports = class InventaryCommand extends BaseCommand {
         const resultImageMagik = await edit(
           `/../../../database/multimedia/images/users/avatar/${message.author.id}.png`,
           `database/multimedia/images/users/circleAvatar/${message.author.id}CircleImage.png`,
-          numberWithCommas(curxp) + "",
+          numberWithCommas(status.xp) + "",
           curlevel,
-          numberWithCommas(nxtLevel) + "",
+          numberWithCommas(next_level) + "",
           message.author.id,
           member.displayHexColor,
           currank + "",
