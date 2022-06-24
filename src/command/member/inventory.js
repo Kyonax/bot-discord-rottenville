@@ -156,9 +156,10 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     const ObjMember = await Api.getMember(member.guild.id, member.user.id);
+    const ObjAuthorMember = await Api.getMember(member.guild.id, message.author.id);
     const ObjGuild = await Api.getGuild(message.guild.id);
 
-    const { id, language, rank, warnings, status, perms } = ObjMember;
+    const { id, language, rank, warnings, status } = ObjMember;
     let next_level = limit(status.xp, status.level);
 
     await Discord.limitToChannel(message, err, "👽・level-up", ObjGuild.owner);
@@ -171,7 +172,7 @@ module.exports = class InventaryCommand extends BaseCommand {
 
     if (id === undefined) return err.noFindMember(bot, message, member.displayName);
     if (message.author.id != member.id) {
-      if (perms.moderator != 1) return perm.moderatorPerms(bot, message);
+      if (ObjAuthorMember.perms.moderator != 1) return perm.moderatorPerms(bot, message);
     }
 
     //BarLevel
