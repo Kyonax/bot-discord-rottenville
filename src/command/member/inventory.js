@@ -14,6 +14,7 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 const Api = require("../../utils/misc/api_discord_functions")
+const Discord = require('../../utils/misc/discord_functions');
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 //Inicialización de js de Node.js
@@ -152,23 +153,15 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error();
     const perm = new Perms();
-    // Limitations
-    const channelLevelUP = message.guild.channels.cache.find(
-      (ch) => ch.name === "👽・level-up"
-    );
-
-    if (message.author.id != "248204538941538308") {
-      if (message.channel.name !== "👽・level-up")
-        return err.noCorrectChannel(bot, message, `898994751305576488`);
-    }
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     const ObjMember = await Api.getMember(member.guild.id, member.user.id);
     const ObjGuild = await Api.getGuild(message.guild.id);
+
     const { id, language, rank, warnings, status, perms } = ObjMember;
     let next_level = limit(status.xp, status.level);
 
-    console.log(ObjGuild)
+    await Discord.limitToChannel(message, err, "👽・level-up", ObjGuild.owner);
 
     let img_member = member.user.displayAvatarURL({
       format: "png",
