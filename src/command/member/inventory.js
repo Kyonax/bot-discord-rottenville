@@ -164,8 +164,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
     const ObjMember = await Api.getMember(member.guild.id, member.user.id);
+    const ObjGuild = await Api.getGuild(message.guild.id);
     const { id, language, rank, warnings, status, perms } = ObjMember;
     let next_level = limit(status.xp, status.level);
+
+    console.log(ObjGuild)
 
     let img_member = member.user.displayAvatarURL({
       format: "png",
