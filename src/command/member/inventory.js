@@ -158,11 +158,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     );
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
-    //const member_id = member.author.id;
+    const member_id = member.user.id;
     const guild_id = member.guild.id;
 
-    //const api_member = await Api.getMember(guild_id, member_id);
-    console.log(member);
+    const api_member = await Api.getMember(guild_id, member_id);
+    console.log(api_member);
 
     if (member_id != "248204538941538308") {
       if (message.channel.name !== "👽・level-up")
