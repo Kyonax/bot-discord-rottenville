@@ -340,11 +340,11 @@ module.exports = class InventaryCommand extends BaseCommand {
           `/../../../database/multimedia/images/users/avatar/${message.author.id}.png`,
           `database/multimedia/images/users/circleAvatar/${message.author.id}CircleImage.png`,
           numberWithCommas(status.xp) + "",
-          curlevel,
+          status.level,
           numberWithCommas(next_level) + "",
           message.author.id,
           member.displayHexColor,
-          currank + "",
+          rank + "",
           member.displayName
         ).then(() => {
           delay(3000).then(async function () {
