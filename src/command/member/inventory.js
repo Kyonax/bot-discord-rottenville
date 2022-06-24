@@ -163,9 +163,12 @@ module.exports = class InventaryCommand extends BaseCommand {
     }
     //Inicialización de Variable de Usuario
     const member = getMember(message, args.join(" "));
-    const api_member = await Api.getMember(member.guild.id, "fd");
+    const ObjMember = await Api.getMember(member.guild.id, member.user.id);
+    const { id, language, rank, status } = ObjMember, member_warnings = ObjMember.warnings;
+    if (id === undefined) return err.noFindMember(bot, message, member.displayName);
 
-    console.log(`MEMBER: ${api_member.id}`)
+
+
 
     let _jsonString,
       _jsonStringWeek,
@@ -246,11 +249,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     const { moderatorMember } = ObjectAutor;
     const memberXPWeek = ObjectMemberWeek.memberXP;
     //Inicialización de Variables - Experiencia - Nivel - Boost
-    let curxp = parseInt(memberXP);
+    let curxp = parseInt(status.xp);
     let curxp_week = parseInt(memberXPWeek);
     let actual_week_xp = curxp - curxp_week;
-    let currank = parseInt(serverRank);
-    let curlevel = parseInt(memberLevel);
+    let currank = parseInt(status.rank);
+    let curlevel = parseInt(status.level);
     let curbost = parseInt(memberBoost);
     let curwarnings = parseInt(warnings);
     let nxtLevel = limit(curxp, curlevel);
