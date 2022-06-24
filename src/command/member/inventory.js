@@ -162,10 +162,10 @@ module.exports = class InventaryCommand extends BaseCommand {
         return err.noCorrectChannel(bot, message, `898994751305576488`);
     }
     //Inicialización de Variable de Usuario
-    const member = getMember(message, args.join(" "));    
+    const member = getMember(message, args.join(" "));
     const api_member = await Api.getMember(member.guild.id, "fd");
-    
 
+    console.log(api_member)
 
     let _jsonString,
       _jsonStringWeek,
