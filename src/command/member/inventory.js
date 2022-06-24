@@ -252,7 +252,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     let curxp = parseInt(status.xp);
     let curxp_week = parseInt(memberXPWeek);
     let actual_week_xp = curxp - curxp_week;
-    let currank = parseInt(status.rank);
+    let currank = parseInt(rank);
     let curlevel = parseInt(status.level);
     let curbost = parseInt(memberBoost);
     let curwarnings = parseInt(warnings);
@@ -385,28 +385,28 @@ module.exports = class InventaryCommand extends BaseCommand {
       .setTitle(`**${member.displayName} Experience Server**`)
       .setThumbnail("https://i.imgur.com/mylTtoH.png")
       .addField("**User**", `**[${member.displayName}]**`, true)
-      .addField("**Level**", `**${curlevel}** ${emojiLevelUp}`, true)
+      .addField("**Level**", `**${status.level}** ${emojiLevelUp}`, true)
       .addField(
         "**XP**",
-        `**${numberWithCommas(curxp) + putEmoji(bot, "899083263816122458")}**`,
+        `**${numberWithCommas(status.xp) + putEmoji(bot, "899083263816122458")}**`,
         true
       )
       .addField(
         "**Rank**",
-        `**#${currank + " " + putEmoji(bot, "899084173455814676")}**`,
+        `**#${rank + " " + putEmoji(bot, "899084173455814676")}**`,
         true
       )
-      .addField("**Warnings**", `**${curwarnings}** ${emojiWarning}`, true)
+      .addField("**Warnings**", `**${member_warnings}** ${emojiWarning}`, true)
       .addField(
         "**Level Boosts**",
-        `**${putEmoji(bot, "899083263816122458")} x ${curbost}** ${emojiBoost}`,
+        `**${putEmoji(bot, "899083263816122458")} x ${status.boost}** ${emojiBoost}`,
         true
-      )
+      )/*
       .addField(
         "**Weekly XP | 1 Week = 1 NFT EVENT**",
         `**${numberWithCommas(actual_week_xp) + putEmoji(bot, "899083263816122458")} in just 1 Week | ${message.guild.name} NFT**`,
         false
-      )
+      )*/
       .attachFiles([
         `./database/multimedia/images/magik/exports/bar${message.author.id}Level.png`,
       ])
@@ -440,5 +440,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         });
       });
     });
+
+
   }
 };
