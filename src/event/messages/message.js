@@ -67,6 +67,7 @@ module.exports = class MessageEvent extends BaseEvent {
     const guildID = message.guild.id;
     const userID = message.author.id;
     const ObjMember = await Api.getMember(guildID, userID);
+    const { id, status, perms, bank } = ObjMember;
     const ObjGuild = await Api.getGuild(guildID);
 
     if (ObjMember.id === undefined) return await Api.postMember(userID, guildID, ObjGuild.language);
@@ -108,7 +109,6 @@ module.exports = class MessageEvent extends BaseEvent {
     //Prefix del Servidor
     const prefix = ObjGuild.prefix;
     const digitPrefix = message.content.slice(0, prefix.length);
-    console.log(prefix);
 
     if (digitPrefix === prefix) {
       const [cmdName, ...cmdArgs] = message.content
@@ -118,9 +118,10 @@ module.exports = class MessageEvent extends BaseEvent {
         bot.commands.get(cmdName) || bot.commands.get(bot.aliases.get(cmdName));
       if (command) {
         //Validación El usuario es un Administrador
-        const { inmortalMember, memberID } = Member;
-        if (inmortalMember === 0) {
-          if (cooldown.has(memberID)) {
+
+
+        if (perms.inmortal === 0) {
+          if (cooldown.has(userID)) {
             message.delete();
             const emojiCancelado = synchronous.emojiID[0].cancelado;
             return message.reply(
@@ -132,12 +133,12 @@ module.exports = class MessageEvent extends BaseEvent {
           } else {
             command.run(bot, message, cmdArgs);
           }
-          cooldown.add(memberID);
+          cooldown.add(userID);
         } else {
           command.run(bot, message, cmdArgs);
         }
         setTimeout(() => {
-          cooldown.delete(memberID);
+          cooldown.delete(userID);
         }, cdseconds * 1000);
       }
     } else {
@@ -152,10 +153,11 @@ module.exports = class MessageEvent extends BaseEvent {
           boostMemberTime,
         } = Member;
         //Ganancia de XP por Miembro
-        const curboost = parseInt(memberBoost);
+        const curboost = status.boost;
         if (curboost > 1) {
-          let curBoostTime = parseInt(boostMemberTime);
+          let curBoostTime = status.boost_time;
           curBoostTime = curBoostTime - 1;
+          await Api.patchStatusMember(userID, guildID, boost_time, curBoostTime);
           const updateMemberBoostTimeJSON = await updateGuildMemberBoostJSON(
             guildMembersJSON,
             guildID,
@@ -208,9 +210,9 @@ module.exports = class MessageEvent extends BaseEvent {
           }
         }
         //Inicialización de Variables memberXP
-        const xp = generateXP(parseInt(memberBoost));
-        let updateXP = xp + parseInt(memberXP);
-        const newLevel = limitLevel(updateXP, parseInt(memberLevel));
+        const xp = generateXP(status.boost);
+        let updateXP = xp + status.xp;
+        const newLevel = limitLevel(updateXP, status.level);
         if (newLevel > memberLevel) {
           const emojiLevelUp = synchronous.emojiID[0].levelup;
           const levelChannel = message.guild.channels.cache.find(
@@ -250,6 +252,10 @@ module.exports = class MessageEvent extends BaseEvent {
             levelUpEmbed
           );
         }
+
+        await Api.patchStatusMember(userID, guildID, "xp", updateXP);
+        await Api.patchStatusMember(userID, guildID, "level", newLevel);
+        await Api.patchBankMember(userID, guildID, "coins", newCoins);
         const updateMemberXPJSON = await updateGuildMemberXPJSON(
           guildMembersJSON,
           guildID,
