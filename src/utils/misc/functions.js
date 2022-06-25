@@ -171,11 +171,7 @@ module.exports = {
   },
   sortServerRanksJSON: async function (_json_file, usersRank, _guild, message) {
 
-    let ObjMembers = await Api.getMembers(_guild);
-
-    for (var i in ObjMembers.all) {
-      console.log(ObjMembers.all[i]);
-    }
+    
 
     let _jsonString, i = 0
 
