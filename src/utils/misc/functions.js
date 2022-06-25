@@ -1,5 +1,6 @@
 //Importación Functions de Database
-const { updateGuildServerRank,updateGuildRolePlayRank } = require("../database/functions");
+const { updateGuildServerRank, updateGuildRolePlayRank } = require("../database/functions");
+const Api = require("./api_discord_functions");
 const Path = require("path");
 const Axios = require("axios");
 
@@ -75,12 +76,12 @@ module.exports = {
         resolve();
       });
 
-      response.data.on("error", (err) => {        
+      response.data.on("error", (err) => {
         reject(err);
       });
     });
   },
-  circleImage: async function (inImage, name) {    
+  circleImage: async function (inImage, name) {
     fs.createReadStream(__dirname + inImage)
       .pipe(
         new PNG({
@@ -94,11 +95,11 @@ module.exports = {
             var radius = this.height / 2;
             if (
               y >=
-                Math.sqrt(Math.pow(radius, 2) - Math.pow(x - radius, 2)) +
-                  radius ||
+              Math.sqrt(Math.pow(radius, 2) - Math.pow(x - radius, 2)) +
+              radius ||
               y <=
-                -Math.sqrt(Math.pow(radius, 2) - Math.pow(x - radius, 2)) +
-                  radius
+              -Math.sqrt(Math.pow(radius, 2) - Math.pow(x - radius, 2)) +
+              radius
             ) {
               this.data[idx + 3] = 0;
             }
@@ -107,7 +108,7 @@ module.exports = {
         this.pack().pipe(
           fs.createWriteStream(
             __dirname +
-              `/database/multimedia/images/users/circleAvatar/${name}CircleImage.png`
+            `/database/multimedia/images/users/circleAvatar/${name}CircleImage.png`
           )
         );
       });
@@ -166,10 +167,16 @@ module.exports = {
       if (arrayMembers[index].memberID === memberID) {
         arrayMembers.splice(arrayMembers.indexOf(arrayMembers[index]), 1);
       }
-    }    
+    }
   },
   sortServerRanksJSON: async function (_json_file, usersRank, _guild, message) {
-       
+
+    let ObjMembers = await Api.getMembers(_guild);
+
+    for (var i in ObjMembers.all) {
+      console.log(ObjMembers.all[i]);
+    }
+
     let _jsonString, i = 0
 
 
@@ -178,19 +185,19 @@ module.exports = {
         console.log("File read failed:", err)
         return
       }
-    })    
+    })
 
     JSON.parse(_jsonString).forEach(variable => {
-      if (_guild == variable.guildID) {    
+      if (_guild == variable.guildID) {
         usersRank.push({
           "memberXP": variable.memberXP,
           "memberID": variable.memberID
-        });        
-      }      
-    });    
+        });
+      }
+    });
 
     _json_file = JSON.parse(_jsonString);
-    
+
     usersRank.sort(function (a, b) {
       if (parseInt(a.memberXP) < parseInt(b.memberXP)) {
         return 1;
@@ -206,12 +213,12 @@ module.exports = {
       i = 0
       usersRank.forEach(rank => {
         if (variable.memberID === rank.memberID) {
-          variable.serverRank = i + 1       
+          variable.serverRank = i + 1
         }
         i++
-      });          
-    }); 
-    
+      });
+    });
+
     const writeData = await fs.writeFileSync(
       "./database/misc/GuildMembers.json",
       JSON.stringify(_json_file),
@@ -219,7 +226,7 @@ module.exports = {
         if (err) console.log(err);
       }
     );
-    
+
   },
   sortServerRanks: function (usersRank, guilds, message, StateManager) {
     const arrayMembers = guilds.get(message.guild.id).Member;
