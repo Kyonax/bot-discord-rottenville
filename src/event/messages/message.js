@@ -73,7 +73,7 @@ module.exports = class MessageEvent extends BaseEvent {
 
 
 
-    //Exist data?
+    //Exist data
     const isMemberBank = await isVariableOnJSON(
       guildBankJSON,
       userID,
@@ -106,12 +106,9 @@ module.exports = class MessageEvent extends BaseEvent {
     const MemberBank = await getMemberBank(guildBankJSON, userID, guildID);
 
     //Prefix del Servidor
-    const prefix = await isPrefixOnJSON(
-      guildConfigurableJSON,
-      "guildID",
-      guildID
-    );
+    const prefix = ObjGuild.prefix;
     const digitPrefix = message.content.slice(0, prefix.length);
+    console.log(prefix);
 
     if (digitPrefix === prefix) {
       const [cmdName, ...cmdArgs] = message.content
