@@ -252,9 +252,12 @@ module.exports = class MessageEvent extends BaseEvent {
             levelUpEmbed
           );
         }
+        const coins = generateCoins();
+        let newCoins = coins + bank.coins;
 
         await Api.patchStatusMember(userID, guildID, "xp", updateXP);
         await Api.patchStatusMember(userID, guildID, "level", newLevel);
+
         await Api.patchBankMember(userID, guildID, "coins", newCoins);
         const updateMemberXPJSON = await updateGuildMemberXPJSON(
           guildMembersJSON,
@@ -263,9 +266,7 @@ module.exports = class MessageEvent extends BaseEvent {
           updateXP,
           newLevel
         );
-        //Ganancia de Coins por Miembro
-        const coins = generateCoins();
-        let newCoins = coins + parseInt(memberCoins);
+        //Ganancia de Coins por Miembro        
         const updateMemberCoinsJSON = await updateGuildBankCoinsJSON(
           guildBankJSON,
           guildID,
