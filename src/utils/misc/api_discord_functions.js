@@ -53,7 +53,7 @@ module.exports = {
         }
         await axios.post(process.env.API_DISCORD + `/guild/create`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -69,7 +69,7 @@ module.exports = {
         }
         await axios.post(process.env.API_DISCORD + `/member/create`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -85,7 +85,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/guild/delete`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -101,7 +101,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/member/delete`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -116,7 +116,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/member/perms/${type}/update`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -131,7 +131,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/member/data/update`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -146,7 +146,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/member/status/update`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -161,7 +161,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/member/bank/update`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
@@ -176,7 +176,7 @@ module.exports = {
         }
         axios.post(process.env.API_DISCORD + `/guild/data/update`, _obj, _config)
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
             }).catch(function (error) {
                 console.log(error.response);
             });
