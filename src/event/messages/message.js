@@ -1,8 +1,6 @@
-//Databases
-const guildMembersJSON = require("../../../database/misc/GuildMembers.json");
 //Importación especifíca de Metodos - MessageEmbed - putEmoji Function - functions Database - Colors
 const { MessageEmbed } = require("discord.js");
-const { putEmoji, sortServerRanksJSON } = require("../../utils/misc/functions");
+const { putEmoji } = require("../../utils/misc/functions");
 const { generateXP, limitLevel } = require("../../utils/logic/logicMember");
 const { generateCoins } = require("../../utils/logic/logicBank");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
@@ -178,17 +176,7 @@ module.exports = class MessageEvent extends BaseEvent {
 
       await Api.patchStatusMember(userID, guildID, "xp", updateXP);
       await Api.patchStatusMember(userID, guildID, "level", newLevel);
-
-      await Api.patchBankMember(userID, guildID, "coins", newCoins);      
-      //Rank Members
-      let usersRank = [];
-      const updateServerRanks = await sortServerRanksJSON(
-        guildMembersJSON,
-        usersRank,
-        guildID,
-        message
-      );
-
+      await Api.patchBankMember(userID, guildID, "coins", newCoins);
     }
   }
 };

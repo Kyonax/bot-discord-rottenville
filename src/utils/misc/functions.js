@@ -169,9 +169,7 @@ module.exports = {
       }
     }
   },
-  sortServerRanksJSON: async function (_json_file, usersRank, _guild, message) {
-
-    
+  sortServerRanksJSON: async function (_json_file, usersRank, _guild, message) {        
 
     let _jsonString, i = 0
 
