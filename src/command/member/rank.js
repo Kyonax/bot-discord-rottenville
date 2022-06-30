@@ -42,7 +42,7 @@ module.exports = class InventaryCommand extends BaseCommand {
           ? "#ffffff"
           : member.displayHexColor)
       .setFooter(`Last Update ${data_member.rank.updated}`)
-      .addField("`🔱` `⚜️` Experience Ranking", ``, false)
+      .addField("`🔱` `⚜️` Experience Ranking", `Your XP Data & Rankings of the Server, if you want to get the **Top #10** keep being active in the Server.`, false)
       .addField("Rank General", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.general + "`" + ` **XP:** ` + "`" + data_member.status.xp + "` **Level:** `" + data_member.status.level + "`", true)
       .addField("Rank Month", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.month.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.month.xp, true)
       .addField("Rank Week", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.week.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.week.xp, true)
