@@ -88,9 +88,9 @@ module.exports = class InventaryCommand extends BaseCommand {
           : member.displayHexColor)
       .setFooter(`Last Update ${data_member.rank.updated}`)
       .addField("`🔱` `⚜️` XP Server Ranking - " + member.displayName + " **Level:** " + data_member.status.level, `Your XP Data & Rankings of the Server, if you want to be one **Top 10 Member** increase your activity in the Server.`, false)
-      .addField("Rank General", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.general + "`" + ` **XP:** ` + "`" + data_member.status.xp + "`", true)
-      .addField("Rank Month", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.month.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.month.xp + "`", true)
-      .addField("Rank Week", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.week.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.week.xp + "`", true)
+      .addField("Rank General", `${putEmoji(bot, emote_g)} ` + "`#" + data_member.rank.general + "`" + ` **XP:** ` + "`" + data_member.status.xp + "`", true)
+      .addField("Rank Month", `${putEmoji(bot, emote_m)} ` + "`#" + data_member.rank.special.month.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.month.xp + "`", true)
+      .addField("Rank Week", `${putEmoji(bot, emote_w)} ` + "`#" + data_member.rank.special.week.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.week.xp + "`", true)
       .setTimestamp();
 
     message.channel.send(
