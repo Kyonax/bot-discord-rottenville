@@ -33,6 +33,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     const err = new Error(), perm = new Perms();
     const member = getMember(message, args.join(" "));
     let data_member = await Api.getMember(message.guild.id, member.user.id), emote_g, emote_m, emote_w;
+    console.log(data_member);
 
     switch (true) {
       case data_member.rank.general === 3:
@@ -82,10 +83,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Mensaje para el Embed de Usuario para este Comando
     let embed = new MessageEmbed()
       .setThumbnail(member.user.displayAvatarURL())
-      .setColor(
-        member.displayHexColor === "#000000"
-          ? "#ffffff"
-          : member.displayHexColor)
+      .setColor("#13ea83")
       .setFooter(`Last Update ${data_member.rank.updated}`)
       .addField("`🔱` `⚜️` XP Server Ranking - " + member.displayName + " **Level:** " + data_member.status.level, `Your XP Data & Rankings of the Server, if you want to be one **Top 10 Member** increase your activity in the Server.`, false)
       .addField("Rank General", `${putEmoji(bot, emote_g)} ` + "`#" + data_member.rank.general + "`" + ` **XP:** ` + "`" + data_member.status.xp + "`", true)
