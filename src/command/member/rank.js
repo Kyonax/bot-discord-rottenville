@@ -33,7 +33,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     const err = new Error(), perm = new Perms();
     const member = getMember(message, args.join(" "));
     let data_member = await Api.getMember(message.guild.id, member.user.id), emote_g, emote_m, emote_w;
-    console.log(data_member);
+    if (!data_member) err.noFindMember(bot, message, member.displayName);
 
     switch (true) {
       case data_member.rank.general === 3:
