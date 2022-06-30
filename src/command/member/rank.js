@@ -38,10 +38,11 @@ module.exports = class InventaryCommand extends BaseCommand {
     let embed = new MessageEmbed()
       .setThumbnail("https://i.imgur.com/mylTtoH.png")
       .setColor("#00ED90")
-      .setFooter(`Last update - ${data_member.rank.updated}`)
-      .addField("Rank General", `${data_member.rank.general}`, true)
-      .addField("Rank Month", `${data_member.rank.special.month.data}`, true)
-      .addField("Rank Month", `${data_member.rank.special.week.data}`, true)
+      .setFooter(`Data Updated at ${data_member.rank.updated}`)
+      .addField("Experience Ranking", `This data ranking you due to your Server XP. *Be active in the Server if you want to win more XP*`, false)
+      .addField("General", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.general + "`" + ` **XP:** ` + "`" + data_member.status.xp + "` **Level:** `" + data_member.status.level + "`", true)
+      .addField("Month", `${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.month.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.month.xp + "` **Level:** `" + data_member.rank.special.month.level + "`", true)
+      .addField("Week",`${putEmoji(bot, "910559141611860070")} ` + "`#" + data_member.rank.special.week.data + "`" + ` **XP:** ` + "`" + data_member.rank.special.week.xp + "` **Level:** `" + data_member.rank.special.week.level + "`", true)
       .setTimestamp();
 
     message.channel.send(
