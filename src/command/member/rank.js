@@ -32,7 +32,7 @@ module.exports = class InventaryCommand extends BaseCommand {
     //Creación de Objetos
     const err = new Error(), perm = new Perms();
     const member = getMember(message, args.join(" "));
-    let data_member = Api.getMember(message.guild.id, member.user.id);
+    let data_member = await Api.getMember(message.guild.id, member.user.id);
 
     //Mensaje para el Embed de Usuario para este Comando
     let embed = new MessageEmbed()
