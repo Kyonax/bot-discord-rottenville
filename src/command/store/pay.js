@@ -1,6 +1,3 @@
-const guildMembersJSON = require("../../../database/misc/GuildMembers.json");
-const guildBankJSON = require("../../../database/misc/GuildBank.json");
-const fs = require("fs");
 //Importación especifica de Metodos - RichEmbed - getMember putEmoji Functions - Errors - kyocolor Colors - synkoin Emoji
 const { MessageEmbed } = require("discord.js");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
@@ -17,9 +14,7 @@ const {
 const {
   updateGuildBankCoins,
   updateGuildMemberBoost,
-  updateGuildLevel,
-  updateGuildBankCoinsJSON,
-  updateGuildMemberXPJSON,
+  updateGuildLevel
 } = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { limit } = require("../../utils/logic/logicMember");
@@ -305,7 +300,7 @@ module.exports = class PayCommand extends BaseCommand {
           true
         );
       }
-    } else if (args[0] === "leveld") {
+    } else if (args[0] === "level") {
       if (
         !message.member.roles.cache.some(
           (role) => role.name === "🏰 RottenVille Citizen"
@@ -402,122 +397,3 @@ module.exports = class PayCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersUpdate",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on("updateCoins", (guildID, memberID, newCoins) => {
-  let objectBankMember = null;
-  objectBankMember = initObjectMember(
-    bankGuilds,
-    objectBankMember,
-    guildID,
-    memberID
-  );
-  objectBankMember.memberCoins = newCoins;
-});
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateAdminMember", (guildID, memberID, adminMember) => {
-  let ObjectMember = null;
-  ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-  ObjectMember.adminMember = adminMember;
-});

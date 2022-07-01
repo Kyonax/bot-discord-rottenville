@@ -3,8 +3,6 @@ require("dotenv").config();
 const { Client, Collection } = require("discord.js");
 //Declarando bot como Client
 const bot = new Client({ partials: ["MESSAGE", "REACTION"] });
-//Importación de la Conexión con la Base De Datos - NO ELIMINAR
-const StateManager = require("./utils/database/StateManager");
 //Iniciación de Comandos y Alias de los Mismos con - discord.js (Collection)
 ["commands", "aliases"].forEach((x) => (bot[x] = new Collection()));
 //Importación de las funciones registerCommands - registerEvents

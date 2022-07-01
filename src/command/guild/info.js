@@ -36,13 +36,8 @@ module.exports = class InfoCommand extends BaseCommand {
     if (message.guild.id != "894634118267146272") return;
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    //Variables
-    let autor = message.author;
-    let contentArgs = args[0];
-    let cancelado = synchronous.emojiID[0].cancelado;
-    let afirmado = synchronous.emojiID[0].afirmado;
-    let textResponse = putEmoji(bot, cancelado) + " **Information not found.**";
-
+    //Variables    
+    let contentArgs = args[0];        
     let embed = new MessageEmbed()
       .setColor("#FFFFFF")
       .setThumbnail(message.guild.iconURL())

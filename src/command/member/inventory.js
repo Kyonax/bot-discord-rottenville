@@ -309,7 +309,7 @@ module.exports = class InventaryCommand extends BaseCommand {
       )
       .addField(
         "**Rank**",
-        `**#${rank + " " + putEmoji(bot, "899084173455814676")}**`,
+        `**#${rank.general + " " + putEmoji(bot, "899084173455814676")}**`,
         true
       )
       .addField("**Warnings**", `**${warnings}** ${emojiWarning}`, true)
@@ -317,7 +317,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         "**Level Boosts**",
         `**${putEmoji(bot, "899083263816122458")} x ${status.boost}** ${emojiBoost}`,
         true
-      )      
+      )
       .attachFiles([
         `./database/multimedia/images/magik/exports/bar${message.author.id}Level.png`,
       ])
@@ -336,7 +336,7 @@ module.exports = class InventaryCommand extends BaseCommand {
           numberWithCommas(next_level) + "",
           message.author.id,
           member.displayHexColor,
-          rank + "",
+          rank.general + "",
           member.displayName
         ).then(() => {
           delay(3000).then(async function () {
