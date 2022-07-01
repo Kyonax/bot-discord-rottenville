@@ -5,6 +5,10 @@ const {
   putEmoji,
   numberWithCommas,
 } = require("../../utils/misc/functions");
+const {
+  goldColor,
+  cleverColor,
+} = require("../../../database/utils/color/color.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
@@ -52,7 +56,7 @@ module.exports = class BankCommand extends BaseCommand {
         `${putEmoji(bot, "905441645980422214")} Checking <@${member.id
         }> Rotten Points.`
       )
-      .setColor("#b4e634")
+      .setColor(goldColor)
       .addField("**User**", `**[${member.displayName}]**`, true)
       .addField(
         " **Rotten Points**",
