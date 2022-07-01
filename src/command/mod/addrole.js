@@ -12,6 +12,7 @@ const {
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { addMessageToBin } = require("../../utils/misc/bin");
 //Importación Clase de Objetos - Conector Error - Perms
+const Api = require("../../utils/misc/api_discord_functions");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
@@ -35,12 +36,12 @@ module.exports = class AddRoleCommand extends BaseCommand {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
+    const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), { perms } = ObjAuthorMember;
+    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
     //Inicialización de Variables
     let member = args[0];
-    if (!member) return err.noUserDigitARole(bot, message);
-    let autor = message.author;
+    if (!member) return err.noUserDigitARole(bot, message);    
     let role = args[1];
     let _jsonString, ObjectMember = null, ObjectAutor = null        
     //Inicialización Guild Prefix

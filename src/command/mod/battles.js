@@ -9,6 +9,7 @@ const {
 const { goldColor } = require("../../../database/utils/color/color.json");
 
 //Importación Clase de Objetos - Conector Error - Perms
+const Api = require("../../utils/misc/api_discord_functions");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de Usuario
@@ -32,39 +33,15 @@ module.exports = class BattlesCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});    
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
-    const autor = getMember(message, message.author.id);
-    let number = args[3];
-    let member = getMember(message, args[0]);
-    if (!number) number = 1;
-    let [cmd, role] = message.content.split(" ");
-    let _competitor_1 = args[1];
-    let _competitor_2 = args[2];
+    const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), { perms } = ObjAuthorMember;
+    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
 
-    let _jsonString, ObjectAuthor = null        
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })        
+    let number = args[3], member = getMember(message, args[0]);
+    if (!number) number = 1; let [cmd, role] = message.content.split(" "), _competitor_1 = args[1], _competitor_2 = args[2];   
 
-    JSON.parse(_jsonString).forEach(_member => {  
-      if (_member.guildID == member.guild.id) {                
-      if(message.author.id == _member.memberID){
-        ObjectAuthor = _member
-      }}
-    });         
-    
-    //Permisos de Autor
-    const { moderatorMember } = ObjectAuthor;
-    
-    //Validaciones - Permisos de Uso - Usuario - Rol - Rol Encontrado
-    if (moderatorMember !== 1) return perm.moderatorPerms(bot, message);
     if (!role.includes("@")) {
       role = "@everyone";
     }
@@ -107,25 +84,25 @@ ${putEmoji(bot, "910558104838615090")} Happy Tournament! - RottenVille Team
       .setImage(`attachment://RTSolBattlesTournament${number}.png`)
       .setFooter("Solana RottenVille-Battles Tournament Selection")
       .setTimestamp();
-/*
-    const encChannel = message.guild.channels.cache.find(
-      (ch) => ch.name === "🎁・rottenville-battles"
-    );
-    if (!encChannel) {
-      return message.guild.channels
-        .create("encuestas", {
-          type: "text",
-          permissionOverwrites: [
-            {
-              id: message.guild.roles.everyone,
-              deny: ["SEND_MESSAGES", "ATTACH_FILES"],
-              allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
-            },
-          ],
-        })
-        .catch((err) => console.log(err));
-    }
-*/
+    /*
+        const encChannel = message.guild.channels.cache.find(
+          (ch) => ch.name === "🎁・rottenville-battles"
+        );
+        if (!encChannel) {
+          return message.guild.channels
+            .create("encuestas", {
+              type: "text",
+              permissionOverwrites: [
+                {
+                  id: message.guild.roles.everyone,
+                  deny: ["SEND_MESSAGES", "ATTACH_FILES"],
+                  allow: ["VIEW_CHANNEL", "READ_MESSAGE_HISTORY"],
+                },
+              ],
+            })
+            .catch((err) => console.log(err));
+        }
+    */
     message.channel.send(
       `**RTSolBattles Tournament ${gRole}!! | ${_competitor_1} VS ${_competitor_2}** ${putEmoji(
         bot,

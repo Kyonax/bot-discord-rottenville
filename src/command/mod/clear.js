@@ -24,30 +24,11 @@ module.exports = class ClearCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminación del mensaje con Comandos
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
-    let member = getMember(message, args[0]);
-    let _jsonString, ObjectAuthor = null        
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })        
-
-    JSON.parse(_jsonString).forEach(_member => {   
-      if (_member.guildID == member.guild.id) {               
-      if(message.author.id == _member.memberID){
-        ObjectAuthor = _member
-      }}
-    });        
-    //Inicialización de Párametros Member
-    const { moderatorMember } = ObjectAuthor;
-    //Insuficientes Permisos para usar el Comando
-    if (moderatorMember != 1) return perm.moderatorPerms(bot, message);
+    const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), { perms } = ObjAuthorMember;
+    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);    
     //Emoji from Map
     const emoji = synchronous.emojiID[0].afirmado;
     if (!args[0]) {

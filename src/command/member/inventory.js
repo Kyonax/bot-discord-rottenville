@@ -317,12 +317,7 @@ module.exports = class InventaryCommand extends BaseCommand {
         "**Level Boosts**",
         `**${putEmoji(bot, "899083263816122458")} x ${status.boost}** ${emojiBoost}`,
         true
-      )/*
-      .addField(
-        "**Weekly XP | 1 Week = 1 NFT EVENT**",
-        `**${numberWithCommas(actual_week_xp) + putEmoji(bot, "899083263816122458")} in just 1 Week | ${message.guild.name} NFT**`,
-        false
-      )*/
+      )      
       .attachFiles([
         `./database/multimedia/images/magik/exports/bar${message.author.id}Level.png`,
       ])

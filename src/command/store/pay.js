@@ -50,14 +50,12 @@ module.exports = class PayCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
-    //Inicialización de Variable Usuario
-    let autor = getMember(message, message.author.id);
-    let member = getMember(message, args[1]);
-    const type = args[0];
+    const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id), member = getMember(message, args[1]), type = args[0];
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), ObjMember = await Api.getMember(member.id, message.author.id), { perms } = ObjAuthorMember;
+    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
+    console.log(ObjMember);
     //Creación de Mensajes Embed para el Comando
     let embed = new MessageEmbed()
       .setTitle(`**${member.displayName}'s Level Radiation**`)
@@ -96,22 +94,24 @@ module.exports = class PayCommand extends BaseCommand {
 
     JSON.parse(_jsonString_bank).forEach((_member) => {
       if (_member.guildID == member.guild.id) {
-        
-      
-      if (member.id == _member.memberID) {
-        ObjectBankMember = _member;
-      }
 
-      if (autor.id == _member.memberID) {
-        ObjectBankAuthor = _member;
-      }}
+
+        if (member.id == _member.memberID) {
+          ObjectBankMember = _member;
+        }
+
+        if (autor.id == _member.memberID) {
+          ObjectBankAuthor = _member;
+        }
+      }
     });
 
     JSON.parse(_jsonString).forEach((_member) => {
       if (_member.guildID == member.guild.id) {
-      if (autor.id == _member.memberID) {
-        ObjectAuthor = _member;
-      }}
+        if (autor.id == _member.memberID) {
+          ObjectAuthor = _member;
+        }
+      }
     });
 
     if (!ObjectBankMember.memberCoins)
@@ -201,9 +201,9 @@ module.exports = class PayCommand extends BaseCommand {
         //Validación de Variables - No suficientes Monedas
         if (actualAuthorCoins < boostB)
           return err.dontHaveSynkoins(bot, message, autor.displayName);
-        
-        
-        
+
+
+
 
         const updateMemberBoost = updateGuildMemberBoost(
           message.guild.id,

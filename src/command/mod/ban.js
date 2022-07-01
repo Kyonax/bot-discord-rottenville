@@ -15,6 +15,7 @@ const {
 const { dangerColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
+const Api = require("../../utils/misc/api_discord_functions");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
@@ -41,37 +42,18 @@ module.exports = class BanCommand extends BaseCommand {
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Objetos
-    const err = new Error();
-    const perm = new Perms();
+    const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), { perms } = ObjAuthorMember;
+    if (perms.admin !== 1) return perm.synksPerms(bot, message);
     //Inicialización de Variables - Canal - Usuario - Razón - Longitud - ID de Usuario
     let banChannel = message.guild.channels.cache.find(
       (ch) => ch.name === "💬・text-mod"
-    );
-    let autor = message.author;
+    );    
     let member = message.guild.member(
       message.mentions.users.first() || message.guild.members.cache.get(args[0])
     );
-    let reason = args.join(" ").slice(22);
-    let _jsonString, ObjectAutor = null        
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildMembers.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })        
-
-    JSON.parse(_jsonString).forEach(_member => {    
-      if (_member.guildID == member.guild.id) {               
-      if(message.author.id == _member.memberID){
-        ObjectAutor = _member
-      }}
-    });         
-    
-    const { adminMember } = ObjectAutor;
-    //Validación de Variables - Permisos de Comandos - Falta de Usuario - Falta de Razón - Auto Baneo
-    // - Usuarios Restringidos - Canal Existente
-    if (adminMember !== 1) return perm.synksPerms(bot, message);
+    let reason = args.join(" ").slice(22);                 
+    //Validación de Variables - Permisos de Comandos - Falta de Usuario - Falta de Razón - Auto Baneo        
     if (!member) return err.noUserDigitBan(bot, message);
     if (member.id === message.author.id)
       return err.noValidTargetBan(bot, message);
