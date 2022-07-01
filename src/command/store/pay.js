@@ -56,8 +56,8 @@ module.exports = class PayCommand extends BaseCommand {
     const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id), member = getMember(message, args[1]), type = args[0];
     const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), ObjMember = await Api.getMember(member.guild.id, member.id), { perms } = ObjAuthorMember;
     if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
-    if (ObjAuthorMember.id) return err.noFindMember(bot, message, autor.displayName);
-    if (ObjMember.id) return err.noFindMemberBank(bot, message);
+    if (ObjAuthorMember.id === undefined) return err.noFindMember(bot, message, autor.displayName);
+    if (ObjMember.id === undefined) return err.noFindMemberBank(bot, message);
     if (!isNaN(type)) return err.noTypeFoundPay(bot, message, type);
     //Creación de Mensajes Embed para el Comando
     let embed = new MessageEmbed()
