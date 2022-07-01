@@ -56,8 +56,9 @@ module.exports = class PayCommand extends BaseCommand {
     const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id), member = getMember(message, args[1]), type = args[0];
     const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), ObjMember = await Api.getMember(member.guild.id, member.id), { perms } = ObjAuthorMember;
     if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
-    console.log(ObjAuthorMember);
-    console.log(ObjMember);
+    if (ObjAuthorMember.id) return err.noFindMember(bot, message, autor.displayName);
+    if (ObjMember.id) return err.noFindMemberBank(bot, message);
+    if (!isNaN(type)) return err.noTypeFoundPay(bot, message, type);
     //Creación de Mensajes Embed para el Comando
     let embed = new MessageEmbed()
       .setTitle(`**${member.displayName}'s Level Radiation**`)
@@ -65,68 +66,14 @@ module.exports = class PayCommand extends BaseCommand {
       .setThumbnail(bot.user.displayAvatarURL())
       .setFooter("RottenBot radiation scanner")
       .setTimestamp();
-    //Creación de Objeto Bank Member
-    let _jsonString,
-      _jsonString_bank,
-      ObjectAuthor = null,
-      ObjectBankMember = null,
-      ObjectBankAuthor = null;
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync(
-      "./database/misc/GuildMembers.json",
-      "utf8",
-      (err, jsonString) => {
-        if (err) {
-          console.log("File read failed:", err);
-          return;
-        }
-      }
-    );
-
-    _jsonString_bank = await fs.readFileSync(
-      "./database/misc/GuildBank.json",
-      "utf8",
-      (err, jsonString) => {
-        if (err) {
-          console.log("File read failed:", err);
-          return;
-        }
-      }
-    );
-
-    JSON.parse(_jsonString_bank).forEach((_member) => {
-      if (_member.guildID == member.guild.id) {
-
-
-        if (member.id == _member.memberID) {
-          ObjectBankMember = _member;
-        }
-
-        if (autor.id == _member.memberID) {
-          ObjectBankAuthor = _member;
-        }
-      }
-    });
-
-    JSON.parse(_jsonString).forEach((_member) => {
-      if (_member.guildID == member.guild.id) {
-        if (autor.id == _member.memberID) {
-          ObjectAuthor = _member;
-        }
-      }
-    });
-
-    if (!ObjectBankMember.memberCoins)
-      return err.noFindMemberBank(bot, message);
-    if (!isNaN(type)) return err.noTypeFoundPay(bot, message, type);
     //Types
     if (type.toLowerCase() === "user") {
       //Validación de variables - Monedas - Usuario
       if (autor.id === member.id) return err.noValidTargetPay(bot, message);
       if (!parseInt(args[2])) return err.noAmountDigit(bot, message);
       //Inicialización de Variables - Monedas de Usuario - Monedas de Autor
-      let actualMemberCoins = parseInt(ObjectBankMember.memberCoins);
-      let actualAuthorCoins = parseInt(ObjectBankAuthor.memberCoins);
+      let actualMemberCoins = ObjMember.bank.coins;
+      let actualAuthorCoins = ObjAuthorMember.bank.coins;
       const updateMCoins = actualMemberCoins + parseInt(args[2]);
       const updateACoins = actualAuthorCoins - parseInt(args[2]);
       //Validación de Variables - No suficientes Monedas
@@ -134,19 +81,8 @@ module.exports = class PayCommand extends BaseCommand {
         return err.dontHaveSynkoins(bot, message, autor.displayName);
       //Transferencia de Monedas - Autor - Usuario
 
-      const updateBankJSON = await updateGuildBankCoinsJSON(
-        guildBankJSON,
-        message.guild.id,
-        member.id,
-        updateMCoins
-      );
-
-      const updateAuthorBankJSON = await updateGuildBankCoinsJSON(
-        guildBankJSON,
-        message.guild.id,
-        autor.id,
-        updateACoins
-      );
+      await Api.patchBankMember(member.id, member.guild.id, "coins", updateMCoins);
+      await Api.patchBankMember(autor.id, autor.guild.id, "coins", updateACoins);
 
       //Inicialización de Emojis y su Uso respectivo
       let emoji = putEmoji(bot, "905441645980422214");
@@ -163,7 +99,7 @@ module.exports = class PayCommand extends BaseCommand {
         true
       );
       embed.addField(
-        `**Rotten Points remaining from ${message.author.username}**`,
+        `**Rotten Points remaining from ${autor.displayName}**`,
         `**${numberWithCommas(updateACoins)} ${emoji} Rotten Points.**`,
         true
       );
