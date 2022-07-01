@@ -54,8 +54,8 @@ module.exports = class PayCommand extends BaseCommand {
     message.delete().catch((O_o) => { });
     //Creación de Objetos
     const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id), member = getMember(message, args[1]), type = args[0];
-    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), ObjMember = await Api.getMember(member.id, message.author.id), { perms } = ObjAuthorMember;
-    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
+    const ObjAuthorMember = await Api.getMember(autor.guild.id, message.author.id), ObjMember = await Api.getMember(member.user.guild.id, member.id), { perms } = ObjAuthorMember;    
+    if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);    
     console.log(ObjMember);
     //Creación de Mensajes Embed para el Comando
     let embed = new MessageEmbed()
