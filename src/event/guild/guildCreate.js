@@ -1,8 +1,5 @@
-const guildJSON = require("../../../database/misc/Guild.json");
-const guildConfigurableJSON = require("../../../database/misc/GuildConfigurable.json");
-//Methods
-const { insertNewGuildIntoJSON } = require("../../utils/database/functions");
 //Importación de cuerpo de Eventos e importación de Conexión Base de Datos
+const Api = require("../../utils/misc/api_discord_functions");
 const BaseEvent = require("../../utils/structure/BaseEvent");
 //Exportación del Evento guildCreate
 module.exports = class guildCreateEvent extends BaseEvent {
@@ -12,12 +9,7 @@ module.exports = class guildCreateEvent extends BaseEvent {
   }
   async run(bot, guild) {
     try {
-      const insertNewGuild = await insertNewGuildIntoJSON(
-        guildJSON,
-        guildConfigurableJSON,
-        guild.id,
-        guild.ownerID
-      );
+      await Api.postGuild(guild.id, guild.ownerID, "en");      
     } catch (error) {
       console.log(error);
     }
