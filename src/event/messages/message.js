@@ -5,6 +5,7 @@ const { generateXP, limitLevel } = require("../../utils/logic/logicMember");
 const { generateCoins } = require("../../utils/logic/logicBank");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
 const { reactionEmbeds } = require("../../utils/misc/reaction");
+const { betaRiddle } = require('../../utils/misc/DiscordEvents')
 const { attachMessageImage } = require("../../utils/misc/attachment");
 const { thrizzColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
@@ -20,7 +21,8 @@ module.exports = class MessageEvent extends BaseEvent {
   constructor() { super("message"); }
 
   async run(bot, message) {
-    const reactionEmbedsA = await reactionEmbeds(bot, message)
+    const reactionEmbedsA = await reactionEmbeds(bot, message)    
+    await betaRiddle(Api, bot, message);
     //No DMS no Bot Messages
     if (message.channel.id == "956120543688548362") return;
     if (message.author.bot || message.channel.type === "dm") return;
