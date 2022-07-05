@@ -22,7 +22,7 @@ module.exports = class MessageEvent extends BaseEvent {
 
   async run(bot, message) {
     const reactionEmbedsA = await reactionEmbeds(bot, message)    
-    const riddleEvent = await betaRiddle(Api, bot, message);
+    await betaRiddle(Api, bot, message);
     //No DMS no Bot Messages
     if (message.channel.id == "956120543688548362") return;
     if (message.author.bot || message.channel.type === "dm") return;
