@@ -1,7 +1,7 @@
 module.exports = {
     betaRiddle: async function (Api, bot, message) {
         let _guild = await Api.getGuild(message.author.id);
-        console.log("Enter")
+        console.log(`Enter: ${message.author.id}`)
         console.log(_guild);
     },
 };
