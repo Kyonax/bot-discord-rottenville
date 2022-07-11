@@ -6,6 +6,7 @@ const Perms = require("../../../database/conectors/perm");
 //Importación de Usuario
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación de la Clase Padre y Conexión con la Base de Datos
+const Api = require("../../utils/misc/api_discord_functions");
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
 const fs = require("fs");
 //Exportación del Comando Clear
@@ -17,7 +18,7 @@ module.exports = class ClearCommand extends BaseCommand {
       "Clear messages from a Channel.",
       "clear`\n**Options:** `<number>`",
       "_***Admin - Inmortales - Moderadores***_",
-      "mod"
+      "mod" 
     );
   }
 
