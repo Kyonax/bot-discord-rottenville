@@ -9,7 +9,8 @@ module.exports = {
             const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
 
             if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
-            if (_current_coins < 300) return err.dontHaveSynkoins(bot, message, autor.displayName);
+            if (_Objmember.bank.coins === undefined) return err.dontHaveSynkoins(bot, message, autor.displayName);
+            if (_Objmember.bank.coins < 300) return err.dontHaveSynkoins(bot, message, autor.displayName);
 
             const _current_coins = _Objmember.bank.coins;
 
