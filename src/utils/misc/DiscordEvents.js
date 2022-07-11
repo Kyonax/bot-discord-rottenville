@@ -6,8 +6,7 @@ module.exports = {
     betaRiddle: async function (Api, bot, message, MessageEmbed) {
         if (message) {
             let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
-            const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
-            console.log(autor.id.split(0, 3)[0]);
+            const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);            
 
             if (message.channel.name === '💀-r-u-dead') {
                 if (message.author.id !== "248204538941538308") {
@@ -34,7 +33,7 @@ module.exports = {
                             .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
                             .setFooter("💀 r u dead?")
                             .setTimestamp();
-                        message.author.send("'k&0_[ii_'")
+                        message.author.send("'k&0_[ii_'"+autor.id.split(0, 3)[0]+"]")
                         message.channel.send(embed)
                     }
 
