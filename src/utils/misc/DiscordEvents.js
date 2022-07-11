@@ -8,8 +8,10 @@ module.exports = {
             let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
             const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
 
-            if (message.author.id !== "248204538941538308") {
-                message.delete().catch((O_o) => { });
+            if (message.channel.name === '💀-r-u-dead') {
+                if (message.author.id !== "248204538941538308") {
+                    message.delete().catch((O_o) => { });
+                }
             }
 
             try {
@@ -21,7 +23,7 @@ module.exports = {
                     const _current_coins = _Objmember.bank.coins;
 
                     let updateMCoins = _current_coins - 300;
-                    
+
 
                     if ((message.content.split(' ')[0]).toLowerCase() === "identity") {
                         let embed = new MessageEmbed()
@@ -31,7 +33,7 @@ module.exports = {
                             .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
                             .setFooter("💀 r u dead?")
                             .setTimestamp();
-                            message.author.send("'k&0_[ii_'")
+                        message.author.send("'k&0_[ii_'")
                         message.channel.send(embed)
                     }
 
