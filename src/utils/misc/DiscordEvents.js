@@ -6,10 +6,12 @@ module.exports = {
     betaRiddle: async function (Api, bot, message, MessageEmbed) {
         if (message) {
             let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
-            const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id), _current_coins = _Objmember.bank.coins;
+            const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
 
             if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
             if (_current_coins < 300) return err.dontHaveSynkoins(bot, message, autor.displayName);
+
+            const _current_coins = _Objmember.bank.coins;
 
             try {
                 if (message.channel.name === '💀-r-u-dead') {
