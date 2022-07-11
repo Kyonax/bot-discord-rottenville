@@ -21,11 +21,11 @@ module.exports = class MessageEvent extends BaseEvent {
   constructor() { super("message"); }
 
   async run(bot, message) {
-    const reactionEmbedsA = await reactionEmbeds(bot, message)    
-    await betaRiddle(Api, bot, message, MessageEmbed);
+    const reactionEmbedsA = await reactionEmbeds(bot, message)        
     //No DMS no Bot Messages
     if (message.channel.id == "956120543688548362") return;
     if (message.author.bot || message.channel.type === "dm") return;
+    await betaRiddle(Api, bot, message, MessageEmbed);
     //Restricted Servers
     try {
       switch (message.guild.id) {
