@@ -17,13 +17,16 @@ module.exports = {
             try {
                 if (message.channel.name === '💀-r-u-dead') {
                     let updateMCoins = _current_coins - 300;
-                    message.delete().catch((O_o) => { });
+                    if (message.author.id !== "701792795362590811" || message.author.id !== "282877563305590785" ||
+                        message.author.id !== "546581714395463691") {
+                        message.delete().catch((O_o) => { });
+                    }
 
                     if ((message.content.split(' ')[0]).toLowerCase() === "identity") {
                         let embed = new MessageEmbed()
                             .setTitle(`**${autor.displayName}'s Congrats!!**`)
                             .setColor('#F7005B')
-                            .setDescription("You `guessed the 1st {word} of the {key}` wait for the other riddles! Be the first to get the three words and unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: "+ numberWithCommas(updateMCoins)+")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
+                            .setDescription("You `guessed the 1st {word} of the {key}` wait for the other riddles! Be the first to get the three words and unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: " + numberWithCommas(updateMCoins) + ")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
                             .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
                             .setFooter("💀 r u dead?")
                             .setTimestamp();
