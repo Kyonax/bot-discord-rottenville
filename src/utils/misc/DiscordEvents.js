@@ -30,6 +30,7 @@ module.exports = {
                             .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
                             .setFooter("💀 r u dead?")
                             .setTimestamp();
+                            message.author.send('k&0_[ii_')
                         message.channel.send(embed)
                     }
 
