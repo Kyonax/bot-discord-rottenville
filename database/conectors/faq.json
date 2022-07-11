@@ -43,5 +43,10 @@
         "tittle": "Do I need Solana to MINT one NFT from the FREE MINT?",
         "description": "./database/conectors/faq/SolanaFees.txt",
         "updated":"05/MAY/2022 - Kyonax"
+    },
+    "riddle": {
+        "tittle": "How to participate in the Riddle activity?",
+        "description": "./database/conectors/faq/RiddleRuDead.txt",
+        "updated": "11/JUL/2022 - Kyonax"
     }
 }
