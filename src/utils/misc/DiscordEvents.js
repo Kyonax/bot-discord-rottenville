@@ -20,7 +20,7 @@ module.exports = {
 
                     }
 
-                    await Api.patchBankMember(message.author.id, member.guild.id, "coins", updateMCoins);
+                    await Api.patchBankMember(message.author.id, message.guild.id, "coins", updateMCoins);
                 }
             } catch (error) {
                 console.log(error)
