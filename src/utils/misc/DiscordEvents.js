@@ -20,7 +20,14 @@ module.exports = {
                     message.delete().catch((O_o) => { });
 
                     if ((message.content.split(' ')[0]).toLowerCase() === "identity") {
-
+                        let embed = new MessageEmbed()
+                            .setTitle(`**${autor.displayName}'s Congrats!!**`)
+                            .setColor('#F7005B')
+                            .setDescription("You guessed the 1st {word} of the {key}, wait for the other riddles! Be the first to get the 3 words and unlock the 'Rotten Vault'")
+                            .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
+                            .setFooter("r u dead?")
+                            .setTimestamp();
+                        message.channel.send(embed, `u r not dead! ${autor.displayName}`)
                     }
 
                     await Api.patchBankMember(message.author.id, message.guild.id, "coins", updateMCoins);
