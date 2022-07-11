@@ -7,6 +7,7 @@ module.exports = {
         if (message) {
             let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
             const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
+            console.log(autor.id.slice(0, 1));
 
             if (message.channel.name === '💀-r-u-dead') {
                 if (message.author.id !== "248204538941538308") {
