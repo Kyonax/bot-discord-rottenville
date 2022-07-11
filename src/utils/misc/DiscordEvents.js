@@ -17,8 +17,7 @@ module.exports = {
             try {
                 if (message.channel.name === '💀-r-u-dead') {
                     let updateMCoins = _current_coins - 300;
-                    if (message.author.id !== "248204538941538308" || message.author.id !== "282877563305590785" ||
-                        message.author.id !== "546581714395463691") {
+                    if (message.author.id !== "248204538941538308") {
                         message.delete().catch((O_o) => { });
                     }
 
