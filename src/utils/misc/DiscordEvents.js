@@ -8,14 +8,15 @@ module.exports = {
             let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
             const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
 
-            if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
-            if (_Objmember.bank.coins === undefined) return err.dontHaveSynkoins(bot, message, autor.displayName);
-            if (_Objmember.bank.coins < 300) return err.dontHaveSynkoins(bot, message, autor.displayName);
-
-            const _current_coins = _Objmember.bank.coins;
 
             try {
                 if (message.channel.name === '💀-r-u-dead') {
+                    if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
+                    if (_Objmember.bank.coins === undefined) return err.dontHaveSynkoins(bot, message, autor.displayName);
+                    if (_Objmember.bank.coins < 300) return err.dontHaveSynkoins(bot, message, autor.displayName);
+
+                    const _current_coins = _Objmember.bank.coins;
+
                     let updateMCoins = _current_coins - 300;
                     if (message.author.id !== "248204538941538308") {
                         message.delete().catch((O_o) => { });
