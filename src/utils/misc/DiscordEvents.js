@@ -18,7 +18,7 @@ module.exports = {
 
             try {
 
-                _array_riddles_words.forEach(word => {
+                _array_riddles_words.forEach(async word => {
                     console.log(`Init array: ${word}`);
                     if (message.channel.name === '💀-r-u-dead') {
                         if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
