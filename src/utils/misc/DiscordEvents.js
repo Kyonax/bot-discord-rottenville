@@ -44,18 +44,18 @@ module.exports = {
                             switch (word) {
                                 case "identity":
                                     embed.setDescription("You `guessed the 1st {word} of the {key}` wait for the other riddles! Be the first to get the three words and unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: " + numberWithCommas(updateMCoins) + ")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
-                                    message.author.send("'k&0_[ii_" + autor.id.split(0, 3)[0] + "]'")
+                                    message.author.send("`k&0_[ii_" + autor.id.split(0, 3)[0] + "]`")
                                     message.channel.send(embed)
                                     console.log(`Init identity: ${word}`);
                                     break;
                                 case "web":
                                     embed.setDescription("You `guessed the 2nd {word} of the {key}` wait for the other riddles! Be the first to get the three words and unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: " + numberWithCommas(updateMCoins) + ")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
-                                    message.author.send("'f$tur3_[ee_" + autor.id.split(0, 3)[0] + "]'")
+                                    message.author.send("`f$tur3_[ee_" + autor.id.split(0, 3)[0] + "]`")
                                     message.channel.send(embed)
                                     console.log(`Init web: ${word}`);
                                     break;
                                 case "testing":
-                                    message.author.send("'f$tur3_[ee_" + autor.id.split(0, 3)[0] + "]'");
+                                    message.author.send("`f$tur3_[ee_" + autor.id.split(0, 3)[0] + "]`");
                                     _array_riddles_words.forEach(word => {
                                         message.author.send(word);
                                     });
