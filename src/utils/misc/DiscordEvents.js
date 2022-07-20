@@ -19,7 +19,6 @@ module.exports = {
             try {
 
                 _array_riddles_words.forEach(async word => {
-                    console.log(`Init array: ${word}`);
                     if (message.channel.name === '💀-r-u-dead') {
                         if (_Objmember.id === undefined) return err.noFindMemberBank(bot, message);
                         if (_Objmember.bank.coins === undefined) return err.dontHaveSynkoins(bot, message, autor.displayName);
@@ -31,7 +30,6 @@ module.exports = {
 
 
                         if ((message.content.split(' ')[0]).toLowerCase() === word) {
-                            console.log(`Init desition: ${word}`);
 
                             let embed = new MessageEmbed()
                                 .setTitle(`**${autor.displayName}'s Congrats!!**`)
@@ -48,7 +46,6 @@ module.exports = {
                                     message.channel.send(embed).then((msg) => {
                                         msg.delete({ timeout: 60000, reason: "It had to be done." });
                                     });
-                                    console.log(`Init identity: ${word}`);
                                     break;
                                 case "web3":
                                     embed.setDescription("You `guessed the 2nd {word} of the {key}` wait for the other riddles! Be the first to get the three words and unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: " + numberWithCommas(updateMCoins) + ")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
@@ -56,14 +53,12 @@ module.exports = {
                                     message.channel.send(embed).then((msg) => {
                                         msg.delete({ timeout: 60000, reason: "It had to be done." });
                                     });
-                                    console.log(`Init web: ${word}`);
                                     break;
                                 case "testing":
                                     message.author.send("`f$tur3_[ee_" + autor.id.split(0, 3)[0] + "]`");
                                     _array_riddles_words.forEach(word => {
                                         message.author.send(word);
                                     });
-                                    console.log(`Init testing: ${word}`);
                                     break;
                                 default:
                                     break;
