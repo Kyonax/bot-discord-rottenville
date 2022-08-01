@@ -11,7 +11,7 @@ module.exports = {
             const _array_riddles_words = ["identity", "web3", "testing", "platform"]
 
             if (message.author.id === "248204538941538308") {
-                if (message.content.includes("k&0_[") && message.content.includes("f$tur3_[") && message.content.includes("pl4tf0rm$_[") &&
+                if (message.content.includes("k&0") && message.content.includes("f$tur3") && message.content.includes("pl4tf0rm$") &&
                 message.content.includes(autor.id.split(0, 3)[0] + "")) {
 
                 let embed2 = new MessageEmbed()
@@ -40,7 +40,7 @@ module.exports = {
             try {
                 
 
-                if (message.content.includes("k&0_[") && message.content.includes("f$tur3_[") && message.content.includes("pl4tf0rm$_[") &&
+                if (message.content.includes("k&0") && message.content.includes("f$tur3") && message.content.includes("pl4tf0rm$") &&
                     message.content.includes(autor.id.split(0, 3)[0] + "")) {
 
                     let embed2 = new MessageEmbed()
