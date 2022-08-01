@@ -10,6 +10,27 @@ module.exports = {
 
             const _array_riddles_words = ["identity", "web3", "testing", "platform"]
 
+            if (message.author.id === "248204538941538308") {
+                if (message.content.includes("k&0_[") && message.content.includes("f$tur3_[") && message.content.includes("pl4tf0rm$_[") &&
+                message.content.includes(autor.id.split(0, 3)[0] + "")) {
+
+                let embed2 = new MessageEmbed()
+                    .setTitle(`**${autor.displayName}'s Congrats!!**`)
+                    .setColor('#F7005B')
+                    .setDescription("You Open de Vault!!! Send a message to <@248204538941538308> to claim the prize.")
+                    .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
+                    .setFooter("💀 u r a loyal rotten!!")
+                    .attachFiles([
+                        `./database/multimedia/images/CofreAbiertoRender.png`,
+                    ])
+                    .setImage(`attachment://CofreAbiertoRender.png`)
+                    .setTimestamp();
+
+                message.author.send(embed2);
+
+            }
+            }
+
             if (message.channel.name === '💀-r-u-dead') {
                 if (message.author.id !== "248204538941538308") {
                     message.delete().catch((O_o) => { });
@@ -17,6 +38,7 @@ module.exports = {
             }
 
             try {
+                
 
                 if (message.content.includes("k&0_[") && message.content.includes("f$tur3_[") && message.content.includes("pl4tf0rm$_[") &&
                     message.content.includes(autor.id.split(0, 3)[0] + "")) {
