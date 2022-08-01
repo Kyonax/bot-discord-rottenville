@@ -17,7 +17,7 @@ module.exports = {
                 let embed2 = new MessageEmbed()
                     .setTitle(`**${autor.displayName}'s Congrats!!**`)
                     .setColor('#F7005B')
-                    .setDescription("You Open de Vault!!! Send a message to <@248204538941538308> to claim the prize.")
+                    .setDescription("You Open de Vault!!! Send a message to <@248204538941538308> to claim the prize.\n\n `The First Utility for the Next phase is the Identity Web3 Platform - 💀`")
                     .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
                     .setFooter("💀 u r a loyal rotten!!")
                     .attachFiles([
