@@ -5,10 +5,10 @@ const { getMember, putEmoji, numberWithCommas, } = require("../../utils/misc/fun
 module.exports = {
     betaRiddle: async function (Api, bot, message, MessageEmbed) {
         if (message) {
-            let _Objguild = await Api.getGuild(message.guild.id), _Objmember = await Api.getMember(message.guild.id, message.author.id);
+            let _Objmember = await Api.getMember(message.guild.id, message.author.id);
             const err = new Error(), perm = new Perms(), autor = getMember(message, message.author.id);
 
-            const _array_riddles_words = ["identity", "web3", "testing"]
+            const _array_riddles_words = ["identity", "web3", "testing", "platform"]
 
             if (message.channel.name === '💀-r-u-dead') {
                 if (message.author.id !== "248204538941538308") {
@@ -17,6 +17,25 @@ module.exports = {
             }
 
             try {
+
+                if (message.content.includes("k&0_[") && message.content.includes("f$tur3_[") && message.content.includes("pl4tf0rm$_[") &&
+                    message.content.includes(autor.id.split(0, 3)[0] + "")) {
+
+                    let embed2 = new MessageEmbed()
+                        .setTitle(`**${autor.displayName}'s Congrats!!**`)
+                        .setColor('#F7005B')
+                        .setDescription("You Open de Vault!!! Send a message to <@248204538941538308> to claim the prize.")
+                        .setThumbnail('https://cdn.discordapp.com/attachments/898963695336583169/994724270276096030/Cofre_R_U_DEAD.png')
+                        .setFooter("💀 u r a loyal rotten!!")
+                        .attachFiles([
+                            `./database/multimedia/images/CofreAbiertoRender.png`,
+                        ])
+                        .setImage(`attachment://CofreAbiertoRender.png`)
+                        .setTimestamp();
+
+                    message.channel.send(embed2);
+
+                }
 
                 _array_riddles_words.forEach(async word => {
                     if (message.channel.name === '💀-r-u-dead') {
@@ -29,7 +48,13 @@ module.exports = {
                         let updateMCoins = _current_coins - 300;
 
 
+
+
                         if ((message.content.split(' ')[0]).toLowerCase() === word) {
+
+                            const encChannel = message.guild.channels.cache.find(
+                                (ch) => ch.name === "💬・testing-team"
+                            );
 
                             let embed = new MessageEmbed()
                                 .setTitle(`**${autor.displayName}'s Congrats!!**`)
@@ -60,11 +85,21 @@ module.exports = {
                                         message.author.send(word);
                                     });
                                     break;
+                                case "platform":
+                                    embed.setDescription("You `guessed the 3rd {word} of the {key}` you can now send all the encrypted key to Win! Be the first to unlock the 'Rotten Vault' \n\n _Just one winner - get more rp to keep participating. **(Current: " + numberWithCommas(updateMCoins) + ")**_ | **[Go to our Twitter](https://twitter.com/rotten_ville)**")
+                                    message.author.send("`pl4tf0rm$_[oo_" + autor.id.split(0, 3)[0] + "]`");
+                                    message.channel.send(embed).then((msg) => {
+                                        msg.delete({ timeout: 60000, reason: "It had to be done." });
+                                    });
+                                    break;
                                 default:
                                     break;
                             }
 
+                            encChannel.message.send(`ID: ${message.author.id}`);
                         }
+
+
 
                         await Api.patchBankMember(message.author.id, message.guild.id, "coins", updateMCoins);
                     }
