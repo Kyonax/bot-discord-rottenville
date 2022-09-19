@@ -21,7 +21,6 @@ const { limit } = require("../../utils/logic/logicMember");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de pregijos guildCommandPrefix
 const guildMembersBank = new Map();
 const bankGuilds = new Map();
