@@ -13,7 +13,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Exportación del Comando set
 module.exports = class PrefixCommand extends BaseCommand {
   //Constructor del Objeto
@@ -25,9 +24,7 @@ module.exports = class PrefixCommand extends BaseCommand {
       "set <command> <user> <value>`\n**Commands:** `<admin>`,`<inmortal>`,`<mod>`\n**Values:** `<true>`,`<false>`",
       "_***Owner***_",
       "owner"
-    );
-    //Conexión con la Base de Datos
-    this.connection = StateManager.connection;
+    );    
   }
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
@@ -64,15 +61,7 @@ module.exports = class PrefixCommand extends BaseCommand {
           await updateGuildAdminMember(message.guild.id, member.id, 1);
         } catch (err) {
           console.log(err);
-        }
-        StateManager.emit("updateAdminMember", message.guild.id, member.id, 1);
-        embed.addField(
-          `**${member.displayName} AdminMember**`,
-          `El usuario ha sido **colocado como Pilar** en este Servidor.\n**Usando** el comando ` +
-            "`" +
-            cmdName +
-            "`."
-        );
+        }        
       } else if (value === "false") {
         try {
           const UpdateAdmin = await updateGuildAdminMember(
@@ -82,15 +71,7 @@ module.exports = class PrefixCommand extends BaseCommand {
           );
         } catch (err) {
           console.log(err);
-        }
-        StateManager.emit("updateAdminMember", message.guild.id, member.id, 0);
-        embed.addField(
-          `**${member.displayName} AdminMember**`,
-          `El usuario ha sido **relegado del cargo de Pilar** en este Servidor.\n**Usando** el comando ` +
-            "`" +
-            cmdName +
-            "`."
-        );
+        }        
       }
     } else if (cmdOrder.toLowerCase() === "inmortal") {
       if (value === "true") {
@@ -98,13 +79,7 @@ module.exports = class PrefixCommand extends BaseCommand {
           await updateGuildInmortalMember(message.guild.id, member.id, 1);
         } catch (err) {
           console.log(err);
-        }
-        StateManager.emit(
-          "updateInmortalMember",
-          message.guild.id,
-          member.id,
-          1
-        );
+        }        
         embed.addField(
           `**${member.displayName} InmortalMember**`,
           `El usuario ha sido **colocado como Inmortal** en este Servidor.\n**Usando** el comando ` +
@@ -113,13 +88,7 @@ module.exports = class PrefixCommand extends BaseCommand {
             "`."
         );
       } else if (value === "false") {
-        await updateGuildInmortalMember(message.guild.id, member.id, 0);
-        StateManager.emit(
-          "updateInmortalMember",
-          message.guild.id,
-          member.id,
-          0
-        );
+        await updateGuildInmortalMember(message.guild.id, member.id, 0);        
         embed.addField(
           `**${member.displayName} InmortalMember**`,
           `El usuario ha sido **relegado del cargo de Inmortal** en este Servidor.\n**Usando** el comando ` +
@@ -134,13 +103,7 @@ module.exports = class PrefixCommand extends BaseCommand {
           await updateGuildModeratorMember(message.guild.id, member.id, 1);
         } catch (err) {
           console.log(err);
-        }
-        StateManager.emit(
-          "updateModeratorMember",
-          message.guild.id,
-          member.id,
-          1
-        );
+        }        
         embed.addField(
           `**${member.displayName} ModeratorMember**`,
           `El usuario ha sido **colocado como Moderador** en este Servidor.\n**Usando** el comando ` +
@@ -149,13 +112,7 @@ module.exports = class PrefixCommand extends BaseCommand {
             "`."
         );
       } else if (value === "false") {
-        await updateGuildModeratorMember(message.guild.id, member.id, 0);
-        StateManager.emit(
-          "updateModeratorMember",
-          message.guild.id,
-          member.id,
-          0
-        );
+        await updateGuildModeratorMember(message.guild.id, member.id, 0);        
         embed.addField(
           `**${member.displayName} ModeratorMember**`,
           `El usuario ha sido **relegado del cargo de Moderador** en este Servidor.\n**Usando** el comando ` +
