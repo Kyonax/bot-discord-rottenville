@@ -14,7 +14,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de Miembros
 const guildMembers = new Map();
 const guilds = new Map();
@@ -67,8 +66,7 @@ module.exports = class WorkCommand extends BaseCommand {
       message.guild.id,
       member.id,
       work
-    );
-    StateManager.emit("updateMemberWork", message.guild.id, member.id, work);
+    );    
     //Inicialización de Emojis y su Uso respectivo
     let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     //Embed de confirmación
@@ -84,87 +82,3 @@ module.exports = class WorkCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateModeratorMember",
-  (guildID, memberID, moderatorMember) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.moderatorMember = moderatorMember;
-  }
-);
-
