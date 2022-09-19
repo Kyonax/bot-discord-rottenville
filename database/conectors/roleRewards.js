@@ -2,8 +2,6 @@ const { MessageEmbed } = require("discord.js");
 const { putEmoji, getMember } = require("../../src/utils/misc/functions");
 const { synchronous } = require("../utils/emojis/emojis.json");
 const { noneColor, cleverColor } = require("../utils/color/color.json");
-//StateManager
-const StateManager = require("../../src/utils/database/StateManager");
 
 module.exports.roleRewards = async (message, bot, level) => {
   //Inicialización de Variables
