@@ -2,14 +2,10 @@
 const { EventEmitter } = require("events");
 EventEmitter.defaultMaxListeners = 300;
 //Importando archivo Conexión con la Base de Datos
-const connection = require("../../../database/mysql/db");
+
 //Creando Clase StateManager - padre(EventEmitter)
 class StateManager extends EventEmitter {
   constructor(opts) {
-    super(opts);
-    connection
-      .then((connection) => (this.connection = connection))
-      .catch((err) => console.log(err));
   }
 }
 //Exportando Conexión obtenida
