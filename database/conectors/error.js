@@ -5,15 +5,13 @@ const { putEmoji } = require("../../src/utils/misc/functions");
 const { synchronous } = require("../utils/emojis/emojis.json");
 //Importacion del Cuerpo de un Conector
 const BaseConector = require("../../src/utils/structure/BaseConector");
-const StateManager = require("../../src/utils/database/StateManager");
 //Mapa de pregijos guildCommandPrefix
 const guildCommandPrefix = new Map();
 //Exportación de Avisos de Errores
 module.exports = class ErrorConector extends BaseConector {
   //Constructor del Objeto
   constructor() {
-    super("error");
-    this.connection = StateManager.connection;
+    super("error");    
   }
   //Error noCommandOrder Detectado - Prefix Error
   async noCmdOrder(bot, message) {
@@ -2801,10 +2799,3 @@ module.exports = class ErrorConector extends BaseConector {
   }
 };
 
-StateManager.on("prefixFetched", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
-
-StateManager.on("prefixUpdate", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
