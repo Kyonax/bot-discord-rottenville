@@ -9,7 +9,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Mapas
 const rolePlayMembers = new Map();
 const guildsRoleplay = new Map();
@@ -60,13 +59,7 @@ module.exports = class RepCommand extends BaseCommand {
       message.guild.id,
       message.author.id,
       memberRespect
-    );
-    StateManager.emit(
-      "updateMemberRespect",
-      message.guild.id,
-      member.id,
-      memberRespect
-    );
+    );   
     //Inicialización de Emojis y su Uso respectivo
     let emoji = putEmoji(bot, synchronous.emojiID[0].afirmado);
     let embed = new MessageEmbed()
@@ -80,88 +73,3 @@ module.exports = class RepCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersRolePlayFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    gameRolePlay,
-    rolePlayRank,
-    memberXP,
-    memberLevel,
-    memberAge,
-    memberRespect,
-    memberWork,
-    memberRelation,
-    memberBiography
-  ) => {
-    rolePlayMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      gameRolePlay: gameRolePlay,
-      rolePlayRank: rolePlayRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberAge: memberAge,
-      memberRespect: memberRespect,
-      memberWork: memberWork,
-      memberRelation: memberRelation,
-      memberBiography: memberBiography,
-    });
-    guildsRoleplay.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersRolePlayUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    gameRolePlay,
-    rolePlayRank,
-    memberXP,
-    memberLevel,
-    memberAge,
-    memberRespect,
-    memberWork,
-    memberRelation,
-    memberBiography
-  ) => {
-    rolePlayMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      gameRolePlay: gameRolePlay,
-      rolePlayRank: rolePlayRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberAge: memberAge,
-      memberRespect: memberRespect,
-      memberWork: memberWork,
-      memberRelation: memberRelation,
-      memberBiography: memberBiography,
-    });
-    guildsRoleplay.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateRolePlayMemberXP",
-  (guildID, memberID, updateXP, newLevel) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(
-      guildsRoleplay,
-      ObjectMember,
-      guildID,
-      memberID
-    );
-    ObjectMember.memberXP = updateXP;
-    ObjectMember.memberLevel = newLevel;
-  }
-);
