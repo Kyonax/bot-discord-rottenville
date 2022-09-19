@@ -8,7 +8,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Inicialización de Mapas guildCommandPrefix
 const guildCommandPrefix = new Map();
 //Exportación del Comando prefix
@@ -22,9 +21,7 @@ module.exports = class PrefixCommand extends BaseCommand {
       "prefix <command>`\n**Commands:** `<show>`,`<set>`",
       "_***Owner***_",
       "owner"
-    );
-    //Conexión con la Base de Datos
-    this.connection = StateManager.connection;
+    );    
   }
   async run(bot, message) {
     if (message.guild.id != "894634118267146272") return;
@@ -85,8 +82,7 @@ module.exports = class PrefixCommand extends BaseCommand {
         await this.connection.query(
           `UPDATE GuildConfigurable SET cmdPrefix = '${newPrefix}' WHERE guildID = '${message.guild.id}'`
         );
-        guildCommandPrefix.set(message.guild.id, newPrefix);
-        StateManager.emit("prefixUpdate", message.guild.id, newPrefix);
+        guildCommandPrefix.set(message.guild.id, newPrefix);        
         message.channel.send(embed).then((msg) => {
           msg.delete({ timeout: 10000, reason: "It had to be done." });
         });
@@ -97,6 +93,3 @@ module.exports = class PrefixCommand extends BaseCommand {
   }
 };
 
-StateManager.on("prefixFetched", (guildID, prefix) => {
-  guildCommandPrefix.set(guildID, prefix);
-});
