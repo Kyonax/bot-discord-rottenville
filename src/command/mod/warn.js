@@ -12,7 +12,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de Miembros
 const guildMembers = new Map();
 const guilds = new Map();
@@ -81,8 +80,7 @@ module.exports = class WarnCommand extends BaseCommand {
     if (member.roles.cache.get("623715872506118154"))
       return perm.cantCatchSynks(bor, message);
     warnings++;
-    //await updateGuildMemberWarns(message.guild.id, member.id, warnings);
-    //StateManager.emit("updateWarnings", message.guild.id, member.id, warnings);
+    //await updateGuildMemberWarns(message.guild.id, member.id, warnings);    
     //Inicialización de Emojis y su Uso respectivo
     let emoji = putEmoji(bot, synchronous.emojiID[0].caution);
     if (message.guild.id != synchronous.guildID) emoji = "⚠";
