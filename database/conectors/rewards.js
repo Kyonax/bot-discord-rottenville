@@ -20,8 +20,6 @@ const {
   generateRolePlayXP,
   limitLevel,
 } = require("../../src/utils/logic/logicMember");
-//StateManager
-const StateManager = require("../../src/utils/database/StateManager");
 //Mapas
 const guildMembers = new Map();
 const guildMembersBank = new Map();
@@ -110,24 +108,11 @@ module.exports.levelRoleRewards = async (message, bot) => {
         memberID,
         updateXP,
         newLevel
-      );
-      StateManager.emit(
-        "updateRolePlayMemberXP",
-        guildID,
-        memberID,
-        updateXP,
-        newLevel
-      );
+      );      
       memberXP = updateXP;
       memberLevel = newLevel;
       //Rank RolePlayMembers
-      let usersRank = [];
-      const updateServerRanks = await sortRolePlayRanks(
-        usersRank,
-        guildsRoleplay,
-        message,
-        StateManager
-      );
+      let usersRank = [];      
       //Embed Nuevo nivel Rol
       let levelupEmbed = new MessageEmbed()
         .setThumbnail(message.author.displayAvatarURL())
@@ -186,14 +171,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -201,13 +179,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       }
@@ -219,14 +191,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
             memberID,
             10,
             boostTimeBase
-          );
-          StateManager.emit(
-            "updateMemberBoost",
-            guildID,
-            memberID,
-            10,
-            boostTimeBase
-          );
+          );          
           ObjectMember.memberBoost = 10;
           boostMemberTime = boostTimeBase;
           addBoost = `\n${emojiBoostB} **Boost** de xp en Servidor: **x10**.`;
@@ -277,14 +242,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -292,13 +250,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       } else if (memberLevel === 6) {
@@ -309,14 +261,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
             memberID,
             10,
             boostTimeBase
-          );
-          StateManager.emit(
-            "updateMemberBoost",
-            guildID,
-            memberID,
-            10,
-            boostTimeBase
-          );
+          );          
           ObjectMember.memberBoost = 10;
           boostMemberTime = boostTimeBase;
           addBoost = `\n${emojiBoostB} **Boost** de xp en Servidor: **x10**.`;
@@ -367,14 +312,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -382,13 +320,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       } else if (memberLevel === 9) {
@@ -399,14 +331,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
             memberID,
             10,
             boostTimeBase
-          );
-          StateManager.emit(
-            "updateMemberBoost",
-            guildID,
-            memberID,
-            10,
-            boostTimeBase
-          );
+          );          
           ObjectMember.memberBoost = 10;
           boostMemberTime = boostTimeBase;
           addBoost = `\n${emojiBoostB} **Boost** de xp en Servidor: **x10**.`;
@@ -457,14 +382,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -472,13 +390,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       } else if (memberLevel === 12) {
@@ -489,14 +401,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
             memberID,
             10,
             boostTimeBase
-          );
-          StateManager.emit(
-            "updateMemberBoost",
-            guildID,
-            memberID,
-            10,
-            boostTimeBase
-          );
+          );          
           ObjectMember.memberBoost = 10;
           boostMemberTime = boostTimeBase;
           addBoost = `\n${emojiBoostB} **Boost** de xp en Servidor: **x10**.`;
@@ -547,14 +452,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -562,13 +460,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       } else if (memberLevel === 18) {
@@ -579,14 +471,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
             memberID,
             10,
             boostTimeBase
-          );
-          StateManager.emit(
-            "updateMemberBoost",
-            guildID,
-            memberID,
-            10,
-            boostTimeBase
-          );
+          );          
           ObjectMember.memberBoost = 10;
           boostMemberTime = boostTimeBase;
           addBoost = `\n${emojiBoostB} **Boost** de xp en Servidor: **x10**.`;
@@ -637,14 +522,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           memberID,
           memberXPUpdate,
           memberLevelUpdate
-        );
-        StateManager.emit(
-          "updateMemberXP",
-          guildID,
-          memberID,
-          memberXPUpdate,
-          memberLevelUpdate
-        );
+        );        
         ObjectMember.memberLevel = memberLevelUpdate;
         ObjectMember.memberXP = memberXPUpdate;
         //Actualización Base de Datos Bank Coins
@@ -652,13 +530,7 @@ module.exports.levelRoleRewards = async (message, bot) => {
           guildID,
           memberID,
           parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
-        StateManager.emit(
-          "updateCoins",
-          guildID,
-          memberID,
-          parseInt(ObjectBankMember.memberCoins) + coinsReward
-        );
+        );        
         ObjectBankMember.memberCoins =
           parseInt(ObjectBankMember.memberCoins) + coinsReward;
       }
@@ -683,194 +555,11 @@ module.exports.levelRoleRewards = async (message, bot) => {
         memberID,
         updateXP,
         newLevel
-      );
-      StateManager.emit(
-        "updateRolePlayMemberXP",
-        guildID,
-        memberID,
-        updateXP,
-        newLevel
-      );
+      );      
       memberXP = updateXP;
       memberLevel = newLevel;
       //Rank RolePlayMembers
-      let usersRank = [];
-      const updateServerRanks = await sortRolePlayRanks(
-        usersRank,
-        guildsRoleplay,
-        message,
-        StateManager
-      );
+      let usersRank = [];      
     }
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersFetched",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "bankMembersUpdate",
-  (membersBank, guildID, memberID, memberCoins) => {
-    guildMembersBank.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberCoins: memberCoins,
-    });
-    bankGuilds.set(guildID, {
-      Member: membersBank,
-    });
-  }
-);
-
-StateManager.on(
-  "membersRolePlayFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    gameRolePlay,
-    rolePlayRank,
-    memberXP,
-    memberLevel,
-    memberAge,
-    memberRespect,
-    memberWork,
-    memberRelation,
-    memberBiography
-  ) => {
-    rolePlayMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      gameRolePlay: gameRolePlay,
-      rolePlayRank: rolePlayRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberAge: memberAge,
-      memberRespect: memberRespect,
-      memberWork: memberWork,
-      memberRelation: memberRelation,
-      memberBiography: memberBiography,
-    });
-    guildsRoleplay.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on("updateCoins", (guildID, memberID, newCoins) => {
-  let objectBankMember = null;
-  objectBankMember = initObjectMember(
-    bankGuilds,
-    objectBankMember,
-    guildID,
-    memberID
-  );
-  objectBankMember.memberCoins = newCoins;
-});
-
-StateManager.on("updateMemberCoins", (guildID, memberID, memberCoins) => {
-  let ObjectBankMember = null;
-  ObjectBankMember = initObjectMember(
-    bankGuilds,
-    ObjectBankMember,
-    guildID,
-    memberID
-  );
-  ObjectBankMember.memberCoins = memberCoins;
-});
-
-StateManager.on("updateAuthorCoins", (guildID, memberID, memberCoins) => {
-  let ObjectBankMember = null;
-  ObjectBankMember = initObjectMember(
-    bankGuilds,
-    ObjectBankMember,
-    guildID,
-    memberID
-  );
-  ObjectBankMember.memberCoins = memberCoins;
-});
