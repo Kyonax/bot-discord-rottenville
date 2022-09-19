@@ -24,7 +24,6 @@ const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de pregijos guildCommandPrefix
 const guildMembersBank = new Map();
 const bankGuilds = new Map();
@@ -143,14 +142,7 @@ module.exports = class PayCommand extends BaseCommand {
           autor.id,
           boostBv,
           boostTimeBase
-        );
-        StateManager.emit(
-          "updateMemberBoost",
-          message.guild.id,
-          autor.id,
-          boostBv,
-          boostTimeBase
-        );
+        );        
         ObjectAuthor.boostMemberTime = boostTimeBase;
         ObjectAuthor.memberBoost = boostBv;
         //Coins
@@ -162,13 +154,7 @@ module.exports = class PayCommand extends BaseCommand {
         );
         //Update Map
         ObjectBankAuthor.memberCoins = updateACoins;
-        //Emit Update
-        StateManager.emit(
-          "updateAuthorCoins",
-          message.guild.id,
-          autor.id,
-          updateACoins
-        );
+        //Emit Update        
         //Emojis
         //Inicialización de Emojis y su Uso respectivo
         const emojiBoostB = putEmoji(bot, synchronous.emojiID[0].boostb);
@@ -198,14 +184,7 @@ module.exports = class PayCommand extends BaseCommand {
           autor.id,
           boostAv,
           boostTimeAvanzado
-        );
-        StateManager.emit(
-          "updateMemberBoost",
-          message.guild.id,
-          autor.id,
-          boostAv,
-          boostTimeAvanzado
-        );
+        );        
         ObjectAuthor.boostMemberTime = boostTimeAvanzado;
         ObjectAuthor.memberBoost = boostAv;
         //Coins
@@ -217,13 +196,7 @@ module.exports = class PayCommand extends BaseCommand {
         );
         //Update Map
         ObjectBankAuthor.memberCoins = updateACoins;
-        //Emit Update
-        StateManager.emit(
-          "updateAuthorCoins",
-          message.guild.id,
-          autor.id,
-          updateACoins
-        );
+        //Emit Update        
         //Emojis
         //Inicialización de Emojis y su Uso respectivo
         const emojiBoostA = putEmoji(bot, synchronous.emojiID[0].boosta);
@@ -253,14 +226,7 @@ module.exports = class PayCommand extends BaseCommand {
           autor.id,
           boostPremiumv,
           boostPremiumTime
-        );
-        StateManager.emit(
-          "updateMemberBoost",
-          message.guild.id,
-          autor.id,
-          boostPremiumv,
-          boostPremiumTime
-        );
+        );        
         ObjectAuthor.boostMemberTime = boostPremiumTime;
         ObjectAuthor.memberBoost = boostPremiumv;
         //Coins
@@ -272,13 +238,7 @@ module.exports = class PayCommand extends BaseCommand {
         );
         //Update Map
         ObjectBankAuthor.memberCoins = updateACoins;
-        //Emit Update
-        StateManager.emit(
-          "updateAuthorCoins",
-          message.guild.id,
-          autor.id,
-          updateACoins
-        );
+        //Emit Update        
         //Emojis
         //Inicialización de Emojis y su Uso respectivo
         const emojiBoostPremium = putEmoji(bot, synchronous.emojiID[0].boostp);
@@ -324,14 +284,7 @@ module.exports = class PayCommand extends BaseCommand {
         autor.id,
         actualAuthorLevel,
         boughtXP
-      );
-      StateManager.emit(
-        "updateMemberLevel",
-        message.guild.id,
-        autor.id,
-        actualAuthorLevel,
-        boughtXP
-      );
+      );      
       ObjectAuthor.memberLevel = actualAuthorLevel;
       ObjectAuthor.memberXP = boughtXP;
       //Coins
@@ -343,13 +296,7 @@ module.exports = class PayCommand extends BaseCommand {
       );
       //Update Map
       ObjectBankAuthor.memberCoins = updateACoins;
-      //Emit Update
-      StateManager.emit(
-        "updateAuthorCoins",
-        message.guild.id,
-        autor.id,
-        updateACoins
-      );
+      //Emit Update      
       //Emojis
       const levelChannel = message.guild.channels.cache.find(
         (ch) => ch.name === "🎄・level-up"
