@@ -21,7 +21,6 @@ const {
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de pregijos guildCommandPrefix
 const guildMembersBank = new Map();
 const bankGuilds = new Map();
