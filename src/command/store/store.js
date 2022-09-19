@@ -13,7 +13,6 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const { stripIndents } = require("common-tags");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
-const StateManager = require("../../utils/database/StateManager");
 //Mapa de Miembros
 const guildMembers = new Map();
 const guilds = new Map();
@@ -117,87 +116,3 @@ module.exports = class StoreCommand extends BaseCommand {
     });
   }
 };
-
-StateManager.on(
-  "membersFetched",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "membersUpdate",
-  (
-    membersGuild,
-    guildID,
-    memberID,
-    memberLanguage,
-    adminMember,
-    inmortalMember,
-    moderatorMember,
-    serverRank,
-    memberXP,
-    memberLevel,
-    memberBoost,
-    boostMemberTime,
-    warnings
-  ) => {
-    guildMembers.set(memberID, {
-      memberID: memberID,
-      guildID: guildID,
-      memberLanguage: memberLanguage,
-      adminMember: adminMember,
-      inmortalMember: inmortalMember,
-      moderatorMember: moderatorMember,
-      serverRank: serverRank,
-      memberXP: memberXP,
-      memberLevel: memberLevel,
-      memberBoost: memberBoost,
-      boostMemberTime: boostMemberTime,
-      warnings: warnings,
-    });
-    guilds.set(guildID, {
-      Member: membersGuild,
-    });
-  }
-);
-
-StateManager.on(
-  "updateMemberLevel",
-  (guildID, memberID, memberLevel, memberXP) => {
-    let ObjectMember = null;
-    ObjectMember = initObjectMember(guilds, ObjectMember, guildID, memberID);
-    ObjectMember.memberLevel = memberLevel;
-    ObjectMember.memberXP = memberXP;
-  }
-);
