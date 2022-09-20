@@ -162,15 +162,13 @@ module.exports.twitter = async (bot) => {
         try {
           let channel = bot.channels
             .fetch(process.env.DISCORD_CHANNEL_ADM_ID)
-            .then((channel) => {
-              /*
+            .then((channel) => {              
               channel.send(
                 `${putEmoji(
                   bot,
                   emoji_afirmado
                 )} **ADM Tweet to Watch <@248204538941538308>**\n${url_kyo_tweet}`
-              );
-              */
+              );              
             })
             .catch((err) => {
               console.log(err);
