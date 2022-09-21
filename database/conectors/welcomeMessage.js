@@ -34,7 +34,7 @@ async function edit(firstImage, secondImage, name, username, size) {
 async function secondStep(inImage, name, username, size) {
   gm(backgroundNewUser)
     .gravity("East")
-    .fill("#34e637")
+    .fill("#fb163b")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
