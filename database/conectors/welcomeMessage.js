@@ -38,7 +38,7 @@ async function secondStep(inImage, name, username, size) {
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
-    .fill("#F5FBF3")
+    .fill("#fb163b")
     .font("Helvetica", 20)
     .drawText(136, 254, `${"#" + size + 1}`, "North")
     .draw([`image Over 47,55 0,0 ${inImage}`])
@@ -99,7 +99,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 
 
       let _embed = new MessageEmbed()
-        .setColor("#13ea83")
+        .setColor("#fb163b")
         .setThumbnail(member.user.displayAvatarURL())
         .setFooter(
           "📣 RottenVille Project・check out our twitter.com/rotten_ville"
@@ -110,7 +110,7 @@ module.exports.welcomeMessage = async (member, bot) => {
           ` — Be part of RottenVille —-**
 ┊ **Follow the Server rules and start your**
 ┊ journey as a Rotten member on this channel
-┊ <#928319200139812864> ・` +
+┊ <#898998539814846474> ・` +
           "`🏁`" +
           `
 ┊
@@ -122,8 +122,8 @@ module.exports.welcomeMessage = async (member, bot) => {
 ┊ **Member Verify <#960905065906991144> **
 ┊ you will get ** <@&895850023311540225> **
 ┊
-┊ _If you have any question <#898998539814846474> or_
-┊ **__ask for help on <#899003268473180230>__**
+┊ _If you have any question <#898998539814846474>_
+┊ **__ask for help on <#977648446158815242>__**
 ╰
     `
         ).attachFiles([
