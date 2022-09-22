@@ -94,8 +94,7 @@ module.exports.twitter = async (bot) => {
   });
 
   stream_twitter_forex.on("tweet", function (tweet) {
-    let accountTwitter = [
-      rotten_ville_twitter,
+    let accountTwitter = [      
       solana_sensei,
       big_brain,
       sol_buckets,
