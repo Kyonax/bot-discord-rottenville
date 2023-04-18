@@ -5,7 +5,7 @@ author: 'Kyonax'
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
-    requiered: true
+    required: true
   TENOR_TOKEN:
     description: 'Tenor API Token'
     required: true
