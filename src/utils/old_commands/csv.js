@@ -1,0 +1,96 @@
+//Importación especifica de Metodos - MessageEmbed - nonecolor Color - putEmoji Function
+const { MessageEmbed } = require("discord.js");
+const { noneColor } = require("../../../database/utils/color/color.json");
+const { putEmoji } = require("../misc/functions");
+const { synchronous } = require("../../../database/utils/emojis/emojis.json");
+const {
+  getMember,
+  initObjectMember,
+  numberWithCommas,
+} = require("../misc/functions");
+const ToCSV = require("../../../database/misc/ToCSV.json");
+//Importación Clase de Objetos - Conector Error
+const Error = require("../../../database/conectors/error");
+const Perms = require("../../../database/conectors/perm");
+//Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
+const BaseCommand = require("../structure/BaseCommand");
+var fs = require("fs"),
+  gm = require("gm"),
+  imageMagick = gm.subClass({
+    imageMagick: true,
+  });
+//Exportación del Comando Verifying
+module.exports = class CsvCommand extends BaseCommand {
+  constructor() {
+    super(
+      "csv",
+      ["cs"],
+      "CSV a JSON File.",
+      "csv`",
+      "_***Everyone***_",
+      "guild"
+    );
+  }
+  async run(bot, message, args) {
+    if (message.guild.id != "894634118267146272") return;
+    if (message.author.id != "248204538941538308") return;
+    //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
+    //Creación de Objetos
+    const err = new Error();
+    const perm = new Perms();
+    let _jsonString,_jsonStringCSV, _keyCSV = false;
+    message.delete().catch((O_o) => {});
+    //Creación de Objetos
+    _jsonString = await fs.readFileSync(
+      "./database/misc/Whitelist.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
+
+    _jsonStringCSV = await fs.readFileSync(
+      "./database/misc/ToCSV.json",
+      "utf8",
+      (err, jsonString) => {
+        if (err) {
+          console.log("File read failed:", err);
+          return;
+        }
+      }
+    );
+    //Solicitando Json
+    JSON.parse(_jsonString).Whitelist.forEach(async (spot) => {
+     JSON.parse(_jsonStringCSV).Structure.forEach(csv => {
+       if (spot.id === csv.id) {
+        return _keyCSV = true;         
+       }       
+     });
+
+     if (_keyCSV !== true) {
+      console.log(
+        `Fetching Data Whitelist - ID MEMBER: ${spot.id} WALLET: ${spot.wallet}`
+      );
+      let _member = getMember(message, spot.id);
+      let _member_structure = `${_member.user.username}#${_member.user.discriminator}`;
+
+      ToCSV.Structure_2.push({
+        "Discord Tag": `${_member_structure}`,
+        "Discord ID": `${spot.id}`,
+        "Solana Wallet": `${spot.wallet}`,
+      });
+
+      const writeData = await fs.writeFileSync(
+        "./database/misc/ToCSV.json",
+        JSON.stringify(ToCSV),
+        (err) => {
+          if (err) console.log(err);
+        }
+      );       
+     }
+    });
+  }
+};

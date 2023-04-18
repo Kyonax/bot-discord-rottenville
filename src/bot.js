@@ -8,9 +8,9 @@ const bot = new Client({ partials: ["MESSAGE", "REACTION"] });
 //Importación de las funciones registerCommands - registerEvents
 const { registerCommands, registerEvents } = require("./utils/handler/handler");
 //Ejecución de bot.login - registerCommands - registerEvents
-(async () => {
+(async () => {  
   //Conexión con el Token del Bot Discord - usando dotenv
-  bot.login(process.env.TOKEN);
+  bot.login(process.env.TOKEN);  
   //Lectura de Comandos y Eventos
   await registerCommands(bot, "../../command");
   await registerEvents(bot, "../../event");

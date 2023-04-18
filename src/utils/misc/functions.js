@@ -1,5 +1,4 @@
 //Importación Functions de Database
-const { updateGuildServerRank, updateGuildRolePlayRank } = require("../database/functions");
 const Api = require("./api_discord_functions");
 const Path = require("path");
 const Axios = require("axios");

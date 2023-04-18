@@ -23,23 +23,11 @@ module.exports = class HelpCommand extends BaseCommand {
   async run(bot, message, args) {
     if (message.guild.id != "894634118267146272") return;
     //Eliminación de mensaje que usó el Comando
-    message.delete().catch((O_o) => {});
+    message.delete().catch((O_o) => { });
     //Creación de Objetos
     const error = new Error();
-    let prefix, _jsonString    
-    //Inicialización Guild Prefix
-    _jsonString = await fs.readFileSync('./database/misc/GuildConfigurable.json', 'utf8', (err, jsonString) => {
-      if (err) {
-        console.log("File read failed:", err)
-        return
-      }
-    })
-
-    JSON.parse(_jsonString).forEach(guild => {            
-      if (message.guild.id == guild.guildID) {
-        prefix = guild.cmdPrefix;             
-      }
-    });
+    let prefix, _jsonString
+    //Inicialización Guild Prefix    
     //Validación de contenido y especificación del comando a Usar.
     if (!args[0]) {
       const categories = readdirSync("./src/command");
@@ -47,20 +35,16 @@ module.exports = class HelpCommand extends BaseCommand {
       let firstEmbed = new MessageEmbed()
         .setDescription(
           `Hello there **${message.author.username}** I'm the **Main BOT** from the **${message.guild.name}** server, if you want to interact in the server I give you **${bot.commands.size}** commands that you will be able to use on the Server.\n\n\n**Prefix: **` +
-            "`" +
-            prefix +
-            "`" +
-            " to see the function of the Commands **use**: " +
-            "`" +
-            prefix +
-            "help <command>`" +
-            `\n \n **[Twitter RottenVille](https://twitter.com/rotten_ville)** | **[RottenVille Website](https://rottenville.io/)** \n \n \n`
+          "`" +
+          prefix +
+          "`" +
+          " to see the function of the Commands **use**: " +
+          "`" +
+          prefix +
+          "help <command>`" +
+          `\n \n **[Twitter RottenVille](https://twitter.com/rotten_ville)** | **[RottenVille Website](https://rottenville.io/)** \n \n \n`
         )
-        .setColor(noneColor)
-        .attachFiles([
-          "./database/multimedia/images/demo/server/BannerRottenVille.png",
-        ])
-        .setImage("attachment://BannerRottenVille.png");
+        .setColor(noneColor)        
       categories.forEach((category) => {
         const dir = bot.commands.filter((c) => c.category === category);
         const capitalise =
@@ -91,6 +75,7 @@ module.exports = class HelpCommand extends BaseCommand {
               `El usuario ${message.author.username} tiene desactivado los Mensajes Directos.`
             )
           );
+        message.channel.send(firstEmbed);
       });
     } else {
       const embed = new MessageEmbed()

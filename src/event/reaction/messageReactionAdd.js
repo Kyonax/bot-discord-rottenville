@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const guildBankJSON = require("../../../database/misc/GuildBank.json");
 const {
   getMember,
   putEmoji,
@@ -10,23 +9,12 @@ const {
   goldColor,
   cleverColor,
 } = require("../../../database/utils/color/color.json");
-const {
-  updateGuildBankCoins,
-  updateGuildMemberBoost,
-  updateGuildLevel, updateGuildBankCoinsJSON
-} = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const  RTSolBattles  = require("../../../database/utils/adds/votes.json");
 const { limit } = require("../../utils/logic/logicMember");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
-//Mapa de pregijos guildCommandPrefix
-const guildMembersBank = new Map();
-const bankGuilds = new Map();
-//Mapa de Miembros
-const guildMembers = new Map();
-const guilds = new Map();
 //Exportación de Comando Pay
 //Importación de paquetes JS de Node.js
 const fs = require("fs");

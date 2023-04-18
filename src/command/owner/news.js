@@ -2,7 +2,6 @@
 const { MessageEmbed } = require("discord.js");
 const { kyoColor } = require("../../../database/utils/color/color.json");
 const { putEmoji } = require("../../utils/misc/functions");
-const { addMessageToBin } = require("../../utils/misc/bin");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");

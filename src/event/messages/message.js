@@ -5,7 +5,6 @@ const { generateXP, limitLevel } = require("../../utils/logic/logicMember");
 const { generateCoins } = require("../../utils/logic/logicBank");
 const { roleRewards } = require("../../../database/conectors/roleRewards");
 const { reactionEmbeds } = require("../../utils/misc/reaction");
-const { betaRiddle } = require('../../utils/misc/DiscordEvents')
 const { attachMessageImage } = require("../../utils/misc/attachment");
 const { thrizzColor } = require("../../../database/utils/color/color.json");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");

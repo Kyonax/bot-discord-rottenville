@@ -4,8 +4,6 @@ const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 //Importación Clase de Objetos - Conector Perms
 const Perms = require("../../../database/conectors/perm");
-//Importación de Usuario
-const { memberExist } = require("../../utils/database/functions");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 const fs = require("fs");

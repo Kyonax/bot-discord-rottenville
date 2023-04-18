@@ -2,11 +2,6 @@
 const { MessageEmbed } = require("discord.js");
 const { noneColor } = require("../../../database/utils/color/color.json");
 const { putEmoji, getMember } = require("../../utils/misc/functions");
-const {
-  updateGuildAdminMember,
-  updateGuildInmortalMember,
-  updateGuildModeratorMember,
-} = require("../../utils/database/functions");
 const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");

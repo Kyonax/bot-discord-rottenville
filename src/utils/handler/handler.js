@@ -9,6 +9,7 @@ async function registerCommands(bot, dir = "") {
   const filePath = path.join(__dirname, dir);
   const files = await fs.readdir(filePath);
   for (const file of files) {
+    console.log(`Commands ${file}`)
     const stat = await fs.lstat(path.join(filePath, file));
     if (stat.isDirectory()) registerCommands(bot, path.join(dir, file));
     if (file.endsWith(".js")) {
@@ -20,13 +21,14 @@ async function registerCommands(bot, dir = "") {
           cmd.aliases.forEach((a) => bot.aliases.set(a, cmd.name));
       }
     }
-  }
+  }  
 }
 //Creando Función registerEvents
-async function registerEvents(bot, dir = "") {
+async function registerEvents(bot, dir = "") {  
   const filePath = path.join(__dirname, dir);
   const files = await fs.readdir(filePath);
   for (const file of files) {
+    console.log(`Evento ${file}`)
     const stat = await fs.lstat(path.join(filePath, file));
     if (stat.isDirectory()) registerEvents(bot, path.join(dir, file));
     if (file.endsWith(".js")) {
@@ -36,7 +38,7 @@ async function registerEvents(bot, dir = "") {
         bot.on(event.name, event.run.bind(event, bot));
       }
     }
-  }
+  }  
 }
 //Exportando Funciones
 module.exports = {
