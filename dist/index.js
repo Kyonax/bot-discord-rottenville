@@ -9711,11 +9711,15 @@ async function run() {
     const { pull_request } = context.payload;
 
 
-    await octokit.issues.createComment({
-        ...context.repo,
-        issue_number: pull_request.number,
-        body: 'Thank you for submitting a pull request!'
-    })
+    try {
+        await octokit.issues.createComment({
+            ...context.repo,
+            issue_number: pull_request.number,
+            body: 'Thank you for submitting a pull request!'
+        })
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 run();
