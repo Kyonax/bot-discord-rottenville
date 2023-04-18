@@ -1,7 +1,2 @@
 .env
-.database/misc/Guild.json
-.database/misc/GuildBank.json
-.database/misc/GuildBans.json
-.database/misc/GuildConfigurable.json
-.database/misc/GuildMembers.json
-.database/misc/RolePlayMembers.json
+node_modules

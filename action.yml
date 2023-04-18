@@ -1,0 +1,15 @@
+name: 'Action - RottenVille Bot Development'
+description: 'Actions for PULL Requests'
+author: 'Kyonax'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    requiered: true
+  TENOR_TOKEN:
+    description: 'Tenor API Token'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
