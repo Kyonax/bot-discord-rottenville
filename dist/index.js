@@ -9715,7 +9715,7 @@ async function run() {
 
 
     try {
-        await octokit.codespaces.issues.createComment({
+        await octokit.rest.issues.createComment({
             ...context.repo,
             issue_number: pull_request.number,
             body: 'Thank you for submitting a pull request!'
