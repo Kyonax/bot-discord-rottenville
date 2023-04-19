@@ -9783,7 +9783,7 @@ module.exports = JSON.parse('[[[0,44],"disallowed_STD3_valid"],[[45,46],"valid"]
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat */
 /******/ 	
-/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = __dirname + "/";
+/******/ 	if (typeof __nccwpck_require__ !== 'undefined') __nccwpck_require__.ab = process.cwd() + "/";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
