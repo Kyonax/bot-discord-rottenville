@@ -1,9 +1,13 @@
 //Importación de .js BaseCommand - BaseEvent
+const { fileURLToPath } = require("url");
+const { dirname } = require("path")
+
 const BaseCommand = require("../structure/BaseCommand");
 const BaseEvent = require("../structure/BaseEvent");
 //Importando node.js files path - fs
 const path = require("path");
 const fs = require("fs").promises;
+
 //Creando Función registerCommands
 async function registerCommands(bot, dir = "") {
   const filePath = path.join(__dirname, dir);
@@ -24,12 +28,12 @@ async function registerCommands(bot, dir = "") {
 }
 //Testing all the JSFiles
 async function JSFiles(dir = "") {
-  const filePath = path.join(__dirname, dir);
-  const files = await fs.readdir(filePath); let all_js_files = [];
+  const __filename = fileURLToPath(require('url').pathToFileURL(dir).toString());
 
+  const files = await fs.readdir(__filename); let all_js_files = [];
   for (const file of files) {
-    const js_folders = path.join(__dirname, dir + `/${file}`);
-    const jsfiles = await fs.readdir(js_folders);
+
+    const jsfiles = await fs.readdir(__filename + `/${file}`);
 
     for (const jsFile of jsfiles) {
       if (jsFile.endsWith(".js")) {

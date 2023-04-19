@@ -3,7 +3,6 @@ const Api = require("./api_discord_functions");
 const Path = require("path");
 const Axios = require("axios");
 
-PNG = require("pngjs").PNG;
 var fs = require("fs"),
   gm = require("gm"),
   imageMagick = gm.subClass({
