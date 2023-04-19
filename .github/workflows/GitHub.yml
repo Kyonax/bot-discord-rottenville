@@ -1,6 +1,4 @@
 name: GitHub Send Message
-author: Kyonax - Cristian Moreno
-description: Send a Custom Message file to the person that is doing a pull-request in the repo
 
 inputs:
   environment:
