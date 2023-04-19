@@ -7,6 +7,7 @@ const bot = new Client({ partials: ["MESSAGE", "REACTION"] });
 ["commands", "aliases"].forEach((x) => (bot[x] = new Collection()));
 //Importación de las funciones registerCommands - registerEvents
 const { registerCommands, registerEvents } = require("./utils/handler/handler");
+
 //Ejecución de bot.login - registerCommands - registerEvents
 (async () => {  
   //Conexión con el Token del Bot Discord - usando dotenv

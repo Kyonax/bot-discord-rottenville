@@ -1,0 +1,10 @@
+{
+    "bot": {
+        "name": "Bot Discord RottenVille",
+        "version": "v2.0.0",
+        "backend": {
+            "commands": 15,
+            "events": 7
+        }
+    }
+}

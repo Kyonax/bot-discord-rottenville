@@ -9,7 +9,6 @@ async function registerCommands(bot, dir = "") {
   const filePath = path.join(__dirname, dir);
   const files = await fs.readdir(filePath);
   for (const file of files) {
-    console.log(`Commands ${file}`)
     const stat = await fs.lstat(path.join(filePath, file));
     if (stat.isDirectory()) registerCommands(bot, path.join(dir, file));
     if (file.endsWith(".js")) {
@@ -21,14 +20,31 @@ async function registerCommands(bot, dir = "") {
           cmd.aliases.forEach((a) => bot.aliases.set(a, cmd.name));
       }
     }
-  }  
+  }
+}
+//Testing all the JSFiles
+async function JSFiles(dir = "") {
+  const filePath = path.join(__dirname, dir);
+  const files = await fs.readdir(filePath); let all_js_files = [];
+
+  for (const file of files) {
+    const js_folders = path.join(__dirname, dir + `/${file}`);
+    const jsfiles = await fs.readdir(js_folders);
+
+    for (const jsFile of jsfiles) {
+      if (jsFile.endsWith(".js")) {
+        all_js_files.push(`${jsFile}`);
+      }
+    }
+  }
+
+  return all_js_files
 }
 //Creando Función registerEvents
-async function registerEvents(bot, dir = "") {  
+async function registerEvents(bot, dir = "") {
   const filePath = path.join(__dirname, dir);
   const files = await fs.readdir(filePath);
   for (const file of files) {
-    console.log(`Evento ${file}`)
     const stat = await fs.lstat(path.join(filePath, file));
     if (stat.isDirectory()) registerEvents(bot, path.join(dir, file));
     if (file.endsWith(".js")) {
@@ -38,10 +54,12 @@ async function registerEvents(bot, dir = "") {
         bot.on(event.name, event.run.bind(event, bot));
       }
     }
-  }  
+  }
 }
 //Exportando Funciones
 module.exports = {
   registerCommands,
   registerEvents,
+  JSFiles
 };
+
