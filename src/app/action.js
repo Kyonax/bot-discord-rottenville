@@ -13,7 +13,7 @@ async function run() {
         await octokit.rest.issues.createComment({
             ...context.repo,
             issue_number: pull_request.number,
-            body: 'Thank you for submitting a pull request! Kyonax will review it asap.'
+            body: 'Thank you for submitting a pull request! Wait until the Checklist ends the deployment, if anything goes wrong solve the issues and try again | The pull request will be only avaible to merge by Kyonax. | Do not forget to follow him on Twitter: @kyonax_on_tech @kyonax_on'
         })
     } catch (error) {
         console.log(error)
