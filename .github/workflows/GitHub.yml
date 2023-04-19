@@ -1,11 +1,5 @@
 name: GitHub Send Message
 
-inputs:
-  environment:
-    description: "Environment Name"
-    required: true
-    default: dev
-
 on:
   pull_request:
     types: [opened]
