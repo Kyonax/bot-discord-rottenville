@@ -62,9 +62,9 @@ module.exports.welcomeMessage = async (member, bot) => {
   const _MEMBER_ID = member.user.id;
   const _MEMBER = member;
   const _SALUTE = [
-    `**Hey!! ${_MEMBER} welcome to RottenVille Gang**, make sure to read all the Server Rules <#928319200139812864>, and start to get **Rotten Points ${putEmoji(
+    `**Hola! ${_MEMBER} Bienvenido a Isacademi**,  <#928319200139812864>, and start to get **Rotten Points ${putEmoji(
       bot,
-      "901151325117636618"
+      "1102305790477484142"
     )}**`,
     `What? A new Survivor? **Welcome ${_MEMBER} to the RottenVille Gang, enjoy your stay!!!**`,
     `**Gang gang, We have a new member in our Gang, congrats ${_MEMBER}** and Welcome to RottenVille!`,
@@ -78,10 +78,10 @@ module.exports.welcomeMessage = async (member, bot) => {
   ];
   const _RANDOM_SALUTE = _SALUTE[Math.floor(Math.random() * _SALUTE.length)] + ` | **Verify as a Member on <#960905065906991144> & if you are a Holder go to <#958311149659631637> - Stay up-to-date on <#898963695336583169>**`;
   const _HELLO_CHANNEL = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("📑・new-member")
+    ch.name.includes("✨・new-member")
   );
   const _SERVER_CHANNEL_ = member.guild.channels.cache.find((ch) =>
-    ch.name.includes("📑・new-member")
+    ch.name.includes("✨・new-member")
   );
 
 
@@ -102,28 +102,28 @@ module.exports.welcomeMessage = async (member, bot) => {
         .setColor("#fb163b")
         .setThumbnail(member.user.displayAvatarURL())
         .setFooter(
-          "📣 RottenVille Project・check out our twitter.com/rotten_ville"
+          "📣 Página Web Isacademi ・check out our https://isacademi.com"
         )
         .setDescription(
-          `**╭・———— » ` +
-          "`👽`" +
-          ` — Be part of RottenVille —-**
-┊ **Follow the Server rules and start your**
-┊ journey as a Rotten member on this channel
-┊ <#898998539814846474> ・` +
+          `**╭・—— » ` +
+          "`🍎`" +
+          ` — Isacademi tu Academía —-**
+┊ **Sigue las reglas del Servidor para**
+┊ comenzar a explorar en la Academía
+┊ <#1098500908180058182> ・` +
           "`🏁`" +
           `
 ┊
-┊ **Verify as a Holder** to get full acces
-┊ _"<#958311149659631637>"_・` +
-          "`👹`" +
+┊ **Información Importante de Isacademi**
+┊ _"<#1098491956516102254>"_・` +
+          "`📑`" +
           `
 ┊
-┊ **Member Verify <#960905065906991144> **
-┊ you will get ** <@&895850023311540225> **
+┊ **FAQ Server <#1098491672704319518> **
+┊ abre un ticket sólo si lo necesitas.
 ┊
-┊ _If you have any question <#898998539814846474>_
-┊ **__ask for help on <#977648446158815242>__**
+┊ _Anuncios <#1098491285427474474>_
+┊ **__Planes <#1098491956516102254>__**
 ╰
     `
         ).attachFiles([
@@ -133,9 +133,8 @@ module.exports.welcomeMessage = async (member, bot) => {
 
 
       try {
-        _HELLO_CHANNEL.send(_RANDOM_SALUTE);
         _SERVER_CHANNEL_.send(
-          `**Welcome ${_MEMBER} to RottenVille Lab!! Check this out.**`,
+          `**Bienvenido ${_MEMBER} a Isacademi! Observa esto antes de seguir.**`,
           _embed
         );
       } catch (error) {

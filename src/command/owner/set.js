@@ -22,7 +22,7 @@ module.exports = class PrefixCommand extends BaseCommand {
     );    
   }
   async run(bot, message, args) {
-    if (message.guild.id != "894634118267146272") return;
+    if (message.guild.id != "1097508462080041030") return;
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
     //Creación de Objetos

@@ -11,7 +11,7 @@ module.exports = class ReadyEvent extends BaseEvent {
 
   async run(bot) {
     console.log(`${bot.user.tag} iniciado y en funcionamiento! ☠️`);
-    bot.user.setActivity("Beta Season", { type: `PLAYING`, });
+    bot.user.setActivity("English Academy", { type: `PLAYING`, });
     //Selección y conexión Con DATOS de la Guild Correspondiente
     bot.guilds.cache.forEach(async (guild) => {
 

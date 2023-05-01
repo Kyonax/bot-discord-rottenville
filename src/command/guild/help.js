@@ -4,6 +4,7 @@ const { noneColor } = require("../../../database/utils/color/color.json");
 const { readdirSync } = require("fs");
 //Importación Clase de Objetos - Conector Error
 const Error = require("../../../database/conectors/error");
+const Api = require("../../utils/misc/api_discord_functions");
 //Importación de el cuerpo de Comandos e importación de Conexión Base de Datos
 const BaseCommand = require("../../utils/structure/BaseCommand");
 //Exportación del Comando help
@@ -20,13 +21,15 @@ module.exports = class HelpCommand extends BaseCommand {
   }
 
   async run(bot, message, args) {
-    if (message.guild.id != "894634118267146272") return;
+    if (message.guild.id != "1097508462080041030") return;
     //Eliminación de mensaje que usó el Comando
     message.delete().catch((O_o) => { });
     //Creación de Objetos
     const error = new Error();
     let prefix, _jsonString
-    //Inicialización Guild Prefix    
+    //Inicialización Guild Prefix
+    prefix = await Api.getGuild(message.guild.id);
+    prefix = prefix.prefix
     //Validación de contenido y especificación del comando a Usar.
     if (!args[0]) {
       const categories = readdirSync("./src/command");
@@ -41,7 +44,7 @@ module.exports = class HelpCommand extends BaseCommand {
           "`" +
           prefix +
           "help <command>`" +
-          `\n \n **[Twitter RottenVille](https://twitter.com/rotten_ville)** | **[RottenVille Website](https://rottenville.io/)** \n \n \n`
+          `\n \n **[Twitter Kyo Dev](https://twitter.com/kyonax_on_tech)** | **[Isacademi Website](https://rottenville.io/)** \n \n \n`
         )
         .setColor(noneColor)        
       categories.forEach((category) => {

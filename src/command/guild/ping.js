@@ -19,7 +19,7 @@ module.exports = class PingCommand extends BaseCommand {
   }
 
   async run(bot, message) {
-    if (message.guild.id != "894634118267146272") return;
+    if (message.guild.id != "1097508462080041030") return;
     //Eliminacion del mensaje enviado por el usuario al ejecutar el Comando
     message.delete().catch((O_o) => {});
     //Creación de Mensaje Embed

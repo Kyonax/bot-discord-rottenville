@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1681891156144" clover="3.2.0">
-  <project timestamp="1681891156145" name="All files">
+<coverage generated="1682687251147" clover="3.2.0">
+  <project timestamp="1682687251148" name="All files">
     <metrics statements="234" coveredstatements="42" conditionals="58" coveredconditionals="1" methods="84" coveredmethods="8" elements="376" coveredelements="51" complexity="0" loc="234" ncloc="234" packages="4" files="7" classes="7"/>
     <package name="handler">
       <metrics statements="37" coveredstatements="15" conditionals="19" coveredconditionals="1" methods="4" coveredmethods="1"/>
-      <file name="handler.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/handler/handler.js">
+      <file name="handler.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/handler/handler.js">
         <metrics statements="37" coveredstatements="15" conditionals="19" coveredconditionals="1" methods="4" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -47,12 +47,12 @@
     </package>
     <package name="logic">
       <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-      <file name="logicBank.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/logic/logicBank.js">
+      <file name="logicBank.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/logic/logicBank.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
       </file>
-      <file name="logicMember.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/logic/logicMember.js">
+      <file name="logicMember.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/logic/logicMember.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -70,7 +70,7 @@
     </package>
     <package name="misc">
       <metrics statements="174" coveredstatements="11" conditionals="39" coveredconditionals="0" methods="73" coveredmethods="2"/>
-      <file name="api_discord_functions.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/misc/api_discord_functions.js">
+      <file name="api_discord_functions.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/misc/api_discord_functions.js">
         <metrics statements="58" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="37" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -131,7 +131,7 @@
         <line num="177" count="0" type="stmt"/>
         <line num="181" count="0" type="stmt"/>
       </file>
-      <file name="functions.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/misc/functions.js">
+      <file name="functions.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/misc/functions.js">
         <metrics statements="116" coveredstatements="9" conditionals="39" coveredconditionals="0" methods="36" coveredmethods="2"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
@@ -253,7 +253,7 @@
     </package>
     <package name="structure">
       <metrics statements="9" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="BaseCommand.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/structure/BaseCommand.js">
+      <file name="BaseCommand.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/structure/BaseCommand.js">
         <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -263,7 +263,7 @@
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
       </file>
-      <file name="BaseEvent.js" path="/mnt/d/dev/Trabajo/bot-discord-rottenville/src/utils/structure/BaseEvent.js">
+      <file name="BaseEvent.js" path="/mnt/d/dev/Trabajo/bot-discord-isacademi/src/utils/structure/BaseEvent.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>

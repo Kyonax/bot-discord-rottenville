@@ -1,7 +1,7 @@
 {
-  "name": "bot-discord-rottenville",
-  "version": "2.0.0",
-  "description": "Discord bot for RottenVille Server - discord.js v12",
+  "name": "bot-discord-isacademi",
+  "version": "1.0.0",
+  "description": "Discord bot for Isacademi Server - discord.js v12",
   "main": "./src/bot.js",
   "keywords": [
     "discord",

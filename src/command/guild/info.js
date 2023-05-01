@@ -9,6 +9,8 @@ const fs = require("fs");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const BaseCommand = require("../../utils/structure/BaseCommand");
 
+let _obj_faq_map = {};
+
 function readTextFile(file) {
   try {
     const data = fs.readFileSync(file, "utf8");
@@ -19,6 +21,18 @@ function readTextFile(file) {
   }
 }
 
+function readFAQIndex(){
+  let _obj_faq = "";
+
+  for(var faq in FAQ){
+    _obj_faq = _obj_faq + "`" + `${faq}` + "` -";
+  }
+
+  _obj_faq_map = _obj_faq;
+}
+
+readFAQIndex();
+
 //Exportación del Comando news
 module.exports = class InfoCommand extends BaseCommand {
   constructor() {
@@ -26,14 +40,14 @@ module.exports = class InfoCommand extends BaseCommand {
       "info",
       ["inf", "i", "information", "faq", "ask"],
       "Send definitions and important information about the Server.",
-      "say <text>`\n**Options:** `alpha` - `battles`",
+      "say <text>`\n**Options:** "+_obj_faq_map,
       "***Everyone***",
       "everyone"
     );
   }
 
   async run(bot, message, args) {
-    if (message.guild.id != "894634118267146272") return;
+    if (message.guild.id != "1097508462080041030") return;
     message.delete().catch((O_o) => {});
     //Creación de Objetos
     //Variables    

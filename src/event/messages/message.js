@@ -20,28 +20,25 @@ module.exports = class MessageEvent extends BaseEvent {
   constructor() { super("message"); }
 
   async run(bot, message) {
-    const reactionEmbedsA = await reactionEmbeds(bot, message)
     //No DMS no Bot Messages
-    if (message.channel.id == "956120543688548362") return;
     if (message.author.bot || message.channel.type === "dm") return;
+
     //Restricted Servers
     try {
       switch (message.guild.id) {
-        case "894634118267146272":
+        case "1097508462080041030":
           break;
       }
     } catch (error) {
-      console.log(
-        "Se ha registrado una interacción fuera de una Guild habilitada. [" +
-        error +
-        "]"
-      );
+      console.log("Se ha registrado una interacción fuera de una Guild habilitada. [" +error + "]");
     }
+
     //Attachment Message
     const attachment = message.attachments;
     attachment.forEach((messageAttachment) => {
       attachMessageImage(messageAttachment);
     });
+
     //Inicialización de Variables guildID - memeberID
     const guildID = message.guild.id, userID = message.author.id, ObjMember = await Api.getMember(guildID, userID), ObjGuild = await Api.getGuild(guildID);
     if (ObjMember.id === undefined) return await Api.postMember(userID, guildID, ObjGuild.language);
@@ -56,9 +53,8 @@ module.exports = class MessageEvent extends BaseEvent {
       const command =
         bot.commands.get(cmdName) || bot.commands.get(bot.aliases.get(cmdName));
       if (command) {
+
         //Validación El usuario es un Administrador
-
-
         if (perms.inmortal === 0) {
           if (cooldown.has(userID)) {
             message.delete();
@@ -82,10 +78,10 @@ module.exports = class MessageEvent extends BaseEvent {
       }
 
     } else {
-      await betaRiddle(Api, bot, message, MessageEmbed);
       //Ganancia de XP por Miembro
-      const curboost = status.boost;
-      if (curboost > 1) {
+      //const curboost = status.boost;
+
+      /*if (curboost > 1) {
         let curBoostTime = status.boost_time;
         curBoostTime = curBoostTime - 1;
         await Api.patchStatusMember(userID, guildID, boost_time, curBoostTime);
@@ -126,13 +122,14 @@ module.exports = class MessageEvent extends BaseEvent {
             );
           message.channel.send(timeOutEmbed);
         }
-      }
-      //Inicialización de Variables memberXP
-      const xp = generateXP(status.boost);
-      let updateXP = xp + status.xp;
-      const newLevel = limitLevel(updateXP, status.level);
+      }*/
 
-      if (newLevel > status.level) {
+      //Inicialización de Variables memberXP
+      //const xp = generateXP(status.boost);
+      //let updateXP = xp + status.xp;
+      //const newLevel = limitLevel(updateXP, status.level);
+
+      /*if (newLevel > status.level) {
         const emojiLevelUp = synchronous.emojiID[0].levelup;
         const levelChannel = message.guild.channels.cache.find(
           (ch) => ch.name === "👽・level-up"
@@ -170,13 +167,13 @@ module.exports = class MessageEvent extends BaseEvent {
           `**Hey Survivor <@${message.author.id}> !** You reached a new Level`,
           levelUpEmbed
         );
-      }
-      const coins = generateCoins();
-      let newCoins = coins + bank.coins;
+      }*/
+     // const coins = generateCoins();
+    //  let newCoins = coins + bank.coins;
 
-      await Api.patchStatusMember(userID, guildID, "xp", updateXP);
-      await Api.patchStatusMember(userID, guildID, "level", newLevel);
-      await Api.patchBankMember(userID, guildID, "coins", newCoins);
+      //await Api.patchStatusMember(userID, guildID, "xp", updateXP);
+//      await Api.patchStatusMember(userID, guildID, "level", newLevel);
+  //    await Api.patchBankMember(userID, guildID, "coins", newCoins);
     }
   }
 };

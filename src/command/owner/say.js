@@ -20,8 +20,7 @@ module.exports = class NewsCommand extends BaseCommand {
   }
 
   async run(bot, message, args) {
-    if (message.guild.id != "894634118267146272") return;
-    addMessageToBin(bot, message);
+    if (message.guild.id != "1097508462080041030") return;
     //Eliminación del mensaje con Comandos
     message.delete().catch((O_o) => {});
     //Creación de Objetos
@@ -31,19 +30,17 @@ module.exports = class NewsCommand extends BaseCommand {
       return perm.ownerPerms(bot, message);
     //Variables
     let autor = message.author;
+
+    if(args[0] === "embed") {
+
     let contentArgs = "";
     let key = "¬";
     let tittle = "None";
     let description = "None";
-    for (var i = 0; i < args.length; i++) {
-      contentArgs = contentArgs + " " + args[i];
-      if (args[i].toString() === key) {
-        tittle = contentArgs;
-        contentArgs = message.content;
-        break;
-      }
-    }
-    tittle = tittle.replace("¬", "");
+
+      contentArgs = message.content;
+
+
     let REPLACE_STRINGS = [
       "s!text",
       "s!decir",
@@ -51,19 +48,38 @@ module.exports = class NewsCommand extends BaseCommand {
       "s!say",
       "!say",
       "¬",
+      "embed",
       tittle,
     ];
+
     for (var i = 0; i < REPLACE_STRINGS.length; i++) {
       contentArgs = contentArgs.replace(REPLACE_STRINGS[i], "");
     }
+
     description = contentArgs;
     const embed = new MessageEmbed()
       .setColor(noneColor)
       .setDescription(description)
-      .attachFiles([
-        "database/multimedia/images/demo/server/BarPost_Discord.gif",
-      ])
-      .setImage("attachment://BarPost_Discord.gif");
     message.channel.send(embed);
+    } else {
+      let contentArgs = message.content;
+
+    let REPLACE_STRINGS = [
+      "s!text",
+      "s!decir",
+      "s!says",
+      "s!say",
+      "!say",
+      "¬",
+      "embed"
+    ];
+
+    for (var i = 0; i < REPLACE_STRINGS.length; i++) {
+      contentArgs = contentArgs.replace(REPLACE_STRINGS[i], "");
+    }
+
+      message.channel.send(contentArgs)
+    }
+
   }
 };
