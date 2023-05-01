@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1682930142980" clover="3.2.0">
   <project timestamp="1682930142980" name="All files">
+=======
+<coverage generated="1682928806979" clover="3.2.0">
+  <project timestamp="1682928806979" name="All files">
+>>>>>>> origin/v1.0-IsaBot
     <metrics statements="234" coveredstatements="42" conditionals="58" coveredconditionals="1" methods="84" coveredmethods="8" elements="376" coveredelements="51" complexity="0" loc="234" ncloc="234" packages="4" files="7" classes="7"/>
     <package name="handler">
       <metrics statements="37" coveredstatements="15" conditionals="19" coveredconditionals="1" methods="4" coveredmethods="1"/>

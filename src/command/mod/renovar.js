@@ -47,7 +47,9 @@ module.exports = class RenovarCommand extends BaseCommand {
     const emoji = synchronous.emojiID[0].afirmado;
 
 
-    const currentDate = new Date().getTime(), daysOfSuscription = 31;
+    const currentDate = new Date().getTime(); let daysOfSuscription = 31;
+
+    if(args[2]) daysOfSuscription = args[2];
 
     let joinedAt = new Date(currentDate+0 *24*60*60*1000);
     joinedAt = joinedAt.toLocaleDateString();
