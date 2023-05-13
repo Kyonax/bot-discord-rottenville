@@ -1,6 +1,6 @@
 
 //Importación especifica de Metodos - findUserID putEmoji Functions
-const { putEmoji, getMember } = require("../../utils/misc/functions.js");
+const { putEmoji, getMember, delay } = require("../../utils/misc/functions.js");
 //Importación Clase de Objetos - Conector Error - Perms
 const Error = require("../../../database/conectors/error");
 const Perms = require("../../../database/conectors/perm");
@@ -48,6 +48,7 @@ module.exports = class CheckCommand extends BaseCommand {
 
 
     for(var member_local in _objJSONMembers) {
+
       try{
       let guildID = bot.guilds.cache.get(message.guild.id);
       let member = await guildID.members.fetch(member_local);
@@ -55,7 +56,10 @@ module.exports = class CheckCommand extends BaseCommand {
         message.channel.send(err);
       }
 
+
+    await delay(500).then(function () {
       message.channel.send(`> ${putEmoji(bot, emoji)} **Checking to <@${member_local}**> suscription end on **__${_objJSONMembers[member_local].time.end.day}/${_objJSONMembers[member_local].time.end.month}/${_objJSONMembers[member_local].time.end.year}__**`);
+    });
 
       if (_objJSONMembers[member_local].time.end.year >= todayDate.split(' ')[2]){
         //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.year} = ${todayDate.split(' ')[2]}`)
