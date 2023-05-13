@@ -48,14 +48,20 @@ module.exports = class CheckCommand extends BaseCommand {
 
 
     for(var member_local in _objJSONMembers) {
+      try{
       let guildID = bot.guilds.cache.get(message.guild.id);
       let member = await guildID.members.fetch(member_local);
+      } catch (err){
+        message.channel.send(err);
+      }
 
-      if (_objJSONMembers[member_local].time.end.year === todayDate.split(' ')[2]){
+      message.channel.send(`> ${putEmoji(bot, emoji)} **Checking to <@${member_local}**> suscription end on **__${_objJSONMembers[member_local].time.end.day}/${_objJSONMembers[member_local].time.end.month}/${_objJSONMembers[member_local].time.end.year}__**`);
+
+      if (_objJSONMembers[member_local].time.end.year >= todayDate.split(' ')[2]){
         //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.year} = ${todayDate.split(' ')[2]}`)
-        if (_objJSONMembers[member_local].time.end.month === todayDate.split(' ')[0]) {
+        if (_objJSONMembers[member_local].time.end.month >= todayDate.split(' ')[0]) {
           //console.log(`El Usuario ${member_local} tiene el mismo mes de caducimiento: ${_objJSONMembers[member_local].time.end.month} = ${todayDate.split(' ')[0]}`)
-          if (_objJSONMembers[member_local].time.end.day === todayDate.split(' ')[1]) {
+          if (_objJSONMembers[member_local].time.end.day >= todayDate.split(' ')[1]) {
             _objJSONMembers[member_local].paid = 0;
             try {
               member.roles.remove("1098486568991326330");
@@ -69,6 +75,8 @@ module.exports = class CheckCommand extends BaseCommand {
             message.channel.send(`> ${putEmoji(bot, emoji)} **El Bot a detectado que el usuario <@${member_local}> se le ha terminado la Suscripción al plan <@&${_objJSONMembers[member_local].type}>.** *(Puede Renovarla con el comando: `+"`!renovar @user @suscripción`"+`)*`);
             console.log(`Usuario ${member_local} no ha renovado sub!`)
             //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.day} = ${todayDate.split(' ')[1]}`)
+          } else {
+            message.channel.send(`> ${putEmoji(bot, emoji)} **El Bot NO** a detectado alguna Suscripción actualmente terminada.`);
           }
         }
       }
