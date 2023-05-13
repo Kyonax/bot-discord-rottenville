@@ -36,7 +36,10 @@ async function edit(firstImage, secondImage, name, username, size) {
   }
 }
 async function secondStep(inImage, name, username, size) {
-  console.log(gm(backgroundNewUser).draw());
+  console.log(gm(backgroundNewUser).draw([`image Over 47,55 0,0 "${inImage}"`]));
+  console.log(gm(backgroundNewUser).draw([`image Over 47,55 0,0 ${inImage}`]));
+  console.log(gm(backgroundNewUser).draw(`image Over 47,55 0,0 "${inImage}"`));
+  console.log(gm(backgroundNewUser).draw(`image Over 47,55 0,0 ${inImage}`));
   gm(backgroundNewUser)
     .gravity("East")
     .fill("#fb163b")
