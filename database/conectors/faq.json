@@ -1,52 +1,87 @@
 {
-    "alpha":{
-        "tittle": "What the f*ck is the Alpha Phase?",
-        "description": "./database/conectors/faq/AlphaPhase.txt",
-        "updated": "26/APR/2022 - Kyonax"
+    "hinscribirse":{
+        "tittle": "¿Cómo me Inscribo?",
+        "description": "./database/conectors/faq/hinscribirse.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "dev":{
-        "tittle": "Who are behind the Rotten Ville project?",
-        "description": "./database/conectors/faq/DEVTeam.txt",
-        "updated": "27/APR/2022 - Kyonax"
+    "hplancambio":{
+        "tittle": "¿Puedo Cambiarme de Plan? Arriba o Abajo?",
+        "description": "./database/conectors/faq/hplancambio.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "project":{
-        "tittle": "What the f*ck is Rotten Ville project?",
-        "description": "./database/conectors/faq/RVProject.txt",
-        "updated": "27/APR/2022 - Kyonax"
+    "hpago":{
+        "tittle": "Métodos de Pago",
+        "description": "./database/conectors/faq/hpago.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "alphafreemint": {
-        "tittle": "What will happen with the Alpha Collection in the next FREE MINT?",
-        "description": "./database/conectors/faq/AlphaAndFreeMint.txt",
-        "updated": "27/APR/2022 - Kyonax"
+    "hacceso":{
+        "tittle": "Después de pagar, ¿Cuando tengo acceso?",
+        "description": "./database/conectors/faq/hacceso.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "busts":{
-        "tittle": "What the f*ck is the Bust Sculptures Collection?",
-        "description": "./database/conectors/faq/BustSculptures.txt",
-        "updated":"27/APR/2022 - Kyonax"
+    "hcursoduration":{
+        "tittle": "¿Cuanto dura el Curso?",
+        "description": "./database/conectors/faq/hcursoduration.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "alphamarket":{
-        "tittle": "Where do I buy an Alpha Rotten?",
-        "description": "./database/conectors/faq/AlphaMarketplaces.txt",
-        "updated": "28/APR/2022 - Kyonax"
+    "hfunciona":{
+        "tittle": "¿Cómo Funciona?",
+        "description": "./database/conectors/faq/hfunciona.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "reasonstobuy":{
-        "tittle": "Why should I have an NFT from Rotten Ville?",
-        "description": "./database/conectors/faq/ReasonsToBuy.txt",
-        "updated": "28/APR/2022 - Kyonax"
+    "hcertificate":{
+        "tittle": "¿Qué Calificación/Certificación tiene Isacademi?",
+        "description": "./database/conectors/faq/hcertificate.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "whattobuy": {
-        "tittle": "How do I know which Rottens to buy?",
-        "description": "./database/conectors/faq/WhatToBuy.txt",
-        "updated":"28/APR/2022 - Kyonax"
+    "hliveclasses":{
+        "tittle": "¿Cómo son las Clases en VIVO?",
+        "description": "./database/conectors/faq/hliveclasses.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "solanafees": {
-        "tittle": "Do I need Solana to MINT one NFT from the FREE MINT?",
-        "description": "./database/conectors/faq/SolanaFees.txt",
-        "updated":"05/MAY/2022 - Kyonax"
+    "hplanesdifferences":{
+        "tittle": "¿Cuáles son las Diferencias entre planes?",
+        "description": "./database/conectors/faq/hplanesdifferences.txt",
+        "updated": "12/MAY/2023 - Kyonax"
     },
-    "riddle": {
-        "tittle": "How to participate in the Riddle activity?",
-        "description": "./database/conectors/faq/RiddleRuDead.txt",
-        "updated": "11/JUL/2022 - Kyonax"
-    }
+    "hlevels":{
+        "tittle": "¿Sólo veo NIVEL 1-2, Cuántos son?",
+        "description": "./database/conectors/faq/hlevels.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "hfrecuency":{
+        "tittle": "¿Qué Amenudo tengo que estudiar?",
+        "description": "./database/conectors/faq/hfrecuency.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "h1to1":{
+        "tittle": "¿Hay 1-1?",
+        "description": "./database/conectors/faq/h1to1.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "haccountno":{
+        "tittle": "¿Por qué me negaron la Cuenta?",
+        "description": "./database/conectors/faq/haccountno.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "hmonthlysub":{
+        "tittle": "¿Cómo son los Cobros Mensuales?",
+        "description": "./database/conectors/faq/hmonthlysub.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "hpatreon":{
+        "tittle": "¿Por qué Isacademi se fue de Patreon?",
+        "description": "./database/conectors/faq/hpatreon.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "hcancel":{
+        "tittle": "¿Cómo Cancelo?",
+        "description": "./database/conectors/faq/hcancel.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
+    "hrefund":{
+        "tittle": "¿Hay reembolso?",
+        "description": "./database/conectors/faq/hrefund.txt",
+        "updated": "12/MAY/2023 - Kyonax"
+    },
 }
