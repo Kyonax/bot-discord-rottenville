@@ -41,7 +41,6 @@ async function secondStep(inImage, name, username, size) {
     .fill("#fb163b")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
-    .draw([`image Over 47,55 0,0 ${inImage}`])
     .fill("#fb163b")
     .font("Helvetica", 20)
     .drawText(136, 254, `${"#" + size + 1}`, "North")
