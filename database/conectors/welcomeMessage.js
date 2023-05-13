@@ -39,6 +39,7 @@ async function secondStep(inImage, name, username, size) {
   try{
   gm(backgroundNewUser)
     .gravity("East")
+    .draw([`image Over 47,55 0,0 ${inImage}`])
     .fill("#fb163b")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
