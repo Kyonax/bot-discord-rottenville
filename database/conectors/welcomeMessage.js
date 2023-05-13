@@ -44,7 +44,6 @@ async function secondStep(inImage, name, username, size) {
     .fill("#fb163b")
     .font("Helvetica", 20)
     .drawText(136, 254, `${"#" + size + 1}`, "North")
-    .draw(`image Over 47,55 0,0 ${inImage}`)
     .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
@@ -93,7 +92,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     delay(1000).then(async function () {
       edit(
         `/../../../database/multimedia/images/users/avatar/${member.user.id}.png`,
-        `/home/ubuntu/bot-discord-rottenville/database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
+        `/mnt/d/dev/Trabajo/bot-discord-isacademi/database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
         member.user.tag,
         member.user.id,
         memberCount
