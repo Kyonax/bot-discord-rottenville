@@ -36,6 +36,8 @@ async function edit(firstImage, secondImage, name, username, size) {
   }
 }
 async function secondStep(inImage, name, username, size) {
+  let image = 'image Over 47,55 0,0 "'+inImage+'"';
+
   gm(backgroundNewUser)
     .gravity("East")
     .fill("#fb163b")
@@ -44,7 +46,7 @@ async function secondStep(inImage, name, username, size) {
     .fill("#fb163b")
     .font("Helvetica", 20)
     .drawText(136, 254, `${"#" + size + 1}`, "North")
-    .draw([`'image Over 47,55 0,0 "${inImage}"'`])
+    .draw([image])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
       if (err) console.log("Error Second Step!: " + err);
