@@ -24,10 +24,10 @@ const backgroundNewUser = "database/multimedia/images/DiscordWelcome.png";
 //Funciones
 async function edit(firstImage, secondImage, name, username, size) {
   circleImage(firstImage, username);
-  delay(2000).then(function () {
+  delay(4000).then(function () {
     resizeImage(username);
   });
-  delay(4000).then(function () {
+  delay(7000).then(function () {
     secondStep(secondImage, name, username, size);
   });
 }
@@ -86,7 +86,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 
 
   downloadUser(memberImage, member.user.id).then(() => {
-    delay(300).then(async function () {
+    delay(1000).then(async function () {
       edit(
         `/../../../database/multimedia/images/users/avatar/${member.user.id}.png`,
         `database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
@@ -95,7 +95,7 @@ module.exports.welcomeMessage = async (member, bot) => {
         memberCount
       );
     });
-    return delay(28000).then(async function () {
+    return delay(15000).then(async function () {
 
 
       let _embed = new MessageEmbed()
