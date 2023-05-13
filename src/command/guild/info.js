@@ -22,10 +22,13 @@ function readTextFile(file) {
 }
 
 function readFAQIndex(){
-  let _obj_faq = "";
+  let _obj_faq = "", i = 0;
 
   for(var faq in FAQ){
+    if(i <= 6){
     _obj_faq = _obj_faq + "`" + `${faq}` + "` -";
+    i++;
+    } else break;
   }
 
   _obj_faq_map = _obj_faq;
