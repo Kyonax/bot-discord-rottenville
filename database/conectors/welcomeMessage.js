@@ -124,7 +124,7 @@ module.exports.welcomeMessage = async (member, bot) => {
         memberCount
       );
     });
-    return delay(2300).then(async function () {
+    return delay(3000).then(async function () {
 
 
       let _embed = new MessageEmbed()
