@@ -26,13 +26,13 @@ const backgroundNewUser = "database/multimedia/images/DiscordWelcome.png";
 async function edit(firstImage, secondImage, name, username, size) {
   try{
   circleImage(firstImage, username);
-  delay(4000).then(function () {
+  delay(900).then(function () {
     resizeImage(username);
   });
-  delay(7000).then(function () {
+  delay(1500).then(function () {
     secondStep(secondImage, name, username, size);
   });
-  delay(9000).then(function () {
+  delay(2000).then(function () {
     thirdStep(secondImage,username);
   });
   } catch (err) {
@@ -115,7 +115,7 @@ module.exports.welcomeMessage = async (member, bot) => {
 
 
   downloadUser(memberImage, member.user.id).then(() => {
-    delay(1000).then(async function () {
+    delay(300).then(async function () {
       edit(
         `/../../../database/multimedia/images/users/avatar/${member.user.id}.png`,
         `/home/ubuntu/bot-discord-rottenville/database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
@@ -124,7 +124,7 @@ module.exports.welcomeMessage = async (member, bot) => {
         memberCount
       );
     });
-    return delay(15000).then(async function () {
+    return delay(5000).then(async function () {
 
 
       let _embed = new MessageEmbed()
