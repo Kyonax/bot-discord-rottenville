@@ -41,7 +41,7 @@ async function edit(firstImage, secondImage, name, username, size) {
 }
 
 async function thirdStep(inImage, username) {
-  var images = [backgroundNewUser, inImage], jimps = [];
+  var images = [`database/multimedia/images/magik/exports/${username}.png`, inImage], jimps = [];
 
   for(var i = 0; i < images.length; i++){
     jimps.push(jimp.read(images[i]));
