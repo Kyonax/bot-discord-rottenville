@@ -52,20 +52,18 @@ module.exports = class CheckCommand extends BaseCommand {
       try{
       let guildID = bot.guilds.cache.get(message.guild.id);
       let member = await guildID.members.fetch(member_local);
-      } catch (err){
-        message.channel.send(err);
-      }
 
 
-    await delay(500).then(function () {
-      message.channel.send(`> ${putEmoji(bot, emoji)} **Checking to <@${member_local}**> suscription end on **__${_objJSONMembers[member_local].time.end.day}/${_objJSONMembers[member_local].time.end.month}/${_objJSONMembers[member_local].time.end.year}__**`);
+
+    await delay(1000).then(function () {
+      message.channel.send(`> ${putEmoji(bot, emoji)} **Checking to <@${member_local}>** suscription end on **__${_objJSONMembers[member_local].time.end.day}/${_objJSONMembers[member_local].time.end.month}/${_objJSONMembers[member_local].time.end.year}__**`);
     });
 
-      if (_objJSONMembers[member_local].time.end.year >= todayDate.split(' ')[2]){
+      if (_objJSONMembers[member_local].time.end.year <= todayDate.split(' ')[2]){
         //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.year} = ${todayDate.split(' ')[2]}`)
-        if (_objJSONMembers[member_local].time.end.month >= todayDate.split(' ')[0]) {
+        if (_objJSONMembers[member_local].time.end.month <= todayDate.split(' ')[0]) {
           //console.log(`El Usuario ${member_local} tiene el mismo mes de caducimiento: ${_objJSONMembers[member_local].time.end.month} = ${todayDate.split(' ')[0]}`)
-          if (_objJSONMembers[member_local].time.end.day >= todayDate.split(' ')[1]) {
+          if (_objJSONMembers[member_local].time.end.day <= todayDate.split(' ')[1]) {
             _objJSONMembers[member_local].paid = 0;
             try {
               member.roles.remove("1098486568991326330");
@@ -84,6 +82,11 @@ module.exports = class CheckCommand extends BaseCommand {
           }
         }
       }
+
+      } catch (err){
+        message.channel.send(err);
+      }
+
     }
 
     try{
