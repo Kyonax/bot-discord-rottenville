@@ -36,6 +36,7 @@ async function edit(firstImage, secondImage, name, username, size) {
   }
 }
 async function secondStep(inImage, name, username, size) {
+  try{
   gm(backgroundNewUser)
     .gravity("East")
     .fill("#fb163b")
@@ -49,6 +50,9 @@ async function secondStep(inImage, name, username, size) {
       console.log("Done! SecondStep");
       if (err) console.log("Error Second Step!: " + err);
     });
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 module.exports.welcomeMessage = async (member, bot) => {
