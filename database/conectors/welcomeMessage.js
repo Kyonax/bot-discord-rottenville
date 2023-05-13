@@ -92,7 +92,7 @@ module.exports.welcomeMessage = async (member, bot) => {
     delay(1000).then(async function () {
       edit(
         `/../../../database/multimedia/images/users/avatar/${member.user.id}.png`,
-        `/mnt/d/dev/Trabajo/bot-discord-isacademi/database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
+        `/home/ubuntu/bot-discord-rottenville/database/multimedia/images/users/circleAvatar/${member.user.id}CircleImageR.png`,
         member.user.tag,
         member.user.id,
         memberCount
