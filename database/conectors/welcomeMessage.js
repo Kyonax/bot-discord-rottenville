@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 //Inicialización de js de Node.js
+var jimp = require('jimp');
 PNG = require("pngjs").PNG;
 var fs = require("fs"),
   gm = require("gm"),
@@ -31,15 +32,36 @@ async function edit(firstImage, secondImage, name, username, size) {
   delay(7000).then(function () {
     secondStep(secondImage, name, username, size);
   });
+  delay(9000).then(function () {
+    thirdStep(secondImage,username);
+  });
   } catch (err) {
     console.log(err);
   }
 }
+
+async function thirdStep(inImage, username) {
+  var images = [backgroundNewUser, inImage], jimps = [];
+
+  for(var i = 0; i < images.length; i++){
+    jimps.push(jimp.read(images[i]));
+  }
+
+  Promise.all(jimps).then(function (data){
+    return Promise.all(jimps);
+  }).then(function(data){
+    data[0].composite(data[1],47,55);
+
+    data[0].write(`database/multimedia/images/magik/exports/${username}.png`, function(){
+      console.log("Jimp add Image");
+    })
+  })
+}
+
 async function secondStep(inImage, name, username, size) {
   try{
   gm(backgroundNewUser)
     .gravity("East")
-    .draw([`image Over 47,55 0,0 ${inImage}`])
     .fill("#fb163b")
     .font("Helvetica-Bold", 40)
     .drawText(6, 212, `${name}`, "North")
