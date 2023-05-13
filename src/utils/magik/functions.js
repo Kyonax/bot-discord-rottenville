@@ -98,7 +98,7 @@ module.exports = {
       .write(
         `database/multimedia/images/users/circleAvatar/${name}CircleImageR.png`,
         function (err) {
-          if (err) console.log("Error!: " + err);
+          if (err) console.log("Error Resize!: " + err);
         }
       );
   },

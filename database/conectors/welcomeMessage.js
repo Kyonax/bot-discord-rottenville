@@ -23,6 +23,7 @@ const Error = require("../conectors/error");
 const backgroundNewUser = "database/multimedia/images/DiscordWelcome.png";
 //Funciones
 async function edit(firstImage, secondImage, name, username, size) {
+  try{
   circleImage(firstImage, username);
   delay(4000).then(function () {
     resizeImage(username);
@@ -30,6 +31,9 @@ async function edit(firstImage, secondImage, name, username, size) {
   delay(7000).then(function () {
     secondStep(secondImage, name, username, size);
   });
+  } catch (err) {
+    console.log(err);
+  }
 }
 async function secondStep(inImage, name, username, size) {
   gm(backgroundNewUser)
@@ -44,7 +48,7 @@ async function secondStep(inImage, name, username, size) {
     .draw([`image Over 47,55 0,0 ${inImage}`])
     .write(`database/multimedia/images/magik/exports/${username}.png`, function (err) {
       console.log("Done! SecondStep");
-      if (err) console.log("Error!: " + err);
+      if (err) console.log("Error Second Step!: " + err);
     });
 }
 
