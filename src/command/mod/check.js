@@ -10,6 +10,35 @@ const { synchronous } = require("../../../database/utils/emojis/emojis.json");
 const Api = require("../../utils/misc/api_discord_functions");
 const BaseCommand = require("../../../src/utils/structure/BaseCommand.js");
 const fs = require("fs");
+
+async function expulsar_usuario (bot, emoji, _objJSONMembers, member, member_local, message) {
+  _objJSONMembers[member_local].paid = 0;
+
+  try {
+    member.roles.remove("1098486568991326330");
+    member.roles.remove("1098487509324939324");
+    member.roles.remove("1098487966009131029");
+    member.roles.remove("1098495106073514106");
+    member.roles.add("1098498388963622932");
+  } catch (err) {
+    console.log(err);
+  }
+  message.channel.send(`> ${putEmoji(bot, emoji)} **El Bot a detectado que el usuario <@${member_local}> se le ha terminado la Suscripción al plan <@&${_objJSONMembers[member_local].type}>.** *(Puede Renovarla con el comando: `+"`!renovar @user @suscripción`"+`)*`);
+  console.log(`Usuario ${member_local} no ha renovado sub!`)
+  //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.day} = ${todayDate.split(' ')[1]}`)
+}
+
+async function dar_role (_objJSONMembers, member_local, message, member) {
+  _objJSONMembers[member_local].paid = 1;
+
+  try {
+    member.roles.add(_objJSONMembers[member_local].type);
+    member.roles.add("1098495106073514106");
+    member.roles.remove("1098498388963622932");
+  } catch (err) {
+    console.log(err) ;
+  }
+}
 //Exportación del Comando Clear
 module.exports = class CheckCommand extends BaseCommand {
   constructor() {
@@ -47,7 +76,18 @@ module.exports = class CheckCommand extends BaseCommand {
     _objJSONMembers = JSON.parse(_objJSONMembers);
 
 
+
     for(var member_local in _objJSONMembers) {
+
+
+    const dayEnd = _objJSONMembers[member_local].time.end.day;
+    const monthEnd = _objJSONMembers[member_local].time.end.month;
+    const yearEnd = _objJSONMembers[member_local].time.end.year;
+
+    let fechaInicio = new Date(`${todayDate.split(' ')[2]}-${todayDate.split(' ')[0]}-${todayDate.split(' ')[1]}`);
+    let fechaFin = new Date(`${yearEnd}-${monthEnd}-${dayEnd}`);
+
+    let diff = fechaFin - fechaInicio;
 
       try{
       let guildID = bot.guilds.cache.get(message.guild.id);
@@ -59,29 +99,19 @@ module.exports = class CheckCommand extends BaseCommand {
       message.channel.send(`> ${putEmoji(bot, emoji)} **Checking to <@${member_local}>** suscription end on **__${_objJSONMembers[member_local].time.end.day}/${_objJSONMembers[member_local].time.end.month}/${_objJSONMembers[member_local].time.end.year}__**`);
     });
 
-      if (_objJSONMembers[member_local].time.end.year <= todayDate.split(' ')[2]){
-        //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.year} = ${todayDate.split(' ')[2]}`)
-        if (_objJSONMembers[member_local].time.end.month <= todayDate.split(' ')[0]) {
-          //console.log(`El Usuario ${member_local} tiene el mismo mes de caducimiento: ${_objJSONMembers[member_local].time.end.month} = ${todayDate.split(' ')[0]}`)
-          if (_objJSONMembers[member_local].time.end.day <= todayDate.split(' ')[1]) {
-            _objJSONMembers[member_local].paid = 0;
-            try {
-              member.roles.remove("1098486568991326330");
-              member.roles.remove("1098487509324939324");
-              member.roles.remove("1098487966009131029");
-              member.roles.remove("1098495106073514106");
-              member.roles.add("1098498388963622932");
-            } catch (err) {
-              console.log(err);
-            }
-            message.channel.send(`> ${putEmoji(bot, emoji)} **El Bot a detectado que el usuario <@${member_local}> se le ha terminado la Suscripción al plan <@&${_objJSONMembers[member_local].type}>.** *(Puede Renovarla con el comando: `+"`!renovar @user @suscripción`"+`)*`);
-            console.log(`Usuario ${member_local} no ha renovado sub!`)
-            //console.log(`El Usuario ${member_local} tiene el mismo año de caducimiento: ${_objJSONMembers[member_local].time.end.day} = ${todayDate.split(' ')[1]}`)
-          } else {
-            message.channel.send(`> ${putEmoji(bot, emoji)} **El Bot NO** a detectado alguna Suscripción actualmente terminada.`);
-          }
+        console.log(`-------------------------------------------------------`);
+        console.log(`Persona: ${member.user}`);
+        console.log("Tiempo en base de Datos: "+`Año: ${_objJSONMembers[member_local].time.end.year}/ Mes: ${_objJSONMembers[member_local].time.end.month}/ Día: ${_objJSONMembers[member_local].time.end.day}`);
+        console.log("Tiempo de hoy: "+`Año: ${todayDate.split(' ')[2]}/ Mes: ${todayDate.split(' ')[0]}/ Día: ${todayDate.split(' ')[1]}`);
+        console.log(`Tiempo Restante: ${diff}`);
+        diff = diff/(1000*60*60*24);
+        console.log(`Tiempo Restante Remake: ${diff}`);
+
+        if (diff <= 0){
+          expulsar_usuario(bot, emoji, _objJSONMembers, member, member_local, message);
+        } else {
+          dar_role(_objJSONMembers, member_local, message, member)
         }
-      }
 
       } catch (err){
         message.channel.send(err);
@@ -92,9 +122,7 @@ module.exports = class CheckCommand extends BaseCommand {
     try{
       const writeData = await fs.writeFileSync("./database/utils/adds/usersSuscriptions.json", JSON.stringify(_objJSONMembers), (err) => {
         if (err) console.log(err);
-      })
-    }catch (error) {
-      console.log(error)
+      })}catch (error) {console.log(error)
     }
 
   }
