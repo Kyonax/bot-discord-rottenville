@@ -35,6 +35,7 @@ module.exports = class RenovarCommand extends BaseCommand {
     if (perms.moderator !== 1) return perm.moderatorPerms(bot, message);
 
     let member = getMember(message, args[0]);
+    console.log(`Usuario entrante: ${args[0]} | Usuario Obtenido de Member: ${member}`)
     if (!member) return err.noUserDigitARole(bot, message);
     let role = args[1];
     if (!role) return err.noARoleDigit(bot, message);
@@ -60,8 +61,8 @@ module.exports = class RenovarCommand extends BaseCommand {
     endAt = endAt.replace("/", " ");
     endAt = endAt.replace("/", " ");
 
-    // console.log(`Joined At: M:${joinedAt.split(' ')[0]}|D:${joinedAt.split(' ')[1]}|Y:${joinedAt.split(' ')[2]}`);
-    // console.log(`End At: M:${endAt.split(' ')[0]}|D:${endAt.split(' ')[1]}|Y:${endAt.split(' ')[2]}`)
+    console.log(`Joined At: M:${joinedAt.split(' ')[0]}|D:${joinedAt.split(' ')[1]}|Y:${joinedAt.split(' ')[2]}`);
+    console.log(`End At: M:${endAt.split(' ')[0]}|D:${endAt.split(' ')[1]}|Y:${endAt.split(' ')[2]}`)
 
 
     let _objJSONMembers = null, inDatabase = 0;
@@ -70,6 +71,8 @@ module.exports = class RenovarCommand extends BaseCommand {
 
     for(var member_local in _objJSONMembers) {
       if(member.user.id === member_local){
+        console.log("-------------------------")
+        console.log(`Verificando Member ID: ${member.user.id} | Base de Datos: ${member_local}`);
         inDatabase = 1;
       }
     }
@@ -108,8 +111,8 @@ module.exports = class RenovarCommand extends BaseCommand {
     member.roles.remove("1098498388963622932");
 
 
-    message.channel.send(`> ${putEmoji(bot, emoji)} **Se ha renovado la suscripción de <@${member_local}> y se le ha otorgado <@&${_objJSONMembers[member_local].type}>.**`);
-    console.log(`Usuario ${member_local} ha renovado sub!`)
+    message.channel.send(`> ${putEmoji(bot, emoji)} **Se ha renovado la suscripción de ${member} y se le ha otorgado <@&${_objJSONMembers[member.user.id].type}>.**`);
+    console.log(`Usuario ${member} ha renovado sub!`)
 
     try{
       const writeData = await fs.writeFileSync("./database/utils/adds/usersSuscriptions.json", JSON.stringify(_objJSONMembers), (err) => {
